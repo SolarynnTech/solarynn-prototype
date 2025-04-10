@@ -1,0 +1,8342 @@
+[
+  {
+    "id": "Q330959",
+    "name": "Béla Rajki",
+    "sport_type": "swimming",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q331332",
+    "name": "Vítězslav Lavička",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2017 UEFA European Under-21 Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q331332",
+    "name": "Vítězslav Lavička",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2017 UEFA European Under-21 Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q331332",
+    "name": "Vítězslav Lavička",
+    "sport_type": "association football",
+    "teams": "FC Hradec Králové",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2017 UEFA European Under-21 Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q331332",
+    "name": "Vítězslav Lavička",
+    "sport_type": "association football",
+    "teams": "Bohemians 1905",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2017 UEFA European Under-21 Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q331332",
+    "name": "Vítězslav Lavička",
+    "sport_type": "association football",
+    "teams": "FK Hvězda Cheb",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2017 UEFA European Under-21 Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q331332",
+    "name": "Vítězslav Lavička",
+    "sport_type": "association football",
+    "teams": "MFK Chrudim",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2017 UEFA European Under-21 Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "1. FC Bad Kötzting",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "Rot Weiss Ahlen",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "FC Baník Ostrava",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "FK Viktoria Žižkov",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "FK Chmel Blšany",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "SV Elversberg",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "FC Slavia Karlovy Vary",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q332054",
+    "name": "Jan Velkoborský",
+    "sport_type": "association football",
+    "teams": "FK Tachov",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q333400",
+    "name": "Grantley Berkeley",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334334",
+    "name": "Daniel Kolář",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334334",
+    "name": "Daniel Kolář",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334334",
+    "name": "Daniel Kolář",
+    "sport_type": "association football",
+    "teams": "Gaziantepspor",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334334",
+    "name": "Daniel Kolář",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334334",
+    "name": "Daniel Kolář",
+    "sport_type": "association football",
+    "teams": "FK Chmel Blšany",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334334",
+    "name": "Daniel Kolář",
+    "sport_type": "association football",
+    "teams": "1. FC Slovácko",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334334",
+    "name": "Daniel Kolář",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334334",
+    "name": "Daniel Kolář",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-19 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "Modena F.C.",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "Tottenham Hotspur F.C.",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "TJ Jiskra Domažlice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-20 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q342834",
+    "name": "Jeb Corliss",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Tinkoff",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Tinkoff",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Team Jayco AlUla",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Team Jayco AlUla",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "XDS Astana Team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "XDS Astana Team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Cannondale Pro Cycling Team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Cannondale Pro Cycling Team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Qhubeka NextHash",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Qhubeka NextHash",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Gazprom–RusVelo",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Gazprom–RusVelo",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "SK Rapid Wien",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "Austria men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "FC Hradec Králové",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "Admira Wacker",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "MFK Vítkovice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352733",
+    "name": "Randy Couture",
+    "sport_type": "mixed martial arts",
+    "teams": "Team Quest",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q355902",
+    "name": "Manfred Hoeberl",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q356271",
+    "name": "Georges St-Pierre",
+    "sport_type": "karate",
+    "teams": "Jackson Wink MMA Academy",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q356271",
+    "name": "Georges St-Pierre",
+    "sport_type": "mixed martial arts",
+    "teams": "Jackson Wink MMA Academy",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q356271",
+    "name": "Georges St-Pierre",
+    "sport_type": "Muay Thai",
+    "teams": "Jackson Wink MMA Academy",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "FK Drnovice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "FK Viktoria Žižkov",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "FK Hvězda Cheb",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361289",
+    "name": "Adolf Dorner",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361587",
+    "name": "Kevin Peter Hall",
+    "sport_type": "basketball",
+    "teams": "George Washington Revolutionaries men's basketball",
+    "league": "NCAA Division I men's basketball",
+    "olympic_data": []
+  },
+  {
+    "id": "Q371518",
+    "name": "Tobias Ide",
+    "sport_type": "powerlifting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q371689",
+    "name": "Ivan Nanut",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q373261",
+    "name": "Nigel Murray",
+    "sport_type": "boccia",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q373293",
+    "name": "Jahon Qurbonov",
+    "sport_type": "boxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q373699",
+    "name": "Adrian Nicholas",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q375421",
+    "name": "Lenka Ledvinová",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380050",
+    "name": "Chuck Liddell",
+    "sport_type": "karate",
+    "teams": "The Pit",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380050",
+    "name": "Chuck Liddell",
+    "sport_type": "mixed martial arts",
+    "teams": "The Pit",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "Real Betis Balompié",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "FK Viktoria Žižkov",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "FK Teplice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "FK Hvězda Cheb",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380407",
+    "name": "Nikolai Fomenko",
+    "sport_type": "auto racing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380407",
+    "name": "Nikolai Fomenko",
+    "sport_type": "alpine skiing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q382073",
+    "name": "Filip Jícha",
+    "sport_type": "handball",
+    "teams": "THW Kiel",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q382073",
+    "name": "Filip Jícha",
+    "sport_type": "handball",
+    "teams": "TBV Lemgo",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q382478",
+    "name": "Milovan Zoričić",
+    "sport_type": "association football",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q388631",
+    "name": "Ivan Hlinka",
+    "sport_type": "ice hockey",
+    "teams": "Vancouver Canucks",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q388631",
+    "name": "Ivan Hlinka",
+    "sport_type": "ice hockey",
+    "teams": "HC Litvínov",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q388631",
+    "name": "Ivan Hlinka",
+    "sport_type": "ice hockey",
+    "teams": "EV Zug",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q388631",
+    "name": "Ivan Hlinka",
+    "sport_type": "ice hockey",
+    "teams": "HK Dukla Trenčín",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q393039",
+    "name": "Hagesias of Syracuse",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q405989",
+    "name": "Aenetus of Amyclae",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q406813",
+    "name": "Alfred James Wilmott",
+    "sport_type": "table tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q427745",
+    "name": "Max Braun",
+    "sport_type": "tug of war",
+    "teams": "Southwest Turnverein of Saint Louis",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q427820",
+    "name": "Rob van den Wildenberg",
+    "sport_type": "cycle sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q428673",
+    "name": "Josef Silný",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q945289",
+    "name": "Peter Falkner",
+    "sport_type": "fencing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q949892",
+    "name": "Steve House",
+    "sport_type": "mountaineering",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Eintracht Frankfurt",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2000",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1996",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Trabzonspor",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2000",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1996",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2000",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1996",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "SK Sigma Olomouc",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2000",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1996",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2000",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1996",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "FK Teplice",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2000",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1996",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Bohemians 1905",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2000",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1996",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Dukla Prague",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2000",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1996",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Eintracht Frankfurt",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Trabzonspor",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "SK Sigma Olomouc",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "FK Teplice",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Bohemians 1905",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Dukla Prague",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Toulouse FC",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Arminia Bielefeld",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Dynamo Dresden",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "FK Příbram",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "ŠK Slovan Bratislava",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Football Club Molenbeek Brussels Strombeek",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-17 football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-19 football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q957327",
+    "name": "Tomáš Šmíd",
+    "sport_type": "tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q957414",
+    "name": "Chris Bradford",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "FC Zlín",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "Górnik Zabrze",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "Dyskobolia Grodzisk Wielkopolski",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "FC Baník Ostrava",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "FK Viktoria Žižkov",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "FK Chmel Blšany",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "Racing Club de Calais",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "SK Kladno",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "UD Horadada",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q961979",
+    "name": "Franz Wilhelmer",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q965819",
+    "name": "József Várszegi",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q970958",
+    "name": "Callias II",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q971784",
+    "name": "Aaron Links",
+    "sport_type": "bodybuilding",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q972626",
+    "name": "Stefan Schneider",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q979195",
+    "name": "Mike Plant",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q983623",
+    "name": "Mariano Haro",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q984592",
+    "name": "Gunnar Nielsen",
+    "sport_type": "athletics",
+    "teams": "Københavns Idræts Forening",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q986919",
+    "name": "Dér László",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q987551",
+    "name": "András Ecsédi",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q987931",
+    "name": "János Egri",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q990812",
+    "name": "Lajos Erkel",
+    "sport_type": "chess",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q993505",
+    "name": "Bruno Löwe",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1000592",
+    "name": "Tyson Fury",
+    "sport_type": "boxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1029029",
+    "name": "Jiří Holík",
+    "sport_type": "ice hockey",
+    "teams": "HC Rebel Havlíčkův Brod",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1031772",
+    "name": "Gusztáv Götz",
+    "sport_type": "rowing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1032870",
+    "name": "Gyula Halasy",
+    "sport_type": "shooting sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1032870",
+    "name": "Gyula Halasy",
+    "sport_type": "skeet shooting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1035526",
+    "name": "Balázs Herjeczki",
+    "sport_type": "handball",
+    "teams": "Q4048033",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1037886",
+    "name": "Frigyes Hollósi",
+    "sport_type": "swimming",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1037886",
+    "name": "Frigyes Hollósi",
+    "sport_type": "rowing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1055140",
+    "name": "Róbert Horling",
+    "sport_type": "water polo",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1055660",
+    "name": "Ádám Horváth",
+    "sport_type": "volleyball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1056414",
+    "name": "Viktor Hunfalvy",
+    "sport_type": "",
+    "teams": "Magyar Honvédelmi Szövetség",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1057827",
+    "name": "Cevdet Sümer",
+    "sport_type": "equestrian sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1069806",
+    "name": "Chen Zhaokui",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1078045",
+    "name": "Christa Decker",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1083426",
+    "name": "Christine Becker",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1083820",
+    "name": "Christine Theiss",
+    "sport_type": "kickboxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "FK Drnovice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "FK Viktoria Žižkov",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361207",
+    "name": "Jaroslav Šilhavý",
+    "sport_type": "association football",
+    "teams": "FK Hvězda Cheb",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361289",
+    "name": "Adolf Dorner",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q361587",
+    "name": "Kevin Peter Hall",
+    "sport_type": "basketball",
+    "teams": "George Washington Revolutionaries men's basketball",
+    "league": "NCAA Division I men's basketball",
+    "olympic_data": []
+  },
+  {
+    "id": "Q371518",
+    "name": "Tobias Ide",
+    "sport_type": "powerlifting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q371689",
+    "name": "Ivan Nanut",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q373261",
+    "name": "Nigel Murray",
+    "sport_type": "boccia",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q373293",
+    "name": "Jahon Qurbonov",
+    "sport_type": "boxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q373699",
+    "name": "Adrian Nicholas",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q375421",
+    "name": "Lenka Ledvinová",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380050",
+    "name": "Chuck Liddell",
+    "sport_type": "karate",
+    "teams": "The Pit",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380050",
+    "name": "Chuck Liddell",
+    "sport_type": "mixed martial arts",
+    "teams": "The Pit",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "Real Betis Balompié",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "FK Viktoria Žižkov",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "FK Teplice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380115",
+    "name": "Michal Bílek",
+    "sport_type": "association football",
+    "teams": "FK Hvězda Cheb",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380407",
+    "name": "Nikolai Fomenko",
+    "sport_type": "auto racing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q380407",
+    "name": "Nikolai Fomenko",
+    "sport_type": "alpine skiing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q382073",
+    "name": "Filip Jícha",
+    "sport_type": "handball",
+    "teams": "THW Kiel",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q382073",
+    "name": "Filip Jícha",
+    "sport_type": "handball",
+    "teams": "TBV Lemgo",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q382478",
+    "name": "Milovan Zoričić",
+    "sport_type": "association football",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "TJ Jiskra Domažlice",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2016",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 2012",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2016",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 2012",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q334393",
+    "name": "David Limberský",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-20 football team",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 2016",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 2012",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q342834",
+    "name": "Jeb Corliss",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Tinkoff",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2009 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2011 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2008 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2007 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2012 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2011 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2009 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2013 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2005 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2008 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Vuelta a España",
+        "medal": ""
+      },
+      {
+        "event": "2014 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2015 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2015 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2017 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2008 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2012 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "Vuelta a España",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Tinkoff",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2009 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2011 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2008 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2007 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2012 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2011 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2009 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2013 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2005 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2008 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Vuelta a España",
+        "medal": ""
+      },
+      {
+        "event": "2014 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2015 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2015 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2017 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2008 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2012 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "Vuelta a España",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Team Jayco AlUla",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2009 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2011 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2008 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2007 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2012 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2011 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2009 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2013 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2005 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2008 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Vuelta a España",
+        "medal": ""
+      },
+      {
+        "event": "2014 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2015 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2015 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2017 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2008 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2012 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "Vuelta a España",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Team Jayco AlUla",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2009 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2011 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2008 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2007 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2012 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2011 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2009 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2013 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2005 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2008 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Vuelta a España",
+        "medal": ""
+      },
+      {
+        "event": "2014 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2015 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2015 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2017 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2008 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2012 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "Vuelta a España",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "XDS Astana Team",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2009 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2011 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2008 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2007 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2012 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2011 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2009 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2013 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2005 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2008 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Vuelta a España",
+        "medal": ""
+      },
+      {
+        "event": "2014 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2015 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2015 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2017 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2008 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2012 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "Vuelta a España",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "XDS Astana Team",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2009 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2011 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2008 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2010 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2007 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2012 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2011 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2009 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2013 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2005 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2008 UCI ProTour",
+        "medal": ""
+      },
+      {
+        "event": "2013 Vuelta a España",
+        "medal": ""
+      },
+      {
+        "event": "2014 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2015 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2015 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2017 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2016 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2017 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2018 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2019 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2020 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI Europe Tour",
+        "medal": ""
+      },
+      {
+        "event": "2021 UCI World Ranking",
+        "medal": ""
+      },
+      {
+        "event": "2008 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2012 Summer Olympics",
+        "medal": ""
+      },
+      {
+        "event": "Tour de France",
+        "medal": ""
+      },
+      {
+        "event": "Vuelta a España",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Cannondale Pro Cycling Team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Cannondale Pro Cycling Team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Qhubeka NextHash",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Qhubeka NextHash",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "road bicycle racing",
+    "teams": "Gazprom–RusVelo",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q347184",
+    "name": "Roman Kreuziger",
+    "sport_type": "cyclo-cross",
+    "teams": "Gazprom–RusVelo",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "SK Rapid Wien",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "Austria men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "FC Hradec Králové",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "Admira Wacker",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352017",
+    "name": "Josef Bican",
+    "sport_type": "association football",
+    "teams": "MFK Vítkovice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q352733",
+    "name": "Randy Couture",
+    "sport_type": "mixed martial arts",
+    "teams": "Team Quest",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q355902",
+    "name": "Manfred Hoeberl",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q356271",
+    "name": "Georges St-Pierre",
+    "sport_type": "karate",
+    "teams": "Jackson Wink MMA Academy",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q356271",
+    "name": "Georges St-Pierre",
+    "sport_type": "mixed martial arts",
+    "teams": "Jackson Wink MMA Academy",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q356271",
+    "name": "Georges St-Pierre",
+    "sport_type": "Muay Thai",
+    "teams": "Jackson Wink MMA Academy",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1933",
+    "name": "Anja Pärson",
+    "sport_type": "alpine skiing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q7407",
+    "name": "Andre Agassi",
+    "sport_type": "tennis",
+    "teams": "United States Davis Cup team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q11662",
+    "name": "Steffi Graf",
+    "sport_type": "tennis",
+    "teams": "Germany Billie Jean King Cup team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q15542",
+    "name": "Jefferson Pérez",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q16849",
+    "name": "Matti Nykänen",
+    "sport_type": "ski jumping",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q18797",
+    "name": "Wladimir Klitschko",
+    "sport_type": "boxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q26846",
+    "name": "Archelaus I of Macedon",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31082",
+    "name": "Florence Griffith Joyner",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31370",
+    "name": "Pavel Černý",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31370",
+    "name": "Pavel Černý",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31370",
+    "name": "Pavel Černý",
+    "sport_type": "association football",
+    "teams": "AFK Atlantic Lázně Bohdaneč",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31370",
+    "name": "Pavel Černý",
+    "sport_type": "association football",
+    "teams": "FC Hradec Králové",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31370",
+    "name": "Pavel Černý",
+    "sport_type": "association football",
+    "teams": "Sanfrecce Hiroshima",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "Sporting CP",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "FK Jablonec",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "Galatasaray S.K.",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "FK Teplice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "Vissel Kobe",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "TJ Jiskra Domažlice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q31377",
+    "name": "Pavel Horváth",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q40421",
+    "name": "Miroslav Dvořák",
+    "sport_type": "ice hockey",
+    "teams": "Philadelphia Flyers",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q41152",
+    "name": "Akebono Tarō",
+    "sport_type": "sumo",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q41152",
+    "name": "Akebono Tarō",
+    "sport_type": "mixed martial arts",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q41152",
+    "name": "Akebono Tarō",
+    "sport_type": "professional wrestling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q41152",
+    "name": "Akebono Tarō",
+    "sport_type": "K-1",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q44158",
+    "name": "Dave Bautista",
+    "sport_type": "mixed martial arts",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q44158",
+    "name": "Dave Bautista",
+    "sport_type": "professional wrestling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q46667",
+    "name": "Nelson Margetts",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q47085",
+    "name": "Olga Fikotová",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q47085",
+    "name": "Olga Fikotová",
+    "sport_type": "basketball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q57907",
+    "name": "Heide Rosendahl",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62177",
+    "name": "Hans Günter Winkler",
+    "sport_type": "equestrian sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "Buffalo Sabres",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "Montreal Canadiens",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "Carolina Hurricanes",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "Florida Panthers",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "Edmonton Oilers",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "Columbus Blue Jackets",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "Chicago Blackhawks",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "HC Slavia Praha",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "Färjestad BK",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q62545",
+    "name": "Jaroslav Špaček",
+    "sport_type": "ice hockey",
+    "teams": "HC Plzeň",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q64497",
+    "name": "Fouad Abiad",
+    "sport_type": "professional bodybuilding",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q64756",
+    "name": "Víctor Martínez",
+    "sport_type": "bodybuilding",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q73191",
+    "name": "Josef Černý",
+    "sport_type": "ice hockey",
+    "teams": "HC Plzeň",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q73797",
+    "name": "Antonio Neves Braga",
+    "sport_type": "capoeira",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q76455",
+    "name": "Magdalena Neuner",
+    "sport_type": "biathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q77389",
+    "name": "Robert Hübner",
+    "sport_type": "chess",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q78851",
+    "name": "Andreas Münzer",
+    "sport_type": "bodybuilding",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q80030",
+    "name": "Bettina Dajka",
+    "sport_type": "handball",
+    "teams": "Ferencvárosi TC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q87709",
+    "name": "Ronny Rockel",
+    "sport_type": "bodybuilding",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q89267",
+    "name": "Karl Heinz Klee",
+    "sport_type": "skiing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q91184",
+    "name": "Helmut Reichmann",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q91448",
+    "name": "Ines Geipel",
+    "sport_type": "long jump",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q91448",
+    "name": "Ines Geipel",
+    "sport_type": "sprinting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q92281",
+    "name": "Heinz Ollesch",
+    "sport_type": "strength athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q104009",
+    "name": "Michael Sauer",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q109255",
+    "name": "Bernard Hinault",
+    "sport_type": "road bicycle racing",
+    "teams": "Renault",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q109255",
+    "name": "Bernard Hinault",
+    "sport_type": "road bicycle racing",
+    "teams": "La Vie claire",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q109255",
+    "name": "Bernard Hinault",
+    "sport_type": "road bicycle racing",
+    "teams": "Gitane",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q113417",
+    "name": "Terpander",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q114667",
+    "name": "Sarah Wiener",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q118323",
+    "name": "Dirk Schachtsiek",
+    "sport_type": "fistball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q126152",
+    "name": "Uta Albanese",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q126752",
+    "name": "Alexander Munro",
+    "sport_type": "tug of war",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q129197",
+    "name": "Petr Čáslava",
+    "sport_type": "ice hockey",
+    "teams": "HC Pardubice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q129197",
+    "name": "Petr Čáslava",
+    "sport_type": "ice hockey",
+    "teams": "Severstal Cherepovets",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q129742",
+    "name": "Jindřich Panský",
+    "sport_type": "table tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "1988 Summer Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "FC Bayern Munich",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "Schalke 04",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "Borussia Dortmund",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "Germany men's national association football team",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "1. FC Köln",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "Fenerbahçe Istanbul",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q159577",
+    "name": "Jet Li",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "S.L. Benfica",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "1966 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Portugal men's national football team",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "1966 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "S.C. Beira-Mar",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Club de Fútbol Monterrey",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "C.D. Maxaquene",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Boston Minutemen",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Toronto Blizzard",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "San Diego Sockers",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "U.F.C.I. Tomar",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Las Vegas Quicksilvers",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Miami Americans",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "New Jersey Americans",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Toronto Blizzard",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q168068",
+    "name": "Zbigniew Głowaty",
+    "sport_type": "cycle sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q169044",
+    "name": "Zdeněk Pecka",
+    "sport_type": "rowing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "Juventus FC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "SS Lazio",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "Dukla Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1098751",
+    "name": "Ádám Iváncsik",
+    "sport_type": "handball",
+    "teams": "Q4048033",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1099261",
+    "name": "Fritz R. Huitfeldt",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1107892",
+    "name": "István Keszthelyi",
+    "sport_type": "equestrian sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1110305",
+    "name": "Michele Borghetti",
+    "sport_type": "International draughts",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1110305",
+    "name": "Michele Borghetti",
+    "sport_type": "English draughts",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1110305",
+    "name": "Michele Borghetti",
+    "sport_type": "Italian draughts",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1111787",
+    "name": "Jeremy Stenberg",
+    "sport_type": "motocross",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1114770",
+    "name": "László Kocsár",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1114770",
+    "name": "László Kocsár",
+    "sport_type": "cycling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1114770",
+    "name": "László Kocsár",
+    "sport_type": "long-distance running",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Hungary men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Fehérvár FC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Hungary national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Szombathelyi Haladás",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Hungary national under-17 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120227",
+    "name": "Adorno Corradini",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1159127",
+    "name": "Dan Millman",
+    "sport_type": "diving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1159127",
+    "name": "Dan Millman",
+    "sport_type": "martial art",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1159127",
+    "name": "Dan Millman",
+    "sport_type": "artistic gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1159127",
+    "name": "Dan Millman",
+    "sport_type": "trampoline gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1161248",
+    "name": "Daniel Jocelyn",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1161726",
+    "name": "Daniel Meech",
+    "sport_type": "equestrian sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1162679",
+    "name": "Daniel Scioli",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1163522",
+    "name": "Daniela Rechberger",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1169843",
+    "name": "Nicolo Corradini",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1170422",
+    "name": "Pompeo d'Ambrosio",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1172987",
+    "name": "Minh Thai",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1173830",
+    "name": "David Brickhill-Jones",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1178183",
+    "name": "György Mocsányi",
+    "sport_type": "aerobatics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1178183",
+    "name": "György Mocsányi",
+    "sport_type": "Q1460462",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1178641",
+    "name": "István Molnár",
+    "sport_type": "Q1460462",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1178749",
+    "name": "Tibor Molnár",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1185359",
+    "name": "Alipi Kostadinov",
+    "sport_type": "cycle sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1187742",
+    "name": "Denise Blöchlinger",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1195453",
+    "name": "Jiří Kučera",
+    "sport_type": "ice hockey",
+    "teams": "EHC Kloten",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1213126",
+    "name": "György Mészárovics",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1217157",
+    "name": "Vera Neszmélyi",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1222151",
+    "name": "Dieter Hogen",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1226299",
+    "name": "András Orvos",
+    "sport_type": "weightlifting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1227705",
+    "name": "Etelka Paczkó",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1227852",
+    "name": "Pajor Gábor",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1227852",
+    "name": "Pajor Gábor",
+    "sport_type": "modern pentathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1228116",
+    "name": "Dirk Wagner",
+    "sport_type": "table tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1229296",
+    "name": "Mats Nordlander",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1231485",
+    "name": "Sándor Újhelyi",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1231713",
+    "name": "Hugó Payr",
+    "sport_type": "wrestling",
+    "teams": "MTK Budapest",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1232879",
+    "name": "Lajos Perley",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1234194",
+    "name": "Tibor Pettkó-Szandtner",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1235374",
+    "name": "József Pick",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1237804",
+    "name": "Dominik Holzknecht",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1238640",
+    "name": "Judit Pollerman",
+    "sport_type": "Q1460462",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1240839",
+    "name": "Pruha József",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1249083",
+    "name": "Sándor Richnovszky",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1251346",
+    "name": "György Rozgonyi",
+    "sport_type": "ice hockey",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1253147",
+    "name": "József Révay",
+    "sport_type": "ice hockey",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1258856",
+    "name": "Sakyong Mipham",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1260734",
+    "name": "Rui Santos",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1268413",
+    "name": "Markus Ressler",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1285223",
+    "name": "Ladislav Heller",
+    "sport_type": "road bicycle racing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1286078",
+    "name": "György Schirilla",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1286079",
+    "name": "Schirilla György, ifj.",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1288676",
+    "name": "Sándor Simon",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1289599",
+    "name": "Eduard Pulvermann",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293492",
+    "name": "Ferenc Szabó",
+    "sport_type": "association football",
+    "teams": "Ferencvárosi TC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293492",
+    "name": "Ferenc Szabó",
+    "sport_type": "association football",
+    "teams": "Győri ETO FC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293492",
+    "name": "Ferenc Szabó",
+    "sport_type": "association football",
+    "teams": "Szombathelyi Haladás",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293492",
+    "name": "Ferenc Szabó",
+    "sport_type": "association football",
+    "teams": "Celldömölki VSE",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293558",
+    "name": "Ilona Szabó",
+    "sport_type": "association football",
+    "teams": "Miskolci VSC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293680",
+    "name": "László Szabó",
+    "sport_type": "association football",
+    "teams": "Ferencvárosi TC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293682",
+    "name": "László Szabó",
+    "sport_type": "association football",
+    "teams": "Diósgyőri VTK",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293768",
+    "name": "Sándor Szabó",
+    "sport_type": "association football",
+    "teams": "Szombathelyi Haladás",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q129742",
+    "name": "Jindřich Panský",
+    "sport_type": "table tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "1988 Summer Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "FC Bayern Munich",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "Schalke 04",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "Borussia Dortmund",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "Germany men's national association football team",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "1. FC Köln",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q157847",
+    "name": "Toni Schumacher",
+    "sport_type": "association football",
+    "teams": "Fenerbahçe Istanbul",
+    "league": "Bundesliga",
+    "olympic_data": [
+      {
+        "event": "UEFA Euro 1980",
+        "medal": ""
+      },
+      {
+        "event": "UEFA Euro 1984",
+        "medal": ""
+      },
+      {
+        "event": "1982 FIFA World Cup",
+        "medal": ""
+      },
+      {
+        "event": "1986 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q159577",
+    "name": "Jet Li",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "S.L. Benfica",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "1966 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Portugal men's national football team",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "1966 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "S.C. Beira-Mar",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Club de Fútbol Monterrey",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "C.D. Maxaquene",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Boston Minutemen",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Toronto Blizzard",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "San Diego Sockers",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "U.F.C.I. Tomar",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Las Vegas Quicksilvers",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Miami Americans",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "New Jersey Americans",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q162043",
+    "name": "Eusébio",
+    "sport_type": "association football",
+    "teams": "Toronto Blizzard",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q168068",
+    "name": "Zbigniew Głowaty",
+    "sport_type": "cycle sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q169044",
+    "name": "Zdeněk Pecka",
+    "sport_type": "rowing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "Juventus FC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "SS Lazio",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q171295",
+    "name": "Pavel Nedvěd",
+    "sport_type": "association football",
+    "teams": "Dukla Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1098751",
+    "name": "Ádám Iváncsik",
+    "sport_type": "handball",
+    "teams": "Q4048033",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1099261",
+    "name": "Fritz R. Huitfeldt",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1107892",
+    "name": "István Keszthelyi",
+    "sport_type": "equestrian sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1110305",
+    "name": "Michele Borghetti",
+    "sport_type": "International draughts",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1110305",
+    "name": "Michele Borghetti",
+    "sport_type": "English draughts",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1110305",
+    "name": "Michele Borghetti",
+    "sport_type": "Italian draughts",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1111787",
+    "name": "Jeremy Stenberg",
+    "sport_type": "motocross",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1114770",
+    "name": "László Kocsár",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1114770",
+    "name": "László Kocsár",
+    "sport_type": "cycling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1114770",
+    "name": "László Kocsár",
+    "sport_type": "long-distance running",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Hungary men's national football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Fehérvár FC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Hungary national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Szombathelyi Haladás",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120175",
+    "name": "István Kovács",
+    "sport_type": "association football",
+    "teams": "Hungary national under-17 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1120227",
+    "name": "Adorno Corradini",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1159127",
+    "name": "Dan Millman",
+    "sport_type": "diving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1159127",
+    "name": "Dan Millman",
+    "sport_type": "martial art",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1159127",
+    "name": "Dan Millman",
+    "sport_type": "artistic gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1159127",
+    "name": "Dan Millman",
+    "sport_type": "trampoline gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1161248",
+    "name": "Daniel Jocelyn",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1161726",
+    "name": "Daniel Meech",
+    "sport_type": "equestrian sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1162679",
+    "name": "Daniel Scioli",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1163522",
+    "name": "Daniela Rechberger",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1169843",
+    "name": "Nicolo Corradini",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1170422",
+    "name": "Pompeo d'Ambrosio",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1172987",
+    "name": "Minh Thai",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1173830",
+    "name": "David Brickhill-Jones",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1178183",
+    "name": "György Mocsányi",
+    "sport_type": "aerobatics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1178183",
+    "name": "György Mocsányi",
+    "sport_type": "Q1460462",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1178641",
+    "name": "István Molnár",
+    "sport_type": "Q1460462",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1178749",
+    "name": "Tibor Molnár",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1185359",
+    "name": "Alipi Kostadinov",
+    "sport_type": "cycle sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1187742",
+    "name": "Denise Blöchlinger",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1195453",
+    "name": "Jiří Kučera",
+    "sport_type": "ice hockey",
+    "teams": "EHC Kloten",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1213126",
+    "name": "György Mészárovics",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1217157",
+    "name": "Vera Neszmélyi",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1222151",
+    "name": "Dieter Hogen",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1226299",
+    "name": "András Orvos",
+    "sport_type": "weightlifting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1227705",
+    "name": "Etelka Paczkó",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1227852",
+    "name": "Pajor Gábor",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1227852",
+    "name": "Pajor Gábor",
+    "sport_type": "modern pentathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1228116",
+    "name": "Dirk Wagner",
+    "sport_type": "table tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1229296",
+    "name": "Mats Nordlander",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1231485",
+    "name": "Sándor Újhelyi",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1231713",
+    "name": "Hugó Payr",
+    "sport_type": "wrestling",
+    "teams": "MTK Budapest",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1232879",
+    "name": "Lajos Perley",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1234194",
+    "name": "Tibor Pettkó-Szandtner",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1235374",
+    "name": "József Pick",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1237804",
+    "name": "Dominik Holzknecht",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1238640",
+    "name": "Judit Pollerman",
+    "sport_type": "Q1460462",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1240839",
+    "name": "Pruha József",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1249083",
+    "name": "Sándor Richnovszky",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1251346",
+    "name": "György Rozgonyi",
+    "sport_type": "ice hockey",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1253147",
+    "name": "József Révay",
+    "sport_type": "ice hockey",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1258856",
+    "name": "Sakyong Mipham",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1260734",
+    "name": "Rui Santos",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1268413",
+    "name": "Markus Ressler",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1285223",
+    "name": "Ladislav Heller",
+    "sport_type": "road bicycle racing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1286078",
+    "name": "György Schirilla",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1286079",
+    "name": "Schirilla György, ifj.",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1288676",
+    "name": "Sándor Simon",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1289599",
+    "name": "Eduard Pulvermann",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293492",
+    "name": "Ferenc Szabó",
+    "sport_type": "association football",
+    "teams": "Ferencvárosi TC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293492",
+    "name": "Ferenc Szabó",
+    "sport_type": "association football",
+    "teams": "Győri ETO FC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293492",
+    "name": "Ferenc Szabó",
+    "sport_type": "association football",
+    "teams": "Szombathelyi Haladás",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293492",
+    "name": "Ferenc Szabó",
+    "sport_type": "association football",
+    "teams": "Celldömölki VSE",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293558",
+    "name": "Ilona Szabó",
+    "sport_type": "association football",
+    "teams": "Miskolci VSC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293680",
+    "name": "László Szabó",
+    "sport_type": "association football",
+    "teams": "Ferencvárosi TC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293682",
+    "name": "László Szabó",
+    "sport_type": "association football",
+    "teams": "Diósgyőri VTK",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1293768",
+    "name": "Sándor Szabó",
+    "sport_type": "association football",
+    "teams": "Szombathelyi Haladás",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q312695",
+    "name": "Dominik Hašek",
+    "sport_type": "ice hockey",
+    "teams": "Detroit Red Wings",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "1998 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2006 Winter Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q312695",
+    "name": "Dominik Hašek",
+    "sport_type": "ice hockey",
+    "teams": "Chicago Blackhawks",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "1998 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2006 Winter Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q312695",
+    "name": "Dominik Hašek",
+    "sport_type": "ice hockey",
+    "teams": "HC Dukla Jihlava",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "1998 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2006 Winter Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q312695",
+    "name": "Dominik Hašek",
+    "sport_type": "ice hockey",
+    "teams": "HC Pardubice",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "1998 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2006 Winter Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q312695",
+    "name": "Dominik Hašek",
+    "sport_type": "ice hockey",
+    "teams": "HC Spartak Moscow",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "1998 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2006 Winter Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q314712",
+    "name": "Barry Bonds",
+    "sport_type": "baseball",
+    "teams": "San Francisco Giants",
+    "league": "Major League Baseball",
+    "olympic_data": [
+      {
+        "event": "2007 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2000 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1996 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1988 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1998 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1997 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1995 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2006 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1994 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2005 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2004 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2002 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2003 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2001 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1986 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1989 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1987 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1990 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1993 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1991 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1992 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1999 Major League Baseball season",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q314712",
+    "name": "Barry Bonds",
+    "sport_type": "baseball",
+    "teams": "Pittsburgh Pirates",
+    "league": "Major League Baseball",
+    "olympic_data": [
+      {
+        "event": "2007 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2000 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1996 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1988 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1998 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1997 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1995 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2006 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1994 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2005 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2004 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2002 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2003 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2001 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1986 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1989 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1987 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1990 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1993 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1991 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1992 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1999 Major League Baseball season",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q314712",
+    "name": "Barry Bonds",
+    "sport_type": "baseball",
+    "teams": "Arizona State Sun Devils baseball",
+    "league": "Major League Baseball",
+    "olympic_data": [
+      {
+        "event": "2007 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2000 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1996 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1988 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1998 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1997 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1995 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2006 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1994 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2005 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2004 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2002 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2003 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "2001 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1986 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1989 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1987 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1990 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1993 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1991 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1992 Major League Baseball season",
+        "medal": ""
+      },
+      {
+        "event": "1999 Major League Baseball season",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q319351",
+    "name": "Roger Bannister",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "1954 European Athletics Championships",
+        "medal": ""
+      },
+      {
+        "event": "1954 British Empire and Commonwealth Games",
+        "medal": ""
+      },
+      {
+        "event": "1950 European Athletics Championships",
+        "medal": ""
+      },
+      {
+        "event": "1952 Summer Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q322479",
+    "name": "Pavel Dobrý",
+    "sport_type": "association football",
+    "teams": "Dynamo Dresden",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q322479",
+    "name": "Pavel Dobrý",
+    "sport_type": "association football",
+    "teams": "1. FC Magdeburg",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q322479",
+    "name": "Pavel Dobrý",
+    "sport_type": "association football",
+    "teams": "Holstein Kiel",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q322479",
+    "name": "Pavel Dobrý",
+    "sport_type": "association football",
+    "teams": "SC Paderborn 07",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q322479",
+    "name": "Pavel Dobrý",
+    "sport_type": "association football",
+    "teams": "Chemnitzer FC",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q322479",
+    "name": "Pavel Dobrý",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q322479",
+    "name": "Pavel Dobrý",
+    "sport_type": "association football",
+    "teams": "Heidenauer SV",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q322479",
+    "name": "Pavel Dobrý",
+    "sport_type": "association football",
+    "teams": "Hoyerswerdaer FC",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q324082",
+    "name": "Karel Nováček",
+    "sport_type": "tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q327449",
+    "name": "Michał Jach",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q328892",
+    "name": "Rory Stewart",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q328920",
+    "name": "Lubor Tesař",
+    "sport_type": "cycle sport",
+    "teams": "Wiesenhof-Felt",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q328920",
+    "name": "Lubor Tesař",
+    "sport_type": "cycle sport",
+    "teams": "Elkov-Kasper",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q328920",
+    "name": "Lubor Tesař",
+    "sport_type": "cycle sport",
+    "teams": "Ed’ System ZVVZ",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q328920",
+    "name": "Lubor Tesař",
+    "sport_type": "cycle sport",
+    "teams": "Team Akud Arnolds Sicherheit",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q330959",
+    "name": "Béla Rajki",
+    "sport_type": "water polo",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q945289",
+    "name": "Peter Falkner",
+    "sport_type": "fencing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q949892",
+    "name": "Steve House",
+    "sport_type": "mountaineering",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Eintracht Frankfurt",
+    "league": "Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Trabzonspor",
+    "league": "Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "SK Sigma Olomouc",
+    "league": "Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "FK Teplice",
+    "league": "Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Bohemians 1905",
+    "league": "Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Dukla Prague",
+    "league": "Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Eintracht Frankfurt",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Trabzonspor",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "SK Sigma Olomouc",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "FK Teplice",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Bohemians 1905",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q950537",
+    "name": "Karel Rada",
+    "sport_type": "association football",
+    "teams": "Dukla Prague",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Toulouse FC",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Arminia Bielefeld",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Dynamo Dresden",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "FK Příbram",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "ŠK Slovan Bratislava",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Football Club Molenbeek Brussels Strombeek",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-17 football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q952654",
+    "name": "Pavel Fořt",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-19 football team",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q957327",
+    "name": "Tomáš Šmíd",
+    "sport_type": "tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q957414",
+    "name": "Chris Bradford",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "FC Zlín",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "Górnik Zabrze",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "Dyskobolia Grodzisk Wielkopolski",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "FC Baník Ostrava",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "FK Viktoria Žižkov",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "FK Chmel Blšany",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "Racing Club de Calais",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-21 football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "SK Kladno",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q958529",
+    "name": "Marcel Lička",
+    "sport_type": "association football",
+    "teams": "UD Horadada",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q961979",
+    "name": "Franz Wilhelmer",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q965819",
+    "name": "József Várszegi",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q970958",
+    "name": "Callias II",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q971784",
+    "name": "Aaron Links",
+    "sport_type": "bodybuilding",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q972626",
+    "name": "Stefan Schneider",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q979195",
+    "name": "Mike Plant",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q983623",
+    "name": "Mariano Haro",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q984592",
+    "name": "Gunnar Nielsen",
+    "sport_type": "athletics",
+    "teams": "Københavns Idræts Forening",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q986919",
+    "name": "Dér László",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q987551",
+    "name": "András Ecsédi",
+    "sport_type": "skydiving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q987931",
+    "name": "János Egri",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q990812",
+    "name": "Lajos Erkel",
+    "sport_type": "chess",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q993505",
+    "name": "Bruno Löwe",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1000592",
+    "name": "Tyson Fury",
+    "sport_type": "boxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1029029",
+    "name": "Jiří Holík",
+    "sport_type": "ice hockey",
+    "teams": "HC Rebel Havlíčkův Brod",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1031772",
+    "name": "Gusztáv Götz",
+    "sport_type": "rowing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1032870",
+    "name": "Gyula Halasy",
+    "sport_type": "shooting sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1032870",
+    "name": "Gyula Halasy",
+    "sport_type": "skeet shooting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1035526",
+    "name": "Balázs Herjeczki",
+    "sport_type": "handball",
+    "teams": "Q4048033",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1037886",
+    "name": "Frigyes Hollósi",
+    "sport_type": "swimming",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1037886",
+    "name": "Frigyes Hollósi",
+    "sport_type": "rowing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1055140",
+    "name": "Róbert Horling",
+    "sport_type": "water polo",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1055660",
+    "name": "Ádám Horváth",
+    "sport_type": "volleyball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1056414",
+    "name": "Viktor Hunfalvy",
+    "sport_type": "",
+    "teams": "Magyar Honvédelmi Szövetség",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1057827",
+    "name": "Cevdet Sümer",
+    "sport_type": "equestrian sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1069806",
+    "name": "Chen Zhaokui",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1078045",
+    "name": "Christa Decker",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1083426",
+    "name": "Christine Becker",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1083820",
+    "name": "Christine Theiss",
+    "sport_type": "kickboxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q655083",
+    "name": "László Széchy",
+    "sport_type": "fencing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q661919",
+    "name": "José Cláudio dos Reis",
+    "sport_type": "basketball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q664323",
+    "name": "Phil Edwards",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q669313",
+    "name": "Daniel Šmejkal",
+    "sport_type": "association football",
+    "teams": "1. FC Nürnberg",
+    "league": "2. Bundesliga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q722746",
+    "name": "Petr Sýkora",
+    "sport_type": "ice hockey",
+    "teams": "Pittsburgh Penguins",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "ice hockey at the 2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2005 IIHF World Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q722746",
+    "name": "Petr Sýkora",
+    "sport_type": "ice hockey",
+    "teams": "Edmonton Oilers",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "ice hockey at the 2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2005 IIHF World Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q722746",
+    "name": "Petr Sýkora",
+    "sport_type": "ice hockey",
+    "teams": "Minnesota Wild",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "ice hockey at the 2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2005 IIHF World Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q722746",
+    "name": "Petr Sýkora",
+    "sport_type": "ice hockey",
+    "teams": "Metallurg Magnitogorsk",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "ice hockey at the 2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2005 IIHF World Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q722746",
+    "name": "Petr Sýkora",
+    "sport_type": "ice hockey",
+    "teams": "HC Plzeň",
+    "league": "National Hockey League",
+    "olympic_data": [
+      {
+        "event": "ice hockey at the 2002 Winter Olympics",
+        "medal": ""
+      },
+      {
+        "event": "2005 IIHF World Championship",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q727332",
+    "name": "Károly Varga",
+    "sport_type": "shooting sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "shooting at the 1980 Summer Olympics – mixed 50 metre rifle prone",
+        "medal": "Olympic gold medal"
+      }
+    ]
+  },
+  {
+    "id": "Q731732",
+    "name": "Zhanna Shubenok",
+    "sport_type": "modern pentathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "2000 Summer Olympics",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q739663",
+    "name": "Wally Albright",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q741143",
+    "name": "Sammael",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q745026",
+    "name": "Gábor P. Szabó",
+    "sport_type": "association football",
+    "teams": "Újpest FC",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "1934 FIFA World Cup",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q751142",
+    "name": "Laszlo Fekete",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q762419",
+    "name": "George Genereux",
+    "sport_type": "shooting sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q765474",
+    "name": "Mark Felix",
+    "sport_type": "bodybuilding",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q769648",
+    "name": "Ivan Poddubny",
+    "sport_type": "wrestling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q777273",
+    "name": "Edwin Mills",
+    "sport_type": "tug of war",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q787080",
+    "name": "Autolycus of Athens",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q788729",
+    "name": "Iloosh Khoshabe",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q789827",
+    "name": "Balázs Andor András",
+    "sport_type": "aerobatics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q791579",
+    "name": "Kenzō Awa",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q804375",
+    "name": "Ede Blasy",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q807664",
+    "name": "Barbara Tesar",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q818083",
+    "name": "Benny Vansteelant",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q822669",
+    "name": "Bernard Boverton Redwood",
+    "sport_type": "powerboating",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q833001",
+    "name": "Karol Jablonski",
+    "sport_type": "ice sailing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q833523",
+    "name": "János Bogár",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q834085",
+    "name": "József Bolla",
+    "sport_type": "wrestling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q834091",
+    "name": "Mária Bolla",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q836388",
+    "name": "Géza Tuli",
+    "sport_type": "artistic gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q850090",
+    "name": "Bettina Zelenka",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q852909",
+    "name": "József Bán",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q862101",
+    "name": "Bill Flynn",
+    "sport_type": "ice hockey",
+    "teams": "Flint Generals",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q866631",
+    "name": "Leung Jan",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q875692",
+    "name": "Ibolya Gyimesi",
+    "sport_type": "aerobatics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q877242",
+    "name": "Li Luoneng",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q889918",
+    "name": "Bodo Ferl",
+    "sport_type": "bobsleigh",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q890940",
+    "name": "Bohumil Němeček",
+    "sport_type": "boxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q896855",
+    "name": "Brad Penrith",
+    "sport_type": "amateur wrestling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q897596",
+    "name": "Sándor Szalay",
+    "sport_type": "figure skating",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q902948",
+    "name": "Aditya Dev",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q912690",
+    "name": "Sándor Dávid",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q913798",
+    "name": "Aleksandr Kurlovich",
+    "sport_type": "weightlifting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q914398",
+    "name": "Robert Lang",
+    "sport_type": "ice hockey",
+    "teams": "Montreal Canadiens",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q914398",
+    "name": "Robert Lang",
+    "sport_type": "ice hockey",
+    "teams": "Pittsburgh Penguins",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q914398",
+    "name": "Robert Lang",
+    "sport_type": "ice hockey",
+    "teams": "Detroit Red Wings",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q914398",
+    "name": "Robert Lang",
+    "sport_type": "ice hockey",
+    "teams": "Boston Bruins",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q914398",
+    "name": "Robert Lang",
+    "sport_type": "ice hockey",
+    "teams": "Los Angeles Kings",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q914398",
+    "name": "Robert Lang",
+    "sport_type": "ice hockey",
+    "teams": "Washington Capitals",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q914398",
+    "name": "Robert Lang",
+    "sport_type": "ice hockey",
+    "teams": "Arizona Coyotes",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q914398",
+    "name": "Robert Lang",
+    "sport_type": "ice hockey",
+    "teams": "Chicago Blackhawks",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q922415",
+    "name": "Carlos Gracie",
+    "sport_type": "judo",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q925954",
+    "name": "Ryszard Rogala",
+    "sport_type": "para powerlifting",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q926482",
+    "name": "Wim Hof",
+    "sport_type": "swimming",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q930268",
+    "name": "Václav Kozák",
+    "sport_type": "rowing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q933325",
+    "name": "Miloslav Hořava",
+    "sport_type": "ice hockey",
+    "teams": "New York Rangers",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q933773",
+    "name": "Charles Brown",
+    "sport_type": "roque",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q935095",
+    "name": "Henryk Flinik",
+    "sport_type": "field hockey",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q944243",
+    "name": "Tomáš Vlasák",
+    "sport_type": "ice hockey",
+    "teams": "HC Ambrì-Piotta",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q944243",
+    "name": "Tomáš Vlasák",
+    "sport_type": "ice hockey",
+    "teams": "Ak Bars Kazan",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q944243",
+    "name": "Tomáš Vlasák",
+    "sport_type": "ice hockey",
+    "teams": "HC Slavia Praha",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q944243",
+    "name": "Tomáš Vlasák",
+    "sport_type": "ice hockey",
+    "teams": "HC Plzeň",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q173992",
+    "name": "Josef Pešice",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q173992",
+    "name": "Josef Pešice",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q173992",
+    "name": "Josef Pešice",
+    "sport_type": "association football",
+    "teams": "AEL Limassol FC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q173992",
+    "name": "Josef Pešice",
+    "sport_type": "association football",
+    "teams": "FC Zbrojovka Brno",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q182046",
+    "name": "Leon Battista Alberti",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "FC Baník Ostrava",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "Bohemians 1905",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "FC Rouen",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "MFK Vítkovice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "Dukla Pardubice",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q203028",
+    "name": "Tomáš Pospíchal",
+    "sport_type": "association football",
+    "teams": "Tankista Praha",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q209390",
+    "name": "Jackie Joyner-Kersee",
+    "sport_type": "athletics",
+    "teams": "UCLA Bruins",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q209390",
+    "name": "Jackie Joyner-Kersee",
+    "sport_type": "basketball",
+    "teams": "UCLA Bruins",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q218994",
+    "name": "Zoltán Mechlovits",
+    "sport_type": "table tennis",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q220534",
+    "name": "Zoran Matković",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q221185",
+    "name": "Kateřina Emmons",
+    "sport_type": "shooting sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "SS Lazio",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "Manchester United F.C.",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "S.L. Benfica",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "AC Sparta Prague",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "SK Slavia Prague",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "Czechia men's national football team",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "FK Viktoria Žižkov",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "SK Dynamo České Budějovice",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q224033",
+    "name": "Karel Poborský",
+    "sport_type": "association football",
+    "teams": "FK Jiskra Třeboň",
+    "league": "Premier League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q225271",
+    "name": "István Kovács",
+    "sport_type": "boxing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q229503",
+    "name": "Věra Čáslavská",
+    "sport_type": "artistic gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q230353",
+    "name": "Barbora Strýcová",
+    "sport_type": "tennis",
+    "teams": "Czech Republic Billie Jean King Cup team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q233572",
+    "name": "Ágnes Keleti",
+    "sport_type": "gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q233572",
+    "name": "Ágnes Keleti",
+    "sport_type": "artistic gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q233683",
+    "name": "Jarmila Kratochvílová",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q234408",
+    "name": "Dana Zátopková",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q240984",
+    "name": "Elena Novikova-Belova",
+    "sport_type": "fencing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q242201",
+    "name": "Ronda Rousey",
+    "sport_type": "judo",
+    "teams": "10th Planet Jiu-Jitsu",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q242201",
+    "name": "Ronda Rousey",
+    "sport_type": "mixed martial arts",
+    "teams": "10th Planet Jiu-Jitsu",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q242201",
+    "name": "Ronda Rousey",
+    "sport_type": "professional wrestling",
+    "teams": "10th Planet Jiu-Jitsu",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1389721",
+    "name": "Jim Poole",
+    "sport_type": "basketball",
+    "teams": "",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "basketball at the 1955 Pan American Games",
+        "medal": ""
+      },
+      {
+        "event": "1961 Malaysia Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1962 Canadian Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1971 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1972 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1970 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1975 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1974 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1977 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1979 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1970 US Badminton Championships – mixed doubles",
+        "medal": ""
+      },
+      {
+        "event": "1975 US Badminton Championships – mixed doubles",
+        "medal": ""
+      },
+      {
+        "event": "1959 US Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1958 US Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1961 US Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1968 US Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1970 US Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1971 US Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1973 US Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1971 US Open Badminton Championships – mixed doubles",
+        "medal": ""
+      },
+      {
+        "event": "1962 Canadian Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1965 Canadian Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1962 Canadian Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1965 Canadian Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1973 Canadian Open Badminton Championships – men's singles",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q1389721",
+    "name": "Jim Poole",
+    "sport_type": "badminton",
+    "teams": "",
+    "league": "",
+    "olympic_data": [
+      {
+        "event": "basketball at the 1955 Pan American Games",
+        "medal": ""
+      },
+      {
+        "event": "1961 Malaysia Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1962 Canadian Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1971 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1972 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1970 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1975 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1974 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1977 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1979 US Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1970 US Badminton Championships – mixed doubles",
+        "medal": ""
+      },
+      {
+        "event": "1975 US Badminton Championships – mixed doubles",
+        "medal": ""
+      },
+      {
+        "event": "1959 US Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1958 US Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1961 US Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1968 US Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1970 US Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1971 US Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1973 US Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1971 US Open Badminton Championships – mixed doubles",
+        "medal": ""
+      },
+      {
+        "event": "1962 Canadian Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1965 Canadian Open Badminton Championships – men's doubles",
+        "medal": ""
+      },
+      {
+        "event": "1962 Canadian Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1965 Canadian Open Badminton Championships – men's singles",
+        "medal": ""
+      },
+      {
+        "event": "1973 Canadian Open Badminton Championships – men's singles",
+        "medal": ""
+      }
+    ]
+  },
+  {
+    "id": "Q1397315",
+    "name": "Hartmut Pötzelberger",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1401666",
+    "name": "Ferenc Varga",
+    "sport_type": "association football",
+    "teams": "Szombathelyi Haladás",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1401707",
+    "name": "István Varga",
+    "sport_type": "association football",
+    "teams": "Budapest Honvéd FC",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1401739",
+    "name": "József Varga",
+    "sport_type": "water polo",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1401794",
+    "name": "Mária Varga",
+    "sport_type": "basketball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1403429",
+    "name": "Felix Dueball",
+    "sport_type": "go",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1405582",
+    "name": "Ferdinand Mack",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1423589",
+    "name": "Sharur Wardanjan",
+    "sport_type": "amateur wrestling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1424782",
+    "name": "Kerstin Weißenborn",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1429676",
+    "name": "Florian Glatzl",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1435207",
+    "name": "Fok Ming Shan",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1435834",
+    "name": "Jiří Bubla",
+    "sport_type": "ice hockey",
+    "teams": "Vancouver Canucks",
+    "league": "National Hockey League",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1436107",
+    "name": "Kauko Laasonen",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1442203",
+    "name": "Francisco Sardá",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1442363",
+    "name": "Franciszek Hynek",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1445653",
+    "name": "František Plass",
+    "sport_type": "association football",
+    "teams": "Czechoslovakia men's national association football team",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1445653",
+    "name": "František Plass",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1445653",
+    "name": "František Plass",
+    "sport_type": "association football",
+    "teams": "FK Hvězda Cheb",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1448132",
+    "name": "Franz Löschke",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1448132",
+    "name": "Franz Löschke",
+    "sport_type": "duathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1452345",
+    "name": "Fred Hempel",
+    "sport_type": "wrestling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1452896",
+    "name": "Frederick Goodfellow",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1455348",
+    "name": "Rolf Svensson",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1458985",
+    "name": "Robin Theryoung",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1460313",
+    "name": "Jacques Anouma",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1470808",
+    "name": "Jim Conroy",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1477593",
+    "name": "Mark Verstegen",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1488407",
+    "name": "Jakob Baran",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1488453",
+    "name": "Gabi Loose",
+    "sport_type": "canoeing and kayaking",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1488973",
+    "name": "Käthe Tucholla",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1489603",
+    "name": "Kristina Krewer",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1492846",
+    "name": "Mikhail Sorokin",
+    "sport_type": "orienteering",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1494905",
+    "name": "Gary Lautenschlager",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1496312",
+    "name": "Ludwig Blomstrand",
+    "sport_type": "ice hockey",
+    "teams": "Vancouver Canucks",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1496312",
+    "name": "Ludwig Blomstrand",
+    "sport_type": "ice hockey",
+    "teams": "Djurgårdens IF Hockey",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1500321",
+    "name": "Jørgen Peter Müller",
+    "sport_type": "artistic gymnastics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1502559",
+    "name": "Genrik Pavliukianec",
+    "sport_type": "goalball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1509914",
+    "name": "Gerald Horvath",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1509933",
+    "name": "Gerald Kammerlander",
+    "sport_type": "luge",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1510274",
+    "name": "György Erdélyi",
+    "sport_type": "swimming",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1515183",
+    "name": "Olav Iraklis Stamatis",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1515402",
+    "name": "Gerta Nadenau",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1527044",
+    "name": "Veronika Hauke",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1539220",
+    "name": "Gottfried Hinze",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1540848",
+    "name": "Joe Malone",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1541501",
+    "name": "Patrick Salcher",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1543948",
+    "name": "Herbert Mayr",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1545059",
+    "name": "Gregor Buchholz",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1545244",
+    "name": "Jörg Löhr",
+    "sport_type": "handball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1548144",
+    "name": "Joey Kelly",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1551217",
+    "name": "Grzegorz Raniewicz",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1553599",
+    "name": "Guido Köstermeyer",
+    "sport_type": "sport climbing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1553825",
+    "name": "Udo Cohrs",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1553915",
+    "name": "Aleksandr Yegorov",
+    "sport_type": "luge",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1555829",
+    "name": "Gustav Frištenský",
+    "sport_type": "amateur wrestling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1558575",
+    "name": "Gyula Németh",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1559431",
+    "name": "Göran Bjerendal",
+    "sport_type": "archery",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1560986",
+    "name": "Ljubomir Magaš",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1569690",
+    "name": "Cleomedes of Astypalia",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1590324",
+    "name": "Maksim Batunin",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1592812",
+    "name": "Petr Smíšek",
+    "sport_type": "association football",
+    "teams": "FC Rot-Weiß Erfurt",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1592812",
+    "name": "Petr Smíšek",
+    "sport_type": "association football",
+    "teams": "FC Viktoria Plzeň",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1592812",
+    "name": "Petr Smíšek",
+    "sport_type": "association football",
+    "teams": "FK Jablonec",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1592812",
+    "name": "Petr Smíšek",
+    "sport_type": "association football",
+    "teams": "FK Teplice",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1592812",
+    "name": "Petr Smíšek",
+    "sport_type": "association football",
+    "teams": "Czech Republic national under-19 football team",
+    "league": "3. Liga",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1593478",
+    "name": "Heelan Tompkins",
+    "sport_type": "equestrian sport",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1595982",
+    "name": "Heine Stupp",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1601978",
+    "name": "Helene Kienzle",
+    "sport_type": "artistic roller skating",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1602326",
+    "name": "Helga Wischer",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1602328",
+    "name": "Helga Zöllner",
+    "sport_type": "figure skating",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1606383",
+    "name": "Otto Schlenzka",
+    "sport_type": "",
+    "teams": "Kieler Yacht-Club",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1612900",
+    "name": "Inger Anne Frøysedal",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1618146",
+    "name": "Hilbert Wagner",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1633126",
+    "name": "Hubert Dörer",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1641354",
+    "name": "Vasile Dumitrescu",
+    "sport_type": "bobsleigh",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1647388",
+    "name": "Klaus Schenkel",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1649332",
+    "name": "Jan Štochl",
+    "sport_type": "handball",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1657767",
+    "name": "Igor Lapshin",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1659390",
+    "name": "Im Ho",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1668497",
+    "name": "Libor Podmol",
+    "sport_type": "motocross",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1669502",
+    "name": "Thomas Tauporn",
+    "sport_type": "sport climbing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1672678",
+    "name": "Irina Vygusova",
+    "sport_type": "diving",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1675446",
+    "name": "Iuliana Tcaciova",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1675967",
+    "name": "Ivan Kuzmin",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1676015",
+    "name": "Ivan Lazarev",
+    "sport_type": "luge",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1677099",
+    "name": "Jack LaLanne",
+    "sport_type": "bodybuilding",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1677724",
+    "name": "Jacobo Fitz-James Stuart, 17th Duke of Alba",
+    "sport_type": "polo",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1677832",
+    "name": "Jacqueline Uebelhart",
+    "sport_type": "triathlon",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1678594",
+    "name": "Julián Muñoz Giraldo",
+    "sport_type": "road bicycle racing",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1678730",
+    "name": "Jaime Hurtado",
+    "sport_type": "basketball",
+    "teams": "Club Sport Emelec",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1678730",
+    "name": "Jaime Hurtado",
+    "sport_type": "basketball",
+    "teams": "Q48796057",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1681810",
+    "name": "Jan Hanč",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1681862",
+    "name": "Jan Hrbatý",
+    "sport_type": "ice hockey",
+    "teams": "HC Dukla Jihlava",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q1681868",
+    "name": "Jan Huruk",
+    "sport_type": "athletics",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q593798",
+    "name": "Anton Martin Schiestl",
+    "sport_type": "",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q594863",
+    "name": "Anton Tkáč",
+    "sport_type": "track cycling",
+    "teams": "",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q597033",
+    "name": "Arnaud Assoumani",
+    "sport_type": "athletics",
+    "teams": "Stade Français",
+    "league": "",
+    "olympic_data": []
+  },
+  {
+    "id": "Q597033",
+    "name": "Arnaud Assoumani",
+    "sport_type": "para athletics",
+    "teams": "Stade Français",
+    "league": "",
+    "olympic_data": []
+  }
+]
