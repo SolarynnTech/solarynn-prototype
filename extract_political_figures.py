@@ -152,11 +152,9 @@ def process_results(results):
     
     return processed_data
 
-def main():
+def main(max_batches, batch_size):
     # Configure parameters
-    batch_size = 100  # Start with smaller batch size
     start_batch = 0
-    max_batches = 8   # Limit to 8 batches initially
     user_agent = "WikiDataExtract/1.0 (github.com/example/wikiDataExtract)"
     
     all_data = []

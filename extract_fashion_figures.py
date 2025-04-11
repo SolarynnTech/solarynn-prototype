@@ -164,11 +164,8 @@ def process_results(results):
     
     return processed_data
 
-def main():
+def main(max_batches, batch_size, start_batch):
     # Configure parameters
-    batch_size = 100
-    start_batch = 0
-    max_batches = 8
     user_agent = "WikiDataExtract/1.0 (github.com/example/wikiDataExtract)"
     
     all_data = []
@@ -359,6 +356,6 @@ def main():
                 print("Emergency backup saved to emergency_backup.json")
             except:
                 print("Failed to save emergency backup.")
-
+    return all_data
 if __name__ == "__main__":
-    main() 
+    main(max_batches=8, batch_size=100, start_batch=0) 
