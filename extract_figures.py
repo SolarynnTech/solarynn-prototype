@@ -56,12 +56,14 @@ if __name__ == "__main__":
             try:
                 with open(json_file, 'r', encoding='utf-8') as f:
                     existing_data = json.load(f)
-                    if isinstance(existing_data, list):
+                    if not isinstance(existing_data, list):
+                        existing_data = [existing_data]
+                    if isinstance(data, list):
                         existing_data.extend(data)
                     else:
-                        existing_data = [existing_data, data]
+                        existing_data.append(data)
             except (FileNotFoundError, json.JSONDecodeError):
-                existing_data = data
+                existing_data = [data] if not isinstance(data, list) else data
             with open(json_file, 'w', encoding='utf-8') as f:
                 json.dump(existing_data, f, ensure_ascii=False, indent=2)
         elif i % 3 == 2:
@@ -69,12 +71,14 @@ if __name__ == "__main__":
             try:
                 with open(json_file, 'r', encoding='utf-8') as f:
                     existing_data = json.load(f)
-                    if isinstance(existing_data, list):
+                    if not isinstance(existing_data, list):
+                        existing_data = [existing_data]
+                    if isinstance(data, list):
                         existing_data.extend(data)
                     else:
-                        existing_data = [existing_data, data]
+                        existing_data.append(data)
             except (FileNotFoundError, json.JSONDecodeError):
-                existing_data = data
+                existing_data = [data] if not isinstance(data, list) else data
             with open(json_file, 'w', encoding='utf-8') as f:
                 json.dump(existing_data, f, ensure_ascii=False, indent=2)
         elif i % 3 == 0:
@@ -82,12 +86,14 @@ if __name__ == "__main__":
             try:
                 with open(json_file, 'r', encoding='utf-8') as f:
                     existing_data = json.load(f)
-                    if isinstance(existing_data, list):
+                    if not isinstance(existing_data, list):
+                        existing_data = [existing_data]
+                    if isinstance(data, list):
                         existing_data.extend(data)
                     else:
-                        existing_data = [existing_data, data]
+                        existing_data.append(data)
             except (FileNotFoundError, json.JSONDecodeError):
-                existing_data = data
+                existing_data = [data] if not isinstance(data, list) else data
             with open(json_file, 'w', encoding='utf-8') as f:
                 json.dump(existing_data, f, ensure_ascii=False, indent=2)
 

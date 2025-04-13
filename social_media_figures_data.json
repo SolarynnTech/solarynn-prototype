@@ -36,8 +36,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "Semitic",
-        "Mandaeism"
+        "Mandaeism",
+        "Semitic"
       ]
     },
     "engagement_rate": {
@@ -146,8 +146,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "diplomacy",
-        "history"
+        "history",
+        "diplomacy"
       ]
     },
     "engagement_rate": {
@@ -164,8 +164,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "health care",
-        "internal medicine"
+        "internal medicine",
+        "health care"
       ]
     },
     "engagement_rate": {
@@ -215,9 +215,9 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "phytogeography",
         "botany",
-        "biogeography"
+        "biogeography",
+        "phytogeography"
       ]
     },
     "engagement_rate": {
@@ -283,8 +283,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "agriculture",
-        "animal breeding"
+        "animal breeding",
+        "agriculture"
       ]
     },
     "engagement_rate": {
@@ -301,9 +301,9 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
+        "pastoral care",
         "theology",
-        "moral theology",
-        "pastoral care"
+        "moral theology"
       ]
     },
     "engagement_rate": {
@@ -455,8 +455,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "topology",
-        "mathematics"
+        "mathematics",
+        "topology"
       ]
     },
     "engagement_rate": {
@@ -521,9 +521,9 @@
       "platforms": [],
       "fields_of_work": [
         "ecumenical theology",
+        "Catholicism",
         "theology",
-        "comparison of Judaism and Christianity",
-        "Catholicism"
+        "comparison of Judaism and Christianity"
       ]
     },
     "engagement_rate": {
@@ -651,9 +651,9 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "hypnosis",
+        "anthropology",
         "philosophy",
-        "anthropology"
+        "hypnosis"
       ]
     },
     "engagement_rate": {
@@ -804,1627 +804,6 @@
     }
   },
   {
-    "id": "Q87195",
-    "name": "Wilhelm Brückner-Rüggeberg",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87201",
-    "name": "Wilhelm Olivier Leube",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "medicine",
-        "internal medicine"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87202",
-    "name": "Moritz Thausing",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87204",
-    "name": "Eduard Castle",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87206",
-    "name": "Leopold Freund",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "radiology",
-        "medicine"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87208",
-    "name": "Ernst Décsey",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "musicology",
-        "music criticism"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87211",
-    "name": "Wilhelm Roser",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87212",
-    "name": "Michał Rostworowski",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "law",
-        "political science"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87213",
-    "name": "Otto Schrader",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87224",
-    "name": "Josef Haslinger",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87233",
-    "name": "Max Clarenbach",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87234",
-    "name": "Stefan Sonvilla-Weiss",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87240",
-    "name": "Wolfgang Gratzer",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "music",
-        "musicology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87241",
-    "name": "Alfred Dührssen",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "obstetrics",
-        "gynaecology",
-        "medicine"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87243",
-    "name": "Wolfgang Rautenberg",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87244",
-    "name": "Hermann von Schrötter",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87251",
-    "name": "Raphael M. Bonelli",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "psychiatry",
-        "psychotherapy",
-        "medicine",
-        "neurology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87262",
-    "name": "Theodor Hirsch",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "history"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87268",
-    "name": "Wolfgang Mattheuer",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "art of painting"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87273",
-    "name": "Oskar Ewald",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87298",
-    "name": "Ernest Borneman",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87302",
-    "name": "Konrad Meyer-Hetling",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "agriculture",
-        "World War II",
-        "Nazism"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87307",
-    "name": "Robert Gomer",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "physical chemistry"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87309",
-    "name": "Richard von Schubert-Soldern",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87315",
-    "name": "Helmut Satzinger",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87316",
-    "name": "Aino Henssen",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87321",
-    "name": "Karl Mayreder",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87337",
-    "name": "Peter Skalicky",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87353",
-    "name": "Gudrun Kugler",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87357",
-    "name": "Gerhard Chroust",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87359",
-    "name": "Ladislaus von Rabcewicz",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87378",
-    "name": "Marcel Prawy",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87383",
-    "name": "Hannspeter Winter",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87396",
-    "name": "Lore Lorentz",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87401",
-    "name": "Fritz Novotny",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87402",
-    "name": "Hans-Peter Dürr",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87408",
-    "name": "Friedrich Eduard Schulz",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87409",
-    "name": "Rudolf Inzinger",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87411",
-    "name": "Wolfgang Dietrich",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "law",
-        "political science",
-        "historiography"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87412",
-    "name": "Michael Naumann",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87415",
-    "name": "Julius Tandler",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "health service",
-        "social policy",
-        "anatomy"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87418",
-    "name": "Johannes Olearius",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87424",
-    "name": "Johann Jakob Rambach",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "theology",
-        "poetry",
-        "administration and management of the church",
-        "educational system"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87427",
-    "name": "Gerald Teschl",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "mathematical biology",
-        "partial differential equation",
-        "mathematical physics"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87430",
-    "name": "Franz Josef Radermacher",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87431",
-    "name": "Erich Neuwirth",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87434",
-    "name": "Hans Heinrich Eggebrecht",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87435",
-    "name": "Johann Sahulka",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87444",
-    "name": "Wilhelm Gass",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "theology",
-        "philosophy",
-        "Protestant theology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87447",
-    "name": "Adolf Rebner",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87449",
-    "name": "Antal Festetics",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87451",
-    "name": "Martin A. Nowak",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87464",
-    "name": "Aglaja Orgeni",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87467",
-    "name": "Johannes W. Pichler",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "law",
-        "European Union law"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87471",
-    "name": "Heinrich Häser",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87472",
-    "name": "Josef Teichmann",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "statistics",
-        "functional analysis",
-        "differential geometry",
-        "stochastic process",
-        "mathematical finance",
-        "econometrics",
-        "stochastic analysis",
-        "applied mathematics",
-        "numerical analysis",
-        "machine learning",
-        "Lie group",
-        "probability theory"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87478",
-    "name": "Kurt Rudolf Fischer",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87484",
-    "name": "Klaus Kubinger",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87488",
-    "name": "Friedrich Hopfner",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87489",
-    "name": "Hans Scherenberg",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87492",
-    "name": "Arnold Durig",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87499",
-    "name": "Otto Haupt",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "mathematics",
-        "geometry"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87502",
-    "name": "Rudolf Ladenburg",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87506",
-    "name": "Carlos Kloppenburg",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "theology",
-        "dogmatic theology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87507",
-    "name": "Johann von Dumreicher",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87508",
-    "name": "Carl von Bach",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "machine",
-        "mechanical engineering"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87509",
-    "name": "Albert Anton von Muchar",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "history",
-        "philosophy",
-        "archival science",
-        "library science",
-        "philology",
-        "classical philology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87511",
-    "name": "Armin von Tschermak-Seysenegg",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87512",
-    "name": "August Föppl",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "vibration",
-        "mechanics"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87515",
-    "name": "Edmund von Neusser",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87520",
-    "name": "Walter Tollmien",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87522",
-    "name": "Rudolf Chrobak",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "gynaecology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87523",
-    "name": "Carl Johannes Thomae",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "function theory"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87524",
-    "name": "Marietta Blau",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87530",
-    "name": "Franz Chvostek",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87543",
-    "name": "Josef Schintlmeister",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87550",
-    "name": "Leon Lichtenstein",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "mathematics"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87554",
-    "name": "Ernst G. Straus",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "group theory",
-        "combinatorics",
-        "linear algebra",
-        "geometry"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87563",
-    "name": "Josef Krawina",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87566",
-    "name": "Detlef Franke",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87567",
-    "name": "Anton Rubinstein",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "conducting",
-        "music",
-        "piano",
-        "music education",
-        "musicology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87572",
-    "name": "Peter Salcher",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "physics"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87578",
-    "name": "Wolfgang Hahn",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87580",
-    "name": "Robert Kienböck",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87588",
-    "name": "Max Freiherr von Waldberg",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87599",
-    "name": "Joseph Barth",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "surgery",
-        "anatomy",
-        "ophthalmology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87603",
-    "name": "Hans Bobek",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87607",
-    "name": "Wolfgang Sauseng",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87616",
-    "name": "Peter Balazs",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "mathematics"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87619",
-    "name": "Wilhelm Brambach",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87620",
-    "name": "Luca Pacioli",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "theology",
-        "mathematics",
-        "Franciscan spirituality"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87624",
-    "name": "Ulrich Schindel",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87626",
-    "name": "Wilhelm Sihler",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87627",
-    "name": "Norbert Leser",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87636",
-    "name": "Simon Grynaeus",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87644",
-    "name": "Gustav Droysen",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87645",
-    "name": "Alfred Gürtler",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87646",
-    "name": "Salomo Glassius",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87658",
-    "name": "Heinz-Günther Nesselrath",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": [
-        "classical philology"
-      ]
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
-    "id": "Q87662",
-    "name": "Victorinus Strigel",
-    "follower_count": [],
-    "platform_specialty": {
-      "platforms": [],
-      "fields_of_work": []
-    },
-    "engagement_rate": {
-      "views": {},
-      "likes": {},
-      "comments": {},
-      "engagement_rate": {}
-    }
-  },
-  {
     "id": "Q87672",
     "name": "Otto Keller",
     "follower_count": [],
@@ -2494,16 +873,16 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "coin",
         "curve",
-        "differential geometry",
-        "algebra",
-        "medallion",
-        "surface",
-        "group theory",
         "mathematics",
+        "coin",
         "function",
-        "numismatics"
+        "medallion",
+        "group theory",
+        "numismatics",
+        "algebra",
+        "differential geometry",
+        "surface"
       ]
     },
     "engagement_rate": {
@@ -2520,10 +899,10 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "German-language literature",
-        "literature",
+        "history",
         "history of music",
-        "history"
+        "German-language literature",
+        "literature"
       ]
     },
     "engagement_rate": {
@@ -2670,10 +1049,10 @@
       "platforms": [],
       "fields_of_work": [
         "Catullus",
-        "Gaius Lucilius",
-        "Trajan's Column",
         "Panaetius",
         "Dacia",
+        "Trajan's Column",
+        "Gaius Lucilius",
         "ancient history"
       ]
     },
@@ -3046,8 +1425,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "anthropology",
-        "ethnology"
+        "ethnology",
+        "anthropology"
       ]
     },
     "engagement_rate": {
@@ -3064,10 +1443,10 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "Middle Ages",
-        "German",
+        "history",
         "German studies",
-        "history"
+        "German",
+        "Middle Ages"
       ]
     },
     "engagement_rate": {
@@ -3146,8 +1525,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "chemistry",
-        "physics"
+        "physics",
+        "chemistry"
       ]
     },
     "engagement_rate": {
@@ -3183,8 +1562,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "mineralogy",
-        "geology"
+        "geology",
+        "mineralogy"
       ]
     },
     "engagement_rate": {
@@ -3231,8 +1610,1679 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
+        "Protestant theology",
+        "theology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87449",
+    "name": "Antal Festetics",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87451",
+    "name": "Martin A. Nowak",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87464",
+    "name": "Aglaja Orgeni",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87467",
+    "name": "Johannes W. Pichler",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "law",
+        "European Union law"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87471",
+    "name": "Heinrich Häser",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87472",
+    "name": "Josef Teichmann",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "machine learning",
+        "mathematical finance",
+        "probability theory",
+        "stochastic process",
+        "applied mathematics",
+        "stochastic analysis",
+        "econometrics",
+        "differential geometry",
+        "functional analysis",
+        "numerical analysis",
+        "Lie group",
+        "statistics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87478",
+    "name": "Kurt Rudolf Fischer",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87484",
+    "name": "Klaus Kubinger",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87488",
+    "name": "Friedrich Hopfner",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87489",
+    "name": "Hans Scherenberg",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87492",
+    "name": "Arnold Durig",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87499",
+    "name": "Otto Haupt",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "mathematics",
+        "geometry"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87502",
+    "name": "Rudolf Ladenburg",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87506",
+    "name": "Carlos Kloppenburg",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
         "theology",
-        "Protestant theology"
+        "dogmatic theology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87507",
+    "name": "Johann von Dumreicher",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87508",
+    "name": "Carl von Bach",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "machine",
+        "mechanical engineering"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87509",
+    "name": "Albert Anton von Muchar",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "archival science",
+        "classical philology",
+        "library science",
+        "philology",
+        "history",
+        "philosophy"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87511",
+    "name": "Armin von Tschermak-Seysenegg",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87512",
+    "name": "August Föppl",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "vibration",
+        "mechanics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87515",
+    "name": "Edmund von Neusser",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87520",
+    "name": "Walter Tollmien",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87522",
+    "name": "Rudolf Chrobak",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "gynaecology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87523",
+    "name": "Carl Johannes Thomae",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "function theory"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87524",
+    "name": "Marietta Blau",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87530",
+    "name": "Franz Chvostek",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87543",
+    "name": "Josef Schintlmeister",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87550",
+    "name": "Leon Lichtenstein",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "mathematics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87554",
+    "name": "Ernst G. Straus",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "linear algebra",
+        "group theory",
+        "combinatorics",
+        "geometry"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87563",
+    "name": "Josef Krawina",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87566",
+    "name": "Detlef Franke",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87567",
+    "name": "Anton Rubinstein",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "piano",
+        "musicology",
+        "music",
+        "conducting",
+        "music education"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87572",
+    "name": "Peter Salcher",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "physics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87578",
+    "name": "Wolfgang Hahn",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87580",
+    "name": "Robert Kienböck",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87588",
+    "name": "Max Freiherr von Waldberg",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87599",
+    "name": "Joseph Barth",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "anatomy",
+        "surgery",
+        "ophthalmology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87603",
+    "name": "Hans Bobek",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87607",
+    "name": "Wolfgang Sauseng",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87616",
+    "name": "Peter Balazs",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "mathematics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87619",
+    "name": "Wilhelm Brambach",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87620",
+    "name": "Luca Pacioli",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "Franciscan spirituality",
+        "mathematics",
+        "theology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87624",
+    "name": "Ulrich Schindel",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87626",
+    "name": "Wilhelm Sihler",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87627",
+    "name": "Norbert Leser",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87636",
+    "name": "Simon Grynaeus",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87644",
+    "name": "Gustav Droysen",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87645",
+    "name": "Alfred Gürtler",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87646",
+    "name": "Salomo Glassius",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87658",
+    "name": "Heinz-Günther Nesselrath",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "classical philology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q87662",
+    "name": "Victorinus Strigel",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78411",
+    "name": "Karl Bernhardi",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78412",
+    "name": "Ferdinand Fellmann",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "philosophy",
+        "philosophical anthropology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78418",
+    "name": "Bernhard Stade",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78422",
+    "name": "Adolf Reichwein",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "Jenaplan schools",
+        "adult education",
+        "pedagogy",
+        "resistance during World War II",
+        "new education movement",
+        "cultural policy",
+        "alternative education",
+        "progressive education"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78426",
+    "name": "Burkard Wilhelm Leist",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "Roman law",
+        "law",
+        "legal history"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78434",
+    "name": "Christian Rudolph Wilhelm Wiedemann",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "dipterology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78442",
+    "name": "Herbert Schnädelbach",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78445",
+    "name": "Gerhard Hessenberg",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "geometry"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78447",
+    "name": "Andreas Musculus",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78448",
+    "name": "Heinz Hopf",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "mathematics",
+        "algebraic topology",
+        "topology",
+        "geometry",
+        "differential geometry"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78450",
+    "name": "Georg Wenker",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78451",
+    "name": "Joseph Ahrens",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78452",
+    "name": "Wilhelm Weischedel",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78453",
+    "name": "Hermann Guthe",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "Hebrew Bible studies",
+        "biblical criticism"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78461",
+    "name": "Paul Althaus",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78465",
+    "name": "Reinhold Würth",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78474",
+    "name": "Leopold von Sacher-Masoch",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78477",
+    "name": "Joseph Schumpeter",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "economics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78480",
+    "name": "Max Perutz",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "biochemistry",
+        "chemistry",
+        "molecular biology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78483",
+    "name": "Richard Kuhn",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "biochemistry",
+        "chemistry"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78486",
+    "name": "Johann Palisa",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "astronomy"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78492",
+    "name": "Tomáš Garrigue Masaryk",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "educational system",
+        "literature",
+        "politics",
+        "journalism",
+        "philosophy",
+        "sociology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78496",
+    "name": "Konrad Lorenz",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "philosophy",
+        "ethology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78497",
+    "name": "Paul Feyerabend",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "economic theory"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78510",
+    "name": "Walter Kohn",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "theoretical physics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78512",
+    "name": "Hans Asperger",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "pediatrics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78528",
+    "name": "Franz Schreker",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78532",
+    "name": "Ernő Dohnányi",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78546",
+    "name": "Franz König",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78547",
+    "name": "Georg Alexander Pick",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "mathematics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78562",
+    "name": "Clemens von Pirquet",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "bacteriology",
+        "immunology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78579",
+    "name": "Pinchas Lapide",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78580",
+    "name": "Johann Radon",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "mathematical analysis",
+        "mathematics",
+        "geometry"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78599",
+    "name": "Richard Wettstein",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "botany"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78604",
+    "name": "Fritz Machlup",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "economics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78605",
+    "name": "Stephan Endlicher",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "botany"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78607",
+    "name": "Andreas Maislinger",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "international relations"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78608",
+    "name": "Carl Djerassi",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "chemistry"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78610",
+    "name": "Anton Zeilinger",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "quantum physics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78616",
+    "name": "Wolfgang Schneiderhan",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78620",
+    "name": "Herbert W. Franke",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "science fiction literature",
+        "science fiction",
+        "creative and professional writing",
+        "information technology"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78628",
+    "name": "Baron Max Hussarek von Heinlein",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "politics",
+        "ecclesiastical law"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78630",
+    "name": "Otto Stapf",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "botany"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78638",
+    "name": "Theophil Hansen",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78639",
+    "name": "Max Reinhardt",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78646",
+    "name": "Alfred Hrdlicka",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "art of painting",
+        "visual arts",
+        "chess",
+        "art of sculpture"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78655",
+    "name": "Ernst Fehr",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "experimental economics",
+        "microeconomics",
+        "behavioral economics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78667",
+    "name": "Christian Berger",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": []
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78670",
+    "name": "Peter Zoller",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "solid-state physics",
+        "theoretical physics",
+        "quantum computer",
+        "quantum optics",
+        "quantum physics"
+      ]
+    },
+    "engagement_rate": {
+      "views": {},
+      "likes": {},
+      "comments": {},
+      "engagement_rate": {}
+    }
+  },
+  {
+    "id": "Q78688",
+    "name": "Heinz von Foerster",
+    "follower_count": [],
+    "platform_specialty": {
+      "platforms": [],
+      "fields_of_work": [
+        "Second-order cybernetics",
+        "cybernetics"
       ]
     },
     "engagement_rate": {
@@ -3249,9 +3299,9 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "air pollution",
+        "meteorology",
         "climatology",
-        "meteorology"
+        "air pollution"
       ]
     },
     "engagement_rate": {
@@ -3425,12 +3475,12 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
+        "psychotherapy",
         "poetry",
         "Q12054586",
+        "humanistic psychology",
         "psychoanalytic psychotherapy",
-        "psychotherapy",
-        "psychological counseling",
-        "humanistic psychology"
+        "psychological counseling"
       ]
     },
     "engagement_rate": {
@@ -3447,8 +3497,8 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "theology",
         "educational system",
+        "theology",
         "library science"
       ]
     },
@@ -3844,9 +3894,9 @@
       "platforms": [],
       "fields_of_work": [
         "ancient astronomy",
-        "oriental studies",
         "cuneiform clay tablet",
         "history of astronomy",
+        "oriental studies",
         "cuneiform"
       ]
     },
@@ -3879,13 +3929,13 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "transportation engineering",
-        "road transport",
-        "plasma physics",
-        "physics",
-        "solid-state physics",
         "mathematics",
-        "traffic"
+        "solid-state physics",
+        "traffic",
+        "physics",
+        "plasma physics",
+        "road transport",
+        "transportation engineering"
       ]
     },
     "engagement_rate": {
@@ -3932,9 +3982,9 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
+        "botany",
         "acetylene",
-        "chemistry",
-        "botany"
+        "chemistry"
       ]
     },
     "engagement_rate": {
@@ -3981,9 +4031,9 @@
     "platform_specialty": {
       "platforms": [],
       "fields_of_work": [
-        "theology",
         "history of Christianity",
         "New Testament studies",
+        "theology",
         "classical philology"
       ]
     },
