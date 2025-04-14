@@ -1,0 +1,478 @@
+[
+  {
+    "id": "Q144488",
+    "official_name": "University of Warsaw",
+    "brand_types": [
+      "university",
+      "campus university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Warsaw"
+    ],
+    "year_established": "1816-11-19",
+    "revenue": null,
+    "website": "https://www.uw.edu.pl/"
+  },
+  {
+    "id": "Q169913",
+    "official_name": "McGhee Center for Eastern Mediterranean Studies",
+    "brand_types": [
+      "university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Alanya"
+    ],
+    "year_established": "1989-01-01",
+    "revenue": null,
+    "website": "http://www11.georgetown.edu/oip/os/sites/mideast/McGhee"
+  },
+  {
+    "id": "Q170027",
+    "official_name": "University of London",
+    "brand_types": [
+      "university",
+      "higher education institution",
+      "educational organization",
+      "open-access publisher"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "London"
+    ],
+    "year_established": "1836-01-01",
+    "revenue": null,
+    "website": "https://www.london.ac.uk/"
+  },
+  {
+    "id": "Q171249",
+    "official_name": "National Aerospace University – Kharkiv Aviation Institute",
+    "brand_types": [
+      "university",
+      "open-access publisher"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1930-01-01",
+    "revenue": null,
+    "website": "https://khai.edu/ua/"
+  },
+  {
+    "id": "Q7842",
+    "official_name": "University of Tokyo",
+    "brand_types": [
+      "university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Hongō campus"
+    ],
+    "year_established": "1877-04-12",
+    "revenue": null,
+    "website": "https://www.u-tokyo.ac.jp/zh/index.html"
+  },
+  {
+    "id": "Q7842",
+    "official_name": "University of Tokyo",
+    "brand_types": [
+      "university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Hongō campus"
+    ],
+    "year_established": "1877-04-12",
+    "revenue": null,
+    "website": "https://www.u-tokyo.ac.jp/zh/index.html"
+  },
+  {
+    "id": "Q23102",
+    "official_name": "Harbin Engineering University",
+    "brand_types": [
+      "university",
+      "ministry-owned university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1953-01-01",
+    "revenue": null,
+    "website": "http://www.hrbeu.edu.cn"
+  },
+  {
+    "id": "Q316592",
+    "official_name": "University of Wittenberg",
+    "brand_types": [
+      "university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1502-10-28",
+    "revenue": null,
+    "website": "http://www.leucorea.de/"
+  },
+  {
+    "id": "Q310564",
+    "official_name": "Al-Quds University",
+    "brand_types": [
+      "university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1977-01-01",
+    "revenue": null,
+    "website": "https://www.alquds.edu/en/"
+  },
+  {
+    "id": "Q472167",
+    "official_name": "University of Winnipeg",
+    "brand_types": [
+      "university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1967-01-01",
+    "revenue": null,
+    "website": "https://uwinnipeg.ca"
+  },
+  {
+    "id": "Q542248",
+    "official_name": "Universidad Santa María",
+    "brand_types": [
+      "university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1953-10-13",
+    "revenue": null,
+    "website": "https://www.usm.edu.ve/florencia"
+  },
+  {
+    "id": "Q550263",
+    "official_name": "University of Piraeus",
+    "brand_types": [
+      "university",
+      "open-access publisher"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Piraeus"
+    ],
+    "year_established": "1938-01-01",
+    "revenue": null,
+    "website": "http://www.unipi.gr/"
+  },
+  {
+    "id": "Q591426",
+    "official_name": "Fort Hays State University",
+    "brand_types": [
+      "university",
+      "public educational institution of the United States"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1902-01-01",
+    "revenue": null,
+    "website": "https://www.fhsu.edu/"
+  },
+  {
+    "id": "Q593556",
+    "official_name": "University of the Aegean",
+    "brand_types": [
+      "university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Mytilene"
+    ],
+    "year_established": "1984-01-01",
+    "revenue": null,
+    "website": "https://www.aegean.edu/"
+  },
+  {
+    "id": "Q332342",
+    "official_name": "Trinity College",
+    "brand_types": [
+      "university",
+      "college of the University of Cambridge",
+      "school building",
+      "educational institution",
+      "academic department",
+      "university building"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Cambridge"
+    ],
+    "year_established": "1546-01-01",
+    "revenue": "124151000",
+    "website": "https://www.trin.cam.ac.uk"
+  },
+  {
+    "id": "Q550263",
+    "official_name": "University of Piraeus",
+    "brand_types": [
+      "university",
+      "open-access publisher"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Piraeus"
+    ],
+    "year_established": "1938-01-01",
+    "revenue": null,
+    "website": "http://www.unipi.gr/"
+  },
+  {
+    "id": "Q327361",
+    "official_name": "Schiller International University",
+    "brand_types": [
+      "university",
+      "private for-profit educational institution"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1964-01-01",
+    "revenue": null,
+    "website": "https://www.schiller.edu/"
+  },
+  {
+    "id": "Q12432",
+    "official_name": "Michigan Technological University",
+    "brand_types": [
+      "university",
+      "public educational institution of the United States"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Houghton"
+    ],
+    "year_established": "1885-01-01",
+    "revenue": null,
+    "website": "https://www.mtu.edu/"
+  },
+  {
+    "id": "Q15144",
+    "official_name": "University of Massachusetts Boston",
+    "brand_types": [
+      "university",
+      "public educational institution of the United States"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1964-01-01",
+    "revenue": null,
+    "website": "https://www.umb.edu/"
+  },
+  {
+    "id": "Q23101",
+    "official_name": "Beijing Institute of Technology",
+    "brand_types": [
+      "university",
+      "ministry-owned university",
+      "vice-ministerial level university"
+    ],
+    "industry_sectors": [],
+    "headquarters": [
+      "Beijing Institute of Technology community"
+    ],
+    "year_established": "1940-01-01",
+    "revenue": null,
+    "website": "http://www.bit.edu.cn/"
+  },
+  {
+    "id": "Q658514",
+    "official_name": "Academy Vivarium Novum",
+    "brand_types": [
+      "college",
+      "publisher"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": null,
+    "revenue": null,
+    "website": "http://vivariumnovum.net/la"
+  },
+  {
+    "id": "Q794566",
+    "official_name": "Max Stern Yezreel Valley College",
+    "brand_types": [
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1965-01-01",
+    "revenue": null,
+    "website": "http://www.yvc.ac.il/"
+  },
+  {
+    "id": "Q2324588",
+    "official_name": "Šiauliai State College",
+    "brand_types": [
+      "organization",
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "2002-01-01",
+    "revenue": null,
+    "website": "http://www.svako.lt/"
+  },
+  {
+    "id": "Q2371986",
+    "official_name": "Champlain Regional College",
+    "brand_types": [
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1971-01-01",
+    "revenue": null,
+    "website": "http://admin.crc-sher.qc.ca/"
+  },
+  {
+    "id": "Q2982989",
+    "official_name": "Kettering College",
+    "brand_types": [
+      "college",
+      "church college",
+      "private not-for-profit educational institution"
+    ],
+    "industry_sectors": [
+      "higher education"
+    ],
+    "headquarters": [],
+    "year_established": "1967-01-01",
+    "revenue": null,
+    "website": "http://www.kc.edu"
+  },
+  {
+    "id": "Q4881553",
+    "official_name": "Bejoy Narayan Mahavidyalaya",
+    "brand_types": [
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1950-01-01",
+    "revenue": null,
+    "website": "http://bnmahavidyalaya.org"
+  },
+  {
+    "id": "Q4884341",
+    "official_name": "Belmont College",
+    "brand_types": [
+      "college",
+      "public educational institution of the United States"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1971-01-01",
+    "revenue": null,
+    "website": "http://www.belmontcollege.edu"
+  },
+  {
+    "id": "Q128047",
+    "official_name": "Walsh School of Foreign Service",
+    "brand_types": [
+      "college",
+      "school of international relations"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1919-01-01",
+    "revenue": null,
+    "website": "http://sfs.georgetown.edu/"
+  },
+  {
+    "id": "Q49124",
+    "official_name": "Radcliffe College",
+    "brand_types": [
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1879-01-01",
+    "revenue": null,
+    "website": "http://www.radcliffe.edu/"
+  },
+  {
+    "id": "Q530424",
+    "official_name": "St. Francis College",
+    "brand_types": [
+      "college",
+      "private not-for-profit educational institution"
+    ],
+    "industry_sectors": [
+      "higher education"
+    ],
+    "headquarters": [],
+    "year_established": "1859-01-01",
+    "revenue": null,
+    "website": "http://www.sfc.edu"
+  },
+  {
+    "id": "Q49124",
+    "official_name": "Radcliffe College",
+    "brand_types": [
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1879-01-01",
+    "revenue": null,
+    "website": "http://www.radcliffe.edu/"
+  },
+  {
+    "id": "Q530424",
+    "official_name": "St. Francis College",
+    "brand_types": [
+      "college",
+      "private not-for-profit educational institution"
+    ],
+    "industry_sectors": [
+      "higher education"
+    ],
+    "headquarters": [],
+    "year_established": "1859-01-01",
+    "revenue": null,
+    "website": "http://www.sfc.edu"
+  },
+  {
+    "id": "Q540183",
+    "official_name": "Collège Boréal",
+    "brand_types": [
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1995-01-01",
+    "revenue": null,
+    "website": "https://www.collegeboreal.ca"
+  },
+  {
+    "id": "Q2324588",
+    "official_name": "Šiauliai State College",
+    "brand_types": [
+      "organization",
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "2002-01-01",
+    "revenue": null,
+    "website": "http://www.svako.lt/"
+  },
+  {
+    "id": "Q2371986",
+    "official_name": "Champlain Regional College",
+    "brand_types": [
+      "college"
+    ],
+    "industry_sectors": [],
+    "headquarters": [],
+    "year_established": "1971-01-01",
+    "revenue": null,
+    "website": "http://admin.crc-sher.qc.ca/"
+  }
+]
