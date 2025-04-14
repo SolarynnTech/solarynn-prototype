@@ -12,9 +12,9 @@ def query_wikidata_entertainment_figures(limit=100, offset=0, user_agent="WikiDa
     sparql = SPARQLWrapper("https://query.wikidata.org/sparql")
     sparql.addCustomHttpHeader("User-Agent", user_agent)
     
-    # SPARQL query for entertainment & media figures
+    # SPARQL query for entertainment & media figures - simplified version
     query = f"""
-    SELECT ?person ?personLabel ?occupationLabel ?imdb ?productionLabel ?platformLabel
+    SELECT DISTINCT ?person ?personLabel ?occupationLabel ?imdb
     WHERE {{
       # Find people with entertainment/media occupations
       ?person wdt:P106 ?occupation.
@@ -30,19 +30,6 @@ def query_wikidata_entertainment_figures(limit=100, offset=0, user_agent="WikiDa
       
       # IMDB ID
       OPTIONAL {{ ?person wdt:P345 ?imdb. }}
-      
-      # Productions (films or TV series they were part of)
-      OPTIONAL {{ 
-        ?production wdt:P161|wdt:P57|wdt:P1040 ?person.
-      }}
-      
-      # Streaming platform affiliations
-      OPTIONAL {{
-        ?person wdt:P108 ?employer.
-        ?employer wdt:P31/wdt:P279* wd:Q24925754. # streaming media service
-        ?employer rdfs:label ?platformLabel.
-        FILTER(LANG(?platformLabel) = "en")
-      }}
       
       # Get labels
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }}

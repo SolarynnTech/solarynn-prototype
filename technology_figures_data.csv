@@ -1,0 +1,1001 @@
+id,name,patents,companies_built,product_contributions
+Q80,Tim Berners-Lee,"World Wide Web, HTTP, HTML - United Kingdom, web server, Semantic Web, WorldWideWeb, Design Issues for the World Wide Web","web browser (founded: 1990-01-01T00:00:00Z), website (founded: 1990-01-01T00:00:00Z), World Wide Web Consortium (founded: 1994-10-01T00:00:00Z) - World Wide Web, WorldWideWeb, ENQUIRE (founded: 1980-01-01T00:00:00Z), World Wide Web Foundation (founded: 2009-01-01T00:00:00Z), Open Data Institute (founded: 2012-04-13T00:00:00Z) - open data, World Wide Web Virtual Library (founded: 1991-01-01T00:00:00Z), Solid, Inrupt Inc.","WorldWideWeb, Design Issues for the World Wide Web, World Wide Web, HTTP, HTML, web server, Semantic Web"
+Q181,Jimmy Wales,Wikipedia,"Wikipedia (founded: 2001-01-15T00:00:00Z), Wikipedia (founded: 2001-01-15T00:00:00Z), Wiktionary (founded: 2002-12-12T00:00:00Z), Wikimedia Foundation (founded: 2003-06-20T00:00:00Z), Wikisource (founded: 2003-11-24T00:00:00Z), English Wikipedia (founded: 2001-01-15T00:00:00Z), Wikibooks (founded: 2003-07-19T00:00:00Z), Wikibooks (founded: 2003-07-19T00:00:00Z), Wikiquote (founded: 2003-06-27T00:00:00Z), Wikiquote (founded: 2003-06-27T00:00:00Z), Wikimedia Commons (founded: 2004-09-07T00:00:00Z), Wikinews (founded: 2004-11-08T00:00:00Z), Wikispecies (founded: 2004-09-14T00:00:00Z), Nupedia (founded: 2000-03-09T00:00:00Z), Nupedia (founded: 2000-03-09T00:00:00Z), Fandom (founded: 2004-10-18T00:00:00Z), Fandom (founded: 2004-10-18T00:00:00Z), English Wikipedia Arbitration Committee (founded: 2003-12-04T00:00:00Z), Wikimedia Incubator (founded: 2006-07-02T00:00:00Z), Bomis (founded: 1996-01-01T00:00:00Z) - Internet, Wikia Search (founded: 2008-01-07T00:00:00Z), Wikia Search (founded: 2008-01-07T00:00:00Z), Wikimedia Foundation Board of Trustees, Jimmy Wales Foundation (founded: 2015-01-01T00:00:00Z), Fandom, Inc. (founded: 2004-10-01T00:00:00Z), WikiTribune (founded: 2017-04-25T00:00:00Z), Community Central (founded: 2004-10-18T00:00:00Z), WT:Social (founded: 2019-01-01T00:00:00Z), EditThisNFT (founded: 2021-11-29T00:00:00Z), Trust Café",Wikipedia
+Q185,Larry Sanger,"Wikipedia, Citizendium","Wikipedia (founded: 2001-01-15T00:00:00Z), Wikipedia (founded: 2001-01-15T00:00:00Z), Wiktionary (founded: 2002-12-12T00:00:00Z), English Wikipedia (founded: 2001-01-15T00:00:00Z), Nupedia (founded: 2000-03-09T00:00:00Z), Citizendium (founded: 2006-10-01T00:00:00Z), Citizendium (founded: 2006-10-01T00:00:00Z), ignore all rules (founded: 2001-02-06T00:00:00Z), Knowledge Standards Foundation","Citizendium, Wikipedia"
+Q186,Ken Jennings,Omnibus,,Omnibus
+Q360,Julian Assange,,"WikiLeaks (founded: 2006-10-04T00:00:00Z), WikiLeaks (founded: 2006-10-04T00:00:00Z), World Tomorrow",
+Q4864,Eugene Kaspersky,,"Kaspersky Lab (founded: 1997-06-26T00:00:00Z) - computer security, Kaspersky Lab (founded: 1997-06-26T00:00:00Z) - computer security, InfoWatch (founded: 2003-01-01T00:00:00Z)",
+Q4934,Larry Page,,"Google (founded: 1998-09-04T00:00:00Z) - Internet, Google (founded: 1998-09-04T00:00:00Z) - information technology, Google (founded: 1998-09-04T00:00:00Z) - internet marketing, Google (founded: 1998-09-04T00:00:00Z) - software industry, Google (founded: 1998-09-04T00:00:00Z) - search engine, Google (founded: 1998-09-04T00:00:00Z) - Internet industry, Google Search (founded: 1997-09-15T00:00:00Z) - online advertising, Google Search (founded: 1997-09-15T00:00:00Z) - online advertising, Google Images (founded: 2001-07-12T00:00:00Z), Googleplex, Google Summer of Code (founded: 2005-01-01T00:00:00Z), Google Photos (founded: 2016-05-28T00:00:00Z), Google Photos (founded: 2016-05-28T00:00:00Z), Alphabet Inc. (founded: 2015-10-02T00:00:00Z) - information technology, H211, LLC, Google Photos",
+Q7251,Alan Turing,"Turing machine, Turing test, Turing completeness, Church-Turing thesis, Bombe - United Kingdom, halting problem, Computing Machinery and Intelligence, non-deterministic Turing machine, probabilistic Turing machine, Turing degree, universal Turing machine, Symmetric Turing machine, On Computable Numbers, with an Application to the Entscheidungsproblem, Intelligent Machinery, Q133854517",,"Alonzo Church, Turing machine, Turing test, Turing completeness, Church-Turing thesis, Bombe, halting problem, Computing Machinery and Intelligence, non-deterministic Turing machine, probabilistic Turing machine, Turing degree, universal Turing machine, Symmetric Turing machine, On Computable Numbers, with an Application to the Entscheidungsproblem, Intelligent Machinery, Q133854517"
+Q7259,Ada Lovelace,,,"Augustus De Morgan, Mary Somerville, William Frend"
+Q7449,Kevin Mitnick,"The Art of Deception, The Art of Intrusion, Freedom Downtime, Ghost in the Wires",,"The Art of Deception, The Art of Intrusion, Freedom Downtime, Ghost in the Wires"
+Q7526,Deborah Estrin,Scalable timers for soft state protocols,,Scalable timers for soft state protocols
+Q7534,Elizabeth J. Feinler,,"InterNIC (founded: 1972-01-01T00:00:00Z), InterNIC (founded: 1993-01-01T00:00:00Z)",
+Q7536,Valerie Aurora,,"Ada Initiative (founded: 2011-02-08T00:00:00Z), Double Union (founded: 2013-01-01T00:00:00Z)",
+Q7538,Mary Gardiner,,Ada Initiative (founded: 2011-02-08T00:00:00Z),
+Q7541,Sally Floyd,"Random early detection gateways for congestion avoidance, RFC 2309: Recommendations on Queue Management and Congestion Avoidance in the Internet, A reliable multicast framework for light-weight sessions and application level framing, Scalable timers for soft state protocols",,"Random early detection gateways for congestion avoidance, RFC 2309: Recommendations on Queue Management and Congestion Avoidance in the Internet, A reliable multicast framework for light-weight sessions and application level framing, Scalable timers for soft state protocols"
+Q7549,Sandra Lerner,,Cisco (founded: 1984-01-01T00:00:00Z) - telecommunications,
+Q7552,Pattie Maes,,,
+Q7555,Jude Milhon,,Community Memory,
+Q7557,Nicola Pellow,Line Mode Browser,,Line Mode Browser
+Q7558,Radia Perlman,"computer literacy, Spanning Tree Protocol",,"computer literacy, Spanning Tree Protocol"
+Q7562,Ping Fu,,,
+Q7563,Joyce K. Reynolds,,,
+Q7567,Jaime Levy,,,
+Q7637,Ward Cunningham,,"Wiki Wiki Web (founded: 1995-03-25T00:00:00Z), Wiki Wiki Web (founded: 1995-03-25T00:00:00Z)",
+Q8556,Edsger W. Dijkstra,"Dijkstra's algorithm, banker's algorithm, shunting-yard algorithm, smoothsort, Go To Statement Considered Harmful, The humble programmer",Guarded Command Language (founded: 1975-01-01T00:00:00Z),"banker's algorithm, shunting-yard algorithm, smoothsort, Go To Statement Considered Harmful, The humble programmer, Dijkstra's algorithm"
+Q9049,Noam Chomsky,"Chomsky hierarchy, The Sound Pattern of English, Syntactic Structures, Failed States, Manufacturing Consent, Interventions, Hegemony or Survival: America’s Quest for Global Dominance, Cartesian Linguistics, Profit over People, 9-11, American Power and the New Mandarins, Aspects of the Theory of Syntax, Class Warfare, Conditions on Transformations, Counter-Revolutionary Violence: Bloodbaths in Fact & Propaganda, Deterring Democracy, Gaza in Crisis, Ilusionistas, Imperial Ambitions, Knowledge of Language, Lectures on Government and Binding, Making the Future, Necessary Illusions: Thought Control in Democratic Societies, Objectivity and Liberal Scholarship, Occupy, The Prosperous Few and the Restless Many, World Orders Old and New, The Fateful Triangle, The Chomsky Reader, Understanding Power:  The Indispensable Chomsky, Middle East Illusions, Propaganda and the Public Mind, Why Only Us: Language and Evolution, The Political Economy of Human Rights, Current Issues in Linguistic Theory, What Kind of Creatures Are We?, Rogue States: The Rule of Force in World Affairs",Jewish Voice for Peace (founded: 1996-09-01T00:00:00Z),"Roman Jakobson, Zellig S. Harris, Chomsky hierarchy, Nelson Goodman, The Sound Pattern of English, Syntactic Structures, Failed States, Manufacturing Consent, Interventions, Hegemony or Survival: America’s Quest for Global Dominance, Cartesian Linguistics, Profit over People, 9-11, American Power and the New Mandarins, Aspects of the Theory of Syntax, Class Warfare, Conditions on Transformations, Counter-Revolutionary Violence: Bloodbaths in Fact & Propaganda, Deterring Democracy, Gaza in Crisis, Ilusionistas, Imperial Ambitions, Knowledge of Language, Lectures on Government and Binding, Making the Future, Necessary Illusions: Thought Control in Democratic Societies, Objectivity and Liberal Scholarship, Occupy, The Prosperous Few and the Restless Many, World Orders Old and New, The Fateful Triangle, The Chomsky Reader, Understanding Power:  The Indispensable Chomsky, Middle East Illusions, Propaganda and the Public Mind, Why Only Us: Language and Evolution, The Political Economy of Human Rights, Current Issues in Linguistic Theory, What Kind of Creatures Are We?, Rogue States: The Rule of Force in World Affairs"
+Q9537,Glenda Schroeder,,,
+Q9594,Dorit Aharonov,,,
+Q9599,Susanne Albers,,,
+Q9602,Frances Allen,,,
+Q9605,Sarah Allen,,,
+Q9895,Anita K. Jones,,,
+Q9912,Annie Antón,,,
+Q9931,Cecilia R. Aragon,treap,,treap
+Q9958,Winifred Asprey,,,
+Q10070,Jacob Appelbaum,Cypherpunks,Noisebridge (founded: 2007-01-01T00:00:00Z),Cypherpunks
+Q10937,Terri Attwood,,,
+Q10942,Donna Auguste,,,
+Q10947,Chrisanthi Avgerou,,,
+Q10953,Henriette Avram,MARC standards,,MARC standards
+Q10959,Ruzena Bajcsy,,,
+Q11313,John Knoll,,"Adobe Photoshop (founded: 1990-02-19T00:00:00Z), Jyn Erso, Cassian Andor, K-2SO, Orson Krennic",
+Q11428,Jean Bartik,,,
+Q11431,Evelyn Berezin,,Redactron Corporation (founded: 1969-01-01T00:00:00Z),
+Q11433,Francine Berman,,,
+Q11440,Danielle Bunten Berry,"The Seven Cities of Gold, M.U.L.E., Command HQ",,"The Seven Cities of Gold, M.U.L.E., Command HQ"
+Q11458,Orna Berry,,Q106690657 (founded: 2020-01-01T00:00:00Z),
+Q11470,Sue Black,,TechMums,
+Q11481,Kathleen Booth,assembly language,,assembly language
+Q11483,Anita Borg,Anita Borg Institute for Women and Technology - United States,"Grace Hopper Celebration of Women in Computing (founded: 1994-01-01T00:00:00Z), Anita Borg Institute for Women and Technology (founded: 1994-01-01T00:00:00Z), Systers (founded: 1987-01-01T00:00:00Z)",Anita Borg Institute for Women and Technology
+Q11484,Maxine D. Brown,,,
+Q11487,Jennifer Tour Chayes,,,
+Q11488,Amanda Chessell,,,
+Q11489,Anne Condon,,,
+Q11490,Lynn Conway,,,
+Q11493,Danese Cooper,,,
+Q11504,Kate Craig-Wood,,,
+Q11529,Leah Culver,,,
+Q11542,Dorothy E. Denning,,,
+Q11569,Susan T. Dumais,,Latent semantic analysis (founded: 1989-06-13T00:00:00Z),
+Q11580,Cynthia Dwork,,,
+Q11586,Annie Easley,,,
+Q11588,Thelma Estrin,,,
+Q11589,Jeanne Ferrante,,,
+Q11590,Phyllis Fox,DYNAMO,,DYNAMO
+Q11594,Frances A. Rosamond,,,
+Q11596,Charlotte Froese Fischer,,,
+Q11600,Susan Gerhart,,,
+Q11604,Carole Goble,"ELIXIR - Sweden, ELIXIR - Switzerland, ELIXIR - Netherlands, ELIXIR - United Kingdom, ELIXIR - Czech Republic",,ELIXIR
+Q11605,Adele Goldberg,,,
+Q11609,Shafrira Goldwasser,,,
+Q11612,Susan L. Graham,,,
+Q11614,Diane Greene,,VMware (founded: 1998-01-01T00:00:00Z) - software industry,
+Q11615,Sheila Greibach,,,
+Q11619,Nancy Davis Griffeth,,,
+Q11620,Rebecca Grinter,,,
+Q11623,Nancy Hafkin,,,
+Q11624,Lois Haibt,,,
+Q11625,Ashawna Hailey,,,
+Q11626,Wendy Hall,,Microcosm (founded: 1988-01-01T00:00:00Z),
+Q11628,Margaret Hamilton,,"Hamilton Technologies (founded: 1986-01-01T00:00:00Z), Hamilton Technologies (founded: 1986-01-01T00:00:00Z)",
+Q11630,Jane Hillston,,PEPA,
+Q11636,Betty Holberton,ENIAC - United States,,ENIAC
+Q11638,Molly Holzschlag,,,
+Q11641,Grace Hopper,FLOW-MATIC,,"FLOW-MATIC, Howard Engstrom"
+Q11644,Ayanna Howard,,,
+Q11648,Mary Jane Irwin,,,
+Q11688,Leah Jamieson,,,
+Q11689,Sabina Jeschke,,,
+Q11740,Katherine Johnson,,,William Claytor
+Q11742,Lynne Jolitz,,,
+Q11743,Lila Kari,,,"Arto Salomaa, Gheorghe Păun"
+Q11745,Arfa Karim,,,
+Q11748,Anna Karlin,,,
+Q11749,Lydia E. Kavraki,,,
+Q11752,Mary Kenneth Keller,BASIC,,BASIC
+Q11754,Maria Klawe,,,
+Q11755,Daphne Koller,Coursera - United States,Coursera (founded: 2012-01-01T00:00:00Z) - educational technology,Coursera
+Q11757,Janet Kolodner,,,
+Q11760,Marta Zofia Kwiatkowska,,,
+Q11763,Monica S. Lam,,,
+Q11766,Susan Landau,,,
+Q11770,Amy L. Lansky,,,
+Q11771,Corinna E. Lathan,,,
+Q11773,Nancy Leveson,,,
+Q11775,Ming C. Lin,,,
+Q11777,Joyce Currie Little,,,
+Q11778,Liuba Shrira,,,
+Q11779,Nancy Lynch,,,
+Q12382,Shigeru Miyamoto,"The Legend of Zelda, Donkey Kong, Super Mario, F-Zero, Pikmin","Mario (founded: 1981-07-09T00:00:00Z), Donkey Kong, The Legend of Zelda, Luigi, Yoshi, Princess Peach, Ganon, Link, Bowser, Princess Zelda, Midna, Chain Chomp, Boo, Fox McCloud, Falco Lombardi, Wolf O'Donnell, Bowser Jr., The Legend of Zelda, Captain Olimar, The Adventures of Super Mario Bros. 3, Slippy Toad, Super Mario, Mario, Hyrule","Donkey Kong, Super Mario, F-Zero, Pikmin, The Legend of Zelda"
+Q12780,Rashad Khalifa,,United Submitters International,
+Q12857,Daniel Tammet,"Born on a Blue Day, Embracing the Wide Sky, Every Word is a Bird We Teach to Sing",Mänti,"Born on a Blue Day, Embracing the Wide Sky, Every Word is a Bird We Teach to Sing"
+Q14010,Ursula Martin,,,
+Q14073,Alexia Massalin,,,
+Q14086,Marissa Mayer,,Altaba (founded: 1995-01-01T00:00:00Z) - investment management,
+Q14089,Lori McCreary,,,
+Q14095,Renée Miller,,,
+Q14096,Johanna Moore,,,
+Q14097,Enid Mumford,,,
+Q14098,Caryn Navy,,,
+Q14099,Evi Nemeth,,,
+Q14100,Klara Dan von Neumann,,,
+Q14101,Angela Orebaugh,,,
+Q14102,Wanda Orlikowski,,,
+Q14104,Susan Owicki,,,
+Q14105,Meredith L. Patterson,,,
+Q14106,Stormy Peters,,,
+Q14109,Rosalind Picard,,Empatica - health care,
+Q14110,Nichole Pinkard,,,
+Q14111,Diane Pozefsky,,,
+Q14113,Joanne Pransky,,,
+Q14120,Dana Randall,,,
+Q14210,Elizabeth Rather,,,
+Q14218,Colette Rolland,,,
+Q14220,Dana Ron,,,
+Q14223,Daniela L. Rus,,,
+Q14227,Reihaneh Safavi-Naini,,,
+Q14232,Jean E. Sammet,FORMAC,,FORMAC
+Q14234,Sarit Kraus,,,
+Q14237,Margo Seltzer,,Sleepycat Software (founded: 1997-01-01T00:00:00Z) - software industry,
+Q14239,Kaisa Sere,,,
+Q14241,Mary Shaw,,,
+Q14243,Hava Siegelmann,,,
+Q14250,Barbara Simons,,,
+Q14252,Diane Souvaine,,,
+Q14254,Karen Spärck Jones,,,
+Q14257,Ellen Spertus,,,
+Q14260,Katherine St. John,,,
+Q14261,Stella Atkins,,,
+Q14263,Ileana Streinu,,,
+Q14264,Maureen C. Stone,,,
+Q15020,Carolyn Talcott,,,
+Q15030,Éva Tardos,,,
+Q15036,Jaime Teevan,,,
+Q15313,Marilyn Tremaine,,,
+Q16057,Dana Ulery,,,
+Q16118,Manuela M. Veloso,,,
+Q16372,Nalini Venkatasubramanian,,,
+Q16477,Dorothea Wagner,,,
+Q16478,Wang Xiaoyun,,,
+Q16479,Tandy Warnow,,,
+Q16480,Elaine Weyuker,,,
+Q16481,Sue Whitesides,,,
+Q16482,Telle Whitney,,"Grace Hopper Celebration of Women in Computing (founded: 1994-01-01T00:00:00Z), Anita Borg Institute for Women and Technology (founded: 1994-01-01T00:00:00Z)",
+Q16484,Mary Allen Wilkes,,,
+Q16486,Gail Williams,,,
+Q16487,Myra Wilson,,,
+Q16489,Sophie Wilson,ARM architecture,,ARM architecture
+Q16490,Jeannette Wing,,,
+Q16492,Mary Lee Woods,,,
+Q16493,Beatrice Helen Worsley,,,
+Q16494,Margaret H. Wright,,,
+Q16496,Irma Wyman,,,
+Q16497,Frances Yao,A scheduling model for reduced CPU energy,,A scheduling model for reduced CPU energy
+Q16498,Kateryna Yushchenko,,,"Boris Gnedenko, Sergey Alexeyevich Lebedev"
+Q16500,Maria Zemankova,,,
+Q17455,John von Neumann,"von Neumann universe, von Neumann architecture, Von Neumann–Bernays–Gödel set theory, Von Neumann stability analysis, von Neumann bicommutant theorem, minimax theorem, von Neumann conjecture, Von Neumann neighborhood, von Neumann universal constructor, von Neumann algebra, Von Neumann equation, von Neumann regular ring, von Neumann ordinal, von Neumann cellular automaton, von Neumann–Morgenstern utility theorem, abelian von Neumann algebra, von Neumann entropy, Weyl–von Neumann theorem, First draft of a report on the EDVAC",quantum mechanics,"von Neumann universe, von Neumann architecture, Gábor Szegő, Von Neumann–Bernays–Gödel set theory, Von Neumann stability analysis, László Rátz, von Neumann bicommutant theorem, minimax theorem, von Neumann conjecture, Von Neumann neighborhood, von Neumann universal constructor, von Neumann algebra, Von Neumann equation, von Neumann regular ring, von Neumann ordinal, von Neumann cellular automaton, von Neumann–Morgenstern utility theorem, abelian von Neumann algebra, von Neumann entropy, Weyl–von Neumann theorem, First draft of a report on the EDVAC"
+Q17457,Donald Knuth,"TeX, The Art of Computer Programming, The Art of Computer Programming, literate programming, Computer Modern, WEB, Metafont, CWEB","TeX (founded: 1978-01-01T00:00:00Z), TeX (founded: 1978-01-01T00:00:00Z), Knuth's up-arrow notation, WEB, Man or boy test, Knuth–Plass line-breaking algorithm (founded: 1981-01-01T00:00:00Z)","The Art of Computer Programming, literate programming, Computer Modern, WEB, Metafont, CWEB, TeX"
+Q17520,Kathleen Antonelli,,,
+Q17579,Tsutomu Yamaguchi,,,
+Q18263,Gina Bianchini,,"Ning (founded: 2004-01-01T00:00:00Z), Ning (founded: 2004-01-01T00:00:00Z)",
+Q18950,Theo de Raadt,"OpenBSD, NetBSD, OpenSSH, Calgary Internet Exchange","OpenBSD (founded: 1995-10-18T00:00:00Z), Calgary Internet Exchange, OpenBSD Project (founded: 1995-01-01T00:00:00Z)","OpenSSH, Calgary Internet Exchange, OpenBSD, NetBSD"
+Q19837,Steve Jobs,"iPhone, iPad - United States, iPod, iTunes, iMac, Apple I, App Store, Apple Lisa, NeXTSTEP, Mac OS X 10.0, Apple II (US4136359), NeXT Computer","Apple (founded: 1976-04-01T00:00:00Z) - electronics, Apple (founded: 1976-04-01T00:00:00Z) - information technology, Apple (founded: 1976-04-01T00:00:00Z) - digital distribution, Apple (founded: 1976-04-01T00:00:00Z) - software development, Apple (founded: 1976-04-01T00:00:00Z) - software industry, Apple (founded: 1976-04-01T00:00:00Z) - mobile phone industry, Apple (founded: 1976-04-01T00:00:00Z) - consumer electronics industry, macOS (founded: 2001-03-24T00:00:00Z), NeXT (founded: 1985-06-20T00:00:00Z) - computer hardware, NeXT (founded: 1985-06-20T00:00:00Z) - computer hardware, NeXT (founded: 1985-06-20T00:00:00Z) - software industry, NeXT (founded: 1985-06-20T00:00:00Z) - software industry, Macintosh 128K Home Computer","Museum of Modern Art, App Store, Apple Lisa, NeXTSTEP, Mac OS X 10.0, Apple II, NeXT Computer, iPhone, iPad, iPod, iTunes, iMac, Apple I"
+Q20906,Felix von Leitner,"Fefes Blog, Q126720342",,"Fefes Blog, Q126720342"
+Q20995,Ahn Cheol-soo,,"AhnLab Inc (founded: 1995-01-01T00:00:00Z) - software industry, The People's Party (founded: 2020-02-23T00:00:00Z)",
+Q21585,Cynthia Breazeal,Kismet - United States,,Kismet
+Q21805,Sandy Carter,,,
+Q22677,Michael S. Hart,,Project Gutenberg (founded: 1971-07-04T00:00:00Z),
+Q23889,Clive Sinclair,,"Sinclair Research (founded: 1961-01-01T00:00:00Z) - electronics industry, Sinclair Vehicles (founded: 1983-01-01T00:00:00Z), Sinclair Radionics (founded: 1961-01-01T00:00:00Z) - electronics",Museum Boijmans Van Beuningen
+Q27376,Christoph Zenger,,,
+Q28900,John George Kemeny,"BASIC, Kemeny's constant, Report of the President's Commission on the Accident at Three Mile Island : the need for change : the legacy of TMI / United States. - 1979",Dartmouth BASIC,"Kemeny's constant, Report of the President's Commission on the Accident at Three Mile Island : the need for change : the legacy of TMI / United States. - 1979, BASIC"
+Q29664,Narendra Karmarkar,,,
+Q30942,Guido van Rossum,"Python, ABC - Netherlands",,"ABC, Python"
+Q32338,Leonard Kleinrock,,Nomadix (founded: 1998-01-01T00:00:00Z),
+Q34965,Jeri Ellsworth,"C64 Direct-to-TV, C-One, castAR - United States, Tilt5","castAR (founded: 2013-03-01T00:00:00Z), Tilt5 (founded: 2017-01-01T00:00:00Z)","C64 Direct-to-TV, C-One, castAR, Tilt5"
+Q36215,Mark Zuckerberg,,"Facebook (founded: 2004-02-04T00:00:00Z), Facebook (founded: 2004-02-04T00:00:00Z), Meta Platforms (founded: 2004-07-29T00:00:00Z) - information technology, Meta Platforms (founded: 2004-07-29T00:00:00Z) - information technology, FWD.us (founded: 2013-04-11T00:00:00Z) - immigration policy, Breakthrough Prize in Mathematics (founded: 2013-01-01T00:00:00Z), Chan Zuckerberg Initiative (founded: 2015-01-01T00:00:00Z) - philanthropy, New Horizons in Mathematics Prize, Synapse Media Player",
+Q37195,Caterina Fake,,"Flickr (founded: 2004-02-10T00:00:00Z), Hunch (founded: 2009-06-15T00:00:00Z) - recommender system",
+Q40289,Adele Goldstine,,,
+Q41378,Charles Stark Draper,,,
+Q41390,Kurt Gödel,"Gödel's incompleteness theorems, Von Neumann–Bernays–Gödel set theory, Gödel's ontological proof, Gödel's completeness theorem, Gödel's second incompleteness theorem, Gödel numbering, Gödel metric, constructible universe, Gödel-incomplete machine, Gödel's speed-up theorem, Gödel's β function, Gödel operation, Gödel logic, Godel's first incompleteness theorem","Gödel metric (founded: 1949-01-01T00:00:00Z), Gödel's Loophole (founded: 1947-01-01T00:00:00Z)","Philipp Furtwängler, Gödel's incompleteness theorems, Von Neumann–Bernays–Gödel set theory, Gödel's ontological proof, Gödel's completeness theorem, Gödel's second incompleteness theorem, Gödel numbering, Gödel metric, constructible universe, Gödel-incomplete machine, Gödel's speed-up theorem, Gödel's β function, Gödel operation, Gödel logic, Godel's first incompleteness theorem"
+Q41624,Erna Schneider Hoover,,,
+Q41638,Mary Lou Jepsen,,"Pixel Qi (founded: 2008-01-01T00:00:00Z) - electronic visual display, Openwater",San Francisco Museum of Modern Art
+Q43768,Heinz Zemanek,,,
+Q44808,Patrick Volkerding,Slackware,,Slackware
+Q45575,Dennis M. Ritchie,"Unix, C, Plan 9, Multics, B, BCPL, The C Programming Language, ALTRAN",history of Unix (founded: 1969-01-01T00:00:00Z),"Plan 9, Multics, B, BCPL, The C Programming Language, ALTRAN, Unix, C"
+Q45864,John McAfee,,"McAfee, LLC (founded: 1987-01-01T00:00:00Z) - antivirus software, McAfee, LLC (founded: 1987-01-01T00:00:00Z) - software industry, McAfee, LLC (founded: 1987-01-01T00:00:00Z) - computer security, McAfee, LLC (founded: 1987-01-01T00:00:00Z) - computer security industry",
+Q46633,Charles Babbage,analytical engine,"Charles Babbage Fonds, Babbage's Analytical Engine (founded: 1871-01-01T00:00:00Z)","analytical engine, Science Museum"
+Q48971,Susan Kare,Athens,"Sad Mac, Happy Mac, Glam Media (founded: 2003-01-01T00:00:00Z) - electronic media, Dogcow","Museum of Modern Art, San Francisco Museum of Modern Art, Athens"
+Q49245,Marlyn Meltzer,,,
+Q49656,Benjamin Mako Hill,,,
+Q49813,Peter J. Denning,,,
+Q49815,Rob Levin,freenode,freenode (founded: 1995-01-01T00:00:00Z),"Nadia Boulanger, freenode"
+Q49819,Charles Simonyi,,Intentional Software (founded: 2002-09-01T00:00:00Z) - software engineering,
+Q49823,Dana Scott,,SIGLOG (founded: 2014-01-01T00:00:00Z),
+Q49826,Andrew Rubin,,"Android (founded: 2008-09-23T00:00:00Z), Danger, Inc. (founded: 2000-01-01T00:00:00Z) - software industry, Essential Products (founded: 2015-11-09T00:00:00Z) - technology",
+Q49828,Randy Pausch,The Last Lecture,,The Last Lecture
+Q49971,Ginni Rometty,,,
+Q51708,Patricia Selinger,,,
+Q51741,Carol Shaw,River Raid,River Raid,River Raid
+Q51769,Frances Spence,,,
+Q51781,Katia Sycara,,,
+Q52254,Mike Cowlishaw,REXX,,REXX
+Q52559,Ruth Teitelbaum,,,
+Q52994,Michael Morhaime,,"Blizzard Entertainment (founded: 1991-02-08T00:00:00Z) - video game industry, Dreamhaven (founded: 2020-11-22T00:00:00Z), Dreamhaven (founded: 2020-11-22T00:00:00Z)",
+Q53465,Péter Gervai,,,
+Q55118,Ben Goodger,,,
+Q55123,Alan Cox,,Fuzix OS (founded: 2014-10-31T00:00:00Z),
+Q57403,Wilhelm Schickard,Q28503169,,Q28503169
+Q57406,Armin Meiwes,,,
+Q60093,Konrad Zuse,"Plankalkül, Z3, Z22, Z1 - Germany, Z2, Z4, Der Computer – Mein Lebenswerk, Calculating Space, Z11, Z5, Z23 (computer)","Z3 (founded: 1941-01-01T00:00:00Z), Z1 (founded: 1937-01-01T00:00:00Z), Z2 (founded: 1940-01-01T00:00:00Z), Z5 (founded: 1953-01-01T00:00:00Z), Zuse Z22","ZKM Center for Art and Media Karlsruhe, Z3, Z22, Z1, Z2, Z4, Der Computer – Mein Lebenswerk, Calculating Space, Z11, Z5, Z23 (computer), Plankalkül"
+Q60543,Kim Dotcom,,"Megaupload (founded: 2005-03-21T00:00:00Z), Megaupload (founded: 2005-03-21T00:00:00Z), Mega (founded: 2013-01-01T00:00:00Z), Mega (founded: 2013-01-01T00:00:00Z), Internet Party (founded: 2014-01-01T00:00:00Z)",
+Q60903,George Yury Right,,,
+Q61743,Carl Adam Petri,Petri net,,Petri net
+Q61885,Carl Gustav Hempel,Philosophy of Natural Science,,Philosophy of Natural Science
+Q62164,Horst Feistel,Feistel cipher,,Feistel cipher
+Q62339,Tron,Q15804062,,Q15804062
+Q62843,Bob Kahn,"Transmission Control Protocol, Internet protocol suite, ARPANET","Internet Society (founded: 1992-12-11T00:00:00Z), Corporation for National Research Initiatives","Internet protocol suite, ARPANET, Transmission Control Protocol"
+Q62849,Miguel de Icaza,"GNOME, Mono","Gnumeric (founded: 1998-01-01T00:00:00Z), Ximian (founded: 1999-01-01T00:00:00Z) - software industry, Mono (founded: 2004-06-30T00:00:00Z), GNU Midnight Commander (founded: 1994-01-01T00:00:00Z), GNU Midnight Commander (founded: 1994-01-01T00:00:00Z), Xamarin (founded: 2011-05-01T00:00:00Z) - software industry, The GNOME Project (founded: 1997-08-01T00:00:00Z)","Mono, GNOME"
+Q62857,Maurice Wilkes,Electronic Delay Storage Automatic Calculator,,Electronic Delay Storage Automatic Calculator
+Q62861,Alan Perlis,ALGOL,,ALGOL
+Q62866,Ivan Sutherland,,Evans & Sutherland (founded: 1968-01-01T00:00:00Z),
+Q62870,Stephen Cook,,,
+Q62874,John Edward Hopcroft,,,
+Q62877,James H. Wilkinson,backward error analysis,,backward error analysis
+Q62882,Marc Andreessen,"Mosaic, Fairshake","Netscape (founded: 1994-04-04T00:00:00Z) - software industry, Ning (founded: 2004-01-01T00:00:00Z), Ning (founded: 2004-01-01T00:00:00Z), Opsware (founded: 1999-01-01T00:00:00Z), Andreessen Horowitz (founded: 2009-07-06T00:00:00Z) - financial services","Mosaic, Fairshake"
+Q62886,Peter Norton,,"Norton Utilities, Norton Utilities, Peter Norton Computing (founded: 1982-01-01T00:00:00Z) - software engineering",
+Q62888,Andrew Yao,Yao's principle,"exponential search, Innovations in Theoretical Computer Science (founded: 2010-01-01T00:00:00Z)",Yao's principle
+Q62890,Gene Amdahl,Amdahl's law,"computer architecture, Amdahl Corporation (founded: 1970-10-19T00:00:00Z)",Amdahl's law
+Q62894,Charles Bachman,Integrated Data Store,,Integrated Data Store
+Q62898,Alfred Aho,"AWK, Principles of Compiler Design",,"AWK, Principles of Compiler Design"
+Q62899,Steve Mann,,,
+Q62901,Sebastian Thrun,,"Waymo (founded: 2016-12-13T00:00:00Z) - unmanned vehicle, X Development (founded: 2010-01-01T00:00:00Z) - research and development, Udacity (founded: 2011-06-01T00:00:00Z) - online education",
+Q62904,Ben Shneiderman,,"The Interactive Encyclopedia System (founded: 1983-01-01T00:00:00Z), University of Maryland Human–Computer Interaction Lab (founded: 1983-01-01T00:00:00Z)",
+Q62906,Jochen Liedtke,L4 microkernel family,,L4 microkernel family
+Q62908,Mark Zbikowski,,,
+Q62910,Carver Mead,,"Synaptics (founded: 1986-01-01T00:00:00Z) - computer hardware, Impinj (founded: 2000-01-01T00:00:00Z)",
+Q62913,Mark Weiser,,,
+Q62915,Jim Kajiya,,,
+Q63363,Klaus Knopper,,,
+Q63768,Igor Sysoev,,"nginx (founded: 2004-10-04T00:00:00Z), NGINX, Inc. (founded: 2011-01-01T00:00:00Z)",
+Q64050,Zeev Suraski,,"Zend Engine (founded: 1999-01-01T00:00:00Z), Zend Technologies (founded: 1999-01-01T00:00:00Z) - software industry",
+Q64088,Michael Spindler,,,
+Q64564,Daniel Domscheit-Berg,,,
+Q65212,Volker Strassen,,,
+Q65344,Andy Bechtolsheim,,"Sun Microsystems (founded: 1982-02-24T00:00:00Z) - computing, Sun Microsystems (founded: 1982-02-24T00:00:00Z) - software development, Moovweb (founded: 2003-01-01T00:00:00Z)",
+Q65668,Christof Leng,,Pirate Party Germany (founded: 2006-09-10T00:00:00Z),
+Q66656,Rudolf Bayer,,,
+Q68237,Georg C. F. Greve,,"Free Software Foundation Europe (founded: 2001-03-10T00:00:00Z) - Förderung der Erziehung, Volks- und Berufsbildung einschließlich der Studentenhilfe",
+Q68604,Friedrich L. Bauer,,,
+Q68998,Manfred Trenz,,,
+Q69412,Rolf Landauer,,,
+Q70455,Karl Steinbuch,,"Lernmatrix, informatics (founded: 1957-01-01T00:00:00Z)",
+Q70870,Harald Welte,gpl-violations.org,"Open Source Mobile Communications, Ulogd",gpl-violations.org
+Q72250,Wau Holland,,Chaos Computer Club (founded: 1981-09-12T00:00:00Z),
+Q73000,Bernd Sturmfels,,,
+Q74894,Martin Fowler,,Row data gateway,
+Q75778,Joseph Weizenbaum,"SLIP, Computer Power and Human Reason: From Judgment to Calculation",SLIP (founded: 1960-01-01T00:00:00Z),"SLIP, Computer Power and Human Reason: From Judgment to Calculation"
+Q76116,Johann Helfrich von Müller,,,
+Q76308,Günter Hotz,,,
+Q76694,Jawed Karim,YouTube - United States,"YouTube (founded: 2005-02-14T00:00:00Z) - online video platform, YouTube (founded: 2005-02-14T00:00:00Z) - Internet industry, Me at the zoo",YouTube
+Q76780,Matthias Ettrich,,"KDE (founded: 1996-10-14T00:00:00Z), KDE e.V. (founded: 1997-11-27T00:00:00Z) - Förderung der Erziehung, Volks- und Berufsbildung einschließlich der Studentenhilfe",
+Q77842,Ingo Rechenberg,,,
+Q77843,Mario Jeckle,,,
+Q78106,Arnold Schönhage,Schönhage–Strassen algorithm,,Schönhage–Strassen algorithm
+Q78399,Hans Georg Bock,,,
+Q78688,Heinz von Foerster,,,
+Q82556,Jakob Nielsen,,Nielsen Norman Group (founded: 1998-08-28T00:00:00Z) - information technology consulting,
+Q85240,Frank Ostrowski,,,
+Q86300,Hans Peter Luhn,The Automatic Creation of Literature Abstracts,,The Automatic Creation of Literature Abstracts
+Q87216,Odo Josef Struger,,,
+Q87357,Gerhard Chroust,,,
+Q87430,Franz Josef Radermacher,,,Rolf Kaerkes
+Q88170,Ingo Wegener,,,Wolfgang Paul
+Q88295,Thomas Henzinger,,,
+Q88431,Peter A. Bruck,,,
+Q88626,Raúl Rojas,,,
+Q89167,Kai Krause,Kai's Power Tools,,Kai's Power Tools
+Q89269,Gustav Tauschek,,,
+Q89467,Georg Gottlob,,,Curt Christian
+Q90046,Wolfgang Pree,,,
+Q90302,Gottfried Ungerboeck,,,
+Q90313,Kurt Mehlhorn,,,
+Q90599,Reinhard Wilhelm,,,
+Q90604,Bernhard Korte,,,
+Q91233,Michael Kohlhase,OMDoc,,OMDoc
+Q91452,Bernhard Thalheim,,,
+Q91503,Henning Kagermann,,,
+Q91769,Tom Stonier,,,
+Q92596,Edgar F. Codd,"Codd's cellular automaton, A relational model of data for large shared data banks",,"Codd's cellular automaton, A relational model of data for large shared data banks"
+Q92597,Larry Wall,"Perl, patch, Raku","Perl (founded: 1987-01-01T00:00:00Z), patch (founded: 1985-01-01T00:00:00Z)","patch, Raku, Perl"
+Q92600,Alexey Pajitnov,Tetris,"Tetris, The Tetris Company (founded: 1996-01-01T00:00:00Z) - video game industry, Tetris Online, Inc. (founded: 2006-01-01T00:00:00Z) - video game industry","Tetris, Museum of Modern Art"
+Q92601,Nicholas Negroponte,,"One Laptop per Child (founded: 2005-01-01T00:00:00Z), MIT Media Lab (founded: 1985-01-01T00:00:00Z)",San Francisco Museum of Modern Art
+Q92602,Tony Hoare,"quicksort, null, communicating sequential processes, Hoare logic",,"quicksort, null, communicating sequential processes, Hoare logic"
+Q92604,Niklaus Wirth,"Pascal, Modula-2, Euler, Oberon, ALGOL W, Modula, PL360",Oberon-2 (founded: 1991-01-01T00:00:00Z),"Pascal, Modula-2, Euler, Oberon, ALGOL W, Modula, PL360"
+Q92605,John Carmack,"Wolfenstein 3D, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Doom, Quake, Quake, Quake, Quake, Quake, Quake, Quake, Quake, Quake, Quake, Quake","id Software (founded: 1991-02-01T00:00:00Z) - video game industry, Armadillo Aerospace (founded: 2000-01-01T00:00:00Z) - aerospace industry, id Tech 1","Doom, Quake, Wolfenstein 3D"
+Q92606,Jim Gray,,Conference on Innovative Data Systems Research (founded: 2002-01-01T00:00:00Z),
+Q92608,Brian Kernighan,"Unix, AWK, AMPL, The C Programming Language","history of Unix (founded: 1969-01-01T00:00:00Z), PIC","AWK, AMPL, The C Programming Language, Unix"
+Q92609,Fred Brooks,OS/360,computer architecture,OS/360
+Q92611,Haskell Curry,"Curry's paradox, Curry–Howard correspondence, currying",,"Paul Bernays, Curry's paradox, Curry–Howard correspondence, currying"
+Q92612,Richard M. Karp,A simple algorithm for finding frequent elements in streams and bags,Karp's 21 NP-complete problems,A simple algorithm for finding frequent elements in streams and bags
+Q92613,Leslie Lamport,"LaTeX, distributed computing, Paxos, temporal logic of actions, TLA+",,"distributed computing, Paxos, temporal logic of actions, TLA+, LaTeX"
+Q92616,Sid Meier,,"MicroProse (founded: 1982-01-01T00:00:00Z) - video game industry, Firaxis Games (founded: 1996-01-01T00:00:00Z) - video game industry",
+Q92617,Paul Baran,"packet switching, On Distributed communications: I.introduction to distributed communications networks","Telebit (founded: 1984-01-01T00:00:00Z) - telecommunication, Institute for the Future (founded: 1968-01-01T00:00:00Z)","packet switching, On Distributed communications: I.introduction to distributed communications networks"
+Q92618,Peter Naur,,,
+Q92619,Richard Hamming,"Hamming distance, Hamming graph, Hamming code, Hamming bound, Hamming weight, Error Detecting and Error Correcting Codes, Hamming window",,"Hamming distance, Hamming graph, Hamming code, Hamming bound, Hamming weight, Error Detecting and Error Correcting Codes, Hamming window"
+Q92620,Bjarne Stroustrup,C++,,C++
+Q92621,Andrew S. Tanenbaum,MINIX,,MINIX
+Q92622,James Gosling,,,
+Q92623,Jon Postel,,"Internet Assigned Numbers Authority (founded: 1981-01-01T00:00:00Z), ICANN (founded: 1998-09-18T00:00:00Z)",
+Q92624,Dan Bricklin,VisiCalc,"Software Arts (founded: 1979-01-01T00:00:00Z) - software industry, Trellix (founded: 1997-01-01T00:00:00Z)",VisiCalc
+Q92625,Fernando J. Corbató,"Multics, Compatible Time-Sharing System",,"Multics, Compatible Time-Sharing System"
+Q92626,Manuel Blum,,,
+Q92627,Gary Kildall,CP/M,"Digital Research (founded: 1974-01-01T00:00:00Z) - software industry, Digital Research (founded: 1974-01-01T00:00:00Z) - software industry, CP/M (founded: 1974-01-01T00:00:00Z)",CP/M
+Q92628,Juris Hartmanis,,,
+Q92629,Kenneth E. Iverson,,,
+Q92632,John Cocke,,,
+Q92633,Shawn Fanning,,"Path (founded: 2010-01-01T00:00:00Z), SNOCAP (founded: 2002-01-01T00:00:00Z)",
+Q92634,Niklas Zennström,,"Skype (founded: 2003-08-01T00:00:00Z), Skype Technologies (founded: 2003-01-01T00:00:00Z) - software industry, Atomico (founded: 2006-01-01T00:00:00Z) - financial services",
+Q92635,Jacques Vallée,"The Invisible College, Passport to Magonia, Messengers of Deception: UFO Contacts and Cults, Alien Contact Trilogy",,"The Invisible College, Passport to Magonia, Messengers of Deception: UFO Contacts and Cults, Alien Contact Trilogy"
+Q92636,John Ousterhout,,Ousterhout's dichotomy,
+Q92637,Ray Ozzie,,Iris Associates (founded: 1984-01-01T00:00:00Z) - higher education,
+Q92638,Robert Tarjan,,,
+Q92639,Christos Papadimitriou,A simple algorithm for finding frequent elements in streams and bags,,A simple algorithm for finding frequent elements in streams and bags
+Q92641,Robert W. Floyd,,,
+Q92642,Ton Roosendaal,"Blender, Elephants Dream","Blender (founded: 1998-01-02T00:00:00Z), Blender Foundation (founded: 2002-05-01T00:00:00Z)","Blender, Elephants Dream"
+Q92643,Robin Milner,,,
+Q92644,Butler Lampson,,,
+Q92646,John Henry Holland,,,
+Q92647,Robert Tappan Morris,,"Y Combinator (founded: 2005-03-01T00:00:00Z) - investment, Y Combinator (founded: 2005-03-01T00:00:00Z) - venture capital",
+Q92648,Brendan Eich,JavaScript,"SpiderMonkey, SpiderMonkey, Brave (founded: 2016-01-01T00:00:00Z), Brave Software (founded: 2015-05-28T00:00:00Z)",JavaScript
+Q92649,Amir Pnueli,,,
+Q92650,Paul Graham,"Hacker News, Arc, Y Combinator - United States, Hackers & Painters, On Lisp","Hacker News (founded: 2007-02-19T00:00:00Z), Arc (founded: 2008-01-01T00:00:00Z), Y Combinator (founded: 2005-03-01T00:00:00Z) - investment, Y Combinator (founded: 2005-03-01T00:00:00Z) - venture capital, Viaweb (founded: 1995-01-01T00:00:00Z), Blub","Hacker News, Arc, Y Combinator, Hackers & Painters, On Lisp"
+Q92651,Håkon Wium Lie,,,
+Q92652,Hans Reiser,,Namesys (founded: 2004-01-01T00:00:00Z) - information technology,
+Q92653,Bruce Perens,,"open source (founded: 1998-02-02T00:00:00Z), Open Source Initiative (founded: 1998-02-01T00:00:00Z)",
+Q92655,Marcelo Tosatti,,,
+Q92656,Walter Savitch,,,
+Q92657,David D. Clark,,,
+Q92658,Craig Reynolds,,,
+Q92659,Jonathan Sachs,,Lotus Software (founded: 1982-01-01T00:00:00Z) - software industry,
+Q92660,James Clark,"XML, groff","groff (founded: 1990-06-01T00:00:00Z), Expat, HoTMetaL, SoftQuad Software (founded: 1984-01-01T00:00:00Z), OpenSP, PSGML (founded: 1992-01-01T00:00:00Z), OpenJade, xt, xp","groff, XML"
+Q92661,Bob Wallace,,,
+Q92662,Ryan C. Gordon,,,
+Q92663,Shang-Hua Teng,,,
+Q92664,Sanjeev Arora,,,
+Q92665,John F. Sowa,,,
+Q92666,Mark Jerrum,,,
+Q92667,C. J. van Rijsbergen,,,
+Q92668,Bob Scheifler,,,
+Q92669,Jeffrey Shallit,,,
+Q92670,Jack Dongarra,"LAPACK, EISPACK",,"LAPACK, EISPACK"
+Q92672,Julius Richard Büchi,,,Ferdinand Gonseth
+Q92673,Dan Kaminsky,,,
+Q92674,Joe Ossanna,,,
+Q92675,Takeo Kanade,Lucas–Kanade method,,Lucas–Kanade method
+Q92676,Joël de Rosnay,,,
+Q92677,Michael Lynn,,,
+Q92679,David G. Lowe,,,
+Q92680,David Gelernter,,,
+Q92681,Rémy Card,,,
+Q92682,Jon Bosak,,,
+Q92683,Damian Conway,,,
+Q92684,Sartaj Sahni,,,
+Q92685,Norbert Pohlmann,,,
+Q92686,David H. D. Warren,,,
+Q92687,William Warren Tunnicliffe,,,
+Q92688,John Pasta,,,
+Q92690,Harald Ganzinger,,,
+Q92691,Daniel G. Bobrow,,,
+Q92692,Rudi Studer,,Ontoprise GmbH (founded: 1999-01-01T00:00:00Z),
+Q92693,Richard Crandall,,,
+Q92694,Andy Hopper,,Olivetti Research Laboratory (founded: 1986-01-01T00:00:00Z),
+Q92695,Philippe Flajolet,,,
+Q92696,David Harris,,,
+Q92697,Yiannis N. Moschovakis,,,
+Q92698,Horst Zuse,,,
+Q92699,Dieter Fox,,,
+Q92700,Stephen Brewster,,,
+Q92701,Dawn Song,,,
+Q92702,Vijay Vazirani,,,
+Q92703,Frieder Nake,,Parallel-axis Polygonoids,"ZKM Center for Art and Media Karlsruhe, Tate, Musée national des beaux-arts du Québec"
+Q92704,Charles Colbourn,,,
+Q92705,Ipke Wachsmuth,,,
+Q92706,Christoph Meinel,,Q133538136 (founded: 2025-04-01T00:00:00Z),
+Q92707,Michael Loceff,,,
+Q92708,Michael Kölling,BlueJ,,BlueJ
+Q92709,Luca Trevisan,,,
+Q92710,Heinz Rutishauser,"ALGOL, Superplan",,"ALGOL, Superplan"
+Q92711,Nick Pippenger,,,
+Q92712,David C. Evans,,Evans & Sutherland (founded: 1968-01-01T00:00:00Z),
+Q92713,Alan Ashton,,Satellite Software International (founded: 1979-01-01T00:00:00Z),
+Q92714,David Haussler,,,
+Q92715,Phil Moorby,,,
+Q92716,Bernhard Nebel,,,
+Q92717,John Fairclough,,,
+Q92718,Mary Ann Horton,,,
+Q92719,Norbert Fuhr,,,
+Q92720,Daniel A. Keim,,,
+Q92721,Christof Ebert,,,
+Q92722,T. V. Raman,,,
+Q92723,Harold Cohen,AARON,"Conclave (founded: 1963-01-01T00:00:00Z), Tribune (founded: 1962-01-01T00:00:00Z), Before the Event (founded: 1963-01-01T00:00:00Z), Vigil Completed (founded: 1966-01-01T00:00:00Z), Benedictus (founded: 1961-01-01T00:00:00Z), Random, Lozenge Painting (founded: 1966-01-01T00:00:00Z), Untitled (founded: 1964-01-01T00:00:00Z), The Raising of Lazarus (founded: 1950-01-01T00:00:00Z), The Sacrifice of Iphigenia (founded: 1951-01-01T00:00:00Z), Woman in the Window (founded: 1954-01-01T00:00:00Z), Standing Figure (founded: 1954-01-01T00:00:00Z), Still Life (founded: 1956-01-01T00:00:00Z), Gentleman in Academic Dress (founded: 1957-01-01T00:00:00Z), Water Garden (founded: 1957-01-01T00:00:00Z), Untitled (founded: 1958-01-01T00:00:00Z), Plan for a City (founded: 1958-01-01T00:00:00Z), Fiesta (founded: 1958-01-01T00:00:00Z), Beta Orionis (founded: 1961-01-01T00:00:00Z), Alcide (founded: 1962-01-01T00:00:00Z), Optional Dimension (founded: 1963-01-01T00:00:00Z), Set (founded: 1964-01-01T00:00:00Z), The Oligarchs (founded: 1964-01-01T00:00:00Z), Untitled (founded: 1965-01-01T00:00:00Z), As If (founded: 1965-01-01T00:00:00Z), Orestes Returning (founded: 1966-01-01T00:00:00Z), Red Central (founded: 1966-01-01T00:00:00Z), Untitled – 1967 (founded: 1967-01-01T00:00:00Z), Gandalf (founded: 1967-01-01T00:00:00Z), Arnolfini Painting (founded: 1984-01-01T00:00:00Z), Project 1962 (diptych, right panel), Project 1962 (diptych, left panel), Abstract, 9 March 1959, Happy Day, December 1958, Into Green, Flood","ZKM Center for Art and Media Karlsruhe, Tate, University of Nottingham, Whitney Museum of American Art, Fitzwilliam College, University of Warwick, National Gallery of Canada, Fitzwilliam Museum, Loughborough University, Scottish National Gallery of Modern Art, National Galleries Scotland, Rhode Island School of Design Museum, AARON, Arts Council Collection, The Wilson, Royal West of England Academy, Rugby Art Gallery and Museum, UCL Art Museum, Picker Art Gallery, Arts Council Collection, Southbank Centre, British Council"
+Q92724,David G. Kirkpatrick,Kirkpatrick–Seidel algorithm,,Kirkpatrick–Seidel algorithm
+Q92725,Ralph Griswold,,,
+Q92726,Joe Celko,,,
+Q92727,Klaus Dittrich,,,
+Q92728,Hans-Peter Seidel,,,
+Q92729,Franz Baader,,,
+Q92730,David May,,XMOS (founded: 2005-01-01T00:00:00Z),
+Q92731,Hartmut Surmann,,,
+Q92732,Maynard V. Olson,,,
+Q92733,James Goodnight,,"SAS Institute (founded: 1976-01-01T00:00:00Z) - analytics, SAS Institute (founded: 1976-01-01T00:00:00Z) - analytics, SAS Institute (founded: 1976-01-01T00:00:00Z) - software industry, SAS Institute (founded: 1976-01-01T00:00:00Z) - software industry",
+Q92734,John G.F. Francis,,,
+Q92735,Jürgen Schmidhuber,,,
+Q92736,Anant Agarwal,,Tilera (founded: 2004-01-01T00:00:00Z) - semiconductor industry,
+Q92737,Ike Nassi,,,
+Q92738,Kent Beck,,,
+Q92739,John McCarthy,artificial intelligence,,"Solomon Lefschetz, artificial intelligence"
+Q92740,Jef Raskin,Mac,Archy,Mac
+Q92741,Alonzo Church,"lambda calculus, Church-Turing thesis, Church–Rosser theorem, Church–Turing–Deutsch principle, Frege–Church ontology, Church–Turing theorem",,"lambda calculus, Church-Turing thesis, Church–Rosser theorem, Church–Turing–Deutsch principle, Frege–Church ontology, Church–Turing theorem"
+Q92742,Alan Kay,,Viewpoints Research Institute (founded: 2001-01-01T00:00:00Z),
+Q92743,Vint Cerf,"Transmission Control Protocol, Internet protocol suite",Internet Society (founded: 1992-12-11T00:00:00Z),"Internet protocol suite, Transmission Control Protocol, Leonard Kleinrock"
+Q92744,Kristen Nygaard,Simula,,Simula
+Q92745,Ole-Johan Dahl,Simula,,Simula
+Q92746,John Backus,"Fortran, Backus–Naur Form, FP, Speedcoding",,"Fortran, Backus–Naur Form, FP, Speedcoding"
+Q92747,Eric Schmidt,,"Jigsaw (founded: 2010-01-01T00:00:00Z), Schmidt Ocean Institute (founded: 2009-01-01T00:00:00Z), The Eric and Wendy Schmidt Fund for Strategic Innovation, Relativity Space (founded: 2015-01-01T00:00:00Z) - space industry, H211, LLC, Schmidt Futures (founded: 2017-01-01T00:00:00Z)",
+Q92748,Yukihiro Matsumoto,"Ruby, Ruby MRI",,"Ruby, Ruby MRI"
+Q92749,Robert Cailliau,,"International World Wide Web Conference Committee (founded: 1994-08-01T00:00:00Z), International World Wide Web Conference Committee (founded: 1996-05-01T00:00:00Z)",
+Q92751,David H. Bailey,Bailey–Borwein–Plouffe formula,,Bailey–Borwein–Plouffe formula
+Q92752,Bo Leuf,,,
+Q92753,Paul Kunz,,,
+Q92754,Ralph Johnson,Design Patterns,,Design Patterns
+Q92755,John Vlissides,,,
+Q92756,Johan Håstad,,,
+Q92757,Eugene Myers,,,
+Q92758,Michael Stonebraker,Ingres,"PostgreSQL (founded: 1996-01-01T00:00:00Z), Vertica (founded: 2005-01-01T00:00:00Z) - enterprise software, C-Store (founded: 2005-01-01T00:00:00Z), C-Store (founded: 2005-01-01T00:00:00Z), Conference on Innovative Data Systems Research (founded: 2002-01-01T00:00:00Z)",Ingres
+Q92759,Larry Ellison,,"Oracle (founded: 1977-06-16T00:00:00Z) - software development, Oracle (founded: 1977-06-16T00:00:00Z) - information technology consulting, Ellison Medical Foundation (founded: 1997-01-01T00:00:00Z), Oracle Cloud (founded: 2016-10-20T00:00:00Z), Lawrence Ellison Foundation, Oracle Cloud Platform - cloud computing, SailGP (founded: 2019-01-01T00:00:00Z), F50 League LLC (founded: 2018-01-01T00:00:00Z)",
+Q92760,Claude Shannon,"information entropy, Shannon–Weaver model, Nyquist–Shannon sampling theorem, A Mathematical Theory of Communication, Communication Theory of Secrecy Systems, Shannon multigraph, Shannon index, Q1615706, Shannon–Hartley theorem, Shannon number, Whittaker–Shannon interpolation formula, Shannon's expansion, Noisy-channel coding theorem, Shannon's source coding theorem, Shannon switching game, A Symbolic Analysis of Relay and Switching Circuits, Shannon–Fano–Elias coding, Shannon capacity","information theory, Shannon's expansion (founded: 1854-01-01T00:00:00Z), Shannon's expansion (founded: 1949-01-01T00:00:00Z)","information entropy, Shannon–Weaver model, Nyquist–Shannon sampling theorem, A Mathematical Theory of Communication, Communication Theory of Secrecy Systems, Shannon multigraph, Shannon index, Q1615706, Shannon–Hartley theorem, Shannon number, Whittaker–Shannon interpolation formula, Shannon's expansion, Noisy-channel coding theorem, Shannon's source coding theorem, Shannon switching game, A Symbolic Analysis of Relay and Switching Circuits, Shannon–Fano–Elias coding, Shannon capacity"
+Q92761,Ian Murdock,"Debian Manifesto, Debian Manifesto, Debian","Debian (founded: 1993-08-16T00:00:00Z), The Debian Project (founded: 1993-01-01T00:00:00Z)","Debian Manifesto, Debian"
+Q92763,Jay Wright Forrester,,,Gordon S. Brown
+Q92764,Sergey Brin,,"Google (founded: 1998-09-04T00:00:00Z) - Internet, Google (founded: 1998-09-04T00:00:00Z) - information technology, Google (founded: 1998-09-04T00:00:00Z) - internet marketing, Google (founded: 1998-09-04T00:00:00Z) - software industry, Google (founded: 1998-09-04T00:00:00Z) - search engine, Google (founded: 1998-09-04T00:00:00Z) - Internet industry, Google Search (founded: 1997-09-15T00:00:00Z) - online advertising, Google Search (founded: 1997-09-15T00:00:00Z) - online advertising, Google Summer of Code (founded: 2005-01-01T00:00:00Z), Breakthrough Prize in Mathematics (founded: 2013-01-01T00:00:00Z), Alphabet Inc. (founded: 2015-10-02T00:00:00Z) - information technology, New Horizons in Mathematics Prize, H211, LLC, Lighter Than Air Research (founded: 2015-01-01T00:00:00Z)",
+Q92765,Seymour Cray,,"Cray (founded: 1972-01-01T00:00:00Z) - information technology, Cray (founded: 1972-01-01T00:00:00Z) - supercomputer",
+Q92766,Robert Metcalfe,"Ethernet, Metcalfe's law",3Com (founded: 1979-01-01T00:00:00Z) - computer network,"Ethernet, Metcalfe's law"
+Q92767,Lotfi A. Zadeh,fuzzy set,,fuzzy set
+Q92768,Rasmus Lerdorf,PHP,PHP (founded: 1995-06-08T00:00:00Z),PHP
+Q92769,Scott E. Fahlman,,,
+Q92770,Jon Stephenson von Tetzchner,,"Opera Software (founded: 1994-01-01T00:00:00Z) - marketing, Opera Software (founded: 1994-01-01T00:00:00Z) - marketing, Opera Software (founded: 1995-01-01T00:00:00Z) - marketing, Opera Software (founded: 1995-01-01T00:00:00Z) - marketing, Opera Software (founded: 1994-01-01T00:00:00Z) - software development, Opera Software (founded: 1994-01-01T00:00:00Z) - software development, Opera Software (founded: 1995-01-01T00:00:00Z) - software development, Opera Software (founded: 1995-01-01T00:00:00Z) - software development, Opera Software (founded: 1994-01-01T00:00:00Z) - software industry, Opera Software (founded: 1994-01-01T00:00:00Z) - software industry, Opera Software (founded: 1995-01-01T00:00:00Z) - software industry, Opera Software (founded: 1995-01-01T00:00:00Z) - software industry, Opera Software (founded: 1994-01-01T00:00:00Z) - Internet industry, Opera Software (founded: 1994-01-01T00:00:00Z) - Internet industry, Opera Software (founded: 1995-01-01T00:00:00Z) - Internet industry, Opera Software (founded: 1995-01-01T00:00:00Z) - Internet industry, Vivaldi Technologies (founded: 2013-12-01T00:00:00Z) - software development, Opera Software (founded: 1995-01-01T00:00:00Z)",
+Q92771,Janus Friis,,"Skype (founded: 2003-08-01T00:00:00Z), Skype Technologies (founded: 2003-01-01T00:00:00Z) - software industry, Starship Technologies (founded: 2014-01-01T00:00:00Z) - information technology, Starship Technologies (founded: 2014-01-01T00:00:00Z) - robotics, Starship Technologies (founded: 2014-01-01T00:00:00Z) - software development",
+Q92772,Dan Ingalls,,,
+Q92773,Franz Alt,,,
+Q92774,Stephen R. Bourne,,,
+Q92776,Steve Furber,ARM architecture,,ARM architecture
+Q92777,Paul Vixie,cron,"Internet Systems Consortium (founded: 1994-01-01T00:00:00Z), Farsight Security (founded: 2013-07-01T00:00:00Z)",cron
+Q92778,J. C. R. Licklider,,Intergalactic Computer Network,
+Q92779,Ingo Molnár,,,
+Q92781,Iosif Sifakis,,,
+Q92782,William Kahan,IEEE 754,,IEEE 754
+Q92783,Fred Cohen,,,
+Q92784,David A. Huffman,,,
+Q92786,Tom Kilburn,,,
+Q92787,Maurice Karnaugh,,,
+Q92788,Bill Atkinson,,General Magic (founded: 1990-05-01T00:00:00Z),
+Q92789,Ron Jeffries,,,
+Q92790,James Rumbaugh,,,
+Q92792,Blake Ross,,Firefox (founded: 2002-09-23T00:00:00Z),
+Q92793,Róbert Szelepcsényi,,,
+Q92794,Jeffrey David Ullman,,,Whitney Museum of American Art
+Q92795,Juraj Hromkovič,,,
+Q92797,Seymour Ginsburg,,,
+Q92798,David E. Goldberg,,,
+Q92800,Dave Cutler,"OpenVMS - United States, Windows NT, RSX-11, VAXELN",,"OpenVMS, Windows NT, RSX-11, VAXELN"
+Q92801,David S. Johnson,,,
+Q92803,Grady Booch,Unified Modeling Language,Booch method,Unified Modeling Language
+Q92805,Umesh Vazirani,,,
+Q92806,Marshall Kirk McKusick,,,
+Q92807,Scott Forstall,,,
+Q92809,Rodney Brooks,,"iRobot (founded: 1990-01-01T00:00:00Z) - robotics, Rethink Robotics (founded: 2008-01-01T00:00:00Z) - robotics",
+Q92810,Irit Dinur,,,
+Q92811,Shmuel Safra,,,
+Q92813,Shlomo Moran,,,
+Q92814,Zohar Manna,,,Alan Perlis
+Q92815,Barry Boehm,,,
+Q92816,Gil Kalai,,,
+Q92817,Uriel Feige,,,
+Q92819,Edmund M. Clarke,,,
+Q92820,Raj Reddy,,,
+Q92821,E. Allen Emerson,,,
+Q92822,Richard E. Stearns,,,
+Q92823,Edward Feigenbaum,,,
+Q92824,Judea Pearl,"Bayesian network, The Book of Why, causal diagram",,"Bayesian network, The Book of Why, causal diagram"
+Q92825,Mihalis Yannakakis,,,
+Q92826,Terry Winograd,,,Seymour Papert
+Q92828,Charles P. Thacker,,,
+Q92829,Mark Russinovich,,Sysinternals (founded: 1996-01-01T00:00:00Z),
+Q92830,Subhash Kak,,,
+Q92831,Peter Chen,,,
+Q92832,Peter Norvig,Artificial Intelligence: A Modern Approach,,Artificial Intelligence: A Modern Approach
+Q92833,Jack Elton Bresenham,,,
+Q92834,David Waltz,,,
+Q92835,Mark Overmars,,GameMaker (founded: 1999-11-15T00:00:00Z),
+Q92837,Rollo Carpenter,,Cleverbot,
+Q92838,Erich Gamma,Design Patterns,,Design Patterns
+Q92839,George Stibitz,,,
+Q92840,Mario Szegedy,,,
+Q92841,Gábor Tardos,,,
+Q92842,Jon Hall,,,
+Q92843,Miklós Ajtai,,,
+Q92844,David Marr,,,
+Q92845,László Babai,,,
+Q92846,Hermann Maurer,,"Hyper-G, HM-Card (founded: 1995-01-01T00:00:00Z)",
+Q92847,Abraham Lempel,,,
+Q92848,Watts Humphrey,,,
+Q92849,Rudy Rucker,Ware Tetralogy,,Ware Tetralogy
+Q92850,Tom Duff,"rc, Duff's device",,"rc, Duff's device"
+Q92851,David A. Patterson,,,
+Q92852,Michael J. Flynn,,Flynn's taxonomy,
+Q92853,Jean Ichbiah,"Ada, FITALY",Alsys (founded: 1980-01-01T00:00:00Z),"Ada, FITALY"
+Q92854,John L. Hennessy,,MIPS Technologies (founded: 1984-01-01T00:00:00Z) - reduced instruction set computing,
+Q92855,Ian Sommerville,,,
+Q92856,Paul Flaherty,,,
+Q92857,Ivar Jacobson,,"object-oriented software engineering (founded: 1992-01-01T00:00:00Z), Objectory AB (founded: 1987-01-01T00:00:00Z) - software engineering, Ivar Jacobson International",
+Q92858,Daniel Lewin,,"Akamai Technologies (founded: 1998-01-01T00:00:00Z) - web hosting service, Akamai Technologies (founded: 1998-01-01T00:00:00Z) - Internet industry",
+Q92859,Eric Bina,Mosaic,,Mosaic
+Q92860,L Peter Deutsch,,,
+Q92861,Vytautas Kaminskas,,,
+Q92862,Jaron Lanier,"You Are Not a Gadget, Who Owns the Future?",VPL Research (founded: 1984-01-01T00:00:00Z),"You Are Not a Gadget, Who Owns the Future?"
+Q92863,Algirdas Avižienis,,,
+Q92864,Algimantas Kurlavičius,,,
+Q92865,Daniel J. Bernstein,"qmail, djbdns, daemontools, cdb, ucspi-tcp, NaCl","Quick Mail Transfer Protocol, NaCl (founded: 2008-01-01T00:00:00Z), SPHINCS, Easily Parsed LIST Format (founded: 1996-03-01T00:00:00Z)","qmail, djbdns, daemontools, cdb, ucspi-tcp, NaCl"
+Q92866,Jack Edmonds,,,
+Q92867,Ronald V. Book,,,
+Q92868,Irving S. Reed,,,
+Q92869,George Marsaglia,"Marsaglia polar method, Marsaglia's theorem",,"Marsaglia polar method, Marsaglia's theorem"
+Q92870,Mark Adler,,Adler-32 (founded: 1995-01-01T00:00:00Z),
+Q92871,Cleve Moler,MATLAB,,MATLAB
+Q92872,Stephen Altschul,,,
+Q92873,Roger Michael Needham,Needham–Schroeder protocol,,Needham–Schroeder protocol
+Q92874,Ken Sakamura,,,
+Q92875,Gordon Bell,,,
+Q92876,David Parnas,,,
+Q92877,Matt Mullenweg,,"Automattic (founded: 2005-01-01T00:00:00Z) - Internet, WordCamp, WordPress Foundation (founded: 2010-09-09T00:00:00Z)",
+Q92878,Andrei Alexandrescu,,,
+Q92879,Tony Fadell,,"Google Nest (founded: 2010-01-01T00:00:00Z) - home automation, Google Nest (founded: 2010-01-01T00:00:00Z) - home automation",San Francisco Museum of Modern Art
+Q92880,Gerard Salton,vector space model,,vector space model
+Q92881,Douglas McIlroy,"diff, join, sort, tr, pipeline, spell, software component",history of Unix (founded: 1969-01-01T00:00:00Z),"diff, join, sort, tr, pipeline, spell, software component"
+Q92882,Edward F. Moore,Moore neighborhood,,Moore neighborhood
+Q92883,Ric Weiland,,Applesoft BASIC (founded: 1977-01-01T00:00:00Z),
+Q92884,Ralph Merkle,,Diffie–Hellman key exchange,
+Q92886,Friedemann Mattern,,,
+Q92887,Philippe Kruchten,,,
+Q92888,Patrick Prosser,,,
+Q92889,Wilfried Brauer,,,
+Q92890,Richard Wallace,AIML,,AIML
+Q92891,Claus P. Schnorr,"Schnorr digital signature scheme, Schnorr group",,"Schnorr digital signature scheme, Schnorr group"
+Q92892,Chris McKinstry,,Mindpixel (founded: 2000-01-01T00:00:00Z),
+Q92893,Victor S. Miller,,,
+Q92894,Geoffrey Hinton,,CIFAR-10,
+Q92895,Marek Chrobak,,,
+Q92896,Wolfram Burgard,,,
+Q92897,Wolfgang Bibel,,,
+Q92898,Marek Karpinski,,,
+Q92899,Richard Grimsdale,,,
+Q92900,Mark N. Wegman,,,
+Q92901,Rick Gates,,"Interpedia (founded: 1993-01-01T00:00:00Z), The Internet Hunt (founded: 1992-08-31T00:00:00Z)",
+Q92902,Neil J. Gunther,,,
+Q92903,David Sayre,,,
+Q92904,Ted Selker,,,
+Q92905,Carsten Lund,,,
+Q92906,Jim Kurose,,,
+Q92907,Rudolf Kruse,,,
+Q92908,Dave Raggett,,"HTML Tidy (founded: 2000-08-04T00:00:00Z), HTML Slidy (founded: 2005-01-01T00:00:00Z)",
+Q92909,Thomas Strothotte,,,
+Q92910,Ellis L. Johnson,,,
+Q92911,Dietmar Saupe,,,
+Q92912,Lawrence Landweber,,,
+Q92913,Anja Feldmann,,,
+Q92914,Klaus Samelson,,,
+Q92915,Terry Welch,"Lempel–Ziv–Welch (US4558302), Lempel–Ziv–Welch (US4814746)",,Lempel–Ziv–Welch
+Q92916,Corinna Cortes,,MNIST database,
+Q92917,Tim Gill,,"Quark, Inc. (founded: 1981-01-01T00:00:00Z) - software industry, Gill Foundation.org, Josh.ai - home automation",
+Q92918,Dieter Fensel,,"Seekda (founded: 2007-01-01T00:00:00Z), Onlim GmbH",
+Q92919,Hans-Peter Kriegel,,,
+Q92920,Manfred Broy,,,
+Q92921,Wolfgang Nebel,,,
+Q92922,Lance Fortnow,,,
+Q92923,Charles Goldfarb,,,
+Q92924,Mihai Nadin,,,
+Q92925,Alan Kotok,,,
+Q92926,An Wang,,Wang Institute of Graduate Studies (founded: 1979-01-01T00:00:00Z),
+Q92927,Noga Alon,,,
+Q92928,Nicholas Metropolis,,,
+Q92929,Hans Piloty,,PERM (founded: 1952-01-01T00:00:00Z),
+Q92930,Theodore Ts'o,e2fsprogs,,e2fsprogs
+Q92931,Charles H. Bennett,,,
+Q92932,Edward Felten,,,
+Q92933,Per Brinch Hansen,,,Peter Naur
+Q92934,Mark P. McCahill,Gopher,POPmail,Gopher
+Q92935,Lawrence Roberts,ARPANET,,ARPANET
+Q92936,Trygve Reenskaug,,Taskon (founded: 1986-01-01T00:00:00Z) - information technology,
+Q92937,Joanna Rutkowska,,"Blue Pill (founded: 2006-01-01T00:00:00Z), Qubes OS (founded: 2010-04-07T00:00:00Z)",
+Q92938,Gilles Brassard,,,
+Q92939,Robert C. Prim,,,
+Q92940,Tim Paterson,MS-DOS,,MS-DOS
+Q92941,Seth Lloyd,Programming the Universe,,Programming the Universe
+Q92942,William Daniel Hillis,,"Thinking Machines Corporation (founded: 1983-01-01T00:00:00Z), Metaweb (founded: 2005-01-01T00:00:00Z) - data management, Applied Minds (founded: 2000-01-01T00:00:00Z) - electronics industry","Museum of Modern Art, Richard Feynman"
+Q92944,David Wheeler,,,
+Q92945,Brewster Kahle,,"Internet Archive (founded: 1996-05-01T00:00:00Z), Internet Archive (founded: 1996-05-01T00:00:00Z), Alexa Internet (founded: 1996-04-01T00:00:00Z) - Internet, Wayback Machine (founded: 2001-10-29T00:00:00Z), Better World Libraries (founded: 2005-10-18T00:00:00Z)",
+Q92946,Bertrand Meyer,Eiffel,Informatics Europe (founded: 2006-01-01T00:00:00Z),"Eiffel, Claude Pair, Jean-Pierre Finance"
+Q92947,Yehuda Afek,,,
+Q92948,Michael Jackson,,,
+Q92949,Simon Peyton Jones,,,
+Q92950,Marcel J. E. Golay,,,
+Q92951,Jacob T. Schwartz,"Dunford–Schwartz theorem, Schwartz–Zippel lemma",,"Dunford–Schwartz theorem, Schwartz–Zippel lemma"
+Q92952,Peter Landin,"SECD machine, ISWIM",,"SECD machine, ISWIM"
+Q92953,Bob Bemer,COMTRAN,COMTRAN (founded: 1957-01-01T00:00:00Z),COMTRAN
+Q92954,Dries Buytaert,,"Drupal (founded: 2001-01-15T00:00:00Z), Acquia (founded: 2007-01-01T00:00:00Z) - software industry",
+Q92955,Nat Friedman,,"GitHub (founded: 2007-10-19T00:00:00Z), Ximian (founded: 1999-01-01T00:00:00Z) - software industry, Xamarin (founded: 2011-05-01T00:00:00Z) - software industry, Xamarin (founded: 2011-05-01T00:00:00Z) - software industry",
+Q92956,Andrew Morton,,,
+Q92957,Avi Wigderson,,,
+Q92958,Jamie Zawinski,,"Mozilla Organization (founded: 1998-02-23T00:00:00Z), The Insidious Big Brother Database",
+Q92959,Peter J. Weinberger,,,
+Q92960,Bruce Eckel,,,
+Q92961,Jordan Hubbard,,,
+Q92962,Michael A. Arbib,,,
+Q92963,Rajeev Motwani,,,
+Q92964,Justin Frankel,,"Nullsoft (founded: 1997-01-01T00:00:00Z) - software industry, Cockos (founded: 2004-01-01T00:00:00Z) - software industry",
+Q92965,Aravind Joshi,,,
+Q92966,Leonid Levin,Cook–Levin theorem,,Cook–Levin theorem
+Q92967,Eric Allman,,Sendmail (founded: 1980-01-01T00:00:00Z),
+Q92968,Georgy Adelson-Velsky,,,
+Q92969,Dieter Rombach,,,
+Q92970,David Bradley,,,
+Q92971,Tatu Ylönen,,Secure Shell (founded: 1995-01-01T00:00:00Z),
+Q92972,Keith Packard,,XDM (founded: 1988-10-03T00:00:00Z),
+Q92973,Wietse Venema,,Postfix,
+Q92974,Aaron Seigo,,,
+Q92975,Chu Bong-Foo,Cangjie input method,,Cangjie input method
+Q92976,Stuart Feldman,,,
+Q92977,Norman Abramson,,,
+Q92978,Jon Kleinberg,,,
+Q92979,Paul Lutus,,,
+Q92980,Werner Zorn,,,
+Q92981,Gerald Jay Sussman,,,
+Q92982,Gustave Solomon,,,
+Q92983,Robert Sedgewick,,,
+Q92985,Robin Li,,"Baidu (founded: 2000-01-01T00:00:00Z) - Internet, Baidu Baike (founded: 2006-04-20T00:00:00Z)",
+Q92986,David S. Miller,,,
+Q92987,Wang Xuan,,"Founder Group (founded: 1986-01-01T00:00:00Z) - information technology, Founder Group (founded: 1986-01-01T00:00:00Z) - finance, Founder Group (founded: 1986-01-01T00:00:00Z) - pharmaceutical industry, Founder Group (founded: 1986-01-01T00:00:00Z) - real property, Founder Group (founded: 1986-01-01T00:00:00Z) - commodities market",
+Q92988,Gerhard Weikum,YAGO,,YAGO
+Q92989,Jim Blinn,,,
+Q92990,Bui Tuong Phong,,,
+Q92991,Guy L. Steele,,Emacs (founded: 1976-01-01T00:00:00Z),
+Q92992,Joshua Bloch,,,
+Q92993,Jeff Hawkins,,"Palm, Inc. (founded: 1992-01-01T00:00:00Z) - software industry, Palm, Inc. (founded: 1992-01-01T00:00:00Z) - electronics industry, Handspring (founded: 1998-06-01T00:00:00Z) - personal digital assistant, Numenta (founded: 2005-01-01T00:00:00Z) - analytics",
+Q92994,Michalis Dertouzos,,,
+Q92995,Wolfgang Wahlster,,,
+Q92996,Herb Sutter,,,
+Q92997,Kasper Skårhøj,,TYPO3 (founded: 1998-01-01T00:00:00Z),
+Q92998,Evgenii Landis,AVL tree,,AVL tree
+Q92999,Charles H. Moore,,,
+Q93000,Thomas Kyte,,,
+Q93002,Llewellyn Thomas,,,
+Q93003,Jeremie Miller,,,
+Q93004,Lenore Blum,,,
+Q93005,Herman Goldstine,,,
+Q93006,Paul Debevec,,light stage,
+Q93007,Raymond F. Boyce,,,
+Q93008,Christopher J. Date,,,
+Q93010,Robert Cecil Martin,,,
+Q93011,Simon Tatham,PuTTY,Netwide Assembler (founded: 1996-01-01T00:00:00Z),PuTTY
+Q93012,Jonathan Schaeffer,Chinook - Canada,,Chinook
+Q93013,Fabrice Bellard,"QEMU, FFmpeg, Tiny C Compiler, QEmacs, QuickJS","QEMU, FFmpeg (founded: 2000-12-20T00:00:00Z), Tiny C Compiler (founded: 2002-01-01T00:00:00Z), Better Portable Graphics (founded: 2014-01-01T00:00:00Z), TinyGL, QEmacs (founded: 2000-01-01T00:00:00Z)","QEMU, FFmpeg, Tiny C Compiler, QEmacs, QuickJS"
+Q93014,Max Levchin,,"PayPal (founded: 1998-12-01T00:00:00Z) - financial services, PayPal (founded: 2015-01-01T00:00:00Z) - financial services, Confinity (founded: 1998-12-01T00:00:00Z), Slide.com (founded: 2005-01-01T00:00:00Z), Affirm (founded: 2012-01-01T00:00:00Z) - fintech",
+Q93015,Adriaan van Wijngaarden,"ALGOL, Van Wijngaarden grammar",,"ALGOL, Van Wijngaarden grammar"
+Q93016,Brian Behlendorf,,Apache Software Foundation (founded: 1999-03-25T00:00:00Z) - software development,
+Q93017,Michael Tiemann,,Cygnus Solutions (founded: 1989-11-13T00:00:00Z) - software industry,
+Q93018,Frank Rosenblatt,,,
+Q93019,Alexander Razborov,,,
+Q93020,Patrick Winston,,Ascent Technology (United States) (founded: 1996-01-01T00:00:00Z),
+Q93021,Steve McConnell,,,
+Q93023,Charles Petzold,,,
+Q93024,John Maeda,,Q3337105,"Museum of Modern Art, San Francisco Museum of Modern Art, Muriel Cooper"
+Q93025,Alexander Stepanov,,,
+Q93026,Bob Frankston,,Software Arts (founded: 1979-01-01T00:00:00Z) - software industry,
+Q93027,Henri Gouraud,,,
+Q93028,Charles E. Leiserson,,,
+Q93029,Manindra Agrawal,,,
+Q93030,Leon O. Chua,,,
+Q93031,Viktor Glushkov,,Ukrainian Physics and Mathematics Lyceum (founded: 1963-01-01T00:00:00Z),"Aleksandr Kurosh, Dmitry Morduhai-Boltovskoi"
+Q93032,Ken Schwaber,,,
+Q93033,John Walker,,,
+Q93034,Ravindran Kannan,,,
+Q93035,Dmitry Sklyarov,,,
+Q93036,Alexander Dewdney,,,
+Q93037,Jay David Bolter,,Storyspace (founded: 1985-01-01T00:00:00Z),
+Q93038,Robert Taylor,,,
+Q93039,Robert J. Mical,,,
+Q93040,Richard Helm,,,
+Q93041,David A. Wagner,,,
+Q93042,Richard P. Brent,,,
+Q93043,Jonathan Bowen,"The Turing Guide, Provably Correct Systems, Digital Technologies and the Museum Experience, Museums and Digital Culture, Towards Verified Systems, Formal Specification and Documentation Using Z, Applications of Formal Methods, The Arts and Computational Culture",,"The Turing Guide, Provably Correct Systems, Digital Technologies and the Museum Experience, Museums and Digital Culture, Towards Verified Systems, Formal Specification and Documentation Using Z, Applications of Formal Methods, The Arts and Computational Culture"
+Q93044,Lee Felsenstein,,Community Memory,
+Q93045,Monte Davidoff,,,
+Q93046,John Domingue,,,
+Q93050,Arthur Whitney,,,
+Q93051,Lov Grover,,,
+Q93052,Robert Fano,,,
+Q93053,Thomas S. Ray,,,
+Q93054,Evgeny Morozov,"To Save Everything, Click Here, The Net Delusion: The Dark Side of Internet Freedom",,"To Save Everything, Click Here, The Net Delusion: The Dark Side of Internet Freedom"
+Q93055,Andrzej Ehrenfeucht,,,
+Q93056,Randal L. Schwartz,,,
+Q93057,Neil Immerman,,,
+Q93058,Alistair Cockburn,,,
+Q93059,Scott Meyers,,,
+Q93060,David Luenberger,,,
+Q93061,Przemysław Prusinkiewicz,,,
+Q93062,Matthew Dillon,"FreeBSD, DragonFly BSD, HAMMER, HAMMER2, vkernel",DragonFly BSD (founded: 2004-07-12T00:00:00Z) - software industry,"DragonFly BSD, HAMMER, HAMMER2, vkernel, FreeBSD"
+Q93063,Irfan Škiljan,,,
+Q93064,Sam Lantinga,,"Simple DirectMedia Layer (founded: 1998-01-01T00:00:00Z), Loki Entertainment (founded: 1998-11-09T00:00:00Z) - video game industry",
+Q93065,Bill Inmon,,,
+Q93066,Konrad Fiałkowski,,,
+Q93067,Brian Paul,,"Mesa (founded: 1993-08-01T00:00:00Z), Mesa (founded: 1993-08-01T00:00:00Z), Tungsten Graphics (founded: 2001-11-01T00:00:00Z)",
+Q93068,Oren Patashnik,,,
+Q93070,Shmuel Winograd,,,Jacob T. Schwartz
+Q93071,Donald D. Chamberlin,SQL,,SQL
+Q93072,Alain Colmerauer,Prolog,,Prolog
+Q93074,Gary Miller,,,
+Q93075,Gerhard Hund,,,
+Q93076,Roy Fielding,,,
+Q93077,Jean Kuntzmann,,École nationale supérieure d'informatique et de mathématiques appliquées de Grenoble (founded: 1960-01-01T00:00:00Z),
+Q93078,Daniel Spielman,,,
+Q93079,Victor A. Vyssotsky,,,
+Q93080,Silvio Micali,,Algorand (founded: 2017-01-01T00:00:00Z),
+Q93081,Edmund Berkeley,,,
+Q93082,Charles Leonard Hamblin,,Australasian Association for Logic (founded: 1965-01-01T00:00:00Z),
+Q93084,Greg Kroah-Hartman,,,
+Q93086,Nikolaus Joachim Lehmann,,,
+Q93087,Jacques Stern,,,
+Q93089,Noel Sharkey,,Foundation for Responsible Robotics (founded: 2015-12-11T00:00:00Z),
+Q93092,William Reeves,,,
+Q93093,Jacek Karpiński,"K-202, AKAT-1",,"K-202, AKAT-1"
+Q93095,Monty Denneau,,,
+Q93096,José Luis Encarnação,,,
+Q93097,Charles Rackoff,,,
+Q93098,Robert Piloty,,,
+Q93099,Robert S. Barton,,,
+Q93102,Fritz-Rudolf Güntsch,,,
+Q93104,Michael Sipser,,,
+Q93106,Helmut Schreyer,,Z3 (founded: 1941-01-01T00:00:00Z),
+Q93107,Pei-Yuan Wei,ViolaWWW,,ViolaWWW
+Q93108,Charles Forgy,,,
+Q93109,Carl Hewitt,Planner,Planner (founded: 1969-01-01T00:00:00Z),Planner
+Q93111,David Rumelhart,,,
+Q93115,Tom DeMarco,,structured analysis,
+Q93117,William Norris,,,
+Q93119,Donald Michie,,Matchbox Educable Noughts and Crosses Engine (founded: 1961-01-01T00:00:00Z),
+Q93120,Hugh Darwen,,,
+Q93121,Tadao Kasami,,,
+Q93122,Christopher Strachey,,,
+Q93123,Steve Grand,Creatures,,Creatures
+Q93124,Ronald Fagin,,fifth normal form,
+Q93125,James McClelland,,,
+Q93126,Rusty Russell,"Linux kernel, Lightning Network",iptables (founded: 1998-01-01T00:00:00Z),"Lightning Network, Linux kernel"
+Q93127,Dirk Meyer,,,
+Q93129,Joel Moses,,,
+Q93130,Frank Soltis,,,
+Q93131,Makoto Murata,,,
+Q93132,Gerald Weinberg,,,
+Q93133,Donald Shell,,,
+Q93134,Wallace Givens,,,
+Q93135,Shi-Kuo Chang,,,
+Q93136,Jean-Paul Delahaye,,,
+Q93138,Yoav Freund,,AdaBoost,
+Q93139,Karl Sims,,"GenArts, Inc. (founded: 1996-01-01T00:00:00Z)",
+Q93141,Walter F. Tichy,GNU RCS,GNU RCS (founded: 1982-01-01T00:00:00Z),GNU RCS
+Q93142,Ian Clarke,,,
+Q93143,Janusz Wiśniewski,,,
+Q93144,Mark Spencer,,"Digium (founded: 1999-01-01T00:00:00Z) - telecommunication, Asterisk (founded: 1999-01-01T00:00:00Z)",
+Q93145,Jim Gettys,,,
+Q93146,Steven Rudich,,,
+Q93147,Edward J. McCluskey,,,
+Q93149,Madhu Sudan,,,
+Q93151,Avinash Kak,,,
+Q93152,Paul Molitor,,,
+Q93153,Armen Sarkissian,,,
+Q93154,Leslie Valiant,,,
+Q93155,Hàn Thế Thành,,,
+Q93159,Daniel Slotnick,,,
+Q93161,Edwin Catmull,,Pixar (founded: 1986-02-03T00:00:00Z) - film industry,
+Q95485,August-Wilhelm Scheer,Consulting,IDS Scheer (founded: 1984-07-27T00:00:00Z) - information technology,Consulting
+Q98042,Heinz Billing,,,
+Q98342,Werner Schuster,,,
+Q99607,Rudolf Ahlswede,,,
+Q99613,Ernst Dickmanns,,,
+Q100469,Rainer Goebel,BrainVoyager,,BrainVoyager
+Q101030,Maria von Wedemeyer Weller,,,
+Q101740,Benoit Mandelbrot,"Mandelbrot set, Zipf–Mandelbrot law, The Fractal Geometry of Nature, Fractals: Form, Chance and Dimension, Fractals: Form, Chance and Dimension",L34600,"Gaston Julia, Zipf–Mandelbrot law, The Fractal Geometry of Nature, Fractals: Form, Chance and Dimension, Mandelbrot set"
+Q103162,Sebastian Möller,,,
+Q108175,Thomas Wiegand,Advanced Video Coding,,Advanced Video Coding
+Q109077,Wilhelm Kämmerer,,,
+Q111160,Reinhard Brandl,,,
+Q112389,Bernd Fix,,,
+Q114897,Helmut Thiele,,,
+Q115142,Arno Schulz,,,
+Q118056,Daniel Borel,,"Logitech (founded: 1981-10-02T00:00:00Z) - computing, ""BeeZy"" BG-1000 (founded: 1978-01-01T00:00:00Z)",Bolo Museum
+Q120462,Ueli Maurer,,,James Massey
+Q121165,Joachim Weickert,,,
+Q121866,Werner Buchholz,,,
+Q125294,Peter Mertens,,,
+Q125651,Ambros Speiser,ERMETH,,ERMETH
+Q129263,Bill Moggridge,,,
+Q129627,Richard Rashid,Mach,,Mach
+Q134661,George Boole,,"Shannon's expansion (founded: 1854-01-01T00:00:00Z), Shannon's expansion (founded: 1949-01-01T00:00:00Z)",
+Q135216,Žiga Turk,,,
+Q149067,Pavel Durov,"VK - Russia, Telegram","VK (founded: 2006-10-10T00:00:00Z), VK (founded: 2006-10-10T00:00:00Z), Digital Fortress LLC (founded: 2013-01-01T00:00:00Z), Telegram (founded: 2013-08-14T00:00:00Z), Telegram (founded: 2013-08-14T00:00:00Z), Telegram (founded: 2013-08-14T00:00:00Z), Q16530750 (founded: 2011-01-01T00:00:00Z), MTProto (founded: 2013-01-01T00:00:00Z), Telegram FZ-LLC (founded: 2013-01-01T00:00:00Z) - software industry, Telegraph, Telegram Open Network, Gram (founded: 2019-01-01T00:00:00Z)","VK, Telegram"
+Q149941,Alaa Abd El-Fatah,,,
+Q153224,Andrey Kolmogorov,"Kolmogorov–Smirnov test, Kolmogorov–Arnold–Moser theorem, Avrami equation, probability axioms, Kolmogorov complexity, Kolmogorov's inequality, Kolmogorov's three-series theorem, Kolmogorov's theorem, Kolmogorov distribution",,"Pavel Aleksandrov, Nikolai Luzin, Pavel Urysohn, Kolmogorov–Smirnov test, Kolmogorov–Arnold–Moser theorem, Avrami equation, probability axioms, Kolmogorov complexity, Kolmogorov's inequality, Vyacheslav Stepanov, Kolmogorov's three-series theorem, Kolmogorov's theorem, Kolmogorov distribution"
+Q162005,Paul Allen,,"Microsoft (founded: 1975-04-04T00:00:00Z) - software development, Microsoft (founded: 1975-04-04T00:00:00Z) - software industry, Microsoft (founded: 1975-04-04T00:00:00Z) - International Standard Industrial Classification, Microsoft (founded: 1975-04-04T00:00:00Z) - technology industry, Stratolaunch Systems (founded: 2011-01-01T00:00:00Z) - aerospace industry, Museum of Pop Culture (founded: 2004-01-01T00:00:00Z), Starwave (founded: 1992-01-01T00:00:00Z) - video game industry, Vulcan Inc. (founded: 1986-01-01T00:00:00Z), Vulcan Inc. (founded: 1987-01-01T00:00:00Z), Allen Institute for Brain Science (founded: 2003-01-01T00:00:00Z), Apex Learning (founded: 1997-01-01T00:00:00Z), Asymetrix (founded: 1984-01-01T00:00:00Z), Flying Heritage Collection (founded: 2004-01-01T00:00:00Z), Interval Research Corporation (founded: 1992-01-01T00:00:00Z) - research and development, Living Computers: Museum + Labs (founded: 2006-01-01T00:00:00Z), Mojave Aerospace Ventures, Vulcan Productions, Allen Institute for Artificial Intelligence (founded: 2014-01-01T00:00:00Z), Allen Institute for Cell Science (founded: 2014-01-01T00:00:00Z), Allen Institute (founded: 2003-01-01T00:00:00Z) - biotechnology, Allen Institute (founded: 2003-01-01T00:00:00Z) - research, Allen Institute for Immunology (founded: 2018-01-01T00:00:00Z)",
+Q163370,Bill Mensch,,Western Design Center (founded: 1978-01-01T00:00:00Z) - electronics,
+Q170419,Carlos Slim,,"América Móvil (founded: 2000-09-01T00:00:00Z) - telecommunications, América Móvil (founded: 2000-09-01T00:00:00Z) - mobile phone industry, Grupo Carso (founded: 1990-01-01T00:00:00Z), Telmex (founded: 1947-01-01T00:00:00Z) - telecommunications, Museo Soumaya (founded: 1994-01-01T00:00:00Z), Claro TV - telecommunication, Telcel (founded: 1984-01-01T00:00:00Z) - telecommunications, Telcel (founded: 1984-01-01T00:00:00Z) - mobile phone industry, Museo Soumaya at Plaza Carso",
+Q173714,Max Euwe,,,
+Q175969,Aubrey de Grey,"Hadwiger–Nelson problem, Ending Aging",SENS Research Foundation (founded: 2009-01-01T00:00:00Z),"Hadwiger–Nelson problem, Ending Aging"
+Q178577,Norbert Wiener,"Wiener filter, Paley–Wiener theorem, abstract Wiener space, classical Wiener space, God & Golem, Inc., The Human Use of Human Beings, Wiener algebra, Wiener equation",Econometric Society (founded: 1930-12-29T00:00:00Z) - higher education,"Paley–Wiener theorem, abstract Wiener space, classical Wiener space, God & Golem, Inc., The Human Use of Human Beings, Wiener algebra, Wiener equation, Wiener filter"
+Q181162,Steve Ballmer,,USAFacts (founded: 2017-04-18T00:00:00Z),
+Q181529,Herbert Simon,"bounded rationality, Administrative Behavior",General Problem Solver,"Harold Lasswell, bounded rationality, Administrative Behavior"
+Q182031,Jack Kilby,,,
+Q188979,Loyd Blankenship,Hacker Manifesto,,Hacker Manifesto
+Q192145,Herman Hollerith,,"Q3513560, Computing Tabulating Recording Company (founded: 1911-06-16T00:00:00Z)",
+Q204815,Marvin Minsky,"Society of Mind, Society of Mind, Perceptrons, The Emotion Machine, Computation: Finite and Infinite Machines",frame,"Society of Mind, Perceptrons, The Emotion Machine, Computation: Finite and Infinite Machines"
+Q214119,Luciano Floridi,"Scepticism and the Foundation of Epistemology: A Study in the Metalogical Fallacies, Q122035186",,"Scepticism and the Foundation of Epistemology: A Study in the Metalogical Fallacies, Q122035186"
+Q214661,Steve Shirley,,"Shirley Foundation (founded: 1996-01-01T00:00:00Z), Xansa (founded: 1962-01-01T00:00:00Z)",
+Q215284,Jerry Yang,Yahoo! - United States,"Yahoo! (founded: 1994-01-01T00:00:00Z) - web portal, Altaba (founded: 1995-01-01T00:00:00Z) - investment management",Yahoo!
+Q217790,Lawrence Lessig,,"Creative Commons (founded: 2001-01-15T00:00:00Z), Science Commons (founded: 2005-01-01T00:00:00Z), Stanford Center for Internet and Society (founded: 2000-01-01T00:00:00Z), Rootstrikers (founded: 2011-01-01T00:00:00Z), Mayday PAC (founded: 2014-01-01T00:00:00Z), The Electors Trust (founded: 2016-12-01T00:00:00Z)",
+Q218630,Michael Dell,,"Dell Inc. (founded: 1984-05-03T00:00:00Z) - computer hardware, Dell Inc. (founded: 1984-05-03T00:00:00Z) - computer hardware, Dell Inc. (founded: 1984-05-03T00:00:00Z) - software industry, Dell Inc. (founded: 1984-05-03T00:00:00Z) - software industry, Michael & Susan Dell Foundation (founded: 1999-01-01T00:00:00Z), MSD Capital (founded: 1998-01-01T00:00:00Z), Dell Software (founded: 1984-01-01T00:00:00Z), Dell Technologies (founded: 2016-09-07T00:00:00Z) - information technology, Dell Technologies (founded: 2016-09-07T00:00:00Z) - information technology",
+Q218823,Joshua Lederberg,,,
+Q219533,Angela Beesley Starling,,"Fandom (founded: 2004-10-18T00:00:00Z), Community Central (founded: 2004-10-18T00:00:00Z)",
+Q220076,Dov Gabbay,,,
+Q220296,Ahmed Nazif,,,
+Q221697,Hilary Putnam,"Reason, truth, and history","Twin Earth thought experiment, Quine–Putnam indispensability argument","Reason, truth, and history"
+Q224372,I. J. Good,Good–Turing frequency estimation,,Good–Turing frequency estimation
+Q224628,Eddy Cue,,,
+Q225247,Sándor Dominich,,,
+Q227030,Mark Shuttleworth,,"Ubuntu (founded: 2004-10-20T00:00:00Z), Canonical Group Limited (founded: 2004-03-05T00:00:00Z) - software industry, Ubuntu Foundation (founded: 2005-07-01T00:00:00Z), Thawte Consulting (founded: 1995-01-01T00:00:00Z), Shuttleworth Foundation",
+Q234653,Sheryl Sandberg,Lean In,,"Victor Arduini, Lean In"
+Q238798,Frederic Calland Williams,,,
+Q240835,Tim Willits,,,
+Q241361,Ilya Zhitomirskiy,,,
+Q241735,Robert Noyce,,"Intel (founded: 1968-07-18T00:00:00Z) - electrical industry, Intel (founded: 1968-07-18T00:00:00Z) - electrical industry, Intel (founded: 1968-07-18T00:00:00Z) - semiconductor industry, Intel (founded: 1968-07-18T00:00:00Z) - semiconductor industry",
+Q242613,Jane Jensen,,,
+Q251262,James Massey,,SAFER,
+Q252554,Wesley A. Clark,,,
+Q253354,Oded Goldreich,,,
+Q253541,Ioan Mang,,,
+Q253960,Ravi Sethi,,,
+Q256657,Miha Mazzini,King of the Rattling Spirits,,King of the Rattling Spirits
+Q262277,Andy Hunt,,"The Pragmatic Programmer, LLC (founded: 1999-07-01T00:00:00Z)",
+Q265852,Tim Cook,,"Apple (founded: 1976-04-01T00:00:00Z) - electronics, Apple (founded: 1976-04-01T00:00:00Z) - information technology, Apple (founded: 1976-04-01T00:00:00Z) - digital distribution, Apple (founded: 1976-04-01T00:00:00Z) - software development, Apple (founded: 1976-04-01T00:00:00Z) - software industry, Apple (founded: 1976-04-01T00:00:00Z) - mobile phone industry, Apple (founded: 1976-04-01T00:00:00Z) - consumer electronics industry",
+Q266386,Jack Dennis,,,
+Q279206,Mike Muuss,ping,ping (founded: 1983-12-01T00:00:00Z),ping
+Q280045,John Romero,Dangerous Dave,"id Software (founded: 1991-02-01T00:00:00Z) - video game industry, Doomguy, Ion Storm (founded: 1996-01-01T00:00:00Z) - video game industry, Monkeystone Games (founded: 2001-01-01T00:00:00Z) - video game industry, Romero Games (founded: 2015-08-11T00:00:00Z) - video game industry, Loot Drop (founded: 2010-01-01T00:00:00Z) - video game industry",Dangerous Dave
+Q281426,Thomas Bushnell,Hurd,,Hurd
+Q282263,Yu Suzuki,"Shenmue, Virtua Fighter, Out Run, Hang-On, Hang-On, Hang-On","Sega AM2 (founded: 1983-10-01T00:00:00Z) - video game industry, Sarah Bryant, Ys Net (founded: 2008-11-11T00:00:00Z) - video game industry","Shenmue, Virtua Fighter, Out Run, Hang-On"
+Q285048,Randall Munroe,"xkcd, geohashing","Cueball, Megan, Hairy, Ponytail, geohashing (founded: 2008-05-21T00:00:00Z)","geohashing, xkcd"
+Q287121,Bernard de Neumann,,,
+Q288221,Bjarni Ármannsson,,,
+Q288317,Éric Poulat,,,
+Q289023,Robert H. Dennard,,,
+Q293398,Óscar Pastor,,,
+Q295218,Satoshi Tajiri,Pokémon video games,"Pokémon, Pokémon, Ash Ketchum, Game Freak (founded: 1989-04-26T00:00:00Z) - video game industry, Brock, Professor Oak, Misty, Drew, Morty, Pokémon video games, Sandra, Tracey Sketchit, Gary Oak, Max, May, Giovanni, Tate & Liza, Pryce, Alice, Whitney, Erika, Chuck, Jasmine, Norman, Professor Birch, Professor Ivy, Bugsy, Brawly, Falkner, Pokémon Professor, Blaine, Professor Elm, Flannery, Lorelei, Wattson, Serena, Pokémon Concierge",Pokémon video games
+Q298341,Raymond Kurzweil,predictions made by Ray Kurzweil,"Kurzweil Music Systems (founded: 1982-01-01T00:00:00Z) - electronics, Singularity University (founded: 2010-01-01T00:00:00Z), FatKat (founded: 1999-01-01T00:00:00Z), predictions made by Ray Kurzweil, Kurzweil Educational Systems (founded: 1996-01-01T00:00:00Z)",predictions made by Ray Kurzweil
+Q298423,Chelsea Manning,,,
+Q299595,Vannevar Bush,Memex,"Raytheon (founded: 1922-07-07T00:00:00Z) - aerospace industry, Committee on the Present Danger (founded: 1950-12-12T00:00:00Z)","Arthur E. Kennelly, Memex"
+Q299723,Howard H. Aiken,"Harvard Mark IV, Harvard Mark I - United States, Harvard Mark II, Harvard Mark III",,"Harvard Mark IV, Harvard Mark I, Harvard Mark II, Harvard Mark III"
+Q305177,Jensen Huang,,"Nvidia (founded: 1993-04-05T00:00:00Z) - semiconductor industry, Nvidia (founded: 1993-04-05T00:00:00Z) - semiconductor industry",
+Q309493,Will Wright,"Raid on Bungeling Bay, The Sims","The Sims, Maxis (founded: 1987-01-01T00:00:00Z) - video game industry, Simlish, SimCity 2000, The Sims, Bella Goth, Mr. Vanderseaux (founded: 2007-03-01T00:00:00Z), Allison Bersowitz, Mrs. Vanderseaux (founded: 2007-03-01T00:00:00Z), Carmen Eggers (founded: 2007-03-01T00:00:00Z), Greg McPear (founded: 2007-03-01T00:00:00Z), Natalia Crenshaw, Lyla Grunt (founded: 2004-09-14T00:00:00Z), Stacy Phelps (founded: 2004-09-14T00:00:00Z), Ichabod Specter (founded: 2004-09-14T00:00:00Z), Simlish alphabet (founded: 1996-01-01T00:00:00Z), Abhijeet Roennigke (founded: 2005-09-13T00:00:00Z)","Museum of Modern Art, Raid on Bungeling Bay, The Sims"
+Q310798,Stephen Wolfram,"Mathematica, A New Kind of Science, Wolfram Language","Wolfram Alpha (founded: 2009-05-01T00:00:00Z), Wolfram Research (founded: 1987-01-01T00:00:00Z) - software industry, Touch Press (founded: 2010-01-01T00:00:00Z), Wolfram Physics Project (founded: 2020-01-01T00:00:00Z)","Mathematica, A New Kind of Science, Wolfram Language"
+Q312405,Vernor Vinge,"True Names, True Names, True Names, True Names, A Fire Upon the Deep",,"True Names, A Fire Upon the Deep"
+Q312525,Hironobu Sakaguchi,Final Fantasy,"Kuja, Zidane Tribal, Blue Dragon, Mistwalker (founded: 2004-01-01T00:00:00Z) - video game industry, Mistwalker (founded: 2004-01-01T00:00:00Z) - video game industry, Chocobo, Aya Brea, Final Fantasy, Faris Scherwiz, Final Fantasy universe, Final Fantasy",Final Fantasy
+Q312556,Jeff Bezos,,"Amazon (founded: 1994-07-05T00:00:00Z) - retail, Amazon (founded: 1994-07-05T00:00:00Z) - retail, Amazon (founded: 1994-07-05T00:00:00Z) - web service, Amazon (founded: 1994-07-05T00:00:00Z) - web service, Amazon (founded: 1994-07-05T00:00:00Z) - e-commerce, Amazon (founded: 1994-07-05T00:00:00Z) - e-commerce, Amazon (founded: 1994-07-05T00:00:00Z) - web hosting service, Amazon (founded: 1994-07-05T00:00:00Z) - web hosting service, Blue Origin (founded: 2000-09-01T00:00:00Z) - aerospace industry, Nash Holdings LLC, Bezos Earth Fund (founded: 2020-01-01T00:00:00Z)",
+Q312663,Eduardo Saverin,,"Facebook (founded: 2004-02-04T00:00:00Z), Meta Platforms (founded: 2004-07-29T00:00:00Z) - information technology",
+Q312823,Wael Ghonim,,"We are all Khaled Said (founded: 2010-07-19T00:00:00Z), We are all Khaled Said (founded: 2010-07-19T00:00:00Z)",
+Q80,Tim Berners-Lee,"World Wide Web, HTTP, HTML - United Kingdom, web server, Semantic Web, WorldWideWeb, Design Issues for the World Wide Web","web browser (founded: 1990-01-01T00:00:00Z), website (founded: 1990-01-01T00:00:00Z), World Wide Web Consortium (founded: 1994-10-01T00:00:00Z) - World Wide Web, WorldWideWeb, ENQUIRE (founded: 1980-01-01T00:00:00Z), World Wide Web Foundation (founded: 2009-01-01T00:00:00Z), Open Data Institute (founded: 2012-04-13T00:00:00Z) - open data, World Wide Web Virtual Library (founded: 1991-01-01T00:00:00Z), Solid, Inrupt Inc.","WorldWideWeb, Design Issues for the World Wide Web, World Wide Web, HTTP, HTML, web server, Semantic Web"
+Q181,Jimmy Wales,Wikipedia,"Wikipedia (founded: 2001-01-15T00:00:00Z), Wikipedia (founded: 2001-01-15T00:00:00Z), Wiktionary (founded: 2002-12-12T00:00:00Z), Wikimedia Foundation (founded: 2003-06-20T00:00:00Z), Wikisource (founded: 2003-11-24T00:00:00Z), English Wikipedia (founded: 2001-01-15T00:00:00Z), Wikibooks (founded: 2003-07-19T00:00:00Z), Wikibooks (founded: 2003-07-19T00:00:00Z), Wikiquote (founded: 2003-06-27T00:00:00Z), Wikiquote (founded: 2003-06-27T00:00:00Z), Wikimedia Commons (founded: 2004-09-07T00:00:00Z), Wikinews (founded: 2004-11-08T00:00:00Z), Wikispecies (founded: 2004-09-14T00:00:00Z), Nupedia (founded: 2000-03-09T00:00:00Z), Nupedia (founded: 2000-03-09T00:00:00Z), Fandom (founded: 2004-10-18T00:00:00Z), Fandom (founded: 2004-10-18T00:00:00Z), English Wikipedia Arbitration Committee (founded: 2003-12-04T00:00:00Z), Wikimedia Incubator (founded: 2006-07-02T00:00:00Z), Bomis (founded: 1996-01-01T00:00:00Z) - Internet, Wikia Search (founded: 2008-01-07T00:00:00Z), Wikia Search (founded: 2008-01-07T00:00:00Z), Wikimedia Foundation Board of Trustees, Jimmy Wales Foundation (founded: 2015-01-01T00:00:00Z), Fandom, Inc. (founded: 2004-10-01T00:00:00Z), WikiTribune (founded: 2017-04-25T00:00:00Z), Community Central (founded: 2004-10-18T00:00:00Z), WT:Social (founded: 2019-01-01T00:00:00Z), EditThisNFT (founded: 2021-11-29T00:00:00Z), Trust Café",Wikipedia
+Q185,Larry Sanger,"Wikipedia, Citizendium","Wikipedia (founded: 2001-01-15T00:00:00Z), Wikipedia (founded: 2001-01-15T00:00:00Z), Wiktionary (founded: 2002-12-12T00:00:00Z), English Wikipedia (founded: 2001-01-15T00:00:00Z), Nupedia (founded: 2000-03-09T00:00:00Z), Citizendium (founded: 2006-10-01T00:00:00Z), Citizendium (founded: 2006-10-01T00:00:00Z), ignore all rules (founded: 2001-02-06T00:00:00Z), Knowledge Standards Foundation","Citizendium, Wikipedia"
+Q186,Ken Jennings,Omnibus,,Omnibus
+Q360,Julian Assange,,"WikiLeaks (founded: 2006-10-04T00:00:00Z), WikiLeaks (founded: 2006-10-04T00:00:00Z), World Tomorrow",
+Q4864,Eugene Kaspersky,,"Kaspersky Lab (founded: 1997-06-26T00:00:00Z) - computer security, Kaspersky Lab (founded: 1997-06-26T00:00:00Z) - computer security, InfoWatch (founded: 2003-01-01T00:00:00Z)",
+Q4934,Larry Page,,"Google (founded: 1998-09-04T00:00:00Z) - Internet, Google (founded: 1998-09-04T00:00:00Z) - information technology, Google (founded: 1998-09-04T00:00:00Z) - internet marketing, Google (founded: 1998-09-04T00:00:00Z) - software industry, Google (founded: 1998-09-04T00:00:00Z) - search engine, Google (founded: 1998-09-04T00:00:00Z) - Internet industry, Google Search (founded: 1997-09-15T00:00:00Z) - online advertising, Google Search (founded: 1997-09-15T00:00:00Z) - online advertising, Google Images (founded: 2001-07-12T00:00:00Z), Googleplex, Google Summer of Code (founded: 2005-01-01T00:00:00Z), Google Photos (founded: 2016-05-28T00:00:00Z), Google Photos (founded: 2016-05-28T00:00:00Z), Alphabet Inc. (founded: 2015-10-02T00:00:00Z) - information technology, H211, LLC, Google Photos",
+Q7251,Alan Turing,"Turing machine, Turing test, Turing completeness, Church-Turing thesis, Bombe - United Kingdom, halting problem, Computing Machinery and Intelligence, non-deterministic Turing machine, probabilistic Turing machine, Turing degree, universal Turing machine, Symmetric Turing machine, On Computable Numbers, with an Application to the Entscheidungsproblem, Intelligent Machinery, Q133854517",,"Alonzo Church, Turing machine, Turing test, Turing completeness, Church-Turing thesis, Bombe, halting problem, Computing Machinery and Intelligence, non-deterministic Turing machine, probabilistic Turing machine, Turing degree, universal Turing machine, Symmetric Turing machine, On Computable Numbers, with an Application to the Entscheidungsproblem, Intelligent Machinery, Q133854517"
+Q7259,Ada Lovelace,,,"Augustus De Morgan, Mary Somerville, William Frend"
+Q7449,Kevin Mitnick,"The Art of Deception, The Art of Intrusion, Freedom Downtime, Ghost in the Wires",,"The Art of Deception, The Art of Intrusion, Freedom Downtime, Ghost in the Wires"
+Q7526,Deborah Estrin,Scalable timers for soft state protocols,,Scalable timers for soft state protocols
+Q7534,Elizabeth J. Feinler,,"InterNIC (founded: 1972-01-01T00:00:00Z), InterNIC (founded: 1993-01-01T00:00:00Z)",
+Q7536,Valerie Aurora,,"Ada Initiative (founded: 2011-02-08T00:00:00Z), Double Union (founded: 2013-01-01T00:00:00Z)",
+Q7538,Mary Gardiner,,Ada Initiative (founded: 2011-02-08T00:00:00Z),
+Q7541,Sally Floyd,"Random early detection gateways for congestion avoidance, RFC 2309: Recommendations on Queue Management and Congestion Avoidance in the Internet, A reliable multicast framework for light-weight sessions and application level framing, Scalable timers for soft state protocols",,"Random early detection gateways for congestion avoidance, RFC 2309: Recommendations on Queue Management and Congestion Avoidance in the Internet, A reliable multicast framework for light-weight sessions and application level framing, Scalable timers for soft state protocols"
+Q7549,Sandra Lerner,,Cisco (founded: 1984-01-01T00:00:00Z) - telecommunications,
+Q7552,Pattie Maes,,,
+Q7555,Jude Milhon,,Community Memory,
+Q7557,Nicola Pellow,Line Mode Browser,,Line Mode Browser
+Q7558,Radia Perlman,"computer literacy, Spanning Tree Protocol",,"computer literacy, Spanning Tree Protocol"
+Q7562,Ping Fu,,,
+Q7563,Joyce K. Reynolds,,,
+Q7567,Jaime Levy,,,
+Q7637,Ward Cunningham,,"Wiki Wiki Web (founded: 1995-03-25T00:00:00Z), Wiki Wiki Web (founded: 1995-03-25T00:00:00Z)",
+Q8556,Edsger W. Dijkstra,"Dijkstra's algorithm, banker's algorithm, shunting-yard algorithm, smoothsort, Go To Statement Considered Harmful, The humble programmer",Guarded Command Language (founded: 1975-01-01T00:00:00Z),"banker's algorithm, shunting-yard algorithm, smoothsort, Go To Statement Considered Harmful, The humble programmer, Dijkstra's algorithm"
+Q9049,Noam Chomsky,"Chomsky hierarchy, The Sound Pattern of English, Syntactic Structures, Failed States, Manufacturing Consent, Interventions, Hegemony or Survival: America’s Quest for Global Dominance, Cartesian Linguistics, Profit over People, 9-11, American Power and the New Mandarins, Aspects of the Theory of Syntax, Class Warfare, Conditions on Transformations, Counter-Revolutionary Violence: Bloodbaths in Fact & Propaganda, Deterring Democracy, Gaza in Crisis, Ilusionistas, Imperial Ambitions, Knowledge of Language, Lectures on Government and Binding, Making the Future, Necessary Illusions: Thought Control in Democratic Societies, Objectivity and Liberal Scholarship, Occupy, The Prosperous Few and the Restless Many, World Orders Old and New, The Fateful Triangle, The Chomsky Reader, Understanding Power:  The Indispensable Chomsky, Middle East Illusions, Propaganda and the Public Mind, Why Only Us: Language and Evolution, The Political Economy of Human Rights, Current Issues in Linguistic Theory, What Kind of Creatures Are We?, Rogue States: The Rule of Force in World Affairs",Jewish Voice for Peace (founded: 1996-09-01T00:00:00Z),"Roman Jakobson, Zellig S. Harris, Chomsky hierarchy, Nelson Goodman, The Sound Pattern of English, Syntactic Structures, Failed States, Manufacturing Consent, Interventions, Hegemony or Survival: America’s Quest for Global Dominance, Cartesian Linguistics, Profit over People, 9-11, American Power and the New Mandarins, Aspects of the Theory of Syntax, Class Warfare, Conditions on Transformations, Counter-Revolutionary Violence: Bloodbaths in Fact & Propaganda, Deterring Democracy, Gaza in Crisis, Ilusionistas, Imperial Ambitions, Knowledge of Language, Lectures on Government and Binding, Making the Future, Necessary Illusions: Thought Control in Democratic Societies, Objectivity and Liberal Scholarship, Occupy, The Prosperous Few and the Restless Many, World Orders Old and New, The Fateful Triangle, The Chomsky Reader, Understanding Power:  The Indispensable Chomsky, Middle East Illusions, Propaganda and the Public Mind, Why Only Us: Language and Evolution, The Political Economy of Human Rights, Current Issues in Linguistic Theory, What Kind of Creatures Are We?, Rogue States: The Rule of Force in World Affairs"
+Q9537,Glenda Schroeder,,,
+Q9594,Dorit Aharonov,,,
+Q9599,Susanne Albers,,,
+Q9602,Frances Allen,,,
+Q9605,Sarah Allen,,,
+Q9895,Anita K. Jones,,,
+Q9912,Annie Antón,,,
+Q9931,Cecilia R. Aragon,treap,,treap
+Q9958,Winifred Asprey,,,
+Q10070,Jacob Appelbaum,Cypherpunks,Noisebridge (founded: 2007-01-01T00:00:00Z),Cypherpunks
+Q10937,Terri Attwood,,,
+Q10942,Donna Auguste,,,
+Q10947,Chrisanthi Avgerou,,,
+Q10953,Henriette Avram,MARC standards,,MARC standards
+Q10959,Ruzena Bajcsy,,,
+Q11313,John Knoll,,"Adobe Photoshop (founded: 1990-02-19T00:00:00Z), Jyn Erso, Cassian Andor, K-2SO, Orson Krennic",
+Q11428,Jean Bartik,,,
+Q11431,Evelyn Berezin,,Redactron Corporation (founded: 1969-01-01T00:00:00Z),
+Q11433,Francine Berman,,,
+Q11440,Danielle Bunten Berry,"The Seven Cities of Gold, M.U.L.E., Command HQ",,"The Seven Cities of Gold, M.U.L.E., Command HQ"
+Q11458,Orna Berry,,Q106690657 (founded: 2020-01-01T00:00:00Z),
+Q11470,Sue Black,,TechMums,
+Q11481,Kathleen Booth,assembly language,,assembly language
+Q11483,Anita Borg,Anita Borg Institute for Women and Technology - United States,"Grace Hopper Celebration of Women in Computing (founded: 1994-01-01T00:00:00Z), Anita Borg Institute for Women and Technology (founded: 1994-01-01T00:00:00Z), Systers (founded: 1987-01-01T00:00:00Z)",Anita Borg Institute for Women and Technology
+Q11484,Maxine D. Brown,,,
+Q11487,Jennifer Tour Chayes,,,
+Q11488,Amanda Chessell,,,
+Q11489,Anne Condon,,,
+Q11490,Lynn Conway,,,
+Q11493,Danese Cooper,,,
+Q11504,Kate Craig-Wood,,,
+Q11529,Leah Culver,,,
+Q11542,Dorothy E. Denning,,,
+Q11569,Susan T. Dumais,,Latent semantic analysis (founded: 1989-06-13T00:00:00Z),
+Q11580,Cynthia Dwork,,,
+Q11586,Annie Easley,,,
+Q11588,Thelma Estrin,,,
+Q11589,Jeanne Ferrante,,,
+Q11590,Phyllis Fox,DYNAMO,,DYNAMO
+Q11594,Frances A. Rosamond,,,
+Q11596,Charlotte Froese Fischer,,,
+Q11600,Susan Gerhart,,,
+Q11604,Carole Goble,"ELIXIR - Sweden, ELIXIR - Switzerland, ELIXIR - Netherlands, ELIXIR - United Kingdom, ELIXIR - Czech Republic",,ELIXIR
+Q11605,Adele Goldberg,,,
+Q11609,Shafrira Goldwasser,,,
+Q11612,Susan L. Graham,,,
+Q11614,Diane Greene,,VMware (founded: 1998-01-01T00:00:00Z) - software industry,
+Q11615,Sheila Greibach,,,
+Q11619,Nancy Davis Griffeth,,,
+Q11620,Rebecca Grinter,,,
+Q11623,Nancy Hafkin,,,
+Q11624,Lois Haibt,,,
+Q11625,Ashawna Hailey,,,
+Q11626,Wendy Hall,,Microcosm (founded: 1988-01-01T00:00:00Z),
+Q11628,Margaret Hamilton,,"Hamilton Technologies (founded: 1986-01-01T00:00:00Z), Hamilton Technologies (founded: 1986-01-01T00:00:00Z)",
+Q11630,Jane Hillston,,PEPA,
+Q11636,Betty Holberton,ENIAC - United States,,ENIAC
+Q11638,Molly Holzschlag,,,
+Q11641,Grace Hopper,FLOW-MATIC,,"FLOW-MATIC, Howard Engstrom"
+Q11644,Ayanna Howard,,,
+Q11648,Mary Jane Irwin,,,
+Q11688,Leah Jamieson,,,
+Q11689,Sabina Jeschke,,,
+Q11740,Katherine Johnson,,,William Claytor
+Q11742,Lynne Jolitz,,,
+Q11743,Lila Kari,,,"Arto Salomaa, Gheorghe Păun"
+Q11745,Arfa Karim,,,
+Q11748,Anna Karlin,,,
+Q11749,Lydia E. Kavraki,,,
+Q11752,Mary Kenneth Keller,BASIC,,BASIC
+Q11754,Maria Klawe,,,
+Q11755,Daphne Koller,Coursera - United States,Coursera (founded: 2012-01-01T00:00:00Z) - educational technology,Coursera
+Q11757,Janet Kolodner,,,
+Q11760,Marta Zofia Kwiatkowska,,,
