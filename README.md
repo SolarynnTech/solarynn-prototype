@@ -1,119 +1,136 @@
-# Wiki Sports Figures Data Extractor
+# LinkedIn Clone Backend
 
-This project extracts information about Sports & Athletics public figures from Wikidata, focusing on specific fields:
-- Sport Type
-- Team(s)
-- Olympic Stats
-- League
+A Flask-based RESTful API backend for a LinkedIn clone with features for profiles, projects, messaging, and more.
 
-## Requirements
+## Features
+
+- **Authentication**
+  - Register with email and phone verification
+  - Login with JWT token
+  - Password reset with verification code
+
+- **Profiles**
+  - Multiple user types (Public Figure, Fashion & Beauty, Company, Industry Expert)
+  - Profile pictures and social media links
+  - Onboarding with custom questions
+  - Favoriting users
+
+- **Projects**
+  - Create and manage projects with images
+  - Rate projects with 5-star system
+  - Send collaboration requests
+  - Make projects private
+  - Categorize projects
+
+- **Messaging**
+  - Chat with users within your circle
+  - Project proposals
+  - Collaboration requests
+  - Support messages
+
+- **Settings**
+  - Update email, phone, and password
+  - Toggle "open to more" setting
+
+## Setup
+
+### Prerequisites
 
 - Python 3.8+
-- Required packages (install using `pip install -r requirements.txt`):
-  - requests
-  - pandas
-  - tqdm
-  - SPARQLWrapper
-  - matplotlib (for visualization)
+- MongoDB
+- Virtual environment (recommended)
 
-## Scripts
+### Installation
 
-The project includes three extractor scripts with varying levels of complexity:
+1. Clone this repository
+   ```
+   git clone <repository-url>
+   cd linkedin-clone-backend
+   ```
 
-### 1. Basic Extractor (`extract_sports_figures.py`)
+2. Create a virtual environment and activate it
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-A simple script that extracts basic information about sports figures:
+3. Install dependencies
+   ```
+   pip install -r requirements.txt
+   ```
 
-```bash
-python extract_sports_figures.py
+4. Create a .env file from the example
+   ```
+   cp .env.example .env
+   ```
+
+5. Edit the .env file with your settings
+   - Generate secure random keys for SECRET_KEY and JWT_SECRET_KEY
+   - Configure your MongoDB connection string
+   - Add Twilio credentials for SMS (if using)
+   - Add SMTP settings for email (if using)
+
+### Running the Application
+
+Development mode:
+```
+python run.py
 ```
 
-### 2. Advanced Extractor (`extract_sports_figures_advanced.py`)
+The API will be available at http://localhost:5000/
 
-An enhanced version that provides more detailed information and better handles multiple values:
+## API Documentation
 
-```bash
-python extract_sports_figures_advanced.py
-```
+### Authentication
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login and get JWT token
+- `POST /api/auth/verify/email` - Verify email with code
+- `POST /api/auth/verify/phone` - Verify phone with code
+- `POST /api/auth/password/reset-request` - Request a password reset
+- `POST /api/auth/password/verify-code` - Verify password reset code
+- `POST /api/auth/password/reset` - Reset password
+- `GET /api/auth/me` - Get current user info
 
-This script includes:
-- Multiple teams per athlete
-- Olympic medals details
-- Country representation
-- Birth date information
-- Image URLs
+### Profiles
+- `GET /api/profile/` - Get current user profile
+- `GET /api/profile/<user_id>` - Get another user's profile
+- `POST /api/profile/onboarding` - Update onboarding responses
+- `PUT /api/profile/update` - Update profile details
+- `POST /api/profile/profile-picture` - Upload profile picture
+- `POST /api/profile/favorite/<user_id>` - Favorite/unfavorite a user
+- `GET /api/profile/favorites/users` - Get favorited users
+- `POST /api/profile/collaboration-request/<user_id>` - Send a collaboration request
+- `POST /api/profile/project-proposal/<user_id>` - Send a project proposal
 
-**Note:** The advanced script may encounter timeout errors with the Wikidata SPARQL endpoint due to query complexity.
+### Projects
+- `POST /api/project/` - Create a new project
+- `GET /api/project/<project_id>` - Get a project by ID
+- `PUT /api/project/<project_id>` - Update a project
+- `POST /api/project/<project_id>/images` - Upload project images
+- `DELETE /api/project/<project_id>/images/<image_index>` - Delete a project image
+- `POST /api/project/<project_id>/favorite` - Favorite/unfavorite a project
+- `GET /api/project/favorites` - Get favorited projects
+- `POST /api/project/<project_id>/rate` - Rate a project
+- `POST /api/project/<project_id>/collaboration-request` - Send a collaboration request
+- `PUT /api/project/<project_id>/collaboration-request/<user_id>` - Update collaboration request
+- `DELETE /api/project/<project_id>` - Delete a project
+- `GET /api/project/user/<user_id>` - Get projects by user
+- `GET /api/project/categories` - Get projects by categories
 
-### 3. Simplified Extractor (`extract_sports_figures_simplified.py`) - Recommended
+### Messages
+- `GET /api/messages/conversations` - Get all conversations
+- `GET /api/messages/conversations/<conversation_id>` - Get messages in a conversation
+- `POST /api/messages/send/<user_id>` - Send a message
+- `GET /api/messages/unread/count` - Get unread message count
+- `POST /api/messages/mark-read/<message_id>` - Mark a message as read
+- `POST /api/messages/mark-conversation-read/<conversation_id>` - Mark all messages in a conversation as read
 
-A more robust version that handles Wikidata API limitations better:
+### Settings
+- `PUT /api/settings/email` - Update email
+- `PUT /api/settings/phone` - Update phone
+- `PUT /api/settings/password` - Update password
+- `PUT /api/settings/open-to-more` - Update "open to more" setting
 
-```bash
-python extract_sports_figures_simplified.py
-```
+## License
 
-This script:
-- Uses a simplified query to avoid timeouts
-- Makes separate queries for Olympic data
-- Has built-in retry logic with reduced batch sizes
-- Limits data collection to a reasonable sample size
-
-### 4. Data Visualization (`visualize_data.py`)
-
-A script to create visualizations from the extracted data:
-
-```bash
-python visualize_data.py
-```
-
-This script generates:
-- Bar chart of the top sports by number of athletes
-- Bar chart of Olympic medal distribution
-
-The visualizations are saved as PNG files in the project directory.
-
-## Output
-
-All extractor scripts generate:
-
-1. A CSV file (`sports_figures_data.csv`) for easy data analysis
-2. A JSON file (`sports_figures_data.json`) containing the complete structured data
-
-## Usage Example
-
-```bash
-# Install dependencies
-pip install requests pandas tqdm SPARQLWrapper matplotlib
-
-# Run the simplified extractor (recommended)
-python extract_sports_figures_simplified.py
-
-# Visualize the extracted data
-python visualize_data.py
-```
-
-## Sample Output
-
-The script provides information such as:
-
-```
-1. Béla Rajki (Q330959)
-   Sport: swimming
-   Team: 
-   League: 
-
-2. Vítězslav Lavička (Q331332)
-   Sport: association football
-   Team: AC Sparta Prague
-   League: 
-   Olympic events:
-      - 2017 UEFA European Under-21 Championship
-```
-
-## Notes
-
-- The scripts limit the number of records retrieved to avoid overloading the Wikidata servers
-- The simplified script is limited to 5 batches (500 athletes) by default
-- All scripts include proper delays between requests to be respectful of Wikidata's servers
-- For Olympic data, the simplified script only fetches data for the first 10 athletes to keep the runtime reasonable 
+[MIT License](LICENSE) 
