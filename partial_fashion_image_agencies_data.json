@@ -1,0 +1,109 @@
+[
+  {
+    "id": "Q307894",
+    "agency_name": "2(x)ist",
+    "service_types": [
+      "Q4830453"
+    ],
+    "industries_served": [
+      "Q12684"
+    ],
+    "locations": [
+      "Q30",
+      "Q60"
+    ],
+    "top_clients": [],
+    "years_active": "1991-00-00 - present",
+    "website": "http://www.2xist.com/",
+    "featured_work": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q16245398",
+    "agency_name": "2wink",
+    "service_types": [
+      "Q4830453"
+    ],
+    "industries_served": [
+      "Q12684"
+    ],
+    "locations": [
+      "Q408",
+      "Q3183"
+    ],
+    "top_clients": [],
+    "years_active": "2005-00-00 - present",
+    "website": "http://www.2wink.com.au/",
+    "featured_work": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q16824190",
+    "agency_name": "A.F.C.A",
+    "service_types": [
+      "Q4830453"
+    ],
+    "industries_served": [
+      "Q12684"
+    ],
+    "locations": [
+      "Q55",
+      "Q727"
+    ],
+    "top_clients": [],
+    "years_active": "1976-00-00 - present",
+    "website": "http://www.afcashop.nl/",
+    "featured_work": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q130710754",
+    "agency_name": "ARNTREAL",
+    "service_types": [
+      "Q1618899",
+      "Q783794"
+    ],
+    "industries_served": [
+      "Q12684"
+    ],
+    "locations": [
+      "Q142"
+    ],
+    "top_clients": [],
+    "years_active": "2023-00-00 - present",
+    "website": "https://www.arntreal.com/",
+    "featured_work": [
+      "Q11460"
+    ],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q112127488",
+    "agency_name": "ASPESI",
+    "service_types": [
+      "Q4830453",
+      "Q1618899",
+      "Q1941779",
+      "Q6881511",
+      "Q431289",
+      "Owned by: Q114046838",
+      "Part of: Q114046616"
+    ],
+    "industries_served": [
+      "Q12684",
+      "Q11828862",
+      "Q11460"
+    ],
+    "locations": [
+      "Q38",
+      "Q42782"
+    ],
+    "top_clients": [],
+    "years_active": "1969-00-00 - present",
+    "website": "https://www.aspesi.com",
+    "featured_work": [
+      "Q11460"
+    ],
+    "platform_integrations": []
+  }
+]

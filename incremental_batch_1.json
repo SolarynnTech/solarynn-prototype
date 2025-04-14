@@ -1,0 +1,109 @@
+[
+  {
+    "id": "Q307894",
+    "agency_name": "2(x)ist",
+    "service_types": [
+      "business"
+    ],
+    "industries_served": [
+      "fashion"
+    ],
+    "locations": [
+      "United States",
+      "New York City"
+    ],
+    "top_clients": [],
+    "years_active": "1991-00-00 - present",
+    "website": "http://www.2xist.com/",
+    "featured_work": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q16245398",
+    "agency_name": "2wink",
+    "service_types": [
+      "business"
+    ],
+    "industries_served": [
+      "fashion"
+    ],
+    "locations": [
+      "Australia",
+      "Perth"
+    ],
+    "top_clients": [],
+    "years_active": "2005-00-00 - present",
+    "website": "http://www.2wink.com.au/",
+    "featured_work": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q16824190",
+    "agency_name": "A.F.C.A",
+    "service_types": [
+      "business"
+    ],
+    "industries_served": [
+      "fashion"
+    ],
+    "locations": [
+      "Netherlands",
+      "Amsterdam"
+    ],
+    "top_clients": [],
+    "years_active": "1976-00-00 - present",
+    "website": "http://www.afcashop.nl/",
+    "featured_work": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q130710754",
+    "agency_name": "ARNTREAL",
+    "service_types": [
+      "fashion label",
+      "company"
+    ],
+    "industries_served": [
+      "fashion"
+    ],
+    "locations": [
+      "France"
+    ],
+    "top_clients": [],
+    "years_active": "2023-00-00 - present",
+    "website": "https://www.arntreal.com/",
+    "featured_work": [
+      "clothing"
+    ],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q112127488",
+    "agency_name": "ASPESI",
+    "service_types": [
+      "business",
+      "fashion label",
+      "fashion house",
+      "enterprise",
+      "brand",
+      "Owned by: Armonia Italy Fund",
+      "Part of: Armònia SGR"
+    ],
+    "industries_served": [
+      "fashion",
+      "clothing industry",
+      "clothing"
+    ],
+    "locations": [
+      "Italy",
+      "Legnano"
+    ],
+    "top_clients": [],
+    "years_active": "1969-00-00 - present",
+    "website": "https://www.aspesi.com",
+    "featured_work": [
+      "clothing"
+    ],
+    "platform_integrations": []
+  }
+]
