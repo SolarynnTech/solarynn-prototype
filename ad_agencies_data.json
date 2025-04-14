@@ -1,0 +1,34 @@
+[
+  {
+    "id": "Q10603158",
+    "agency_name": "Nosebleed Studio",
+    "service_types": [
+      "artist collective"
+    ],
+    "industries_served": [],
+    "locations": [
+      "Sweden"
+    ],
+    "top_clients": [],
+    "years_active": null,
+    "website": null,
+    "featured_work": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q10723620",
+    "agency_name": "Yokaj Studio",
+    "service_types": [
+      "artist collective"
+    ],
+    "industries_served": [],
+    "locations": [
+      "Sweden"
+    ],
+    "top_clients": [],
+    "years_active": null,
+    "website": null,
+    "featured_work": [],
+    "platform_integrations": []
+  }
+]

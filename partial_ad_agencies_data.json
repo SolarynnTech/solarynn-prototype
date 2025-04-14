@@ -1,0 +1,223 @@
+[
+  {
+    "id": "Q151481",
+    "agency_name": "DEHOGA",
+    "service_types": [
+      "trade association",
+      "nonprofit organization",
+      "business and professional associations, unions"
+    ],
+    "industries_served": [
+      "business and professional associations, unions"
+    ],
+    "locations": [
+      "Germany",
+      "Berlin"
+    ],
+    "top_clients": [],
+    "years_active": "1949-01-01 to present",
+    "website": "https://www.dehoga-bundesverband.de/",
+    "case_studies": [],
+    "platform_integrations": [
+      "Bundesvereinigung der Musikveranstalter",
+      "Q1631167",
+      "Bundesverband der Deutschen Tourismuswirtschaft",
+      "Food Federation Germany",
+      "Confederation of German Employers' Associations",
+      "Ausstellungs- und Messe-Ausschuss",
+      "Zentrale zur Bekämpfung Unlauteren Wettbewerbs"
+    ]
+  },
+  {
+    "id": "Q151602",
+    "agency_name": ".au Domain Administration",
+    "service_types": [
+      "membership organization",
+      "domain name registrar",
+      "organ of state",
+      "nonprofit organization"
+    ],
+    "industries_served": [],
+    "locations": [
+      "Australia"
+    ],
+    "top_clients": [],
+    "years_active": "",
+    "website": "https://www.auda.org.au/",
+    "case_studies": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q152746",
+    "agency_name": "Deutsches Institut für Normung",
+    "service_types": [
+      "voluntary sector",
+      "standards organization",
+      "nonprofit organization"
+    ],
+    "industries_served": [
+      "voluntary sector"
+    ],
+    "locations": [
+      "Germany",
+      "Berlin"
+    ],
+    "top_clients": [
+      "DIN Media"
+    ],
+    "years_active": "1917-12-22 to present",
+    "website": "https://www.din.de/de",
+    "case_studies": [],
+    "platform_integrations": [
+      "BVBS",
+      "Kundendienst-Verband Deutschland",
+      "Economic Council Germany",
+      "Verein zur Förderung eines Deutschen Forschungsnetzes",
+      "Deutsche Verkehrswacht"
+    ]
+  },
+  {
+    "id": "Q153410",
+    "agency_name": "Adım Adım Initiative",
+    "service_types": [
+      "charity",
+      "nonprofit organization",
+      "economic, social and community development"
+    ],
+    "industries_served": [
+      "economic, social and community development"
+    ],
+    "locations": [
+      "Turkey"
+    ],
+    "top_clients": [],
+    "years_active": "2022-01-01 to present",
+    "website": "https://adimadim.org/",
+    "case_studies": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q217082",
+    "agency_name": "Internet Engineering Task Force",
+    "service_types": [
+      "standards organization",
+      "project",
+      "nonprofit organization"
+    ],
+    "industries_served": [],
+    "locations": [
+      "United States",
+      "Fremont"
+    ],
+    "top_clients": [],
+    "years_active": "1986-01-17 to present",
+    "website": "https://www.ietf.org/",
+    "case_studies": [
+      "RFC 3233: Defining the IETF"
+    ],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q215616",
+    "agency_name": "PBS",
+    "service_types": [
+      "television network",
+      "public broadcaster",
+      "nonprofit organization"
+    ],
+    "industries_served": [],
+    "locations": [
+      "United States",
+      "Crystal City"
+    ],
+    "top_clients": [
+      "PBS Kids Go!",
+      "PBS Kids"
+    ],
+    "years_active": "1969-11-03 to present",
+    "website": "https://www.pbs.org",
+    "case_studies": [],
+    "platform_integrations": [
+      "National Digital Stewardship Alliance",
+      "public television"
+    ]
+  },
+  {
+    "id": "Q294983",
+    "agency_name": "Ökologisch-Demokratische Studierende",
+    "service_types": [
+      "nonprofit organization"
+    ],
+    "industries_served": [],
+    "locations": [
+      "Germany"
+    ],
+    "top_clients": [],
+    "years_active": "1987-01-01 to 2005-01-01",
+    "website": null,
+    "case_studies": [],
+    "platform_integrations": []
+  },
+  {
+    "id": "Q296568",
+    "agency_name": "ARD.ZDF medienakademie",
+    "service_types": [
+      "Förderung der Erziehung, Volks- und Berufsbildung einschließlich der Studentenhilfe",
+      "nonprofit organization"
+    ],
+    "industries_served": [
+      "Förderung der Erziehung, Volks- und Berufsbildung einschließlich der Studentenhilfe"
+    ],
+    "locations": [
+      "Germany",
+      "Nuremberg"
+    ],
+    "top_clients": [],
+    "years_active": "2007-01-01 to present",
+    "website": "https://www.ard-zdf-medienakademie.de/",
+    "case_studies": [],
+    "platform_integrations": [
+      "MedienCampus Bayern"
+    ]
+  },
+  {
+    "id": "Q301419",
+    "agency_name": "Österreichische Bundes-Sportorganisation",
+    "service_types": [
+      "sports organization",
+      "nonprofit organization"
+    ],
+    "industries_served": [],
+    "locations": [
+      "Austria",
+      "Vienna"
+    ],
+    "top_clients": [],
+    "years_active": "",
+    "website": "https://www.sportaustria.at/",
+    "case_studies": [],
+    "platform_integrations": [
+      "Austrian Olympic Committee"
+    ]
+  },
+  {
+    "id": "Q306681",
+    "agency_name": "Austrian Paralympic Committee",
+    "service_types": [
+      "National Paralympic Committee",
+      "nonprofit organization"
+    ],
+    "industries_served": [],
+    "locations": [
+      "Austria",
+      "Vienna"
+    ],
+    "top_clients": [],
+    "years_active": "1998-01-01 to present",
+    "website": "https://oepc.at",
+    "case_studies": [],
+    "platform_integrations": [
+      "Österreichische Bundes-Sportorganisation"
+    ]
+  }
+]
