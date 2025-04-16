@@ -14,6 +14,7 @@ if __name__ == '__main__':
     
     # Determine if we're in development or production
     env = os.environ.get('FLASK_ENV', 'development')
+    print(f"Environment: {env}")
     debug = env == 'development'
     
     if debug:

@@ -50,7 +50,7 @@ export default function CreateAccount() {
                   }
                   
                   if (data.status) {
-                    localStorage.setItem('create-account-token', True);
+                    localStorage.setItem('create-account-token', "true");
                     // Registration successful, redirect to onboard page
                     router.push('/onboard');
                   } else {
