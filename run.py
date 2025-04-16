@@ -12,8 +12,15 @@ if __name__ == '__main__':
     # Get port from environment variable or use default
     port = int(os.environ.get('PORT', 5000))
     
-    # Run app in debug mode during development
-    debug = os.environ.get('FLASK_ENV', 'development') == 'development'
+    # Determine if we're in development or production
+    env = os.environ.get('FLASK_ENV', 'development')
+    debug = env == 'development'
     
-    # Run app
-    app.run(host='0.0.0.0', port=port, debug=debug) 
+    if debug:
+        # Use Flask's built-in server for development
+        app.run(host='0.0.0.0', port=port, debug=True)
+    else:
+        # Use Waitress for production on Windows
+        from waitress import serve
+        print(f"Serving on http://0.0.0.0:{port}")
+        serve(app, host='0.0.0.0', port=port, threads=4) 
