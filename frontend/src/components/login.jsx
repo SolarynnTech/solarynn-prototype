@@ -16,11 +16,6 @@ const LoginPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle login logic here
-  };
-
   return (
     <div className={styles.container}>
       <div className={styles.loginPage}>
@@ -35,7 +30,7 @@ const LoginPage = () => {
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/69a05f9eccca510a4a88582a0c5b2294314b9764?placeholderIfAbsent=true" alt="" className={styles.headerImage} />
           </div>
 
-          <form onSubmit={handleSubmit} className={styles.form}>
+          <form className={styles.form}>
             <div className={styles.inputGroup}>
               <label htmlFor="email" className={styles.inputLabel}>
                 Your email

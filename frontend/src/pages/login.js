@@ -12,7 +12,7 @@ export default function Login() {
     
     // Add custom form submission handler
     React.useEffect(() => {
-      const loginButton = document.querySelector(`.loginButton`);
+      const loginButton = document.querySelector('button[type="submit"], .continue-button, .next-button, .submit-button');
       if (loginButton) {
         const originalOnClick = loginButton.onclick;
         loginButton.onclick = (e) => {
