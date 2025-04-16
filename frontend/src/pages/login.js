@@ -11,16 +11,7 @@ export default function Login() {
     const component = <LoginPage />;
     
     // Add custom form submission handler
-    React.useEffect(() => {
-      const loginButton = document.querySelector('button[type="submit"], .continue-button, .next-button, .submit-button');
-      if (loginButton) {
-        const originalOnClick = loginButton.onclick;
-        loginButton.onclick = (e) => {
-          if (originalOnClick) originalOnClick(e);
-          router.push('/onboard');
-        };
-      }
-      
+    React.useEffect(() => {      
       // Handle "Create an Account" link
       const createAccountLink = document.querySelector(`.createAccountLink`);
       if (createAccountLink) {

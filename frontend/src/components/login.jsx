@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from "react";
 import styles from "../components/Login.module.css";
-
+import { useRouter } from 'next/router';
 const LoginPage = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -14,6 +15,34 @@ const LoginPage = () => {
       ...prev,
       [name]: value,
     }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      // Call the login API
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/auth/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.token) {
+        // Store the token
+        localStorage.setItem('token', data.token);
+        router.push('/onboard');
+        // Login successful - the page wrapper will handle redirect
+      } else {
+        // Login failed
+        console.error('Login failed:', data.message);
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+    }
   };
 
   return (
@@ -30,7 +59,7 @@ const LoginPage = () => {
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/69a05f9eccca510a4a88582a0c5b2294314b9764?placeholderIfAbsent=true" alt="" className={styles.headerImage} />
           </div>
 
-          <form className={styles.form}>
+          <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.inputGroup}>
               <label htmlFor="email" className={styles.inputLabel}>
                 Your email
