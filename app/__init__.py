@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, send_from_directory
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 from dotenv import load_dotenv
@@ -46,5 +46,20 @@ def create_app(test_config=None):
     # Create required directories for uploads if they don't exist
     os.makedirs(os.path.join(app.config['UPLOAD_FOLDER'], 'profiles'), exist_ok=True)
     os.makedirs(os.path.join(app.config['UPLOAD_FOLDER'], 'projects'), exist_ok=True)
+    
+    # Create static directory if it doesn't exist
+    static_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static/.next')
+    os.makedirs(static_folder, exist_ok=True)
+    
+    # Serve static files from the root route
+    @app.route('/', defaults={'path': 'server/pages/index.html'})
+    @app.route('/<path:path>')
+    def serve_static(path):
+        return send_from_directory(static_folder, path)
+    
+    # Add route specifically for Next.js static files
+    @app.route('/_next/<path:path>')
+    def serve_next_static(path):
+        return send_from_directory(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static/.next'), path)
     
     return app 

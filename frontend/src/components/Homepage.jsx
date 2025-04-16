@@ -319,14 +319,6 @@ const NavIndicator = styled.div`
 function Homepage() {
   const [searchQuery, setSearchQuery] = useState("");
   
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      console.log("Search submitted:", searchQuery);
-      // Here you would typically call an API or perform a search action
-      // For example: searchAPI(searchQuery);
-    }
-  };
 
   return (
     <PageContainer>
@@ -342,7 +334,7 @@ function Homepage() {
       </Header>
 
       <SearchSection>
-        <SearchForm onSubmit={handleSubmit}>
+        <SearchForm>
           <SearchInput 
             type="text" 
             placeholder="Type here to Search" 

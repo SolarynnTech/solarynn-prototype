@@ -1,18 +1,18 @@
 "use client";
 import React from "react";
-import "../components/SelectionPageSelectedState.css";
+import styles from "../components/SelectionPageSelectedState.module.css";
 
 function SelectionPageSelectedState() {
   return (
-    <div className="selection-page">
-      <div className="status-bar">9:41</div>
+    <div className={styles["selection-page"]}>
+      <div className={styles["status-bar"]}>9:41</div>
 
-      <div className="header">
-        <div className="header-title">Select categories</div>
+      <div className={styles["header"]}>
+        <div className={styles["header-title"]}>Select categories</div>
       </div>
 
-      <div className="content">
-        <div className="content-header">You have selected</div>
+      <div className={styles["content"]}>
+        <div className={styles["content-header"]}>You have selected</div>
 
         <div className="category-card category-entertainment">
           <div className="category-content">Entertainment & Media</div>
@@ -22,8 +22,8 @@ function SelectionPageSelectedState() {
           <div className="category-content">Fashion & Modeling</div>
         </div>
 
-        <div className="category-card category-entertainment">
-          <div className="category-content">Entertainment & Media</div>
+        <div className={styles["category-card"]} category-entertainment>
+          <div className={styles["category-content"]}>Entertainment & Media</div>
         </div>
       </div>
 

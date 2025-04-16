@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import SelectionPageSelectedState from '../components/SelectionPageSelectedState';
-import '../components/SelectionPageSelectedState.css';
+import '../components/SelectionPageSelectedState.module.css';
 
 export default function Onboarding4() {
   const router = useRouter();

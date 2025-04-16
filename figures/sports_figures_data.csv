@@ -1,0 +1,801 @@
+id,name,sport_type,teams,league,olympic_data
+Q361207,Jaroslav Šilhavý,association football,FK Drnovice,,
+Q361207,Jaroslav Šilhavý,association football,Czechoslovakia men's national association football team,,
+Q361207,Jaroslav Šilhavý,association football,SK Slavia Prague,,
+Q361207,Jaroslav Šilhavý,association football,FC Viktoria Plzeň,,
+Q361207,Jaroslav Šilhavý,association football,FK Viktoria Žižkov,,
+Q361207,Jaroslav Šilhavý,association football,Czechoslovakia national under-21 football team,,
+Q361207,Jaroslav Šilhavý,association football,FK Hvězda Cheb,,
+Q361289,Adolf Dorner,,,,
+Q361587,Kevin Peter Hall,basketball,George Washington Revolutionaries men's basketball,NCAA Division I men's basketball,
+Q371518,Tobias Ide,powerlifting,,,
+Q371689,Ivan Nanut,,,,
+Q373261,Nigel Murray,boccia,,,"2012 Summer Paralympics, 2008 Summer Paralympics, 2004 Summer Paralympics, 2000 Summer Paralympics"
+Q373293,Jahon Qurbonov,boxing,,,"2010 Asian Games, 2006 Asian Games, 2014 Asian Games, 2008 Summer Olympics, 2012 Summer Olympics"
+Q373699,Adrian Nicholas,,,,
+Q375421,Lenka Ledvinová,athletics,,,2008 Summer Olympics
+Q380050,Chuck Liddell,karate,The Pit,,
+Q380050,Chuck Liddell,mixed martial arts,The Pit,,
+Q380115,Michal Bílek,association football,Real Betis Balompié,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,Czechoslovakia men's national association football team,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,AC Sparta Prague,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,Czechia men's national football team,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,FK Viktoria Žižkov,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,FK Teplice,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,FK Hvězda Cheb,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380407,Nikolai Fomenko,auto racing,,,24 Hours of Le Mans
+Q380407,Nikolai Fomenko,alpine skiing,,,24 Hours of Le Mans
+Q382073,Filip Jícha,handball,THW Kiel,,Q56317501
+Q382073,Filip Jícha,handball,TBV Lemgo,,Q56317501
+Q382478,Milovan Zoričić,association football,,,
+Q388631,Ivan Hlinka,ice hockey,Vancouver Canucks,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q388631,Ivan Hlinka,ice hockey,HC Litvínov,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q388631,Ivan Hlinka,ice hockey,EV Zug,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q388631,Ivan Hlinka,ice hockey,HK Dukla Trenčín,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q393039,Hagesias of Syracuse,,,,
+Q405989,Aenetus of Amyclae,,,,
+Q406813,Alfred James Wilmott,table tennis,,,
+Q427745,Max Braun,tug of war,Southwest Turnverein of Saint Louis,,1904 Summer Olympics
+Q427820,Rob van den Wildenberg,cycle sport,,,2008 Summer Olympics
+Q428673,Josef Silný,association football,Czechoslovakia men's national association football team,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,AC Sparta Prague,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,SK Slavia Prague,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,Bohemians 1905,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,SK Hanácká Slavia Kroměříž,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,Sporting Club Nimes,,1934 FIFA World Cup
+Q429021,František Vaněk,ice hockey,HC Kometa Brno,,"1960 Winter Olympics, 1956 Winter Olympics"
+Q430985,Patrick Philbin,athletics,,,1908 Summer Olympics
+Q433466,Cylon of Athens,,,,
+Q435761,Aleksandr Medved,amateur wrestling,,,"wrestling at the 1972 Summer Olympics – men's freestyle +100 kg (Olympic gold medal), 1964 Summer Olympics, 1968 Summer Olympics"
+Q436172,Jerry Moffatt,bouldering,,,
+Q436172,Jerry Moffatt,rock climbing,,,
+Q436172,Jerry Moffatt,free solo climbing,,,
+Q436172,Jerry Moffatt,sport climbing,,,
+Q436172,Jerry Moffatt,traditional climbing,,,
+Q438600,Erika Nyström,beach volleyball,,,
+Q439743,Sheila Taormina,triathlon,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q439743,Sheila Taormina,swimming,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q439743,Sheila Taormina,modern pentathlon,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q440237,Stan Mikita,ice hockey,Chicago Blackhawks,National Hockey League,
+Q443218,Olga Orgonista,figure skating,,,figure skating at the 1932 Winter Olympics – pairs
+Q445421,Věra Suková,tennis,,,
+Q445799,Natascha Badmann,triathlon,,,
+Q445799,Natascha Badmann,duathlon,,,
+Q449205,Jiří Raška,ski jumping,,,"ski jumping at the 1968 Winter Olympics – large hill individual (Olympic silver medal), ski jumping at the 1968 Winter Olympics – normal hill individual (Olympic gold medal), 1972 Winter Olympics"
+Q449547,Nicola Spieß,alpine skiing,,,1976 Winter Olympics
+Q454730,Jarmila Nygrýnová,athletics,,,"1972 Summer Olympics, 1976 Summer Olympics, 1980 Summer Olympics"
+Q458760,Gustl Berauer,Nordic combined,,,1936 Winter Olympics
+Q461593,Kinga Baranowska,,,,
+Q461814,Jan Marek,ice hockey,Lokomotiv Yaroslavl,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q461814,Jan Marek,ice hockey,Metallurg Magnitogorsk,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q461814,Jan Marek,ice hockey,HC Oceláři Třinec,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q463531,Jean-Baptiste Charcot,rugby union,Olympique,,"sailing at the 1900 Summer Olympics – 0 to .5 ton (Olympic silver medal), 1895–96 French Rugby Union Championship, 1894–95 French Rugby Union Championship, 1900 Summer Olympics"
+Q463531,Jean-Baptiste Charcot,sailing,Olympique,,"sailing at the 1900 Summer Olympics – 0 to .5 ton (Olympic silver medal), 1895–96 French Rugby Union Championship, 1894–95 French Rugby Union Championship, 1900 Summer Olympics"
+Q463639,Ana Mendieta,,,,
+Q463971,František Raboň,road bicycle racing,HTC-Highroad,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,Elkov-Kasper,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,Soudal Quick-Step,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,T-Mobile,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q465225,Sonya Thomas,,,,
+Q471180,Tom Danielson,road bicycle racing,Mercury Cycling Team,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,EF Education-EasyPost,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Discovery Channel,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Fassa Bortolo,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Saturn Cycling Team,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q481811,Amy Alsop,goalball,,,
+Q483137,Petr Čech,association football,Chelsea F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Chelsea F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Arsenal F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Arsenal F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Stade Rennais F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Stade Rennais F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,AC Sparta Prague,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,AC Sparta Prague,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czechia men's national football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czechia men's national football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,FK Chmel Blšany,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,FK Chmel Blšany,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czech Republic national under-21 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czech Republic national under-21 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czech Republic national under-17 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czech Republic national under-17 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q361207,Jaroslav Šilhavý,association football,FK Drnovice,,
+Q361207,Jaroslav Šilhavý,association football,Czechoslovakia men's national association football team,,
+Q361207,Jaroslav Šilhavý,association football,SK Slavia Prague,,
+Q361207,Jaroslav Šilhavý,association football,FC Viktoria Plzeň,,
+Q361207,Jaroslav Šilhavý,association football,FK Viktoria Žižkov,,
+Q361207,Jaroslav Šilhavý,association football,Czechoslovakia national under-21 football team,,
+Q361207,Jaroslav Šilhavý,association football,FK Hvězda Cheb,,
+Q361289,Adolf Dorner,,,,
+Q361587,Kevin Peter Hall,basketball,George Washington Revolutionaries men's basketball,NCAA Division I men's basketball,
+Q371518,Tobias Ide,powerlifting,,,
+Q371689,Ivan Nanut,,,,
+Q373261,Nigel Murray,boccia,,,"2012 Summer Paralympics, 2008 Summer Paralympics, 2004 Summer Paralympics, 2000 Summer Paralympics"
+Q373293,Jahon Qurbonov,boxing,,,"2010 Asian Games, 2006 Asian Games, 2014 Asian Games, 2008 Summer Olympics, 2012 Summer Olympics"
+Q373699,Adrian Nicholas,,,,
+Q375421,Lenka Ledvinová,athletics,,,2008 Summer Olympics
+Q380050,Chuck Liddell,karate,The Pit,,
+Q380050,Chuck Liddell,mixed martial arts,The Pit,,
+Q380115,Michal Bílek,association football,Real Betis Balompié,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,Czechoslovakia men's national association football team,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,AC Sparta Prague,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,Czechia men's national football team,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,FK Viktoria Žižkov,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,FK Teplice,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380115,Michal Bílek,association football,FK Hvězda Cheb,,"1990 FIFA World Cup, UEFA Euro 2012"
+Q380407,Nikolai Fomenko,auto racing,,,24 Hours of Le Mans
+Q380407,Nikolai Fomenko,alpine skiing,,,24 Hours of Le Mans
+Q382073,Filip Jícha,handball,THW Kiel,,Q56317501
+Q382073,Filip Jícha,handball,TBV Lemgo,,Q56317501
+Q382478,Milovan Zoričić,association football,,,
+Q388631,Ivan Hlinka,ice hockey,Vancouver Canucks,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q388631,Ivan Hlinka,ice hockey,HC Litvínov,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q388631,Ivan Hlinka,ice hockey,EV Zug,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q388631,Ivan Hlinka,ice hockey,HK Dukla Trenčín,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q393039,Hagesias of Syracuse,,,,
+Q405989,Aenetus of Amyclae,,,,
+Q406813,Alfred James Wilmott,table tennis,,,
+Q427745,Max Braun,tug of war,Southwest Turnverein of Saint Louis,,1904 Summer Olympics
+Q427820,Rob van den Wildenberg,cycle sport,,,2008 Summer Olympics
+Q428673,Josef Silný,association football,Czechoslovakia men's national association football team,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,AC Sparta Prague,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,SK Slavia Prague,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,Bohemians 1905,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,SK Hanácká Slavia Kroměříž,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,Sporting Club Nimes,,1934 FIFA World Cup
+Q429021,František Vaněk,ice hockey,HC Kometa Brno,,"1960 Winter Olympics, 1956 Winter Olympics"
+Q430985,Patrick Philbin,athletics,,,1908 Summer Olympics
+Q433466,Cylon of Athens,,,,
+Q435761,Aleksandr Medved,amateur wrestling,,,"wrestling at the 1972 Summer Olympics – men's freestyle +100 kg (Olympic gold medal), 1964 Summer Olympics, 1968 Summer Olympics"
+Q436172,Jerry Moffatt,bouldering,,,
+Q436172,Jerry Moffatt,rock climbing,,,
+Q436172,Jerry Moffatt,free solo climbing,,,
+Q436172,Jerry Moffatt,sport climbing,,,
+Q436172,Jerry Moffatt,traditional climbing,,,
+Q438600,Erika Nyström,beach volleyball,,,
+Q439743,Sheila Taormina,triathlon,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q439743,Sheila Taormina,swimming,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q439743,Sheila Taormina,modern pentathlon,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q440237,Stan Mikita,ice hockey,Chicago Blackhawks,National Hockey League,
+Q443218,Olga Orgonista,figure skating,,,figure skating at the 1932 Winter Olympics – pairs
+Q445421,Věra Suková,tennis,,,
+Q445799,Natascha Badmann,triathlon,,,
+Q445799,Natascha Badmann,duathlon,,,
+Q449205,Jiří Raška,ski jumping,,,"ski jumping at the 1968 Winter Olympics – large hill individual (Olympic silver medal), ski jumping at the 1968 Winter Olympics – normal hill individual (Olympic gold medal), 1972 Winter Olympics"
+Q449547,Nicola Spieß,alpine skiing,,,1976 Winter Olympics
+Q454730,Jarmila Nygrýnová,athletics,,,"1972 Summer Olympics, 1976 Summer Olympics, 1980 Summer Olympics"
+Q458760,Gustl Berauer,Nordic combined,,,1936 Winter Olympics
+Q461593,Kinga Baranowska,,,,
+Q461814,Jan Marek,ice hockey,Lokomotiv Yaroslavl,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q461814,Jan Marek,ice hockey,Metallurg Magnitogorsk,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q461814,Jan Marek,ice hockey,HC Oceláři Třinec,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q463531,Jean-Baptiste Charcot,rugby union,Olympique,,"sailing at the 1900 Summer Olympics – 0 to .5 ton (Olympic silver medal), 1895–96 French Rugby Union Championship, 1894–95 French Rugby Union Championship, 1900 Summer Olympics"
+Q463531,Jean-Baptiste Charcot,sailing,Olympique,,"sailing at the 1900 Summer Olympics – 0 to .5 ton (Olympic silver medal), 1895–96 French Rugby Union Championship, 1894–95 French Rugby Union Championship, 1900 Summer Olympics"
+Q463639,Ana Mendieta,,,,
+Q463971,František Raboň,road bicycle racing,HTC-Highroad,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,Elkov-Kasper,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,Soudal Quick-Step,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,T-Mobile,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q465225,Sonya Thomas,,,,
+Q471180,Tom Danielson,road bicycle racing,Mercury Cycling Team,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,EF Education-EasyPost,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Discovery Channel,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Fassa Bortolo,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Saturn Cycling Team,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q481811,Amy Alsop,goalball,,,
+Q483137,Petr Čech,association football,Chelsea F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Chelsea F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Arsenal F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Arsenal F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Stade Rennais F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Stade Rennais F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,AC Sparta Prague,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,AC Sparta Prague,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czechia men's national football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czechia men's national football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,FK Chmel Blšany,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,FK Chmel Blšany,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czech Republic national under-21 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czech Republic national under-21 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czech Republic national under-17 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czech Republic national under-17 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q388631,Ivan Hlinka,ice hockey,HK Dukla Trenčín,National Hockey League,"1972 Winter Olympics, 1976 Winter Olympics"
+Q393039,Hagesias of Syracuse,,,,
+Q405989,Aenetus of Amyclae,,,,
+Q406813,Alfred James Wilmott,table tennis,,,
+Q427745,Max Braun,tug of war,Southwest Turnverein of Saint Louis,,1904 Summer Olympics
+Q427820,Rob van den Wildenberg,cycle sport,,,2008 Summer Olympics
+Q428673,Josef Silný,association football,Czechoslovakia men's national association football team,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,AC Sparta Prague,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,SK Slavia Prague,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,Bohemians 1905,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,SK Hanácká Slavia Kroměříž,,1934 FIFA World Cup
+Q428673,Josef Silný,association football,Sporting Club Nimes,,1934 FIFA World Cup
+Q429021,František Vaněk,ice hockey,HC Kometa Brno,,"1960 Winter Olympics, 1956 Winter Olympics"
+Q430985,Patrick Philbin,athletics,,,1908 Summer Olympics
+Q433466,Cylon of Athens,,,,
+Q435761,Aleksandr Medved,amateur wrestling,,,"wrestling at the 1972 Summer Olympics – men's freestyle +100 kg (Olympic gold medal), 1964 Summer Olympics, 1968 Summer Olympics"
+Q436172,Jerry Moffatt,bouldering,,,
+Q436172,Jerry Moffatt,rock climbing,,,
+Q436172,Jerry Moffatt,free solo climbing,,,
+Q436172,Jerry Moffatt,sport climbing,,,
+Q436172,Jerry Moffatt,traditional climbing,,,
+Q438600,Erika Nyström,beach volleyball,,,
+Q439743,Sheila Taormina,triathlon,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q439743,Sheila Taormina,swimming,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q439743,Sheila Taormina,modern pentathlon,Georgia Bulldogs swimming and diving,,"swimming at the 1996 Summer Olympics – women's 4 × 200 metre freestyle relay (Olympic gold medal), 1996 Summer Olympics (Olympic gold medal), 2000 Summer Olympics, 2004 Summer Olympics, 2008 Summer Olympics"
+Q440237,Stan Mikita,ice hockey,Chicago Blackhawks,National Hockey League,
+Q443218,Olga Orgonista,figure skating,,,figure skating at the 1932 Winter Olympics – pairs
+Q445421,Věra Suková,tennis,,,
+Q445799,Natascha Badmann,triathlon,,,
+Q445799,Natascha Badmann,duathlon,,,
+Q449205,Jiří Raška,ski jumping,,,"ski jumping at the 1968 Winter Olympics – large hill individual (Olympic silver medal), ski jumping at the 1968 Winter Olympics – normal hill individual (Olympic gold medal), 1972 Winter Olympics"
+Q449547,Nicola Spieß,alpine skiing,,,1976 Winter Olympics
+Q454730,Jarmila Nygrýnová,athletics,,,"1972 Summer Olympics, 1976 Summer Olympics, 1980 Summer Olympics"
+Q458760,Gustl Berauer,Nordic combined,,,1936 Winter Olympics
+Q461593,Kinga Baranowska,,,,
+Q461814,Jan Marek,ice hockey,Lokomotiv Yaroslavl,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q461814,Jan Marek,ice hockey,Metallurg Magnitogorsk,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q461814,Jan Marek,ice hockey,HC Oceláři Třinec,,"2010 IIHF World Championship, 2011 IIHF World Championship, 2009 IIHF World Championship, 2007 IIHF World Championship"
+Q463531,Jean-Baptiste Charcot,rugby union,Olympique,,"sailing at the 1900 Summer Olympics – 0 to .5 ton (Olympic silver medal), 1895–96 French Rugby Union Championship, 1894–95 French Rugby Union Championship, 1900 Summer Olympics"
+Q463531,Jean-Baptiste Charcot,sailing,Olympique,,"sailing at the 1900 Summer Olympics – 0 to .5 ton (Olympic silver medal), 1895–96 French Rugby Union Championship, 1894–95 French Rugby Union Championship, 1900 Summer Olympics"
+Q463639,Ana Mendieta,,,,
+Q463971,František Raboň,road bicycle racing,HTC-Highroad,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,Elkov-Kasper,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,Soudal Quick-Step,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q463971,František Raboň,road bicycle racing,T-Mobile,,"2011 UCI World Tour, 2009 UCI World Ranking, Vuelta a España"
+Q465225,Sonya Thomas,,,,
+Q471180,Tom Danielson,road bicycle racing,Mercury Cycling Team,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,EF Education-EasyPost,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Discovery Channel,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Fassa Bortolo,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q471180,Tom Danielson,road bicycle racing,Saturn Cycling Team,,"2012 Tour de France, 2011 Tour de France, 2005 UCI ProTour, 2010 UCI World Ranking, 2012 UCI World Tour, 2011 UCI World Tour, 2013 UCI World Tour, 2013 Tour de France, 2006 UCI ProTour, 2015 UCI World Tour, Tour de France, Vuelta a España"
+Q481811,Amy Alsop,goalball,,,
+Q483137,Petr Čech,association football,Chelsea F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Chelsea F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Arsenal F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Arsenal F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Stade Rennais F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Stade Rennais F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,AC Sparta Prague,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,AC Sparta Prague,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czechia men's national football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czechia men's national football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,FK Chmel Blšany,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,FK Chmel Blšany,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czech Republic national under-21 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czech Republic national under-21 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,association football,Czech Republic national under-17 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q483137,Petr Čech,ice hockey,Czech Republic national under-17 football team,Premier League,"UEFA Euro 2004, UEFA Euro 2016, UEFA Euro 2008, UEFA Euro 2012, 2006 FIFA World Cup"
+Q173992,Josef Pešice,association football,AC Sparta Prague,,
+Q173992,Josef Pešice,association football,SK Slavia Prague,,
+Q173992,Josef Pešice,association football,AEL Limassol FC,,
+Q173992,Josef Pešice,association football,FC Zbrojovka Brno,,
+Q182046,Leon Battista Alberti,,,,
+Q203028,Tomáš Pospíchal,association football,Czechoslovakia men's national association football team,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,AC Sparta Prague,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,SK Slavia Prague,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,FC Viktoria Plzeň,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,FC Baník Ostrava,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,Bohemians 1905,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,FC Rouen,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,MFK Vítkovice,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,Dukla Pardubice,,1962 FIFA World Cup
+Q203028,Tomáš Pospíchal,association football,Tankista Praha,,1962 FIFA World Cup
+Q209390,Jackie Joyner-Kersee,athletics,UCLA Bruins,,"1984 Summer Olympics, 1988 Summer Olympics, 1992 Summer Olympics, 1996 Summer Olympics"
+Q209390,Jackie Joyner-Kersee,basketball,UCLA Bruins,,"1984 Summer Olympics, 1988 Summer Olympics, 1992 Summer Olympics, 1996 Summer Olympics"
+Q218994,Zoltán Mechlovits,table tennis,,,
+Q220534,Zoran Matković,archery,,,1980 Summer Olympics
+Q221185,Kateřina Emmons,shooting sport,,,"shooting at the 2008 Summer Olympics – women's 50 metre rifle three positions (Olympic silver medal), shooting at the 2008 Summer Olympics – women's 10 metre air rifle (Olympic gold medal), shooting at the 2004 Summer Olympics – women's 10 metre air rifle (Olympic bronze medal), 2012 Summer Olympics"
+Q224033,Karel Poborský,association football,SS Lazio,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q224033,Karel Poborský,association football,Manchester United F.C.,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q224033,Karel Poborský,association football,S.L. Benfica,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q224033,Karel Poborský,association football,AC Sparta Prague,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q224033,Karel Poborský,association football,SK Slavia Prague,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q224033,Karel Poborský,association football,Czechia men's national football team,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q224033,Karel Poborský,association football,FK Viktoria Žižkov,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q224033,Karel Poborský,association football,SK Dynamo České Budějovice,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q224033,Karel Poborský,association football,FK Jiskra Třeboň,Premier League,"UEFA Euro 2004, UEFA Euro 2000, UEFA Euro 1996, 2006 FIFA World Cup"
+Q225271,István Kovács,boxing,,,"boxing at the 1996 Summer Olympics – bantamweight (Olympic gold medal), 1992 Summer Olympics"
+Q229503,Věra Čáslavská,artistic gymnastics,,,"gymnastics at the 1964 Summer Olympics – women's balance beam (Olympic gold medal), gymnastics at the 1964 Summer Olympics – women's individual all-around (Olympic gold medal), gymnastics at the 1964 Summer Olympics – women's vault (Olympic gold medal), gymnastics at the 1968 Summer Olympics – women's balance beam (Olympic silver medal), gymnastics at the 1968 Summer Olympics – women's floor (Olympic gold medal), gymnastics at the 1968 Summer Olympics – women's artistic individual all-around (Olympic gold medal), gymnastics at the 1968 Summer Olympics – women's vault (Olympic gold medal), gymnastics at the 1968 Summer Olympics – women's uneven bars (Olympic gold medal), 1960 Summer Olympics"
+Q230353,Barbora Strýcová,tennis,Czech Republic Billie Jean King Cup team,,"tennis at the 2004 Summer Olympics, tennis at the 2016 Summer Olympics – women's doubles (Olympic bronze medal), 2019 Wimbledon Championships – women's doubles, 2023 Wimbledon Championships – Women's doubles"
+Q1293768,Sándor Szabó,association football,Szombathelyi Haladás,,
+Q1295628,Kálmán Szekrényessy,,,,
+Q1296029,Tserendorjiin Dagvadorj,archery,,,"1976 Summer Olympics, 1980 Summer Olympics"
+Q1301947,Tamás Széchy,weightlifting,,,
+Q1304351,Friedrich Waldow,,,,
+Q1314437,Péter Sákovics,,,,
+Q1316136,Emese Takács,fencing,,,
+Q1316144,Gyula Takács,gymnastics,,,
+Q1316923,Tarjányi Ádám,,,,
+Q1317252,Margit Tatár,skydiving,,,
+Q1320986,Samir Bannout,,,,
+Q1323041,Yevgeniy Abalakov,mountaineering,,,
+Q1325395,Marcell Turi,diving,,,
+Q1325643,Hugo Egon Kubaseck,,,,
+Q1326485,Gilles Cresto,archery,,,"1984 Summer Olympics, 1988 Summer Olympics"
+Q1327368,Magdolna Tóth,swimming,,,
+Q1327373,Magdolna Tóth,swimming,,,
+Q1328191,Gábor Török,association football,Újpest FC,,1960 Summer Olympics
+Q1328191,Gábor Török,association football,Salgótarjáni BTC,,1960 Summer Olympics
+Q1328191,Gábor Török,association football,Csepel SC,,1960 Summer Olympics
+Q1328191,Gábor Török,association football,Budapesti MÁVAG,,1960 Summer Olympics
+Q1336532,Marek Čech,association football,FC Lokomotiv Moscow,,
+Q1336532,Marek Čech,association football,AC Sparta Prague,,
+Q1336532,Marek Čech,association football,FC Viktoria Plzeň,,
+Q1336532,Marek Čech,association football,MŠK Žilina,,
+Q1336532,Marek Čech,association football,FC Slovan Liberec,,
+Q1336532,Marek Čech,association football,FC Baník Ostrava,,
+Q1336532,Marek Čech,association football,FC Luch-Energiya Vladivostok,,
+Q1336532,Marek Čech,association football,FC Spartak Trnava,,
+Q630197,William Greggan,athletics,,,1908 Summer Olympics
+Q655083,László Széchy,fencing,,,fencing at the 1924 Summer Olympics – men's team sabre (Olympic silver medal)
+Q661919,José Cláudio dos Reis,basketball,,,
+Q664323,Phil Edwards,,,,
+Q669313,Daniel Šmejkal,association football,1. FC Nürnberg,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,KFC Uerdingen 05,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,FK Příbram,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,SK Slavia Prague,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,FC Viktoria Plzeň,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,Czechia men's national football team,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,FK Chmel Blšany,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,Dukla Prague,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,FK Bohemians Prague,2. Bundesliga,
+Q671156,Harry Stiff,tug of war,,,1920 Summer Olympics
+Q672149,Arkady Vorobyov,weightlifting,,,"weightlifting at the 1952 Summer Olympics – men's 82.5 kg (Olympic bronze medal), weightlifting at the 1956 Summer Olympics – men's 90 kg (Olympic gold medal), weightlifting at the 1960 Summer Olympics – men's 90 kg (Olympic gold medal)"
+Q673475,Arcesilaus IV of Cyrene,,,,
+Q697317,Patrik Ježek,association football,Karlsruher SC,2. Bundesliga,
+Q697317,Patrik Ježek,association football,FK Austria Wien,2. Bundesliga,
+Q697317,Patrik Ježek,association football,AC Sparta Prague,2. Bundesliga,
+Q697317,Patrik Ježek,association football,FC Viktoria Plzeň,2. Bundesliga,
+Q697317,Patrik Ježek,association football,ASKÖ Pasching,2. Bundesliga,
+Q697317,Patrik Ježek,association football,Admira Wacker,2. Bundesliga,
+Q697317,Patrik Ježek,association football,SK Austria Kärnten,2. Bundesliga,
+Q697317,Patrik Ježek,association football,FC Red Bull Salzburg,2. Bundesliga,
+Q697317,Patrik Ježek,association football,Czech Republic national under-21 football team,2. Bundesliga,
+Q697317,Patrik Ježek,association football,FC Tirol Innsbruck,2. Bundesliga,
+Q697317,Patrik Ježek,association football,Czech Republic national under-17 football team,2. Bundesliga,
+Q701786,Wang Zi-Ping,,,,
+Q702841,Oldřich Machač,ice hockey,HK Jestřábi Prostějov,,1976 Winter Olympics
+Q703795,Martin Jakš,cross-country skiing,,,"FIS Nordic World Ski Championships 2017, FIS Nordic World Ski Championships 2007, cross-country skiing at the 2010 Winter Olympics – men's 4 × 10 kilometre relay (Olympic bronze medal), FIS Nordic World Ski Championships 2009, FIS Nordic World Ski Championships 2011, FIS Nordic World Ski Championships 2015, 2014 Winter Olympics, FIS Nordic World Ski Championships 2013"
+Q710558,Arthur Mallwitz,athletics,,,"1906 Intercalated Games, 1908 Summer Olympics"
+Q714669,Oleg Taktarov,judo,,,
+Q714669,Oleg Taktarov,mixed martial arts,,,
+Q717441,Alberto Salazar,athletics,,,1984 Summer Olympics
+Q717790,Bohuslav Ebermann,ice hockey,Brûleurs de Loups,,1976 Winter Olympics
+Q718829,Calvin Bricker,athletics,,,1912 Summer Olympics
+Q719262,Christian Hosoi,skateboarding,,,
+Q722746,Petr Sýkora,ice hockey,SC Bern,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,New York Rangers,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,New Jersey Devils,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Anaheim Ducks,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Pittsburgh Penguins,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Edmonton Oilers,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Minnesota Wild,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Metallurg Magnitogorsk,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,HC Plzeň,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q727332,Károly Varga,shooting sport,,,shooting at the 1980 Summer Olympics – mixed 50 metre rifle prone (Olympic gold medal)
+Q731732,Zhanna Shubenok,modern pentathlon,,,2000 Summer Olympics
+Q739663,Wally Albright,,,,
+Q741143,Sammael,,,,
+Q745026,Gábor P. Szabó,association football,Újpest FC,,1934 FIFA World Cup
+Q751142,Laszlo Fekete,,,,
+Q762419,George Genereux,shooting sport,,,"1952 ISSF World Shooting Championships (silver medal), shooting at the 1952 Summer Olympics – men's trap (Olympic gold medal)"
+Q765474,Mark Felix,bodybuilding,,,
+Q769648,Ivan Poddubny,wrestling,,,
+Q777273,Edwin Mills,tug of war,,,"1912 Summer Olympics, 1920 Summer Olympics"
+Q787080,Autolycus of Athens,,,,
+Q788729,Iloosh Khoshabe,,,,
+Q789827,Balázs Andor András,aerobatics,,,
+Q791579,Kenzō Awa,,,,
+Q804375,Ede Blasy,,,,
+Q807664,Barbara Tesar,triathlon,,,
+Q818083,Benny Vansteelant,triathlon,,,
+Q822669,Bernard Boverton Redwood,powerboating,,,1908 Summer Olympics
+Q833001,Karol Jablonski,ice sailing,,,
+Q833523,János Bogár,athletics,,,
+Q834085,József Bolla,wrestling,,,
+Q834091,Mária Bolla,,,,
+Q836388,Géza Tuli,artistic gymnastics,,,1912 Summer Olympics
+Q850090,Bettina Zelenka,triathlon,,,
+Q852909,József Bán,,,,
+Q513845,Adéla Bruns,shooting sport,,,"shooting at the 2016 Summer Olympics, 2008 Summer Olympics, 2012 Summer Olympics"
+Q515320,Andrzej Mąkowski,cycle sport,,,
+Q517543,Martyna Wojciechowska,,,,
+Q519744,Moritz Sándor,swimming,,,
+Q519744,Moritz Sándor,equestrian sport,,,
+Q521144,Gunhild Haugen,athletics,Runar AIL,,2000 Summer Olympics
+Q522191,Antonia Katheder,taekwondo,,,
+Q523232,Vendula Frintová,triathlon,,,"triathlon at the 2008 Summer Olympics – women's, triathlon at the 2012 Summer Olympics – women's, triathlon at the 2016 Summer Olympics – women's"
+Q523751,Werner Lesser,ski jumping,,,1956 Winter Olympics
+Q529479,Jozef Adamec,association football,Czechoslovakia men's national association football team,,"1970 FIFA World Cup, 1962 FIFA World Cup"
+Q529479,Jozef Adamec,association football,ŠK Slovan Bratislava,,"1970 FIFA World Cup, 1962 FIFA World Cup"
+Q529479,Jozef Adamec,association football,FC Spartak Trnava,,"1970 FIFA World Cup, 1962 FIFA World Cup"
+Q529479,Jozef Adamec,association football,SK Slovan-Hütteldorfer AC,,"1970 FIFA World Cup, 1962 FIFA World Cup"
+Q529479,Jozef Adamec,association football,Dukla Prague,,"1970 FIFA World Cup, 1962 FIFA World Cup"
+Q529770,Sergei Utochkin,association football,,,
+Q529770,Sergei Utochkin,cycle sport,,,
+Q529925,Magnús Scheving,aerobic gymnastics,,,
+Q531116,Frédéric Collignon,table football,,,
+Q531553,Violina Linda Pedro,bowls,,,
+Q532165,Thomas Homewood,,,,1908 Summer Olympics
+Q533918,Jaroslav Poláček,association football,Czechoslovakia men's national association football team,,
+Q533918,Jaroslav Poláček,association football,AC Sparta Prague,,
+Q535941,Ghizlane Samir,,Paris université club,,
+Q551094,Jakub Klášterka,auto racing,,,
+Q551164,Anja Knapp,triathlon,,,2016 Summer Olympics
+Q558630,Toghrul Asgarov,wrestling,,,"wrestling at the 2012 Summer Olympics – men's freestyle 60 kg (Olympic gold medal), wrestling at the 2016 Summer Olympics"
+Q559855,Anna Braun,,,,
+Q570791,Antal Róka,athletics,,,"1952 Summer Olympics, 1956 Summer Olympics"
+Q573831,Jiří Dolana,ice hockey,HC Dukla Jihlava,,1964 Winter Olympics
+Q574303,Henryk Dobrzański,,,,
+Q574525,Vladimír Martinec,ice hockey,HC Pardubice,,"2002 IIHF World Championship, 2001 IIHF World Championship, 2000 IIHF World Championship, 1972 Winter Olympics, 1976 Winter Olympics"
+Q575353,Jaroslav Benák,ice hockey,HC Dukla Jihlava,,ice hockey at the 1984 Winter Olympics (Olympic silver medal)
+Q581618,Agata Korc,swimming,,,2008 Summer Olympics
+Q585540,Jiří Lála,ice hockey,Frankfurt Lions,,"1988 Winter Olympics, 1984 Winter Olympics"
+Q585540,Jiří Lála,ice hockey,HC České Budějovice,,"1988 Winter Olympics, 1984 Winter Olympics"
+Q592698,August Rodenberg,tug of war,Southwest Turnverein of Saint Louis,,1904 Summer Olympics
+Q592708,Charles Thias,tug of war,Southwest Turnverein of Saint Louis,,1904 Summer Olympics
+Q592722,William Slade,,,,1908 Summer Olympics
+Q592733,Walter Chaffe,athletics,,,"1908 Summer Olympics, 1912 Summer Olympics"
+Q330959,Béla Rajki,swimming,,,
+Q331332,Vítězslav Lavička,association football,AC Sparta Prague,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,FC Viktoria Plzeň,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,FC Hradec Králové,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,Bohemians 1905,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,FK Hvězda Cheb,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,MFK Chrudim,,2017 UEFA European Under-21 Championship
+Q332054,Jan Velkoborský,association football,1. FC Bad Kötzting,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,Rot Weiss Ahlen,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FC Viktoria Plzeň,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FC Baník Ostrava,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,Czechia men's national football team,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FK Viktoria Žižkov,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FK Chmel Blšany,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,SV Elversberg,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,Czech Republic national under-21 football team,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FC Slavia Karlovy Vary,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FK Tachov,2. Bundesliga,
+Q333400,Grantley Berkeley,,,,
+Q334334,Daniel Kolář,association football,AC Sparta Prague,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,FC Viktoria Plzeň,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,Gaziantepspor,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,Czechia men's national football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,FK Chmel Blšany,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,1. FC Slovácko,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,Czech Republic national under-21 football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,Czech Republic national under-19 football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Modena F.C.,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Tottenham Hotspur F.C.,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,AC Sparta Prague,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,FC Viktoria Plzeň,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Czechia men's national football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,TJ Jiskra Domažlice,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Czech Republic national under-21 football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Czech Republic national under-20 football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q342834,Jeb Corliss,,,,
+Q347184,Roman Kreuziger,road bicycle racing,Tinkoff,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Tinkoff,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,Team Jayco AlUla,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Team Jayco AlUla,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,XDS Astana Team,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,XDS Astana Team,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,Cannondale Pro Cycling Team,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Cannondale Pro Cycling Team,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,Qhubeka NextHash,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Qhubeka NextHash,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,Gazprom–RusVelo,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Gazprom–RusVelo,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q352017,Josef Bican,association football,SK Rapid Wien,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,Austria men's national football team,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,Czechoslovakia men's national association football team,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,SK Slavia Prague,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,Czechia men's national football team,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,FC Hradec Králové,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,Admira Wacker,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,MFK Vítkovice,,1934 FIFA World Cup
+Q352733,Randy Couture,mixed martial arts,Team Quest,,
+Q355902,Manfred Hoeberl,,,,
+Q356271,Georges St-Pierre,karate,Jackson Wink MMA Academy,,
+Q356271,Georges St-Pierre,mixed martial arts,Jackson Wink MMA Academy,,
+Q356271,Georges St-Pierre,Muay Thai,Jackson Wink MMA Academy,,
+Q1304351,Friedrich Waldow,,,,
+Q1314437,Péter Sákovics,,,,
+Q1316136,Emese Takács,fencing,,,
+Q1316144,Gyula Takács,gymnastics,,,
+Q1316923,Tarjányi Ádám,,,,
+Q1317252,Margit Tatár,skydiving,,,
+Q1320986,Samir Bannout,,,,
+Q1323041,Yevgeniy Abalakov,mountaineering,,,
+Q1325395,Marcell Turi,diving,,,
+Q1325643,Hugo Egon Kubaseck,,,,
+Q1326485,Gilles Cresto,archery,,,"1984 Summer Olympics, 1988 Summer Olympics"
+Q1327368,Magdolna Tóth,swimming,,,
+Q1327373,Magdolna Tóth,swimming,,,
+Q1328191,Gábor Török,association football,Újpest FC,,1960 Summer Olympics
+Q1328191,Gábor Török,association football,Salgótarjáni BTC,,1960 Summer Olympics
+Q1328191,Gábor Török,association football,Csepel SC,,1960 Summer Olympics
+Q1328191,Gábor Török,association football,Budapesti MÁVAG,,1960 Summer Olympics
+Q1336532,Marek Čech,association football,FC Lokomotiv Moscow,,
+Q1336532,Marek Čech,association football,AC Sparta Prague,,
+Q1336532,Marek Čech,association football,FC Viktoria Plzeň,,
+Q1336532,Marek Čech,association football,MŠK Žilina,,
+Q1336532,Marek Čech,association football,FC Slovan Liberec,,
+Q1336532,Marek Čech,association football,FC Baník Ostrava,,
+Q1336532,Marek Čech,association football,FC Luch-Energiya Vladivostok,,
+Q1336532,Marek Čech,association football,FC Spartak Trnava,,
+Q630197,William Greggan,athletics,,,1908 Summer Olympics
+Q655083,László Széchy,fencing,,,fencing at the 1924 Summer Olympics – men's team sabre (Olympic silver medal)
+Q661919,José Cláudio dos Reis,basketball,,,
+Q664323,Phil Edwards,,,,
+Q669313,Daniel Šmejkal,association football,1. FC Nürnberg,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,KFC Uerdingen 05,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,FK Příbram,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,SK Slavia Prague,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,FC Viktoria Plzeň,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,Czechia men's national football team,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,FK Chmel Blšany,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,Dukla Prague,2. Bundesliga,
+Q669313,Daniel Šmejkal,association football,FK Bohemians Prague,2. Bundesliga,
+Q671156,Harry Stiff,tug of war,,,1920 Summer Olympics
+Q672149,Arkady Vorobyov,weightlifting,,,"weightlifting at the 1952 Summer Olympics – men's 82.5 kg (Olympic bronze medal), weightlifting at the 1956 Summer Olympics – men's 90 kg (Olympic gold medal), weightlifting at the 1960 Summer Olympics – men's 90 kg (Olympic gold medal)"
+Q673475,Arcesilaus IV of Cyrene,,,,
+Q697317,Patrik Ježek,association football,Karlsruher SC,2. Bundesliga,
+Q697317,Patrik Ježek,association football,FK Austria Wien,2. Bundesliga,
+Q697317,Patrik Ježek,association football,AC Sparta Prague,2. Bundesliga,
+Q697317,Patrik Ježek,association football,FC Viktoria Plzeň,2. Bundesliga,
+Q697317,Patrik Ježek,association football,ASKÖ Pasching,2. Bundesliga,
+Q697317,Patrik Ježek,association football,Admira Wacker,2. Bundesliga,
+Q697317,Patrik Ježek,association football,SK Austria Kärnten,2. Bundesliga,
+Q697317,Patrik Ježek,association football,FC Red Bull Salzburg,2. Bundesliga,
+Q697317,Patrik Ježek,association football,Czech Republic national under-21 football team,2. Bundesliga,
+Q697317,Patrik Ježek,association football,FC Tirol Innsbruck,2. Bundesliga,
+Q697317,Patrik Ježek,association football,Czech Republic national under-17 football team,2. Bundesliga,
+Q701786,Wang Zi-Ping,,,,
+Q702841,Oldřich Machač,ice hockey,HK Jestřábi Prostějov,,1976 Winter Olympics
+Q703795,Martin Jakš,cross-country skiing,,,"FIS Nordic World Ski Championships 2017, FIS Nordic World Ski Championships 2007, cross-country skiing at the 2010 Winter Olympics – men's 4 × 10 kilometre relay (Olympic bronze medal), FIS Nordic World Ski Championships 2009, FIS Nordic World Ski Championships 2011, FIS Nordic World Ski Championships 2015, 2014 Winter Olympics, FIS Nordic World Ski Championships 2013"
+Q710558,Arthur Mallwitz,athletics,,,"1906 Intercalated Games, 1908 Summer Olympics"
+Q714669,Oleg Taktarov,judo,,,
+Q714669,Oleg Taktarov,mixed martial arts,,,
+Q717441,Alberto Salazar,athletics,,,1984 Summer Olympics
+Q717790,Bohuslav Ebermann,ice hockey,Brûleurs de Loups,,1976 Winter Olympics
+Q718829,Calvin Bricker,athletics,,,1912 Summer Olympics
+Q719262,Christian Hosoi,skateboarding,,,
+Q722746,Petr Sýkora,ice hockey,SC Bern,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,New York Rangers,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,New Jersey Devils,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Anaheim Ducks,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Pittsburgh Penguins,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Edmonton Oilers,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Minnesota Wild,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,Metallurg Magnitogorsk,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q722746,Petr Sýkora,ice hockey,HC Plzeň,National Hockey League,"ice hockey at the 2002 Winter Olympics, 2005 IIHF World Championship"
+Q727332,Károly Varga,shooting sport,,,shooting at the 1980 Summer Olympics – mixed 50 metre rifle prone (Olympic gold medal)
+Q731732,Zhanna Shubenok,modern pentathlon,,,2000 Summer Olympics
+Q739663,Wally Albright,,,,
+Q741143,Sammael,,,,
+Q745026,Gábor P. Szabó,association football,Újpest FC,,1934 FIFA World Cup
+Q751142,Laszlo Fekete,,,,
+Q762419,George Genereux,shooting sport,,,"1952 ISSF World Shooting Championships (silver medal), shooting at the 1952 Summer Olympics – men's trap (Olympic gold medal)"
+Q765474,Mark Felix,bodybuilding,,,
+Q769648,Ivan Poddubny,wrestling,,,
+Q777273,Edwin Mills,tug of war,,,"1912 Summer Olympics, 1920 Summer Olympics"
+Q787080,Autolycus of Athens,,,,
+Q788729,Iloosh Khoshabe,,,,
+Q789827,Balázs Andor András,aerobatics,,,
+Q791579,Kenzō Awa,,,,
+Q804375,Ede Blasy,,,,
+Q807664,Barbara Tesar,triathlon,,,
+Q818083,Benny Vansteelant,triathlon,,,
+Q822669,Bernard Boverton Redwood,powerboating,,,1908 Summer Olympics
+Q833001,Karol Jablonski,ice sailing,,,
+Q833523,János Bogár,athletics,,,
+Q834085,József Bolla,wrestling,,,
+Q834091,Mária Bolla,,,,
+Q836388,Géza Tuli,artistic gymnastics,,,1912 Summer Olympics
+Q850090,Bettina Zelenka,triathlon,,,
+Q852909,József Bán,,,,
+Q862101,Bill Flynn,ice hockey,Flint Generals,,
+Q866631,Leung Jan,,,,
+Q875692,Ibolya Gyimesi,aerobatics,,,
+Q877242,Li Luoneng,,,,
+Q889918,Bodo Ferl,bobsleigh,,,1988 Winter Olympics
+Q890940,Bohumil Němeček,boxing,,,1960 Summer Olympics
+Q896855,Brad Penrith,amateur wrestling,,,
+Q897596,Sándor Szalay,figure skating,,,figure skating at the 1932 Winter Olympics – pairs
+Q902948,Aditya Dev,,,,
+Q912690,Sándor Dávid,,,,
+Q913798,Aleksandr Kurlovich,weightlifting,,,"1988 Summer Olympics, 1992 Summer Olympics, 1996 Summer Olympics, Friendship Games"
+Q914398,Robert Lang,ice hockey,Montreal Canadiens,National Hockey League,"1992 Winter Olympics, 1998 Winter Olympics, 2006 Winter Olympics"
+Q914398,Robert Lang,ice hockey,Pittsburgh Penguins,National Hockey League,"1992 Winter Olympics, 1998 Winter Olympics, 2006 Winter Olympics"
+Q914398,Robert Lang,ice hockey,Detroit Red Wings,National Hockey League,"1992 Winter Olympics, 1998 Winter Olympics, 2006 Winter Olympics"
+Q914398,Robert Lang,ice hockey,Boston Bruins,National Hockey League,"1992 Winter Olympics, 1998 Winter Olympics, 2006 Winter Olympics"
+Q914398,Robert Lang,ice hockey,Los Angeles Kings,National Hockey League,"1992 Winter Olympics, 1998 Winter Olympics, 2006 Winter Olympics"
+Q914398,Robert Lang,ice hockey,Washington Capitals,National Hockey League,"1992 Winter Olympics, 1998 Winter Olympics, 2006 Winter Olympics"
+Q914398,Robert Lang,ice hockey,Arizona Coyotes,National Hockey League,"1992 Winter Olympics, 1998 Winter Olympics, 2006 Winter Olympics"
+Q914398,Robert Lang,ice hockey,Chicago Blackhawks,National Hockey League,"1992 Winter Olympics, 1998 Winter Olympics, 2006 Winter Olympics"
+Q922415,Carlos Gracie,judo,,,
+Q925954,Ryszard Rogala,para powerlifting,,,"2012 Summer Paralympics, 2008 Summer Paralympics, 2004 Summer Paralympics"
+Q926482,Wim Hof,swimming,,,
+Q930268,Václav Kozák,rowing,,,"rowing at the 1964 Summer Olympics – men's single sculls, rowing at the 1968 Summer Olympics – men's single sculls, rowing at the 1960 Summer Olympics – men's double sculls"
+Q933325,Miloslav Hořava,ice hockey,New York Rangers,National Hockey League,"1988 Winter Olympics, 1984 Winter Olympics, 1994 Winter Olympics, 1992 Winter Olympics"
+Q933773,Charles Brown,roque,,,1904 Summer Olympics
+Q935095,Henryk Flinik,field hockey,,,"1952 Summer Olympics, 1960 Summer Olympics"
+Q944243,Tomáš Vlasák,ice hockey,HC Ambrì-Piotta,National Hockey League,"2002 IIHF World Championship, 2001 IIHF World Championship, 2000 IIHF World Championship"
+Q944243,Tomáš Vlasák,ice hockey,Ak Bars Kazan,National Hockey League,"2002 IIHF World Championship, 2001 IIHF World Championship, 2000 IIHF World Championship"
+Q944243,Tomáš Vlasák,ice hockey,HC Slavia Praha,National Hockey League,"2002 IIHF World Championship, 2001 IIHF World Championship, 2000 IIHF World Championship"
+Q944243,Tomáš Vlasák,ice hockey,HC Plzeň,National Hockey League,"2002 IIHF World Championship, 2001 IIHF World Championship, 2000 IIHF World Championship"
+Q945289,Peter Falkner,fencing,,,
+Q949892,Steve House,mountaineering,,,
+Q950537,Karel Rada,association football,Eintracht Frankfurt,Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Trabzonspor,Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,SK Slavia Prague,Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,SK Sigma Olomouc,Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Czechia men's national football team,Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,FK Teplice,Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Bohemians 1905,Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Dukla Prague,Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Eintracht Frankfurt,2. Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Trabzonspor,2. Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,SK Slavia Prague,2. Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,SK Sigma Olomouc,2. Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Czechia men's national football team,2. Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,FK Teplice,2. Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Bohemians 1905,2. Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q950537,Karel Rada,association football,Dukla Prague,2. Bundesliga,"UEFA Euro 2000, UEFA Euro 1996"
+Q952654,Pavel Fořt,association football,Toulouse FC,2. Bundesliga,
+Q952654,Pavel Fořt,association football,Arminia Bielefeld,2. Bundesliga,
+Q952654,Pavel Fořt,association football,Dynamo Dresden,2. Bundesliga,
+Q952654,Pavel Fořt,association football,FK Příbram,2. Bundesliga,
+Q952654,Pavel Fořt,association football,ŠK Slovan Bratislava,2. Bundesliga,
+Q952654,Pavel Fořt,association football,SK Slavia Prague,2. Bundesliga,
+Q952654,Pavel Fořt,association football,FC Viktoria Plzeň,2. Bundesliga,
+Q952654,Pavel Fořt,association football,Football Club Molenbeek Brussels Strombeek,2. Bundesliga,
+Q952654,Pavel Fořt,association football,Czech Republic national under-21 football team,2. Bundesliga,
+Q952654,Pavel Fořt,association football,Czech Republic national under-17 football team,2. Bundesliga,
+Q952654,Pavel Fořt,association football,Czech Republic national under-19 football team,2. Bundesliga,
+Q957327,Tomáš Šmíd,tennis,,,
+Q957414,Chris Bradford,,,,
+Q958529,Marcel Lička,association football,FC Zlín,,
+Q958529,Marcel Lička,association football,Górnik Zabrze,,
+Q958529,Marcel Lička,association football,Dyskobolia Grodzisk Wielkopolski,,
+Q958529,Marcel Lička,association football,SK Slavia Prague,,
+Q958529,Marcel Lička,association football,FC Baník Ostrava,,
+Q958529,Marcel Lička,association football,FK Viktoria Žižkov,,
+Q958529,Marcel Lička,association football,FK Chmel Blšany,,
+Q958529,Marcel Lička,association football,Racing Club de Calais,,
+Q958529,Marcel Lička,association football,Czech Republic national under-21 football team,,
+Q958529,Marcel Lička,association football,SK Kladno,,
+Q958529,Marcel Lička,association football,UD Horadada,,
+Q961979,Franz Wilhelmer,,,,1984 Winter Olympics
+Q965819,József Várszegi,athletics,,,"1936 Summer Olympics, 1948 Summer Olympics, 1952 Summer Olympics"
+Q970958,Callias II,,,,
+Q971784,Aaron Links,bodybuilding,,,
+Q972626,Stefan Schneider,,,,
+Q979195,Mike Plant,,,,"1992-1993 Vendée Globe, 1989–1990 Vendee Globe"
+Q983623,Mariano Haro,athletics,,,"1962 Ibero-American Games, 1972 Summer Olympics, 1976 Summer Olympics"
+Q984592,Gunnar Nielsen,athletics,Københavns Idræts Forening,,"European championship, 1952 Summer Olympics, 1956 Summer Olympics"
+Q986919,Dér László,skydiving,,,
+Q987551,András Ecsédi,skydiving,,,
+Q987931,János Egri,,,,
+Q990812,Lajos Erkel,chess,,,
+Q993505,Bruno Löwe,,,,
+Q1000592,Tyson Fury,boxing,,,Deontay Wilder vs. Tyson Fury
+Q1029029,Jiří Holík,ice hockey,HC Rebel Havlíčkův Brod,,1976 Winter Olympics
+Q1031772,Gusztáv Götz,rowing,,,1936 Summer Olympics
+Q1032870,Gyula Halasy,shooting sport,,,shooting at the 1924 Summer Olympics – men's trap (Olympic gold medal)
+Q1032870,Gyula Halasy,skeet shooting,,,shooting at the 1924 Summer Olympics – men's trap (Olympic gold medal)
+Q1035526,Balázs Herjeczki,handball,Q4048033,,
+Q1037886,Frigyes Hollósi,swimming,,,"swimming at the 1924 Summer Olympics – men's 200 metre breaststroke, rowing at the 1936 Summer Olympics – men's eight"
+Q1037886,Frigyes Hollósi,rowing,,,"swimming at the 1924 Summer Olympics – men's 200 metre breaststroke, rowing at the 1936 Summer Olympics – men's eight"
+Q1055140,Róbert Horling,water polo,,,
+Q1055660,Ádám Horváth,volleyball,,,
+Q1056414,Viktor Hunfalvy,,Magyar Honvédelmi Szövetség,,
+Q1057827,Cevdet Sümer,equestrian sport,,,1960 Summer Olympics
+Q1069806,Chen Zhaokui,,,,
+Q1078045,Christa Decker,,,,
+Q1083426,Christine Becker,,,,
+Q1384673,Emile Thubron,powerboating,,,1908 Summer Olympics
+Q1384715,John Field-Richards,powerboating,,,1908 Summer Olympics
+Q1385994,Jaroslav Holík,ice hockey,HC Dukla Jihlava,,1972 Winter Olympics
+Q1386108,Milan Kajkl,ice hockey,EC KAC,,1976 Winter Olympics
+Q1558575,Gyula Németh,athletics,,,
+Q1559431,Göran Bjerendal,archery,,,"1980 Summer Olympics, 1984 Summer Olympics, 1988 Summer Olympics"
+Q1560986,Ljubomir Magaš,,,,
+Q1569690,Cleomedes of Astypalia,,,,
+Q1590324,Maksim Batunin,,,,
+Q1592812,Petr Smíšek,association football,FC Rot-Weiß Erfurt,3. Liga,
+Q1592812,Petr Smíšek,association football,FC Viktoria Plzeň,3. Liga,
+Q1592812,Petr Smíšek,association football,FK Jablonec,3. Liga,
+Q1592812,Petr Smíšek,association football,FK Teplice,3. Liga,
+Q1592812,Petr Smíšek,association football,Czech Republic national under-19 football team,3. Liga,
+Q1593478,Heelan Tompkins,equestrian sport,,,"2004 Summer Olympics, 2008 Summer Olympics"
+Q1595982,Heine Stupp,,,,
+Q1601978,Helene Kienzle,artistic roller skating,,,
+Q1602326,Helga Wischer,,,,
+Q1602328,Helga Zöllner,figure skating,,,
+Q1606383,Otto Schlenzka,,Kieler Yacht-Club,,
+Q1612900,Inger Anne Frøysedal,athletics,,,
+Q1618146,Hilbert Wagner,,,,
+Q1633126,Hubert Dörer,,,,
+Q1641354,Vasile Dumitrescu,bobsleigh,,,
+Q1647388,Klaus Schenkel,,,,
+Q1649332,Jan Štochl,handball,,,
+Q1657767,Igor Lapshin,athletics,,,1988 Summer Olympics
+Q1659390,Im Ho,,,,
+Q1668497,Libor Podmol,motocross,,,
+Q1669502,Thomas Tauporn,sport climbing,,,
+Q1672678,Irina Vygusova,diving,,,"1996 Summer Olympics, 2000 Summer Olympics"
+Q1675446,Iuliana Tcaciova,,,,
+Q1675967,Ivan Kuzmin,,,,
+Q1676015,Ivan Lazarev,luge,,,
+Q1677099,Jack LaLanne,bodybuilding,,,
+Q1677724,"Jacobo Fitz-James Stuart, 17th Duke of Alba",polo,,,1920 Summer Olympics
+Q1677832,Jacqueline Uebelhart,triathlon,,,
+Q1678594,Julián Muñoz Giraldo,road bicycle racing,,,"2009–10 UCI America Tour, 2008–09 UCI Europe Tour"
+Q1678730,Jaime Hurtado,basketball,Club Sport Emelec,,"Ecuadorian parliamentary election, 1998, Ecuadorian parliamentary election, 1979, 1988 Ecuadorian presidential election, 1984 Ecuadorian presidential election"
+Q330959,Béla Rajki,swimming,,,
+Q331332,Vítězslav Lavička,association football,AC Sparta Prague,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,FC Viktoria Plzeň,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,FC Hradec Králové,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,Bohemians 1905,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,FK Hvězda Cheb,,2017 UEFA European Under-21 Championship
+Q331332,Vítězslav Lavička,association football,MFK Chrudim,,2017 UEFA European Under-21 Championship
+Q332054,Jan Velkoborský,association football,1. FC Bad Kötzting,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,Rot Weiss Ahlen,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FC Viktoria Plzeň,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FC Baník Ostrava,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,Czechia men's national football team,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FK Viktoria Žižkov,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FK Chmel Blšany,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,SV Elversberg,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,Czech Republic national under-21 football team,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FC Slavia Karlovy Vary,2. Bundesliga,
+Q332054,Jan Velkoborský,association football,FK Tachov,2. Bundesliga,
+Q333400,Grantley Berkeley,,,,
+Q334334,Daniel Kolář,association football,AC Sparta Prague,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,FC Viktoria Plzeň,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,Gaziantepspor,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,Czechia men's national football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,FK Chmel Blšany,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,1. FC Slovácko,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,Czech Republic national under-21 football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334334,Daniel Kolář,association football,Czech Republic national under-19 football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Modena F.C.,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Tottenham Hotspur F.C.,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,AC Sparta Prague,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,FC Viktoria Plzeň,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Czechia men's national football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,TJ Jiskra Domažlice,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Czech Republic national under-21 football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q334393,David Limberský,association football,Czech Republic national under-20 football team,,"UEFA Euro 2016, UEFA Euro 2012"
+Q342834,Jeb Corliss,,,,
+Q347184,Roman Kreuziger,road bicycle racing,Tinkoff,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Tinkoff,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,Team Jayco AlUla,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Team Jayco AlUla,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,XDS Astana Team,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,XDS Astana Team,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,Cannondale Pro Cycling Team,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Cannondale Pro Cycling Team,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,Qhubeka NextHash,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Qhubeka NextHash,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,road bicycle racing,Gazprom–RusVelo,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q347184,Roman Kreuziger,cyclo-cross,Gazprom–RusVelo,,"2009 Tour de France, 2010 Tour de France, 2011 Tour de France, 2008 Tour de France, 2010 UCI World Ranking, 2007 UCI ProTour, 2012 UCI World Tour, 2011 UCI World Tour, 2009 UCI World Ranking, 2013 UCI World Tour, 2013 Tour de France, 2005 UCI Europe Tour, 2008 UCI ProTour, 2013 Vuelta a España, 2014 UCI World Tour, 2015 Tour de France, 2015 UCI World Tour, 2016 Tour de France, 2016 UCI World Tour, 2016 UCI Europe Tour, 2017 Tour de France, 2017 UCI World Tour, 2016 UCI World Ranking, 2017 UCI Europe Tour, 2019 Tour de France, 2017 UCI World Ranking, 2018 UCI World Tour, 2018 UCI Europe Tour, 2018 UCI World Ranking, 2020 Tour de France, 2019 UCI Europe Tour, 2019 UCI World Ranking, 2020 UCI Europe Tour, 2020 UCI World Ranking, 2021 UCI Europe Tour, 2021 UCI World Ranking, 2008 Summer Olympics, 2012 Summer Olympics, Tour de France, Vuelta a España"
+Q352017,Josef Bican,association football,SK Rapid Wien,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,Austria men's national football team,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,Czechoslovakia men's national association football team,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,SK Slavia Prague,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,Czechia men's national football team,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,FC Hradec Králové,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,Admira Wacker,,1934 FIFA World Cup
+Q352017,Josef Bican,association football,MFK Vítkovice,,1934 FIFA World Cup
+Q352733,Randy Couture,mixed martial arts,Team Quest,,
+Q355902,Manfred Hoeberl,,,,
+Q356271,Georges St-Pierre,karate,Jackson Wink MMA Academy,,
+Q356271,Georges St-Pierre,mixed martial arts,Jackson Wink MMA Academy,,
+Q356271,Georges St-Pierre,Muay Thai,Jackson Wink MMA Academy,,
+Q1678730,Jaime Hurtado,basketball,Q48796057,,"Ecuadorian parliamentary election, 1998, Ecuadorian parliamentary election, 1979, 1988 Ecuadorian presidential election, 1984 Ecuadorian presidential election"
+Q1681810,Jan Hanč,athletics,,,
+Q1681862,Jan Hrbatý,ice hockey,HC Dukla Jihlava,,1968 Winter Olympics
+Q1681868,Jan Huruk,athletics,,,1992 Summer Olympics

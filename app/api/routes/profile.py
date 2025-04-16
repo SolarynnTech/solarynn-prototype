@@ -33,7 +33,7 @@ def get_profile(current_user):
 @token_required
 def get_user_profile(current_user, user_id):
     """Get another user's profile"""
-    user = User.find_by_id(user_id)
+    user = User.find_by_username(user_id)
     
     if not user:
         return jsonify({"status": False, "message": "User not found"}), 404

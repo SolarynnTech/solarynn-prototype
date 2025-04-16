@@ -127,7 +127,16 @@ class User:
     @classmethod
     def find_by_id(cls, user_id):
         """Find user by ID"""
-        data = db.users.find_one({"_id": ObjectId(user_id)})
+        data = db.sports_figures_data_combined.find_one({"_id": ObjectId(user_id)})
+        if data:
+            data["_id"] = str(data["_id"])
+            return cls.from_dict(data)
+        return None
+
+    @classmethod
+    def find_by_username(cls, username):
+        """Find user by username"""
+        data = db.sports_figures_data_combined.find_one({"username": username})
         if data:
             data["_id"] = str(data["_id"])
             return cls.from_dict(data)
@@ -136,7 +145,7 @@ class User:
     @classmethod
     def find_by_email(cls, email):
         """Find user by email"""
-        data = db.users.find_one({"email": email})
+        data = db.sports_figures_data_combined.find_one({"email": email})
         if data:
             data["_id"] = str(data["_id"])
             return cls.from_dict(data)
@@ -145,7 +154,7 @@ class User:
     @classmethod
     def find_by_phone(cls, phone):
         """Find user by phone number"""
-        data = db.users.find_one({"phone": phone})
+        data = db.sports_figures_data_combined.find_one({"phone": phone})
         if data:
             data["_id"] = str(data["_id"])
             return cls.from_dict(data)
@@ -158,7 +167,7 @@ class User:
         
         if hasattr(self, "_id"):
             # Update existing user
-            result = db.users.update_one(
+            result = db.sports_figures_data_combined.update_one(
                 {"_id": ObjectId(self._id)}, 
                 {"$set": user_dict}
             )
@@ -168,13 +177,13 @@ class User:
             existing_user = User.find_by_email(self.email)
             if existing_user:
                 self._id = existing_user._id
-                return db.users.update_one(
+                return db.sports_figures_data_combined.update_one(
                     {"_id": ObjectId(self._id)}, 
                     {"$set": user_dict}
                 )
             else:
                 # Insert new user
-                result = db.users.insert_one(user_dict)
+                result = db.sports_figures_data_combined.insert_one(user_dict)
                 self._id = str(result.inserted_id)
                 return self._id
     

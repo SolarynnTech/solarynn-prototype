@@ -17,7 +17,12 @@ const WrappedTermsAndConditions = () => {
             const originalOnClick = nextButton.onclick;
             nextButton.onclick = (e) => {
               if (originalOnClick) originalOnClick(e);
-              router.push('/create-account');
+              const token = localStorage.getItem('create-account-token');
+              if (token) {
+                router.push('/login');
+              } else {
+                router.push('/create-account');
+              }
             };
           }
         }, 500); // Small delay to ensure component is fully rendered
