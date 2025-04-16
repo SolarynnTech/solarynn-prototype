@@ -26,7 +26,7 @@ export default function Onboard() {
                     
                     // Fetch user profile using the profile route
                     try {
-                      const profileResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/profile/${form.value}`, {
+                      const profileResponse = await fetch(`${'https://solaryn.onrender.com/'}/api/profile/${form.value}`, {
                         method: 'GET',
                         headers: {
                           'Content-Type': 'application/json',

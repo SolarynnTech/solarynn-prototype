@@ -21,7 +21,7 @@ const LoginPage = () => {
     e.preventDefault();
     try {
       // Call the login API
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000'}/api/auth/login`, {
+      const response = await fetch(`${'https://solaryn.onrender.com/'}/api/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
