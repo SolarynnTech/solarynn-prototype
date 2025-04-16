@@ -7,6 +7,219 @@ import validators
 
 settings_bp = Blueprint('settings', __name__)
 
+@settings_bp.route('/', methods=['GET'])
+@token_required
+def get_settings(current_user):
+    """Get user's settings"""
+    # Default settings if not set
+    settings = {
+        "notifications": {
+            "email_notifications": True,
+            "push_notifications": True,
+            "message_notifications": True,
+            "collaboration_notifications": True
+        },
+        "privacy": {
+            "show_email": False,
+            "show_phone": False,
+            "show_projects": True,
+            "allow_messages_from": "everyone",
+            "profile_visibility": "public"
+        },
+        "theme": {
+            "mode": "light",
+            "color": "blue",
+            "font_size": "medium"
+        }
+    }
+    
+    # Merge with user's settings if they exist
+    if hasattr(current_user, 'settings'):
+        if current_user.settings.get('notifications'):
+            settings['notifications'].update(current_user.settings.get('notifications', {}))
+        if current_user.settings.get('privacy'):
+            settings['privacy'].update(current_user.settings.get('privacy', {}))
+        if current_user.settings.get('theme'):
+            settings['theme'].update(current_user.settings.get('theme', {}))
+    
+    return jsonify({
+        "status": True,
+        "settings": settings
+    }), 200
+
+@settings_bp.route('/notifications', methods=['PUT'])
+@token_required
+def update_notification_settings(current_user):
+    """Update user's notification settings"""
+    data = request.get_json()
+    
+    valid_notification_settings = [
+        "email_notifications",
+        "push_notifications", 
+        "message_notifications",
+        "collaboration_notifications"
+    ]
+    
+    # Validate notification settings
+    for key in data:
+        if key not in valid_notification_settings:
+            return jsonify({
+                "status": False,
+                "message": f"Invalid notification setting: {key}"
+            }), 400
+        if not isinstance(data[key], bool):
+            return jsonify({
+                "status": False,
+                "message": f"Value for {key} must be a boolean"
+            }), 400
+    
+    # Initialize settings if not exist
+    if not hasattr(current_user, 'settings'):
+        current_user.settings = {}
+    if 'notifications' not in current_user.settings:
+        current_user.settings['notifications'] = {}
+    
+    # Update notification settings
+    current_user.settings['notifications'].update(data)
+    current_user.save()
+    
+    return jsonify({
+        "status": True,
+        "message": "Notification settings updated successfully",
+        "notifications": current_user.settings['notifications']
+    }), 200
+
+@settings_bp.route('/privacy', methods=['PUT'])
+@token_required
+def update_privacy_settings(current_user):
+    """Update user's privacy settings"""
+    data = request.get_json()
+    
+    valid_privacy_settings = {
+        "show_email": bool,
+        "show_phone": bool,
+        "show_projects": bool,
+        "allow_messages_from": ["everyone", "connections_only", "none"],
+        "profile_visibility": ["public", "connections_only", "private"]
+    }
+    
+    # Validate privacy settings
+    for key, value in data.items():
+        if key not in valid_privacy_settings:
+            return jsonify({
+                "status": False,
+                "message": f"Invalid privacy setting: {key}"
+            }), 400
+        
+        if isinstance(valid_privacy_settings[key], list):
+            if value not in valid_privacy_settings[key]:
+                return jsonify({
+                    "status": False,
+                    "message": f"Invalid value for {key}. Valid values are: {', '.join(valid_privacy_settings[key])}"
+                }), 400
+        elif not isinstance(value, valid_privacy_settings[key]):
+            return jsonify({
+                "status": False,
+                "message": f"Value for {key} must be a {valid_privacy_settings[key].__name__}"
+            }), 400
+    
+    # Initialize settings if not exist
+    if not hasattr(current_user, 'settings'):
+        current_user.settings = {}
+    if 'privacy' not in current_user.settings:
+        current_user.settings['privacy'] = {}
+    
+    # Update privacy settings
+    current_user.settings['privacy'].update(data)
+    current_user.save()
+    
+    return jsonify({
+        "status": True,
+        "message": "Privacy settings updated successfully",
+        "privacy": current_user.settings['privacy']
+    }), 200
+
+@settings_bp.route('/theme', methods=['PUT'])
+@token_required
+def update_theme_settings(current_user):
+    """Update user's theme settings"""
+    data = request.get_json()
+    
+    valid_theme_settings = {
+        "mode": ["light", "dark"],
+        "color": ["blue", "green", "purple", "red", "orange"],
+        "font_size": ["small", "medium", "large"]
+    }
+    
+    # Validate theme settings
+    for key, value in data.items():
+        if key not in valid_theme_settings:
+            return jsonify({
+                "status": False,
+                "message": f"Invalid theme setting: {key}"
+            }), 400
+        
+        if value not in valid_theme_settings[key]:
+            return jsonify({
+                "status": False,
+                "message": f"Invalid value for {key}. Valid values are: {', '.join(valid_theme_settings[key])}"
+            }), 400
+    
+    # Initialize settings if not exist
+    if not hasattr(current_user, 'settings'):
+        current_user.settings = {}
+    if 'theme' not in current_user.settings:
+        current_user.settings['theme'] = {}
+    
+    # Update theme settings
+    current_user.settings['theme'].update(data)
+    current_user.save()
+    
+    return jsonify({
+        "status": True,
+        "message": "Theme settings updated successfully",
+        "theme": current_user.settings['theme']
+    }), 200
+
+@settings_bp.route('/public/<user_id>', methods=['GET'])
+@token_required
+def get_public_settings(current_user, user_id):
+    """Get public settings for another user"""
+    # Find user by ID
+    target_user = User.find_by_id(user_id)
+    
+    if not target_user:
+        return jsonify({
+            "status": False,
+            "message": "User not found"
+        }), 404
+    
+    # Get privacy settings
+    privacy_settings = {}
+    if hasattr(target_user, 'settings') and 'privacy' in target_user.settings:
+        privacy_settings = target_user.settings['privacy']
+    else:
+        # Default privacy settings
+        privacy_settings = {
+            "show_email": False,
+            "show_phone": False,
+            "show_projects": True,
+            "allow_messages_from": "everyone",
+            "profile_visibility": "public"
+        }
+    
+    # Only return public settings
+    public_settings = {
+        "allow_messages_from": privacy_settings.get("allow_messages_from", "everyone"),
+        "profile_visibility": privacy_settings.get("profile_visibility", "public"),
+        "show_projects": privacy_settings.get("show_projects", True)
+    }
+    
+    return jsonify({
+        "status": True,
+        "settings": public_settings
+    }), 200
+
 @settings_bp.route('/email', methods=['PUT'])
 @token_required
 @requires_verification

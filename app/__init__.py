@@ -22,6 +22,11 @@ def create_app(test_config=None):
         UPLOAD_FOLDER=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'uploads'),
     )
     
+    # Override with test config if provided
+    if test_config is not None:
+        # Use a separate test database to avoid conflicts
+        app.config['MONGO_URI'] = os.environ.get('TEST_MONGO_URI', 'mongodb://localhost:27017/linkedin_clone_test')
+    
     # Initialize JWT
     jwt = JWTManager(app)
     
@@ -35,7 +40,7 @@ def create_app(test_config=None):
     app.register_blueprint(auth_bp, url_prefix='/api/auth')
     app.register_blueprint(profile_bp, url_prefix='/api/profile')
     app.register_blueprint(project_bp, url_prefix='/api/project')
-    app.register_blueprint(message_bp, url_prefix='/api/messages')
+    app.register_blueprint(message_bp, url_prefix='/api/message')
     app.register_blueprint(settings_bp, url_prefix='/api/settings')
     
     # Create required directories for uploads if they don't exist

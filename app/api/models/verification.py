@@ -1,6 +1,6 @@
 import random
 import string
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from app.config.database import db
 
 class VerificationCode:
@@ -13,8 +13,8 @@ class VerificationCode:
         self.code = self._generate_code()
         self.is_used = False
         self.attempts = 0
-        self.expires_at = datetime.utcnow() + timedelta(minutes=15)  # 15 minutes validity
-        self.created_at = datetime.utcnow()
+        self.expires_at = datetime.now(timezone.utc) + timedelta(minutes=15)  # 15 minutes validity
+        self.created_at = datetime.now(timezone.utc)
     
     def _generate_code(self):
         """Generate a 6-digit random code"""
@@ -48,8 +48,18 @@ class VerificationCode:
         code.code = data["code"]
         code.is_used = data["is_used"]
         code.attempts = data["attempts"]
-        code.expires_at = data["expires_at"]
-        code.created_at = data["created_at"]
+        
+        # Ensure datetime objects are timezone aware
+        expires_at = data["expires_at"]
+        if expires_at.tzinfo is None:
+            expires_at = expires_at.replace(tzinfo=timezone.utc)
+        code.expires_at = expires_at
+        
+        created_at = data["created_at"] 
+        if created_at.tzinfo is None:
+            created_at = created_at.replace(tzinfo=timezone.utc)
+        code.created_at = created_at
+        
         if "_id" in data:
             code._id = str(data["_id"])
         return code
@@ -62,7 +72,7 @@ class VerificationCode:
             "code_type": code_type,
             "purpose": purpose,
             "is_used": False,
-            "expires_at": {"$gt": datetime.utcnow()}
+            "expires_at": {"$gt": datetime.now(timezone.utc)}
         })
         if data:
             data["_id"] = str(data["_id"])
@@ -75,7 +85,7 @@ class VerificationCode:
         query = {
             "code": code,
             "is_used": False,
-            "expires_at": {"$gt": datetime.utcnow()}
+            "expires_at": {"$gt": datetime.now(timezone.utc)}
         }
         
         if code_type:
@@ -111,7 +121,12 @@ class VerificationCode:
         if self.is_used:
             return {"status": False, "message": "Code already used"}
         
-        if self.expires_at < datetime.utcnow():
+        # Ensure expires_at is timezone aware
+        expires_at = self.expires_at
+        if expires_at.tzinfo is None:
+            expires_at = expires_at.replace(tzinfo=timezone.utc)
+            
+        if expires_at < datetime.now(timezone.utc):
             return {"status": False, "message": "Code expired"}
         
         if self.attempts > 5:  # Limit to 5 attempts

@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from bson import ObjectId
 import bcrypt
 from app.config.database import db
@@ -19,8 +19,28 @@ class User:
             "users": [],
             "projects": []
         }
-        self.created_at = datetime.utcnow()
-        self.updated_at = datetime.utcnow()
+        self.settings = {
+            "notifications": {
+                "email_notifications": True,
+                "push_notifications": True,
+                "message_notifications": True,
+                "collaboration_notifications": True
+            },
+            "privacy": {
+                "show_email": False,
+                "show_phone": False,
+                "show_projects": True,
+                "allow_messages_from": "everyone",
+                "profile_visibility": "public"
+            },
+            "theme": {
+                "mode": "light",
+                "color": "blue",
+                "font_size": "medium"
+            }
+        }
+        self.created_at = datetime.now(timezone.utc)
+        self.updated_at = datetime.now(timezone.utc)
         self.email_verified = False
         self.phone_verified = False
         self.is_open_to_more = True  # Open to more light option in settings
@@ -46,6 +66,7 @@ class User:
             "social_links": self.social_links,
             "onboarding_responses": self.onboarding_responses,
             "favorites": self.favorites,
+            "settings": self.settings,
             "created_at": self.created_at,
             "updated_at": self.updated_at,
             "email_verified": self.email_verified,
@@ -69,11 +90,38 @@ class User:
         user.password_hash = data["password_hash"]
         user.bio = data.get("bio", "")
         user.favorites = data.get("favorites", {"users": [], "projects": []})
-        user.created_at = data.get("created_at", datetime.utcnow())
-        user.updated_at = data.get("updated_at", datetime.utcnow())
+        
+        # Set settings with defaults if not present
+        user.settings = data.get("settings", {
+            "notifications": {
+                "email_notifications": True,
+                "push_notifications": True,
+                "message_notifications": True,
+                "collaboration_notifications": True
+            },
+            "privacy": {
+                "show_email": False,
+                "show_phone": False,
+                "show_projects": True,
+                "allow_messages_from": "everyone",
+                "profile_visibility": "public"
+            },
+            "theme": {
+                "mode": "light",
+                "color": "blue",
+                "font_size": "medium"
+            }
+        })
+        
+        user.created_at = data.get("created_at", datetime.now(timezone.utc))
+        user.updated_at = data.get("updated_at", datetime.now(timezone.utc))
         user.email_verified = data.get("email_verified", False)
         user.phone_verified = data.get("phone_verified", False)
         user.is_open_to_more = data.get("is_open_to_more", True)
+        
+        if "_id" in data:
+            user._id = data["_id"]
+            
         return user
     
     @classmethod
@@ -106,20 +154,34 @@ class User:
     def save(self):
         """Save user to database"""
         user_dict = self.to_dict()
-        user_dict["updated_at"] = datetime.utcnow()
+        user_dict["updated_at"] = datetime.now(timezone.utc)
         
         if hasattr(self, "_id"):
-            db.users.update_one({"_id": ObjectId(self._id)}, {"$set": user_dict})
+            # Update existing user
+            result = db.users.update_one(
+                {"_id": ObjectId(self._id)}, 
+                {"$set": user_dict}
+            )
             return self._id
         else:
-            result = db.users.insert_one(user_dict)
-            self._id = str(result.inserted_id)
-            return self._id
+            # Check if a user with this email already exists
+            existing_user = User.find_by_email(self.email)
+            if existing_user:
+                self._id = existing_user._id
+                return db.users.update_one(
+                    {"_id": ObjectId(self._id)}, 
+                    {"$set": user_dict}
+                )
+            else:
+                # Insert new user
+                result = db.users.insert_one(user_dict)
+                self._id = str(result.inserted_id)
+                return self._id
     
     def update(self, data):
         """Update user with provided data"""
         for key, value in data.items():
             if key != "_id" and hasattr(self, key):
                 setattr(self, key, value)
-        self.updated_at = datetime.utcnow()
+        self.updated_at = datetime.now(timezone.utc)
         return self.save() 

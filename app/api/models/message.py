@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from bson import ObjectId
 from app.config.database import db
 
@@ -10,8 +10,8 @@ class Message:
         self.content = content
         self.message_type = message_type  # personal, project, support
         self.is_read = False
-        self.created_at = datetime.utcnow()
-        self.updated_at = datetime.utcnow()
+        self.created_at = datetime.now(timezone.utc)
+        self.updated_at = datetime.now(timezone.utc)
     
     def to_dict(self):
         """Convert Message object to dictionary for database storage"""
@@ -37,8 +37,8 @@ class Message:
             message_type=data.get("message_type", "personal")
         )
         message.is_read = data.get("is_read", False)
-        message.created_at = data.get("created_at", datetime.utcnow())
-        message.updated_at = data.get("updated_at", datetime.utcnow())
+        message.created_at = data.get("created_at", datetime.now(timezone.utc))
+        message.updated_at = data.get("updated_at", datetime.now(timezone.utc))
         if "_id" in data:
             message._id = str(data["_id"])
         return message
@@ -100,7 +100,7 @@ class Message:
     def save(self):
         """Save message to database"""
         message_dict = self.to_dict()
-        message_dict["updated_at"] = datetime.utcnow()
+        message_dict["updated_at"] = datetime.now(timezone.utc)
         
         if hasattr(self, "_id"):
             db.messages.update_one({"_id": ObjectId(self._id)}, {"$set": message_dict})
@@ -113,7 +113,7 @@ class Message:
     def mark_as_read(self):
         """Mark message as read"""
         self.is_read = True
-        self.updated_at = datetime.utcnow()
+        self.updated_at = datetime.now(timezone.utc)
         return self.save()
     
     @classmethod
@@ -133,6 +133,6 @@ class Message:
         """Mark all messages in a conversation as read for a specific user"""
         result = db.messages.update_many(
             {"conversation_id": conversation_id, "receiver_id": user_id, "is_read": False},
-            {"$set": {"is_read": True, "updated_at": datetime.utcnow()}}
+            {"$set": {"is_read": True, "updated_at": datetime.now(timezone.utc)}}
         )
         return result.modified_count 

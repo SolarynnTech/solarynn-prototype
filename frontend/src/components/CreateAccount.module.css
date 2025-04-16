@@ -1,0 +1,134 @@
+.container {
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 480px;
+  width: 100%;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+}
+
+.statusBar {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 21px 35px;
+  font-family:
+    "SF Pro Text",
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: -0.17px;
+}
+
+.header {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 12px 59px 4px;
+}
+
+.title {
+  font-size: 22px;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  min-height: 32px;
+}
+
+.content {
+  width: 100%;
+  padding: 24px;
+  overflow: hidden;
+  line-height: 1.3;
+}
+
+.inputGroup {
+  display: flex;
+  min-height: 87px;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: stretch;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.inputGroup:first-child {
+  margin-top: 0;
+}
+
+.inputLabel {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.inputField {
+  border-radius: 12px;
+  border: 1px solid #000000;
+  margin-top: 16px;
+  width: 100%;
+  padding: 16px;
+  font-size: 14px;
+  color: #aeaeae;
+  font-weight: 400;
+}
+
+.inputField::placeholder {
+  color: #aeaeae;
+}
+
+.footer {
+  justify-content: center;
+  align-items: stretch;
+  box-shadow: 0px -1px 25px 0px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff;
+  display: flex;
+  width: 100%;
+  padding: 12px 0 20px;
+  flex-direction: column;
+  font-size: 16px;
+  color: #f5f5f5;
+  font-weight: 600;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.footerContent {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.submitButton {
+  align-self: stretch;
+  border-radius: 24px;
+  background-color: #087b43;
+  min-height: 45px;
+  width: 100%;
+  padding: 12px 123px;
+  color: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.bottomLine {
+  border-radius: 100px;
+  background-color: #000000;
+  align-self: center;
+  display: flex;
+  margin-top: 29px;
+  width: 135px;
+  height: 5px;
+}

@@ -1,7 +1,7 @@
 import os
 import random
 import string
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import jwt
 from app.api.models.user import User
 from app.api.models.verification import VerificationCode
@@ -102,10 +102,18 @@ class AuthService:
         if result["status"]:
             # Update user's verification status
             user = User.find_by_id(user_id)
+            if not user:
+                return {"status": False, "message": "User not found"}
+                
             if code_type == "email":
                 user.email_verified = True
             elif code_type == "phone":
                 user.phone_verified = True
+                
+            # Make sure the _id attribute is set before saving
+            if not hasattr(user, "_id"):
+                user._id = user_id
+                
             user.save()
             
             result["message"] = f"{code_type.capitalize()} verified successfully"
@@ -197,7 +205,7 @@ class AuthService:
     def generate_token(user_id, expires_in=86400):
         """Generate JWT token for user authentication"""
         # Set expiration time
-        exp = datetime.utcnow() + timedelta(seconds=expires_in)
+        exp = datetime.now(timezone.utc) + timedelta(seconds=expires_in)
         
         # Create payload
         payload = {
