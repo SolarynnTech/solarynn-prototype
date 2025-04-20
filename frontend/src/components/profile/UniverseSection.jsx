@@ -26,16 +26,16 @@ const UniverseSection = () => {
         </div>
       </div>
 
-      <div className="flex items-center gap-2 mb-4">
-        {categories.map((category) => (
-          <Badge
-            text={category.label + " " + category.count}
-            textColor="gray-800"
-            bgColor="gray-100"
-            key={category.label}
-          />
-        ))}
-      </div>
+      {/*<div className="flex items-center gap-2 mb-4">*/}
+      {/*  {categories.map((category) => (*/}
+      {/*    <Badge*/}
+      {/*      text={category.label + " " + category.count}*/}
+      {/*      textColor="gray-800"*/}
+      {/*      bgColor="gray-100"*/}
+      {/*      key={category.label}*/}
+      {/*    />*/}
+      {/*  ))}*/}
+      {/*</div>*/}
 
       <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
         <PlaceholderBox height={150} width={150} />
