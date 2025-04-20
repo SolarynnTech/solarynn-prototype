@@ -32,6 +32,7 @@ const UniverseSection = () => {
             text={category.label + " " + category.count}
             textColor="gray-800"
             bgColor="gray-100"
+            key={category.label}
           />
         ))}
       </div>
