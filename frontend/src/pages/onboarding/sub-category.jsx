@@ -135,7 +135,7 @@ export default function SelectSubCategory() {
       <RootNavigation title={"Sub-Categories"} backBtn={true} />
 
       <div className="pt-4">
-        <h2>{mainCategory.title}</h2>
+        <h2>{mainCategory?.title}</h2>
         <h3 className="mb-4 font-medium">
           Please select 1 of {categories.length} that <br />
           define you the most.
