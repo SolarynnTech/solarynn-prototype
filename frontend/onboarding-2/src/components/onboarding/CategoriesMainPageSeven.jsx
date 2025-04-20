@@ -5,7 +5,7 @@ import styles from "./CategoriesMainPageSeven.module.css";
 function CategoriesMainPageSeven() {
   return (
     <div className={styles.container}>
-      <div className={styles.statusBar}>9:41</div>
+      {/*<div className={styles.statusBar}>9:41</div>*/}
 
       <div className={styles.header}>
         <div className={styles.headerTitle}>Main Category</div>

@@ -10,14 +10,14 @@ const OTPVerification = () => {
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
       />
       <div className={styles.container}>
-        <div className={styles.statusBar}>
-          <div className={styles.time}>9:41</div>
-          <div className={styles.indicators}>
-            <div className={styles.indicator} />
-            <div className={styles.indicator} />
-            <div className={styles.indicator} />
-          </div>
-        </div>
+        {/*<div className={styles.statusBar}>*/}
+        {/*  <div className={styles.time}>9:41</div>*/}
+        {/*  <div className={styles.indicators}>*/}
+        {/*    <div className={styles.indicator} />*/}
+        {/*    <div className={styles.indicator} />*/}
+        {/*    <div className={styles.indicator} />*/}
+        {/*  </div>*/}
+        {/*</div>*/}
 
         <div className={styles.header}>
           <button className={styles.backButton}>

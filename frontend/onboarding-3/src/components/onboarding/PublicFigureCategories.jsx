@@ -10,14 +10,14 @@ const PublicFigureCategories = () => {
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       />
       <div className="categories-container">
-        <div className="status-bar">
-          <div className="time">9:41</div>
-          <div className="status-indicators">
-            <div className="indicator"></div>
-            <div className="indicator"></div>
-            <div className="indicator"></div>
-          </div>
-        </div>
+        {/*<div className="status-bar">*/}
+        {/*  <div className="time">9:41</div>*/}
+        {/*  <div className="status-indicators">*/}
+        {/*    <div className="indicator"></div>*/}
+        {/*    <div className="indicator"></div>*/}
+        {/*    <div className="indicator"></div>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
 
         <div className="header">
           <div className="back-button">

@@ -287,7 +287,7 @@ const NavIndicator = styled.div`
 function Homepage() {
   return (
     <PageContainer>
-      <StatusBar>9:41</StatusBar>
+      {/*<StatusBar>9:41</StatusBar>*/}
 
       <Header>
         <Title>Welcome Denzel</Title>

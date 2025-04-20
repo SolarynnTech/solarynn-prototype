@@ -10,27 +10,27 @@ function TermsAndConditionsPage() {
         maxWidth: "393px",
       }}
     >
-      <div
-        className="status-bar"
-        style={{
-          backgroundColor: "rgba(255, 255, 255, 1)",
-          width: "100%",
-          paddingLeft: "35px",
-          paddingRight: "35px",
-          paddingTop: "21px",
-          paddingBottom: "21px",
-          fontFamily:
-            "SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif",
-          fontSize: "15px",
-          color: "rgba(0, 0, 0, 1)",
-          fontWeight: "600",
-          whiteSpace: "nowrap",
-          textAlign: "center",
-          letterSpacing: "-0.17px",
-        }}
-      >
-        9:41
-      </div>
+      {/*<div*/}
+      {/*  className="status-bar"*/}
+      {/*  style={{*/}
+      {/*    backgroundColor: "rgba(255, 255, 255, 1)",*/}
+      {/*    width: "100%",*/}
+      {/*    paddingLeft: "35px",*/}
+      {/*    paddingRight: "35px",*/}
+      {/*    paddingTop: "21px",*/}
+      {/*    paddingBottom: "21px",*/}
+      {/*    fontFamily:*/}
+      {/*      "SF Pro Text, -apple-system, Roboto, Helvetica, sans-serif",*/}
+      {/*    fontSize: "15px",*/}
+      {/*    color: "rgba(0, 0, 0, 1)",*/}
+      {/*    fontWeight: "600",*/}
+      {/*    whiteSpace: "nowrap",*/}
+      {/*    textAlign: "center",*/}
+      {/*    letterSpacing: "-0.17px",*/}
+      {/*  }}*/}
+      {/*>*/}
+      {/*  9:41*/}
+      {/*</div>*/}
       <div
         className="header"
         style={{

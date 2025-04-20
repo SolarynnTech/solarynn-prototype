@@ -1,15 +1,16 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import '../styles/globals.css';
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
-
   return (
-    <div className="app-container" style={{ maxWidth: "393px", margin: "0 auto", boxShadow: "0 0 10px rgba(0,0,0,0.1)" }}>
+    <main
+      className="app-container flex flex-col mx-auto !pt-6 !pb-12"
+      style={{ maxWidth: "440px" }}
+    >
       <Component {...pageProps} />
-    </div>
+    </main>
   );
 }
 
-export default MyApp; 
+export default MyApp;
+
+// maxWidth: "440px" - it is for Iphone 16 pro max

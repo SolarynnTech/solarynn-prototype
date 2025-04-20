@@ -5,7 +5,7 @@ import "../../styles/onboarding.css";
 function WelcomePage() {
   return (
     <div className="welcome-page">
-      <div className="status-bar">9:41</div>
+      {/*<div className="status-bar">9:41</div>*/}
       <div className="welcome-content">
         <h1 className="welcome-title">
           Congratulation!

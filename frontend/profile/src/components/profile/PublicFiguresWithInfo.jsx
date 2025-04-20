@@ -13,7 +13,7 @@ import NavigationBar from "./sections/NavigationBar";
 const PublicFiguresWithInfo = () => {
   return (
     <div className="profile-container">
-      <StatusBar />
+      {/*<StatusBar />*/}
       <ProfileHeader />
       <SocialMediaSection />
       <BusinessSection />

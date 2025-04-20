@@ -28,7 +28,7 @@ export default function CreateAccount() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.statusBar}>9:41</div>
+      {/*<div className={styles.statusBar}>9:41</div>*/}
 
       <div className={styles.header}>
         <div className={styles.title}>Create an account</div>

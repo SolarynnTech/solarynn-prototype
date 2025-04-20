@@ -24,7 +24,7 @@ const LoginPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.loginPage}>
-        <div className={styles.statusBar}>9:41</div>
+        {/*<div className={styles.statusBar}>9:41</div>*/}
 
         <header className={styles.header}>
           <h1 className={styles.headerTitle}>Login</h1>

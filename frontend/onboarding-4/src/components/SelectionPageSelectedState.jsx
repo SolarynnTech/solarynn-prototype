@@ -5,7 +5,7 @@ import "../styles/SelectionPageSelectedState.css";
 function SelectionPageSelectedState() {
   return (
     <div className="selection-page">
-      <div className="status-bar">9:41</div>
+      {/*<div className="status-bar">9:41</div>*/}
 
       <div className="header">
         <div className="header-title">Select categories</div>
