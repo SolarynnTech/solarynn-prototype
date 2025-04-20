@@ -1,14 +1,10 @@
-const PlaceholderBox = ({
-  width = "120",
-  height = "120",
-  bgColor = "gray-100",
-}) => {
+const PlaceholderBox = ({ width = "", height = "", bgColor = "gray-100" }) => {
   return (
     <div
       className={`flex shrink-0 rounded-md items-center justify-center bg-${bgColor}`}
       style={{
-        width: `${width}px`,
-        height: `${height}px`,
+        width: `${width ? width + "px" : "100%"}`,
+        height: `${height ? height + "px" : "100%"}`,
       }}
     ></div>
   );

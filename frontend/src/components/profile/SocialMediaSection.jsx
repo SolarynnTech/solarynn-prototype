@@ -40,7 +40,7 @@ const SocialMediaSection = () => {
           </defs>
         </svg>
       ),
-      count: "888K",
+      link: "https://www.instagram.com/",
       name: "instagram",
     }, //instagram
     {
@@ -58,7 +58,7 @@ const SocialMediaSection = () => {
           />
         </svg>
       ),
-      count: "888K",
+      link: "https://www.facebook.com/",
       name: "facebook",
     }, // Facebook
     {
@@ -76,8 +76,8 @@ const SocialMediaSection = () => {
           />
         </svg>
       ),
-      count: "888K",
-      name: "tikTok",
+      link: "https://www.tiktok.com/",
+      name: "tiktok",
     }, // TikTok
     {
       icon: (
@@ -98,8 +98,8 @@ const SocialMediaSection = () => {
           />
         </svg>
       ),
-      count: "888K",
       name: "youtube",
+      link: "https://www.youtube.com/",
     }, // Youtube
     {
       icon: (
@@ -128,8 +128,8 @@ const SocialMediaSection = () => {
           </defs>
         </svg>
       ),
-      count: "888K",
       name: "x",
+      link: "https://www.x.com/",
     }, // X (Twitter)
     {
       icon: (
@@ -162,8 +162,8 @@ const SocialMediaSection = () => {
           </defs>
         </svg>
       ),
-      count: "888K",
       name: "linkedin",
+      link: "https://www.linkedin.com/",
     }, //linkedIn
     {
       icon: (
@@ -180,8 +180,8 @@ const SocialMediaSection = () => {
           />
         </svg>
       ),
-      count: "888K",
       name: "snapchat",
+      link: "https://www.snapchat.com",
     }, // Snapchat
     {
       icon: (
@@ -202,8 +202,8 @@ const SocialMediaSection = () => {
           />
         </svg>
       ),
-      count: "888K",
       name: "reddit",
+      link: "https://www.reddit.com/",
     }, //reddit
   ];
 
@@ -220,14 +220,14 @@ const SocialMediaSection = () => {
   };
 
   const [socialLinks, setSocialLinks] = useState({
-    instagram: "",
-    facebook: "",
-    youtube: "",
-    tiktok: "",
-    snapchat: "",
-    twitter: "",
-    linkedin: "",
-    reddit: "",
+    instagram: "https://www.instagram.com/",
+    facebook: "https://www.facebook.com/",
+    youtube: "https://www.youtube.com/",
+    tiktok: "https://www.tiktok.com/",
+    snapchat: "https://www.snapchat.com",
+    x: "https://www.x.com/",
+    linkedin: "https://www.linkedin.com/",
+    reddit: "https://www.reddit.com/",
   });
 
   const [open, setOpen] = useState(false);
@@ -257,21 +257,13 @@ const SocialMediaSection = () => {
 
         <div className="flex flex-wrap gap-2">
           {socialPlatforms.map((platform, index) => (
-            <Badge
-              bgColor={"gray-100"}
-              textColor={"green-800"}
-              text={platform.count}
-              key={index}
-            >
-              {platform.icon ? (
-                <span className="inline-flex items-center gap-1">
-                  <span>{platform.icon}</span>
-                  <span>|</span>
+            <a href={socialLinks[platform.name]} key={index} target="_blank">
+              <Badge bgColor={"gray-100"} textColor={"green-800"} key={index}>
+                <span className="inline-flex min-h-5 items-center justify-center">
+                  {platform.icon}
                 </span>
-              ) : (
-                <></>
-              )}
-            </Badge>
+              </Badge>
+            </a>
           ))}
         </div>
       </div>

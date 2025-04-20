@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/amz07GZj0hzbIlGd2WKCe/_buildManifest.js",
-    "static/amz07GZj0hzbIlGd2WKCe/_ssgManifest.js"
+    "static/o951LDlLHkp4QHuL8c6-k/_buildManifest.js",
+    "static/o951LDlLHkp4QHuL8c6-k/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -20,7 +20,7 @@
       "static/chunks/webpack-3617322d1c7e7eea.js",
       "static/chunks/framework-fae63b21a27d6472.js",
       "static/chunks/main-22b029abc2beadb0.js",
-      "static/css/7fd25dd355fed3d9.css",
+      "static/css/8a0826de3a62e4b1.css",
       "static/chunks/pages/_app-aa976960a97c4d39.js"
     ],
     "/_error": [
@@ -39,7 +39,7 @@
       "static/chunks/webpack-3617322d1c7e7eea.js",
       "static/chunks/framework-fae63b21a27d6472.js",
       "static/chunks/main-22b029abc2beadb0.js",
-      "static/chunks/pages/home-b017c24e1bb18540.js"
+      "static/chunks/pages/home-6dc02aa1ab1cb5e8.js"
     ],
     "/login": [
       "static/chunks/webpack-3617322d1c7e7eea.js",
@@ -51,7 +51,7 @@
       "static/chunks/webpack-3617322d1c7e7eea.js",
       "static/chunks/framework-fae63b21a27d6472.js",
       "static/chunks/main-22b029abc2beadb0.js",
-      "static/chunks/pages/onboarding/main-category-39dd8e0f8e0cd50a.js"
+      "static/chunks/pages/onboarding/main-category-3c6df58409b50d13.js"
     ],
     "/onboarding/select-categories": [
       "static/chunks/webpack-3617322d1c7e7eea.js",
@@ -81,15 +81,15 @@
       "static/chunks/webpack-3617322d1c7e7eea.js",
       "static/chunks/framework-fae63b21a27d6472.js",
       "static/chunks/main-22b029abc2beadb0.js",
-      "static/chunks/968-0439d7b154324a9f.js",
+      "static/chunks/968-d6c1770e5c55e8e0.js",
       "static/chunks/577-2753f296b7e5473c.js",
-      "static/chunks/pages/profile-48a4175aacaa9705.js"
+      "static/chunks/pages/profile-6e1b749ebc750914.js"
     ],
     "/questionnaire/[part]/[page]": [
       "static/chunks/webpack-3617322d1c7e7eea.js",
       "static/chunks/framework-fae63b21a27d6472.js",
       "static/chunks/main-22b029abc2beadb0.js",
-      "static/chunks/968-0439d7b154324a9f.js",
+      "static/chunks/968-d6c1770e5c55e8e0.js",
       "static/chunks/577-2753f296b7e5473c.js",
       "static/chunks/pages/questionnaire/[part]/[page]-65b8b1b08c441e3e.js"
     ],
