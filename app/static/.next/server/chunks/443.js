@@ -1,5 +1,0 @@
-"use strict";exports.id=443,exports.ids=[443],exports.modules={5443:(e,s,t)=>{t.d(s,{Z:()=>__WEBPACK_DEFAULT_EXPORT__});var r=t(997);t(6689);let __WEBPACK_DEFAULT_EXPORT__=({title:e,img_url:s="/images/categories/empty.png",bg_color:t="#B4B4B4",isSelected:i=!1,onClick:a,isEmpty:l=!1,disabled:o=!1,level:d="main"})=>(0,r.jsxs)("div",{className:` 
-        ${i?"shadow-[0_0_0_2px_#166534]":""} 
-        ${o?"opacity-60":"hover:scale-105 cursor-pointer"} 
-        ${l?"items-center":"items-start"} 
-        flex pr-24 rounded-lg py-3 pl-3 relative h-24 ease-in transition-transform overflow-hidden`,onClick:a,style:{backgroundColor:t},children:[r.jsx("h5",{className:"relative z-[2]",children:e}),r.jsx("div",{className:"flex justify-end items-end absolute z-[1] bottom-0 right-0 w-20 h-20",children:r.jsx("img",{className:"max-h-full",src:s,alt:e})})]})}};
