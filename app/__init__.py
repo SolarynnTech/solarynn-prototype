@@ -56,6 +56,12 @@ def create_app(test_config=None):
     @app.route('/<path:path>')
     def serve_static(path):
         return send_from_directory(static_folder, path)
+
+    # Serve public images or other public assets
+    @app.route('/images/<path:filename>')
+    def serve_public_images(filename):
+        public_folder = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static/images')
+        return send_from_directory(public_folder, filename)
     
     # Add route specifically for Next.js static files
     @app.route('/_next/<path:path>')
