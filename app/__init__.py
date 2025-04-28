@@ -9,7 +9,7 @@ load_dotenv()
 
 def create_app(test_config=None):
     # Create and configure the app
-    app = Flask(__name__, instance_relative_config=True)
+    app = Flask(__name__, static_folder="static", instance_relative_config=True)
     
     # Enable CORS
     CORS(app)
@@ -66,6 +66,7 @@ def create_app(test_config=None):
     # Add route specifically for Next.js static files
     @app.route('/_next/<path:path>')
     def serve_next_static(path):
-        return send_from_directory(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static/.next'), path)
+        return send_from_directory("static/.next", path)
+        # return send_from_directory(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static/.next'), path)
     
     return app 
