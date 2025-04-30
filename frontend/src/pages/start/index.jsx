@@ -2,9 +2,27 @@ import React from "react";
 import { useRouter } from "next/router";
 import RootNavigation from "../../components/Nav/Nav";
 import PrimaryBtn from "../../components/buttons/PrimaryBtn";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 const StartPage = () => {
   const router = useRouter();
+  const supabase = useSupabaseClient();
+
+  async function fetchData() {
+    const { data, error } = await supabase
+      .from("ad_agencies_data")
+      .select("*");
+
+    if (error) {
+      console.error("Error fetching use case templates:", error);
+    } else {
+      console.log("Fetched data:", data);
+    }
+  }
+
+  React.useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <div>

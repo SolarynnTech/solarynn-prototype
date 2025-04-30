@@ -7,8 +7,9 @@ import YourConnections from "../../components/home/YourConnections";
 import TakeALook from "../../components/home/TakeAlook";
 import NavigationBar from "../../components/profile/NavigationBar";
 import CategoryTile from "../../components/tiles/CategoryTile";
+import SearchBar from "../../components/SearchBar";
 
-export default function Onboard() {
+export default function HomePage() {
   const router = useRouter();
 
   const categories = [
@@ -67,14 +68,7 @@ export default function Onboard() {
         </div>
       </nav>
 
-      <div className="flex items-center justify-between py-3 px-4 relative rounded-xl border border-gray-400 bg-gray-100 mb-12">
-        <input
-          type="text"
-          className="border-0 grow block bg-transparent text-black placeholder:text-gray-500 focus:outline-none"
-          placeholder="Type Here For Search"
-        />
-        <Search color={"#9ca3af"} />
-      </div>
+      <SearchBar/>
 
       <Favorites />
       <RecentlyViewed />

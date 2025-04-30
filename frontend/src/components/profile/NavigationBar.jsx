@@ -16,7 +16,7 @@ const NavigationBar = () => {
       </div>
       <div
         className="flex flex-col items-center justify-center text-xs cursor-pointer hover:text-green-800"
-        onClick={() => router.push("/project")}
+        onClick={() => router.push("/projects/new")}
       >
         <Inbox className="mb-2" />
         Project
