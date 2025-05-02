@@ -2,7 +2,7 @@ import React from "react";
 
 const CategoryTile = ({
   title,
-  img_url = "/images/categories/empty.png",
+  img_url,
   bg_color = "#B4B4B4",
   isSelected = false,
   onClick,
@@ -23,7 +23,7 @@ const CategoryTile = ({
       <h5 className="relative z-[2]">{title}</h5>
 
       <div className="flex justify-end items-end absolute z-[1] bottom-0 right-0 w-20 h-20">
-        <img className={"max-h-full"} src={img_url} alt={title} />
+        <img className={`max-h-full ${!img_url ? "opacity-30" : ""}`} src={img_url || "/images/categories/empty.png"} alt={title} />
       </div>
     </div>
   );

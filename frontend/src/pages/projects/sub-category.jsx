@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NavigationBar from "../../components/profile/NavigationBar";
-import SubCategory from "../../components/projects/SubCategory";
+import Domain from "../../components/projects/Domain";
 import RootNavigation from "../../components/Nav/Nav";
 import Favorites from "../../components/home/Favorites";
 import SearchBar from "../../components/SearchBar";
@@ -14,10 +14,10 @@ export default function HomePage() {
 
       <Favorites />
 
-      <SubCategory />
-      <SubCategory />
-      <SubCategory />
-      <SubCategory />
+      <Domain />
+      <Domain />
+      <Domain />
+      <Domain />
 
       <NavigationBar />
     </div>

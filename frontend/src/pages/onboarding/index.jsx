@@ -6,16 +6,16 @@ import useCategoriesStore from "../../stores/useCategoriesStore";
 import { useRouter } from "next/router";
 
 const SelectCategoriesPage = () => {
-  const { mainCategory, subCategory, subDivision } = useCategoriesStore();
+  const { role, domain, subDivision } = useCategoriesStore();
   const router = useRouter();
 
   const categories = useMemo(() => {
     return [
-      mainCategory || {
+      role || {
         title: "Select main category",
         isEmpty: true,
       },
-      subCategory || {
+      domain || {
         title: "Select sub category",
         isEmpty: true,
         disabled: true,
@@ -26,7 +26,7 @@ const SelectCategoriesPage = () => {
         disabled: true,
       },
     ];
-  }, [mainCategory, subCategory, subDivision]);
+  }, [role, domain, subDivision]);
 
   return (
     <div className="flex flex-col h-full justify-between grow">
@@ -43,21 +43,21 @@ const SelectCategoriesPage = () => {
               onClick={() => {
                 if (category.disabled) return;
                 switch (category.level) {
-                  case "main":
-                    router.push("/onboarding/main-category");
+                  case "role":
+                    router.push("/onboarding/role");
                     break;
-                  case "sub-category":
-                    router.push("/onboarding/sub-category");
+                  case "domain":
+                    router.push("/onboarding/domain");
                     break;
-                  case "sub-division":
+                  case "subdivision":
                     router.push("/onboarding/sub-division");
                     break;
                   default:
-                    router.push("/onboarding/main-category");
+                    router.push("/onboarding/role");
                 }
               }}
-              img_url={category.image}
-              bg_color={category.bg_color}
+              img_url={category.img_url}
+              bg_color={category.color}
               disabled={category.disabled}
               isEmpty={category.isEmpty}
             />
@@ -69,7 +69,7 @@ const SelectCategoriesPage = () => {
         onClick={() => {
           router.push("/questionnaire/1/1");
         }}
-        disabled={!mainCategory || !subCategory || !subDivision}
+        disabled={!role || !domain || !subDivision}
         title="Confirm"
         classes="w-full block"
       />

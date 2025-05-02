@@ -1,22 +1,22 @@
 import "../styles/globals.css";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
-import { useState } from 'react'
+import { useState } from 'react';
+import DefaultLayout from '@/layouts/DefaultLayout';
 
 function MyApp({ Component, pageProps }) {
   const [supabase] = useState(() => createPagesBrowserClient());
+
+  const Layout = Component.layout || DefaultLayout;
 
   return (
     <SessionContextProvider
       supabaseClient={supabase}
       initialSession={pageProps.initialSession}
     >
-    <main
-      className="app-container flex flex-col mx-auto !pt-6 !pb-12"
-      style={{ maxWidth: "440px" }}
-    >
-      <Component {...pageProps} />
-    </main>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </SessionContextProvider>
   );
 }

@@ -1,12 +1,12 @@
 import { create } from "zustand";
 
 const useCategoriesStore = create((set) => ({
-  mainCategory: null,
-  subCategory: null,
+  role: null,
+  domain: null,
   subDivision: null,
 
-  setMainCategory: (category) => set({ mainCategory: category }),
-  setSubCategory: (category) => set({ subCategory: category }),
+  setRole: (category) => set({ role: category }),
+  setDomain: (category) => set({ domain: category }),
   setSubDivision: (category) => set({ subDivision: category }),
 }));
 

@@ -3,9 +3,12 @@ import { useRouter } from "next/router";
 import RootNavigation from "../../components/Nav/Nav";
 import LabeledInput from "../../components/forms/LabeledInput";
 import PrimaryBtn from "../../components/buttons/PrimaryBtn";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 export default function Login() {
   const router = useRouter();
+  const supabase = useSupabaseClient();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -19,31 +22,49 @@ export default function Login() {
     }));
   };
 
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await fetch(
+  //       `${"https://solaryn.onrender.com/"}/api/auth/login`,
+  //       {
+  //         method: "POST",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: JSON.stringify(formData),
+  //       }
+  //     );
+  //
+  //     const data = await response.json();
+  //
+  //     if (data.token) {
+  //       localStorage.setItem("token", data.token);
+  //       router.push("/home");
+  //     } else {
+  //       console.error("Login failed:", data.message);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error during login:", error);
+  //   }
+  // };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      const response = await fetch(
-        `${"https://solaryn.onrender.com/"}/api/auth/login`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+    const { email, password } = formData;
 
-      const data = await response.json();
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
 
-      if (data.token) {
-        localStorage.setItem("token", data.token);
-        router.push("/home");
-      } else {
-        console.error("Login failed:", data.message);
-      }
-    } catch (error) {
-      console.error("Error during login:", error);
+    if (error) {
+      console.error("Login error:", error.message);
+      return;
     }
+
+    console.log("Signed in user:", data.user);
+    router.push("/home");
   };
 
   return (
@@ -84,8 +105,16 @@ export default function Login() {
           <button
             type="button"
             className="text-green-800 border-0 p-o bg-transparent hover:underline focus:outline-none focus:ring-0"
-            onClick={() => {
-              /* Handle forgot password */
+            onClick={async () => {
+              const email = prompt("Enter your email to reset password:");
+              if (email) {
+                const { error } = await supabase.auth.resetPasswordForEmail(email);
+                if (error) {
+                  alert("Error: " + error.message);
+                } else {
+                  alert("Password reset link sent to your email.");
+                }
+              }
             }}
           >
             Forgot password?

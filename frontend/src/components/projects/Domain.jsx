@@ -2,7 +2,7 @@ import React from "react";
 import ActionBtn from "../buttons/ActionBtn";
 import PlaceholderBox from "../PlaceholderBox";
 
-const SubCategory = () => {
+const Domain = () => {
   return (
     <div className="mb-12">
       <div className="flex items-center justify-between mb-4">
@@ -29,4 +29,4 @@ const SubCategory = () => {
   );
 };
 
-export default SubCategory;
+export default Domain;

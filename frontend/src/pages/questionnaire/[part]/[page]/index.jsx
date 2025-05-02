@@ -11,7 +11,7 @@ const QuestionsPage = () => {
   const { part, page } = router.query;
 
   const { forms } = useQuestionnaireStore();
-  const { mainCategory } = useCategoriesStore();
+  const { role } = useCategoriesStore();
 
   const partsLength = forms.length || 0;
   const pagesLength = forms[part - 1]?.pages.length || 0;
@@ -21,7 +21,7 @@ const QuestionsPage = () => {
       <RootNavigation title={"Onboard Questions"} />
 
       <div className="content pt-12">
-        <h3>{mainCategory?.title}</h3>
+        <h3>{role?.title}</h3>
         <h3 className="mb-4">
           {forms[part - 1]?.name} Part {part}
         </h3>
