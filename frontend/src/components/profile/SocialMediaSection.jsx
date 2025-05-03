@@ -10,6 +10,10 @@ import {
   TextField,
   Stack,
 } from "@mui/material";
+import useUserStore from "@/stores/useUserStore";
+import {useSupabaseClient} from "@supabase/auth-helpers-react";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
+import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 
 const SocialMediaSection = () => {
   const socialPlatforms = [
@@ -219,25 +223,33 @@ const SocialMediaSection = () => {
     p: 4,
   };
 
-  const [socialLinks, setSocialLinks] = useState({
-    instagram: "https://www.instagram.com/",
-    facebook: "https://www.facebook.com/",
-    youtube: "https://www.youtube.com/",
-    tiktok: "https://www.tiktok.com/",
-    snapchat: "https://www.snapchat.com",
-    x: "https://www.x.com/",
-    linkedin: "https://www.linkedin.com/",
-    reddit: "https://www.reddit.com/",
-  });
+  const { social_networks, setSocialNetworks, user } = useUserStore();
+
+  const supabase = useSupabaseClient();
 
   const [open, setOpen] = useState(false);
 
-  const handleSocialChange = (event, network) => {
-    setSocialLinks((prev) => ({
-      ...prev,
-      [network]: event.target.value,
-    }));
+  const handleSocialChange = async (event, network) => {
+    setSocialNetworks(
+      (prev) => ({
+        ...prev,
+        [network]: event.target.value,
+      }),
+    );
   };
+
+  const handleSubmit = async () => {
+    const { data, error } = await supabase
+      .from("users")
+      .update({ social_networks })
+      .eq("id", user.id);
+
+    if (error) {
+      console.error("Error updating social networks:", error);
+    } else {
+      console.log("Social networks updated successfully:", data);
+    }
+  }
 
   const handleClose = () => {
     setOpen(false);
@@ -257,7 +269,7 @@ const SocialMediaSection = () => {
 
         <div className="flex flex-wrap gap-2">
           {socialPlatforms.map((platform, index) => (
-            <a href={socialLinks[platform.name]} key={index} target="_blank">
+            <a href={social_networks[platform.name]} key={index} target="_blank">
               <Badge bgColor={"gray-100"} textColor={"green-800"} key={index}>
                 <span className="inline-flex min-h-5 items-center justify-center">
                   {platform.icon}
@@ -272,6 +284,7 @@ const SocialMediaSection = () => {
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
+        closeButton={true}
         onClose={handleClose}
         closeAfterTransition
         slots={{ backdrop: Backdrop }}
@@ -298,12 +311,21 @@ const SocialMediaSection = () => {
                   key={platform.name}
                   label={`${platform.name.charAt(0).toUpperCase() + platform.name.slice(1)} URL`}
                   variant="standard"
+                  slotProps={{
+                    inputLabel: {
+                      shrink: true,
+                    },
+                  }}
                   fullWidth
-                  value={socialLinks[platform.name]}
+                  value={social_networks[platform.name]}
                   onChange={(e) => handleSocialChange(e, platform.name)}
                 />
               ))}
             </Stack>
+            <div className="flex justify-end mt-8 gap-2">
+              <SecondaryBtn title={"Cancel"} onClick={handleClose} />
+              <PrimaryBtn title={"Save"} onClick={handleSubmit}/>
+            </div>
           </Box>
         </Fade>
       </Modal>

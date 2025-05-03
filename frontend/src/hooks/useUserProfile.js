@@ -6,7 +6,7 @@ import useUserStore from "@/stores/useUserStore";
 export default function useUserProfile() {
   const supabase = useSupabaseClient();
   const { setRole, setDomain, setSubDivision } = useCategoriesStore();
-  const { setUser } = useUserStore();
+  const { setUser, setSocialNetworks, social_networks } = useUserStore();
   const { session } = useSessionContext();
   const user = session?.user;
   const [loading, setLoading] = useState(false);
@@ -31,6 +31,8 @@ export default function useUserProfile() {
         }
 
         setUser(userData);
+
+        setSocialNetworks({...social_networks, ...userData.social_networks} || {});
 
         if (userData.role || userData.domain || userData.subdivision) {
           const categoryIds = [userData.role, userData.domain, userData.subdivision].filter(Boolean);

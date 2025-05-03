@@ -11,22 +11,25 @@ import {
   Typography,
 } from "@mui/material";
 import PlaceholderBox from "../PlaceholderBox";
+import useUserStore from "@/stores/useUserStore";
+import SecondaryBtn from "@/components/buttons/SecondaryBtn";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 const ProfileImage = () => {
   const [open, setOpen] = React.useState(false);
-
-  const [user, setUser] = React.useState({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    address: "",
-    profile_image: "",
-    verified: false,
-  });
+  const supabase = useSupabaseClient();
+  const { user, setUser } = useUserStore();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setUser({ ...user, [name]: value });
+
+    setUser({
+      ...user,
+      [name]: value,
+    });
+
+    console.log("User data updated:", user);
   };
 
   const handleClose = () => {
@@ -36,6 +39,23 @@ const ProfileImage = () => {
   const handleOpen = () => {
     setOpen(true);
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { name, email, phone, address } = user;
+
+    const { data, error } = await supabase
+      .from("users")
+      .update({ name, email, phone, address })
+      .eq("id", user.id);
+
+    if (error) {
+      console.error("Error updating user:", error);
+      return;
+    }
+
+    setOpen(false);
+  }
 
   const style = {
     position: "absolute",
@@ -59,13 +79,13 @@ const ProfileImage = () => {
       <div className="relative overflow-hidden rounded-md">
         <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] shadow-[inset_0_-40px_40px_-20px_rgba(0,0,0,0.35)]"></div>
 
-        {user.profile_image ? (
+        {user?.profile_image ? (
           <img src={user.profile_image} alt={user.name} />
         ) : (
           <PlaceholderBox height={400} />
         )}
 
-        {user.verified && (
+        {user?.verified && (
           <div className="flex items-center text-sm uppercase font-semibold text-green-800 bg-green-100 rounded-full px-4 py-1.5 absolute top-4 right-4">
             <Star size={20} color="#087B43" className="mr-2" />
             <div>Verified</div>
@@ -73,7 +93,7 @@ const ProfileImage = () => {
         )}
 
         <div className="text-white font-bold text-xl absolute bottom-4 left-4">
-          {user.name}
+          {user?.name}
         </div>
       </div>
 
@@ -105,40 +125,64 @@ const ProfileImage = () => {
               <TextField
                 id="outlined-basic"
                 label="Name"
-                variant="outlined"
+                variant="standard"
                 fullWidth
                 name="name"
-                value={user.name}
+                slotProps={{
+                  inputLabel: {
+                    shrink: true,
+                  },
+                }}
+                value={user?.name ? user.name : ""}
                 onChange={handleChange}
               />
               <TextField
                 id="outlined-basic"
                 label="Email"
-                variant="outlined"
+                variant="standard"
                 fullWidth
                 name="email"
-                value={user.email}
+                slotProps={{
+                  inputLabel: {
+                    shrink: true,
+                  },
+                }}
+                value={user?.email ? user.email : ""}
                 onChange={handleChange}
               />
               <TextField
                 id="outlined-basic"
                 label="Phone Number"
-                variant="outlined"
+                variant="standard"
                 fullWidth
-                name="phoneNumber"
-                value={user.phoneNumber}
+                name="phone"
+                slotProps={{
+                  inputLabel: {
+                    shrink: true,
+                  },
+                }}
+                value={user?.phone ? user.phone : ""}
                 onChange={handleChange}
               />
               <TextField
                 id="outlined-basic"
                 label="Address"
-                variant="outlined"
+                variant="standard"
                 fullWidth
                 name="address"
-                value={user.address}
+                slotProps={{
+                  inputLabel: {
+                    shrink: true,
+                  },
+                }}
+                value={user?.address ? user.address : ""}
                 onChange={handleChange}
               />
             </Stack>
+            <div className="flex justify-end mt-8 gap-2">
+              <SecondaryBtn title={"Cancel"} onClick={handleClose} />
+              <PrimaryBtn title={"Save"} onClick={handleSubmit}/>
+            </div>
           </Box>
         </Fade>
       </Modal>

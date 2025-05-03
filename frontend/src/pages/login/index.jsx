@@ -8,6 +8,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 export default function Login() {
   const router = useRouter();
   const supabase = useSupabaseClient();
+  const [error, setError] = useState("");
 
   const [formData, setFormData] = useState({
     email: "",
@@ -60,6 +61,7 @@ export default function Login() {
 
     if (error) {
       console.error("Login error:", error.message);
+      setError(error.message);
       return;
     }
 
@@ -139,6 +141,14 @@ export default function Login() {
             Create an Account
           </button>
         </div>
+
+        {error && (
+          <div
+            style={{ color: "red", textAlign: "center", margin: "10px 0" }}
+          >
+            {error}
+          </div>
+        )}
       </form>
     </div>
   );

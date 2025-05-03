@@ -192,6 +192,19 @@ const CreateAccountPage = () => {
             classes={"w-full block mb-4 mt-9"}
           />
 
+          <div className="text-green-800 text-center mt-4">
+            Already have an account?{" "}
+            <button
+              type="button"
+              className="text-green-800 border-0 p-o bg-transparent underline focus:outline-none focus:ring-0"
+              onClick={() => {
+                router.push("/login");
+              }}
+            >
+              Login
+            </button>
+          </div>
+
           {error && (
             <div
               style={{ color: "red", textAlign: "center", margin: "10px 0" }}
