@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Star } from "lucide-react";
 import ActionBtn from "../buttons/ActionBtn";
 import {
@@ -15,22 +15,36 @@ import useUserStore from "@/stores/useUserStore";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import profile from "@/pages/profile";
+import uploadImageToSupabase from "@/utils/uploadImageToSupabase";
 
-const ProfileImage = () => {
-  const [open, setOpen] = React.useState(false);
+const ProfileImage = ({name, imgUrl, id}) => {
+  const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
+  const yourProfile = user?.id === profile.id || !id;
+
+  const [imageFile, setImageFile] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
+  const [profileImg, setProfileImg] = useState("");
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
+    const { name, value, files } = event.target;
 
-    setUser({
-      ...user,
-      [name]: value,
-    });
-
-    console.log("User data updated:", user);
+    if (name === "profile_image" && files?.[0]) {
+      setImageFile(files[0]);
+      setImagePreview(URL.createObjectURL(files[0]));
+    } else {
+      setUser((prevUser) => ({
+        ...prevUser,
+        [name]: value,
+      }));
+    }
   };
+
+  useEffect(() => {
+      setProfileImg(yourProfile ? user?.profile_img : imgUrl || "");
+  }, [user]);
 
   const handleClose = () => {
     setOpen(false);
@@ -44,17 +58,34 @@ const ProfileImage = () => {
     e.preventDefault();
     const { name, email, phone, address } = user;
 
+    const profile_img = imageFile
+      ? await uploadImageToSupabase(supabase, imageFile, user.id)
+      : user.profile_img;
+
     const { data, error } = await supabase
       .from("users")
-      .update({ name, email, phone, address })
+      .update({ name, email, phone, address, profile_img })
       .eq("id", user.id);
+
+    setProfileImg(profile_img);
+
+    setUser((prevUser) => ({
+      ...prevUser,
+      name,
+      email,
+      phone,
+      address,
+      profile_img,
+    }))
 
     if (error) {
       console.error("Error updating user:", error);
       return;
     }
 
-    setOpen(false);
+    setTimeout(() => {
+      setOpen(false);
+    }, 100);
   }
 
   const style = {
@@ -73,14 +104,16 @@ const ProfileImage = () => {
     <div className="mb-6 -mx-6 p-6 bg-gray-100">
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-bold mb-0">User Info</h3>
+        {yourProfile && (
         <ActionBtn title="Edit" onClick={handleOpen} />
+        )}
       </div>
 
       <div className="relative overflow-hidden rounded-md">
         <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] shadow-[inset_0_-40px_40px_-20px_rgba(0,0,0,0.35)]"></div>
 
-        {user?.profile_image ? (
-          <img src={user.profile_image} alt={user.name} />
+        {profileImg ? (
+          <img src={`${profileImg}?t=${Date.now()}`} alt={user.name} />
         ) : (
           <PlaceholderBox height={400} />
         )}
@@ -92,8 +125,8 @@ const ProfileImage = () => {
           </div>
         )}
 
-        <div className="text-white font-bold text-xl absolute bottom-4 left-4">
-          {user?.name}
+        <div className="text-white font-bold text-xl absolute bottom-3 left-4 z-[2]">
+          {yourProfile ? user?.name : name}
         </div>
       </div>
 
@@ -178,6 +211,29 @@ const ProfileImage = () => {
                 value={user?.address ? user.address : ""}
                 onChange={handleChange}
               />
+
+              <label htmlFor="profile-image-upload" className="cursor-pointer">
+                <p className={"text-green-800 font-semibold my-2"}>
+                  Upload Profile Image
+                </p>
+                <input
+                  id="profile-image-upload"
+                  type="file"
+                  accept="image/*"
+                  name="profile_image"
+                  onChange={handleChange}
+                  style={{ display: "none" }}
+                />
+                {imagePreview && (
+                  <img
+                    src={imagePreview}
+                    alt="Preview"
+                    className="mt-2 rounded-md"
+                    style={{ width: 100, height: 100, objectFit: "cover" }}
+                  />
+                )}
+              </label>
+
             </Stack>
             <div className="flex justify-end mt-8 gap-2">
               <SecondaryBtn title={"Cancel"} onClick={handleClose} />

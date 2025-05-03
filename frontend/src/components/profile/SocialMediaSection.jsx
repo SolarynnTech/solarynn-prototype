@@ -14,8 +14,9 @@ import useUserStore from "@/stores/useUserStore";
 import {useSupabaseClient} from "@supabase/auth-helpers-react";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
+import profile from "@/pages/profile";
 
-const SocialMediaSection = () => {
+const SocialMediaSection = ({links, id}) => {
   const socialPlatforms = [
     {
       icon: (
@@ -225,6 +226,8 @@ const SocialMediaSection = () => {
 
   const { social_networks, setSocialNetworks, user } = useUserStore();
 
+  const yourProfile = user?.id === profile.id || !id;
+
   const supabase = useSupabaseClient();
 
   const [open, setOpen] = useState(false);
@@ -264,19 +267,26 @@ const SocialMediaSection = () => {
       <div className="mb-12">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-bold mb-0">Social Media</h3>
-          <ActionBtn title="Edit" onClick={handleOpen} />
+          {yourProfile && (
+            <ActionBtn title="Edit" onClick={handleOpen} />
+          )}
         </div>
 
         <div className="flex flex-wrap gap-2">
-          {socialPlatforms.map((platform, index) => (
-            <a href={social_networks[platform.name]} key={index} target="_blank">
-              <Badge bgColor={"gray-100"} textColor={"green-800"} key={index}>
-                <span className="inline-flex min-h-5 items-center justify-center">
-                  {platform.icon}
-                </span>
-              </Badge>
-            </a>
-          ))}
+          {socialPlatforms.map((platform, index) => {
+            const userLinks = yourProfile ? social_networks : links;
+            const url = userLinks?.[platform.name] || platform.link;
+
+            return (
+              <a href={url} key={index} target="_blank" rel="noopener noreferrer">
+                <Badge bgColor="gray-100" textColor="green-800">
+                  <span className="inline-flex min-h-5 items-center justify-center">
+                    {platform.icon}
+                  </span>
+                </Badge>
+              </a>
+            );
+          })}
         </div>
       </div>
 

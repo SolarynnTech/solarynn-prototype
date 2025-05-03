@@ -5,20 +5,20 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Loader } from "lucide-react";
 
 const TABLES = [
-  { title: "Ad Agencies", table: "ad_agencies_data", column: "agency_name", displayField: "agency_name" },
-  { title: "Business Figures", table: "business_figures_data", column: "name", displayField: "name" },
-  { title: "Entertainment Figures", table: "entertainment_figures_data", column: "name", displayField: "name" },
-  { title: "Fashion Figures", table: "fashion_figures_data", column: "name", displayField: "name" },
-  { title: "Literature Journalism Figures", table: "literature_journalism_figures_data", column: "name", displayField: "name" },
-  { title: "Music Figures", table: "music_figures_data", column: "name", displayField: "name" },
-  { title: "Partial Ad Agencies", table: "partial_ad_agencies_data", column: "agency_name", displayField: "agency_name" },
-  { title: "Education", table: "partial_education_data", column: "official_name", displayField: "official_name" },
-  { title: "Fashion Image Agencies", table: "partial_fashion_image_agencies_data", column: "agency_name", displayField: "agency_name" },
-  { title: "Political Figures", table: "political_figures_data", column: "name", displayField: "name" },
-  { title: "Social Media Figures", table: "social_media_figures_data", column: "name", displayField: "name" },
-  { title: "Sports Figures", table: "sports_figures_data", column: "name", displayField: "name" },
-  { title: "Technology Figures", table: "technology_figures_data", column: "name", displayField: "name" },
-  { title: "Visual Arts Figures", table: "visual_arts_figures_data", column: "name", displayField: "name" },
+  { title: "Ad Agencies", table: "demo_ad_agencies", column: "agency_name", displayField: "agency_name" },
+  { title: "Business Figures", table: "demo_business_figures", column: "name", displayField: "name" },
+  { title: "Entertainment Figures", table: "demo_entertainment_figures", column: "name", displayField: "name" },
+  { title: "Fashion Figures", table: "demo_fashion_figures", column: "name", displayField: "name" },
+  { title: "Literature Journalism Figures", table: "demo_literature_journalism_figures", column: "name", displayField: "name" },
+  { title: "Music Figures", table: "demo_music_figures", column: "name", displayField: "name" },
+  { title: "Partial Ad Agencies", table: "demo_ad_agencies", column: "agency_name", displayField: "agency_name" },
+  { title: "Education", table: "demo_education_entities", column: "official_name", displayField: "official_name" },
+  { title: "Fashion Image Agencies", table: "demo_fashion_image_agencies", column: "agency_name", displayField: "agency_name" },
+  { title: "Political Figures", table: "demo_political_figures", column: "name", displayField: "name" },
+  { title: "Social Media Figures", table: "demo_social_media_figures", column: "name", displayField: "name" },
+  { title: "Sports Figures", table: "demo_sports_figures", column: "name", displayField: "name" },
+  { title: "Technology Figures", table: "demo_technology_figures", column: "name", displayField: "name" },
+  { title: "Visual Arts Figures", table: "demo_visual_arts_figures", column: "name", displayField: "name" },
 ];
 
 const DETAIL_FIELDS = [
@@ -105,7 +105,7 @@ export default function Search() {
                     {group.data.map((item, itemIndex) => (
                       <li key={itemIndex} className="mb-4 pb-4 border-b border-gray-200">
                         <a
-                          href={`/details/${item.id}`}
+                          href={`/profile/${item.id}`}
                           className="text-blue-500 hover:underline font-medium"
                         >
                           {item[group.displayField]}

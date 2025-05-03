@@ -99,5 +99,8 @@ body [chrome-autofilled] {
   min-height: 100vh;
   overflow-y: auto;
   background-color: #fff;
-  padding: 0 24px;
+  padding: 24px 24px 48px 24px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }

@@ -13,8 +13,15 @@ const useUserStore = create((set) => ({
     reddit: "https://www.reddit.com/",
   },
 
-  setUser: (user) => set({ user }),
-  setSocialNetworks: (social_networks) => set({ social_networks }),
+  setUser: (updater) =>
+    set((state) => ({
+      user: typeof updater === "function" ? updater(state.user) : updater,
+    })),
+
+  setSocialNetworks: (updater) =>
+    set((state) => ({
+      social_networks: typeof updater === "function" ? updater(state.social_networks) : updater,
+    })),
 }));
 
 export default useUserStore;

@@ -1,7 +1,6 @@
 
 import useUserProfile from "@/hooks/useUserProfile";
 
-
 const DefaultLayout = ({children}) => {
   const {loading} = useUserProfile();
 
@@ -13,7 +12,7 @@ const DefaultLayout = ({children}) => {
 
   return (
     <main
-      className="app-container flex flex-col mx-auto !pt-6 !pb-12"
+      className="app-container"
       style={{ maxWidth: "440px" }}
     >
       {children}
