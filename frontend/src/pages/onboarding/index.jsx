@@ -67,7 +67,7 @@ const SelectCategoriesPage = () => {
 
       <PrimaryBtn
         onClick={() => {
-          router.push("/questionnaire/1/1");
+          router.push("/questionnaire");
         }}
         disabled={!role || !domain || !subDivision}
         title="Confirm"

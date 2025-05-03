@@ -28,7 +28,7 @@ const StartPage = () => {
     <div>
       <RootNavigation title={"Solaryyn"} />
 
-      <div className="content pt-12">
+      <div className="content pt-12 ">
         <div className="mb-4">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/6aa16236d7d2303d78c21642039e4cccc56b6ef3?placeholderIfAbsent=true"
