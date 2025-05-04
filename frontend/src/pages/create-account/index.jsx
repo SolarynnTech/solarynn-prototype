@@ -4,6 +4,7 @@ import RootNavigation from "@/components/Nav/Nav";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import LabeledInput from "@/components/forms/LabeledInput";
 import {useSessionContext, useSupabaseClient} from "@supabase/auth-helpers-react";
+import useUserStore from "@/stores/useUserStore";
 
 const CreateAccountPage = () => {
   const router = useRouter();
@@ -31,12 +32,17 @@ const CreateAccountPage = () => {
   };
 
   const { session, isLoading } = useSessionContext();
+  const { user } = useUserStore();
 
   useEffect(() => {
     if (!isLoading && session?.user) {
-      router.push("/home");
+      if(user?.domain && user?.role && user?.subdivision) {
+        router.push("/home");
+      } else {
+        router.push("/onboarding/start");
+      }
     }
-  }, [session, isLoading]);
+  }, [session, isLoading, user]);
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
