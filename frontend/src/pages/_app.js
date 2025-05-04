@@ -30,4 +30,10 @@ function MyApp({ Component, pageProps }) {
 
 export default MyApp;
 
+export async function getServerSideProps() {
+  return {
+    props: {}, // empty props is enough
+  };
+}
+
 // maxWidth: "440px" - it is for Iphone 16 pro max
