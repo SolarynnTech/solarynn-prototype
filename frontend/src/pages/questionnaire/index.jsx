@@ -106,15 +106,26 @@ const QuestionsPage = () => {
   }
 
   useEffect(() => {
-    if (user?.role) getSectionsAndQuestions()
-  }, [user?.role])
+    if (user && user.role) {
+      getSectionsAndQuestions();
+    }
+  }, [user?.role, user]);
 
 
-  if(loading) {
+  if(loading || !data.length) {
     return (
       <div className="flex justify-center items-center h-[75vh]">
        <Loader className="animate-spin text-green-800"/>
        <p className="ml-2">Loading...</p>
+      </div>
+    );
+  }
+
+  if (!user) {
+    return (
+      <div className="flex justify-center items-center h-[75vh]">
+        <Loader className="animate-spin text-green-800" />
+        <p className="ml-2">Loading user...</p>
       </div>
     );
   }
