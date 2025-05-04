@@ -99,6 +99,7 @@ const CreateAccountPage = () => {
           data: {
             phone
           },
+            redirectTo: 'https://solaryn-dhlx.onrender.com/onboarding/start', // Redirect URL after sign-up
         },
       });
 
