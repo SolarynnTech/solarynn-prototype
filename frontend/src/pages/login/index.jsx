@@ -4,11 +4,13 @@ import RootNavigation from "@/components/Nav/Nav";
 import LabeledInput from "@/components/forms/LabeledInput";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient, useSessionContext } from "@supabase/auth-helpers-react";
+import useUserStore from "@/stores/useUserStore";
 
 export default function Login() {
   const router = useRouter();
   const supabase = useSupabaseClient();
   const [error, setError] = useState("");
+  const {user} = useUserStore();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -19,9 +21,13 @@ export default function Login() {
 
   useEffect(() => {
     if (!isLoading && session?.user) {
-      router.push("/home");
+      if(user?.domain && user?.role && user?.subdivision) {
+        router.push("/home");
+      } else {
+        router.push("/onboarding");
+      }
     }
-  }, [session, isLoading]);
+  }, [session, isLoading, user]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
