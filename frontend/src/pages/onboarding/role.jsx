@@ -32,10 +32,11 @@ export default function SelectRole() {
   };
 
   const selectRole = async (category) => {
+    console.log("user", user);
     const { data, error } = await supabase
       .from("users")
-      .update({ role: category.id })
-      .eq("id", user.id);
+      .update({ role: category?.id })
+      .eq("id", user?.id);
 
     if (error) {
       console.error("Error updating role:", error);
@@ -89,6 +90,7 @@ export default function SelectRole() {
 
       <PrimaryBtn
         onClick={handleNext}
+        disabled={!role}
         title="Next"
         classes="block w-full mt-8"
       />
