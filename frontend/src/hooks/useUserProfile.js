@@ -12,9 +12,14 @@ export default function useUserProfile() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+
+    console.log("session", session);
     if (!user) return;
 
     const fetchData = async () => {
+
+      console.log("Fetching user profile...");
+
       setLoading(true);
       try {
         const { data : userData, error: userError } = await supabase

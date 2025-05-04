@@ -26,10 +26,15 @@ export default function useAllProfiles() {
   ];
 
   const { profiles, setProfiles } = useProfilesStore();
-  console.log("Profiles in useAllProfiles:", profiles);
+
   useEffect(() => {
-    console.log("Session in useAllProfiles:", session);
+
+    console.log("session", session);
+
     async function fetchAllProfiles() {
+
+      console.log("Fetching all profiles...");
+
       setLoading(true);
       const allRecords = [];
 
