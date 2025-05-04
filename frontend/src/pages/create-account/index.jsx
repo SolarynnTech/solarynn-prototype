@@ -128,7 +128,7 @@ const CreateAccountPage = () => {
         }
       }
 
-      router.push("/onboarding/start");
+      router.push("/verify-email");
     } catch (err) {
       console.error("Supabase registration error:", err);
       setError("Registration failed. Please try again.");
