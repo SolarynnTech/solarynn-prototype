@@ -7,14 +7,13 @@ export default function useUserProfile() {
   const supabase = useSupabaseClient();
   const { setRole, setDomain, setSubDivision } = useCategoriesStore();
   const { setUser, setSocialNetworks, social_networks } = useUserStore();
-  const { session } = useSessionContext();
-  const user = session?.user;
+  const { session, isLoading: sessionLoading } = useSessionContext();
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
 
     console.log("session", session);
-    if (!user) return;
+    if (sessionLoading || !session?.user) return;
 
     const fetchData = async () => {
 
@@ -69,7 +68,7 @@ export default function useUserProfile() {
     };
 
     fetchData();
-  }, [session, user]);
+  }, [session, sessionLoading]);
 
   return { loading };
 }

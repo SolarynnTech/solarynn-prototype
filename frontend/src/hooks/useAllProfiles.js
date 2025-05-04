@@ -4,7 +4,7 @@ import useProfilesStore from "@/stores/useProfilesStore";
 
 export default function useAllProfiles() {
   const supabase = useSupabaseClient();
-  const { session } = useSessionContext();
+  const { session, isLoading: sessionLoading } = useSessionContext();
   const [loading, setLoading] = useState(false);
 
   const TABLES = [
@@ -30,7 +30,7 @@ export default function useAllProfiles() {
   useEffect(() => {
 
     console.log("session", session);
-
+    if (sessionLoading) return;
     async function fetchAllProfiles() {
 
       console.log("Fetching all profiles...");
@@ -64,7 +64,7 @@ export default function useAllProfiles() {
     if (session && !profiles?.length) {
       fetchAllProfiles();
     }
-  }, [session]);
+  }, [session, sessionLoading]);
 
   return { loading };
 }
