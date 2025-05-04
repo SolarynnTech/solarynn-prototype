@@ -11,23 +11,23 @@ export default function useUserProfile() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    console.log("Session loading:", sessionLoading, "Session:", session);
+  }, [sessionLoading, session]);
 
-    console.log("session", session);
+  useEffect(() => {
     if (sessionLoading || !session?.user) return;
 
     const fetchData = async () => {
-
       console.log("Fetching user profile...");
 
       setLoading(true);
+
       try {
-        const { data : userData, error: userError } = await supabase
+        const { data: userData, error: userError } = await supabase
           .from("users")
           .select("*")
-          .eq("id", user.id)
+          .eq("id", session.user.id)
           .single();
-
-        //console.log("User profile loaded", userData);
 
         if (userError) {
           console.error("Error loading user profile:", userError.message);
@@ -35,12 +35,11 @@ export default function useUserProfile() {
         }
 
         setUser(userData);
+        setSocialNetworks({ ...social_networks, ...userData.social_networks } || {});
 
-        setSocialNetworks({...social_networks, ...userData.social_networks} || {});
+        const categoryIds = [userData.role, userData.domain, userData.subdivision].filter(Boolean);
 
-        if (userData.role || userData.domain || userData.subdivision) {
-          const categoryIds = [userData.role, userData.domain, userData.subdivision].filter(Boolean);
-
+        if (categoryIds.length) {
           const { data: catData, error: catError } = await supabase
             .from("categories")
             .select("id, title, color, img_url")
@@ -51,15 +50,12 @@ export default function useUserProfile() {
             return;
           }
 
-          // console.log("catData", catData);
-
           catData.forEach((cat) => {
-            if (cat.id === userData.role) setRole({...cat, level: "role"});
-            else if (cat.id === userData.domain) setDomain({...cat, level: "domain"});
-            else if (cat.id === userData.subdivision) setSubDivision({...cat, level: "subdivision"});
+            if (cat.id === userData.role) setRole({ ...cat, level: "role" });
+            else if (cat.id === userData.domain) setDomain({ ...cat, level: "domain" });
+            else if (cat.id === userData.subdivision) setSubDivision({ ...cat, level: "subdivision" });
           });
         }
-
       } catch (err) {
         console.error("Failed to load user profile:", err.message);
       } finally {
@@ -68,7 +64,7 @@ export default function useUserProfile() {
     };
 
     fetchData();
-  }, [session, sessionLoading]);
+  }, [sessionLoading, session]);
 
   return { loading };
 }
