@@ -16,6 +16,34 @@ const QuestionsPage = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
+  const [answersBySection, setAnswersBySection] = useState({});
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleAnswerChange = (sectionId, questionId, value, option=null) => {
+    setAnswersBySection(prev => {
+      const sec = prev[sectionId] || {};
+      let newVal;
+      if(option!==null){
+        const arr = Array.isArray(sec[questionId]) ? sec[questionId] : [];
+        newVal = arr.includes(option)? arr.filter(v=>v!==option) : [...arr,option];
+      } else {
+        newVal = value;
+      }
+      return { ...prev, [sectionId]: {...sec, [questionId]: newVal } };
+    });
+  };
+
+  const handleNext = () => {
+    if(currentIndex < data.length - 1){
+      setCurrentIndex(idx=>idx+1);
+      console.log(answersBySection, "answersBySection");
+    } else {
+      console.log(answersBySection, "answersBySection");
+      router.push('/profile');
+    }
+  };
+
+  const currentSection = data[currentIndex];
 
   const getSectionsAndQuestions = async () => {
     setLoading(true)
@@ -91,16 +119,12 @@ const QuestionsPage = () => {
         <h3>{role?.title}</h3>
 
         <QuestionnaireForm
-          sections={data}
+          section={currentSection}
+          answers={answersBySection[currentSection?.id]||{}}
+          onChange={(qid,val,opt)=>handleAnswerChange(currentSection.id,qid,val,opt)}
         />
 
-        <PrimaryBtn
-          onClick={() => {
-              router.push("/profile");
-          }}
-          title="Next"
-          classes="w-full block"
-        />
+        <PrimaryBtn onClick={handleNext} title={currentIndex < data.length-1 ? 'Next' : 'Finish'} classes="w-full block"/>
       </div>
     </div>
   );
