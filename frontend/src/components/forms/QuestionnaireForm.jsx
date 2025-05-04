@@ -24,14 +24,14 @@ export default function QuestionnaireForm({
   return (
     <Paper sx={{ p: 4, mb: 4 }} elevation={2} className={'mt-4'}>
       {section.title && (
-        <Typography variant="h5" gutterBottom className={"!font-bold text-xl !mb-4"}>
+        <Typography variant="h5" gutterBottom className={"!font-bold text-lg !mb-4"}>
           {section.title}
         </Typography>
       )}
 
       {section.questions.map((q, qi) => (
         <Box key={q.id} mb={3}>
-          <Typography variant="subtitle1" gutterBottom className={"!text-lg !font-semibold"}>
+          <Typography variant="subtitle1" gutterBottom className={"!text-md !font-semibold"}>
             {qi + 1}. {q.question}
           </Typography>
 

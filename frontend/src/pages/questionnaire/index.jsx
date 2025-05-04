@@ -48,6 +48,7 @@ const QuestionsPage = () => {
       }
       await router.push('/profile');
     }
+    window.scrollTo(0, 0);
   };
 
   const currentSection = data[currentIndex];
@@ -123,7 +124,7 @@ const QuestionsPage = () => {
       <RootNavigation title="Onboard Questions"/>
 
       <div className="content pt-12">
-        <h3>{role?.title}</h3>
+        <h2 className={"text-xl"}>{role?.title}</h2>
 
         <QuestionnaireForm
           section={currentSection}
