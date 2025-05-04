@@ -78,3 +78,9 @@ const SelectCategoriesPage = () => {
 };
 
 export default SelectCategoriesPage;
+
+export async function getServerSideProps() {
+  return {
+    props: {}, // forces SSR
+  };
+}

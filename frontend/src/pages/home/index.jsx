@@ -78,3 +78,9 @@ export default function HomePage() {
     </div>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}, // forces SSR
+  };
+}
