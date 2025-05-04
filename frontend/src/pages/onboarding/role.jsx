@@ -97,3 +97,9 @@ export default function SelectRole() {
     </div>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}, // forces SSR
+  };
+}
