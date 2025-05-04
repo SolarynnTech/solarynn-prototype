@@ -33,13 +33,20 @@ const QuestionsPage = () => {
     });
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if(currentIndex < data.length - 1){
       setCurrentIndex(idx=>idx+1);
       console.log(answersBySection, "answersBySection");
     } else {
-      console.log(answersBySection, "answersBySection");
-      router.push('/profile');
+      const { error } = await supabase
+        .from('users')
+        .update({ questionnaire_answers: answersBySection })
+        .eq('id', user.id);
+      if (error) {
+        console.error('Failed saving answers:', error);
+        return;
+      }
+      await router.push('/profile');
     }
   };
 
