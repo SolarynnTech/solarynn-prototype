@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
-import RootNavigation from "../../components/Nav/Nav";
-import PrimaryBtn from "../../components/buttons/PrimaryBtn";
+import RootNavigation from "@/components/Nav/Nav";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 const StartPage = () => {

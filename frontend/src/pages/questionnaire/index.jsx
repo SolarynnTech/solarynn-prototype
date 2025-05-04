@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import RootNavigation from "../../components/Nav/Nav";
-import PrimaryBtn from "../../components/buttons/PrimaryBtn";
-import useCategoriesStore from "../../stores/useCategoriesStore";
-import QuestionnaireForm from "../../components/forms/QuestionnaireForm";
+import RootNavigation from "@/components/Nav/Nav";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
+import useCategoriesStore from "@/stores/useCategoriesStore";
+import QuestionnaireForm from "@/components/forms/QuestionnaireForm";
 import useUserStore from "@/stores/useUserStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Loader } from "lucide-react";

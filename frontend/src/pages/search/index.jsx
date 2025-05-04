@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import RootNavigation from "../../components/Nav/Nav";
+import RootNavigation from "@/components/Nav/Nav";
 import { Loader } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import useProfilesStore from "@/stores/useProfilesStore";

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import RootNavigation from "../../components/Nav/Nav";
-import PrimaryBtn from "../../components/buttons/PrimaryBtn";
-import SecondaryBtn from "../../components/buttons/SecondaryBtn";
+import RootNavigation from "@/components/Nav/Nav";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
+import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 
 const TermsAndConditionsPage = () => {
   const router = useRouter();

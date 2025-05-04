@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import { useRouter } from "next/router";
-import RootNavigation from "../../components/Nav/Nav";
-import PrimaryBtn from "../../components/buttons/PrimaryBtn";
-import CategoryTile from "../../components/tiles/CategoryTile";
-import useCategoriesStore from "../../stores/useCategoriesStore";
+import RootNavigation from "@/components/Nav/Nav";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
+import CategoryTile from "@/components/tiles/CategoryTile";
+import useCategoriesStore from "@/stores/useCategoriesStore";
 import {useSupabaseClient} from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 

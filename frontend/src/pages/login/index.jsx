@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import RootNavigation from "../../components/Nav/Nav";
-import LabeledInput from "../../components/forms/LabeledInput";
-import PrimaryBtn from "../../components/buttons/PrimaryBtn";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import RootNavigation from "@/components/Nav/Nav";
+import LabeledInput from "@/components/forms/LabeledInput";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
+import { useSupabaseClient, useSessionContext } from "@supabase/auth-helpers-react";
 
 export default function Login() {
   const router = useRouter();
@@ -14,6 +14,14 @@ export default function Login() {
     email: "",
     password: "",
   });
+
+  const { session, isLoading } = useSessionContext();
+
+  useEffect(() => {
+    if (!isLoading && session?.user) {
+      router.push("/home");
+    }
+  }, [session, isLoading]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -108,15 +116,7 @@ export default function Login() {
             type="button"
             className="text-green-800 border-0 p-o bg-transparent hover:underline focus:outline-none focus:ring-0"
             onClick={async () => {
-              const email = prompt("Enter your email to reset password:");
-              if (email) {
-                const { error } = await supabase.auth.resetPasswordForEmail(email);
-                if (error) {
-                  alert("Error: " + error.message);
-                } else {
-                  alert("Password reset link sent to your email.");
-                }
-              }
+              router.push("/reset-password");
             }}
           >
             Forgot password?

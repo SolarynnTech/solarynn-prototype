@@ -3,10 +3,25 @@ import ActionBtn from "../buttons/ActionBtn";
 import PlaceholderBox from "../PlaceholderBox";
 import useUserStore from "@/stores/useUserStore";
 import UserPreview from "@/components/UserPreview";
+import useProfilesStore from "@/stores/useProfilesStore";
+import { useRouter } from "next/router";
 
 const RecentlyViewed = () => {
 
   const {user } = useUserStore();
+  const {profiles} = useProfilesStore();
+  const [recentlyViewed, setRecentlyViewed] = React.useState([]);
+  const router = useRouter();
+
+  React.useEffect(() => {
+    if(!profiles?.length || !user?.id) return;
+    if (user?.recently_viewed) {
+      const viewedProfiles = user.recently_viewed.map((id) => {
+        return profiles.find((profile) => profile.id === id);
+      });
+      setRecentlyViewed(viewedProfiles);
+    }
+  }, [user?.id, profiles]);
 
   return (
     <div className="mb-12">
@@ -14,32 +29,31 @@ const RecentlyViewed = () => {
         <h3 className="font-bold mb-0">Recently Viewed</h3>
 
         <div className="flex items-center">
-          <ActionBtn
-            title={"See All"}
-            onClick={() => {
-              // Handle click event
-            }}
-          />
+          {recentlyViewed?.length > 2 && (
+            <ActionBtn
+              title={"See All"}
+              onClick={() => {
+                router.push("/listing/" + user.id + "/recently_viewed");
+              }}
+            />
+          )}
         </div>
       </div>
 
       <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
 
-        {user?.recently_viewed?.length > 0 ? (
-          user?.recently_viewed?.map((user, index) => (
+        {recentlyViewed?.length > 0 ? (
+          recentlyViewed?.map((profile, index) => (
             <UserPreview
               key={index}
-              name={user.name}
-              img_url={user.profile_img}
-              onClick={() => {
-                // Handle click event
-              }}
+              link={"/profile/" + profile.id}
+              name={profile.name || profile.official_name || profile.agency_name}
+              img_url={profile.profile_img}
+              height={150} width={150}
             />
           ))
         ) : (
           <>
-            <PlaceholderBox height={150} width={150} />
-            <PlaceholderBox height={150} width={150} />
             <PlaceholderBox height={150} width={150} />
             <PlaceholderBox height={150} width={150} />
             <PlaceholderBox height={150} width={150} />

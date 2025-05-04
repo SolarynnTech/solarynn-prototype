@@ -25,7 +25,7 @@ export default function useAllProfiles() {
     { title: "Registered Profiles", table: "users", column: "name", displayField: "name" },
   ];
 
-  const { setProfiles } = useProfilesStore();
+  const { profiles, setProfiles } = useProfilesStore();
 
   useEffect(() => {
     async function fetchAllProfiles() {
@@ -55,7 +55,7 @@ export default function useAllProfiles() {
       setLoading(false);
     }
 
-    if (session) {
+    if (session && !profiles?.length) {
       fetchAllProfiles();
     }
   }, [session]);

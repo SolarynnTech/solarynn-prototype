@@ -10,17 +10,17 @@ const UserPreview = ({
   return (
     <a
       href={link}
-      className={`flex shrink-0 rounded-md items-center justify-center bg-${bgColor}`}
+      className={`flex shrink-0 relative rounded-md items-center justify-center bg-${bgColor}`}
       style={{
         width: `${width ? width + "px" : "100%"}`,
         height: `${height ? height + "px" : "100%"}`,
         backgroundImage: `url(${img_url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        boxShadow: `inset 0px 0px 10px rgba(0, 0, 0, 0.5)`,
+        boxShadow: `rgba(0, 0, 0, 0.25) 0px -30px 25px -10px inset`,
       }}
     >
-      <p style={{textShadow: `0 0 2px rgba(0,0,0,.2)`}} className="absolute bottom-2 left-2 truncate right-2 text-sm text-white z-[2]">{name}</p>
+      <p style={{textShadow: `0 0 2px rgba(0,0,0,.2)`}} className="absolute bottom-1 font-semibold left-2 truncate right-2 text-sm text-white z-[2]">{name}</p>
     </a>
   );
 };

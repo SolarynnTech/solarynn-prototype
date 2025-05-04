@@ -1,8 +1,8 @@
 import React, { useMemo } from "react";
-import RootNavigation from "../../components/Nav/Nav";
-import PrimaryBtn from "../../components/buttons/PrimaryBtn";
-import CategoryTile from "../../components/tiles/CategoryTile";
-import useCategoriesStore from "../../stores/useCategoriesStore";
+import RootNavigation from "@/components/Nav/Nav";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
+import CategoryTile from "@/components/tiles/CategoryTile";
+import useCategoriesStore from "@/stores/useCategoriesStore";
 import { useRouter } from "next/router";
 
 const SelectCategoriesPage = () => {

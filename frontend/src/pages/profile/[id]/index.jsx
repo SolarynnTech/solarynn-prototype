@@ -10,7 +10,6 @@ import NavigationBar from "@/components/profile/NavigationBar";
 import React from "react";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import Affiliation from "@/components/profile/Affiliation";
-import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 import {useSupabaseClient} from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import useProfilesStore from "@/stores/useProfilesStore";
@@ -53,7 +52,7 @@ const ProfilePage = ({ id }) => {
   if (!profile) {
     return (
       <div className="flex items-center justify-center h-screen">
-        <p className="text-lg">Profile not found</p>
+        <p className="text-lg">Profile is loading...</p>
       </div>
     );
   }

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useRouter } from "next/router";
-import RootNavigation from "../../components/Nav/Nav";
-import PrimaryBtn from "../../components/buttons/PrimaryBtn";
-import LabeledInput from "../../components/forms/LabeledInput";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import RootNavigation from "@/components/Nav/Nav";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn";
+import LabeledInput from "@/components/forms/LabeledInput";
+import {useSessionContext, useSupabaseClient} from "@supabase/auth-helpers-react";
 
 const CreateAccountPage = () => {
   const router = useRouter();
@@ -29,6 +29,14 @@ const CreateAccountPage = () => {
       [name]: value,
     }));
   };
+
+  const { session, isLoading } = useSessionContext();
+
+  useEffect(() => {
+    if (!isLoading && session?.user) {
+      router.push("/home");
+    }
+  }, [session, isLoading]);
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault();
