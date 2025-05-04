@@ -10,6 +10,7 @@ import CategoryTile from "../../components/tiles/CategoryTile";
 import SearchBar from "../../components/SearchBar";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
+import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 
 export default function HomePage() {
   const { user } = useUserStore();
@@ -79,8 +80,25 @@ export default function HomePage() {
   );
 }
 
-export async function getServerSideProps() {
+
+export async function getServerSideProps(context) {
+  const supabase = createPagesServerClient(context);
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+
+  if (!session) {
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+
   return {
-    props: {}, // forces SSR
+    props: {
+      initialSession: session,
+    },
   };
 }
