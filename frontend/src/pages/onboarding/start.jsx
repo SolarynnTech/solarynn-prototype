@@ -26,7 +26,7 @@ const OnboardingStartPage = () => {
 
       <PrimaryBtn
         onClick={() => {
-          router.push("/onboarding/select-categories");
+          router.push("/onboarding");
         }}
         title="Continue"
         classes="w-full block"

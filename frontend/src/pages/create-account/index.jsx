@@ -117,6 +117,7 @@ const CreateAccountPage = () => {
               id: user.id, // match this with Supabase auth user.id
               email,
               phone,
+              verified: true
             },
           ]);
 
