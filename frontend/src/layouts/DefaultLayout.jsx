@@ -1,14 +1,10 @@
 
 import useUserProfile from "@/hooks/useUserProfile";
+import useAllProfiles from "@/hooks/useAllProfiles";
 
-const DefaultLayout = ({children}) => {
-  const {loading} = useUserProfile();
-
-  // if (loading) {
-  //   return (
-  //     <></>
-  //   )
-  // }
+const DefaultLayout = ({children, }) => {
+  useUserProfile();
+  useAllProfiles();
 
   return (
     <main

@@ -11,25 +11,44 @@ import React from "react";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import Affiliation from "@/components/profile/Affiliation";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
+import {useSupabaseClient} from "@supabase/auth-helpers-react";
+import useUserStore from "@/stores/useUserStore";
+import useProfilesStore from "@/stores/useProfilesStore";
 
-const TABLES = [
-  { title: "Ad Agencies", table: "demo_ad_agencies", column: "agency_name", displayField: "agency_name" },
-  { title: "Business Figures", table: "demo_business_figures", column: "name", displayField: "name" },
-  { title: "Entertainment Figures", table: "demo_entertainment_figures", column: "name", displayField: "name" },
-  { title: "Fashion Figures", table: "demo_fashion_figures", column: "name", displayField: "name" },
-  { title: "Literature Journalism Figures", table: "demo_literature_journalism_figures", column: "name", displayField: "name" },
-  { title: "Music Figures", table: "demo_music_figures", column: "name", displayField: "name" },
-  { title: "Partial Ad Agencies", table: "demo_ad_agencies", column: "agency_name", displayField: "agency_name" },
-  { title: "Education", table: "demo_education_entities", column: "official_name", displayField: "official_name" },
-  { title: "Fashion Image Agencies", table: "demo_fashion_image_agencies", column: "agency_name", displayField: "agency_name" },
-  { title: "Political Figures", table: "demo_political_figures", column: "name", displayField: "name" },
-  { title: "Social Media Figures", table: "demo_social_media_figures", column: "name", displayField: "name" },
-  { title: "Sports Figures", table: "demo_sports_figures", column: "name", displayField: "name" },
-  { title: "Technology Figures", table: "demo_technology_figures", column: "name", displayField: "name" },
-  { title: "Visual Arts Figures", table: "demo_visual_arts_figures", column: "name", displayField: "name" },
-];
 
-const ProfilePage = ({ id, profile, table }) => {
+
+const ProfilePage = ({ id }) => {
+
+  const [profile, setProfile] = useState(null);
+  const {user, setUser} = useUserStore();
+  const supabase = useSupabaseClient();
+  const { profiles } = useProfilesStore();
+
+  useEffect(() => {
+    if(!profiles) return;
+    setProfile(profiles.find((p) => p.id === id));
+  }, [profiles]);
+
+  const updateRecentlyViewed = async () => {
+    const { data: userData, error } = await supabase
+      .from("users")
+      .update({recently_viewed: user?.recently_viewed ? [...user?.recently_viewed, id] : [id]})
+      .eq("id", user?.id);
+
+    if (!error) {
+      console.log("User recently viewed updated", userData);
+      setUser((prevUser) => ({
+        ...prevUser,
+        recently_viewed: prevUser?.recently_viewed ? [...prevUser?.recently_viewed, id] : [id],
+      }));
+    }
+  }
+
+  useEffect(() => {
+    if (user?.id && user?.id !== id && !user?.recently_viewed?.includes(id)) {
+      updateRecentlyViewed();
+    }
+  }, [user?.id, profile]);
 
   if (!profile) {
     return (
@@ -43,12 +62,12 @@ const ProfilePage = ({ id, profile, table }) => {
     <div>
       <RootNavigation title={"Profile"} />
       <div className="pt-4 pb-8">
-        <ProfileImage name={profile.name} imgUrl={profile.img_url} id={id} />
+        <ProfileImage name={profile.name || profile.official_name || profile.agency_name} imgUrl={profile.img_url} id={id} />
         <SocialMediaSection links={profile.social_networks} id={id} />
         <PrimaryBtn title="Start A Project" classes="w-full block mb-12" onClick={()=> {
           router.push("/projects/new");
         }} />
-        <DetailsPanel />
+        <DetailsPanel profile={profile} id={id} />
         <Affiliation />
         <BusinessSection />
         <UniverseSection />
@@ -61,36 +80,12 @@ const ProfilePage = ({ id, profile, table }) => {
 
 export default ProfilePage;
 
-
 export async function getServerSideProps(context) {
-  const supabase = createPagesServerClient(context);
-
   const { id } = context.query;
 
-  for (const tableInfo of TABLES) {
-    const { data, error } = await supabase
-      .from(tableInfo.table)
-      .select("*")
-      .eq("id", id)
-      .maybeSingle();
-
-    if (error) {
-      console.warn(`Error checking table ${tableInfo.table}: ${error.message}`);
-      continue;
-    }
-
-    if (data) {
-      return {
-        props: {
-          id,
-          profile: data,
-          table: tableInfo.table,
-        },
-      };
-    }
-  }
-
   return {
-    notFound: true,
+    props: {
+      id
+    },
   };
 }

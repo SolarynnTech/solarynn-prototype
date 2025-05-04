@@ -125,7 +125,7 @@ const ProfileImage = ({name, imgUrl, id}) => {
           </div>
         )}
 
-        <div className="text-white font-bold text-xl absolute bottom-3 left-4 z-[2]">
+        <div style={{textShadow: `0 0 2px rgba(0,0,0,.2)`}} className="text-white font-bold text-xl absolute bottom-3 left-4 z-[2]">
           {yourProfile ? user?.name : name}
         </div>
       </div>

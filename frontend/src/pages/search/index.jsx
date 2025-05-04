@@ -1,47 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import RootNavigation from "../../components/Nav/Nav";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Loader } from "lucide-react";
-
-const TABLES = [
-  { title: "Ad Agencies", table: "demo_ad_agencies", column: "agency_name", displayField: "agency_name" },
-  { title: "Business Figures", table: "demo_business_figures", column: "name", displayField: "name" },
-  { title: "Entertainment Figures", table: "demo_entertainment_figures", column: "name", displayField: "name" },
-  { title: "Fashion Figures", table: "demo_fashion_figures", column: "name", displayField: "name" },
-  { title: "Literature Journalism Figures", table: "demo_literature_journalism_figures", column: "name", displayField: "name" },
-  { title: "Music Figures", table: "demo_music_figures", column: "name", displayField: "name" },
-  { title: "Partial Ad Agencies", table: "demo_ad_agencies", column: "agency_name", displayField: "agency_name" },
-  { title: "Education", table: "demo_education_entities", column: "official_name", displayField: "official_name" },
-  { title: "Fashion Image Agencies", table: "demo_fashion_image_agencies", column: "agency_name", displayField: "agency_name" },
-  { title: "Political Figures", table: "demo_political_figures", column: "name", displayField: "name" },
-  { title: "Social Media Figures", table: "demo_social_media_figures", column: "name", displayField: "name" },
-  { title: "Sports Figures", table: "demo_sports_figures", column: "name", displayField: "name" },
-  { title: "Technology Figures", table: "demo_technology_figures", column: "name", displayField: "name" },
-  { title: "Visual Arts Figures", table: "demo_visual_arts_figures", column: "name", displayField: "name" },
-];
-
-const DETAIL_FIELDS = [
-  "description", "service_types", "locations", "companies", "occupation", "major_productions",
-  "agency", "publishers", "syndicates", "genre", "record_label", "chart_data",
-  "headquarters", "party", "position", "platform_specialty_fields", "sport_type",
-  "teams", "companies_built", "styles", "galleries_exhibits"
-];
-
-const LINK_FIELDS = [
-  { key: "website", label: "Website" },
-  { key: "imdb_link", label: "IMDB Link" }
-];
+import SearchBar from "@/components/SearchBar";
+import useProfilesStore from "@/stores/useProfilesStore";
 
 export default function Search() {
   const router = useRouter();
   const { searchQuery } = router.query;
+  const { profiles, DETAIL_FIELDS, LINK_FIELDS } = useProfilesStore();
 
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  const supabase = useSupabaseClient();
 
   useEffect(() => {
     async function fetchAllData() {
@@ -52,21 +23,22 @@ export default function Search() {
       try {
         const allResults = [];
 
-        for (const table of TABLES) {
-          const { data, error } = await supabase
-            .from(table.table)
-            .select("*")
-            .ilike(table.column, `%${searchQuery}%`);
+        profiles.forEach((profile) => {
+          if(profile.name === searchQuery || profile.agency_name === searchQuery || profile.official_name === searchQuery) {
+            const { __title, __displayField, ...rest } = profile;
+            const group = allResults.find((g) => g.title === __title);
 
-          if (error) {
-            console.error(`Error fetching from ${table.title}:`, error.message);
-            continue;
+            if (group) {
+              group.data.push({ ...rest, id: profile.id });
+            } else {
+              allResults.push({
+                title: __title,
+                displayField: __displayField,
+                data: [{ ...rest, id: profile.id }],
+              });
+            }
           }
-
-          if (data && data.length > 0) {
-            allResults.push({ title: table.title, displayField: table.displayField, data });
-          }
-        }
+        })
 
         setSearchResults(allResults);
       } catch (err) {
@@ -79,13 +51,16 @@ export default function Search() {
     if (searchQuery) {
       fetchAllData();
     }
-  }, [searchQuery, supabase]);
+  }, [searchQuery, profiles]);
 
   return (
     <div>
       <RootNavigation title="Search Results" backBtn={true} />
 
       <div className="pt-12">
+
+        <SearchBar/>
+
         <div className="mb-4">
           {loading && (
             <div className="flex justify-center items-center h-[75vh]">

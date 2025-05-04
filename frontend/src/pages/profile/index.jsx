@@ -20,10 +20,12 @@ const ProfilePage = () => {
         <SocialMediaSection />
         <PrimaryBtn title="Start A Project" classes="w-full block mb-12" />
         <DetailsPanel />
+
         <Affiliation />
         <BusinessSection />
         <UniverseSection />
         <AlbumsSection />
+
         <NavigationBar />
       </div>
     </div>
