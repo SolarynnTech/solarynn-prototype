@@ -14,7 +14,7 @@ export default function Settings() {
 
   return (
     <div>
-      <RootNavigation title="Mailbox" backBtn={true} />
+      <RootNavigation title="Settings" backBtn={true} />
 
       <div className="pt-12">
 

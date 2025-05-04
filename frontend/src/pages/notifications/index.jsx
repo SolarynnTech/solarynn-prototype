@@ -8,7 +8,7 @@ export default function Notifications() {
 
   return (
     <div>
-      <RootNavigation title="Mailbox" backBtn={true} />
+      <RootNavigation title="Notifications" backBtn={true} />
 
       <div className="pt-12">
 

@@ -1,1 +1,10 @@
-{"/_app":"pages/_app.js","/home":"pages/home.html","/":"pages/index.html","/create-account":"pages/create-account.html","/_error":"pages/_error.js","/_document":"pages/_document.js","/login":"pages/login.html","/onboarding/start":"pages/onboarding/start.html","/onboarding/select-categories":"pages/onboarding/select-categories.html","/profile":"pages/profile.html","/onboarding/main-category":"pages/onboarding/main-category.html","/onboarding/sub-division":"pages/onboarding/sub-division.html","/onboarding/sub-category":"pages/onboarding/sub-category.html","/projects":"pages/projects.html","/projects/new":"pages/projects/new.html","/projects/sub-category":"pages/projects/sub-category.html","/questionnaire/[part]/[page]":"pages/questionnaire/[part]/[page].html","/search":"pages/search.html","/terms-and-conditions":"pages/terms-and-conditions.html","/start":"pages/start.html","/404":"pages/404.html"}
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/home": "pages/home.js",
+  "/categories/[id]": "pages/categories/[id].js",
+  "/profiles/[id]": "pages/profiles/[id].js",
+  "/projects/new": "pages/projects/new.js",
+  "/profile": "pages/profile.js"
+}

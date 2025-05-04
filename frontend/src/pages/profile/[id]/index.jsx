@@ -13,15 +13,15 @@ import Affiliation from "@/components/profile/Affiliation";
 import {useSupabaseClient} from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import useProfilesStore from "@/stores/useProfilesStore";
+import {useRouter} from "next/router";
 
-
-
-const ProfilePage = ({ id }) => {
-
+const ProfilePage = () => {
   const [profile, setProfile] = useState(null);
   const {user, setUser} = useUserStore();
   const supabase = useSupabaseClient();
   const { profiles } = useProfilesStore();
+  const router = useRouter();
+  const { id } = router.query;
 
   useEffect(() => {
     if(!profiles) return;
@@ -78,13 +78,3 @@ const ProfilePage = ({ id }) => {
 };
 
 export default ProfilePage;
-
-export async function getServerSideProps(context) {
-  const { id } = context.query;
-
-  return {
-    props: {
-      id
-    },
-  };
-}

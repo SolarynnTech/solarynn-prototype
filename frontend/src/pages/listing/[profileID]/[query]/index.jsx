@@ -6,9 +6,10 @@ import SearchBar from "@/components/SearchBar";
 import useProfilesStore from "@/stores/useProfilesStore";
 import UserPreview from "@/components/UserPreview";
 
-export default function Listing({profileID, query}) {
+export default function Listing() {
   const router = useRouter();
   const { profiles } = useProfilesStore();
+  const { profileID, query } = router.query;
 
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -62,16 +63,5 @@ export default function Listing({profileID, query}) {
       </div>
     </div>
   );
-}
-
-export async function getServerSideProps(context) {
-  const { profileID, query } = context.query;
-
-  return {
-    props: {
-      profileID,
-      query,
-    },
-  };
 }
 
