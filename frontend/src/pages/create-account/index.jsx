@@ -104,7 +104,8 @@ const CreateAccountPage = () => {
         { email, password },
         {
           data: { phone },
-          redirectTo: "https://solaryn-dhlx.onrender.com/onboarding/start"
+          redirectTo: "https://solaryn-dhlx.onrender.com/onboarding/start",
+          emailRedirectTo: "https://solaryn-dhlx.onrender.com/onboarding/start"
         }
       );
 
