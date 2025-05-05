@@ -5,6 +5,7 @@ import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 export default function ConfirmPage() {
   const router = useRouter();
   const supabase = createPagesBrowserClient();
+  console.log("HEY", 'data')
   useEffect(() => {
     const confirmEmail = async () => {
       const { query } = router;
