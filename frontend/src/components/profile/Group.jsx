@@ -17,7 +17,7 @@ import {
 } from "@mui/material";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 
-const Group = ({ title, data, groupId, columnName, isMyProfile, profile }) => {
+const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) => {
   const SIZE = groupId === "dddc641a-049a-454a-af31-1112fb6727be"
     ? { h: 300, w: 200 }
     : { h: 150, w: 150 };
@@ -39,7 +39,7 @@ const Group = ({ title, data, groupId, columnName, isMyProfile, profile }) => {
       .map((id) => profiles.find((p) => p.id === id))
       .filter(Boolean);
     setDataToDisplay(dataMapped);
-  }, [data, profiles]);
+  }, [data, profiles, id]);
 
   useEffect(() => {
     const lower = search.toLowerCase();
@@ -55,7 +55,7 @@ const Group = ({ title, data, groupId, columnName, isMyProfile, profile }) => {
 
     setFiltered(matches);
     setVisibleCount(20);
-  }, [search, profiles, data]);
+  }, [search, profiles, data, id]);
 
   const handleAddProfile = async (newProfileId) => {
     const updated = [...(user[columnName] || []), newProfileId];

@@ -15,7 +15,7 @@ import {useSupabaseClient} from "@supabase/auth-helpers-react";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 
-const SocialMediaSection = ({links, isMyProfile}) => {
+const SocialMediaSection = ({id, links, isMyProfile}) => {
   const socialPlatforms = [
     {
       icon: (

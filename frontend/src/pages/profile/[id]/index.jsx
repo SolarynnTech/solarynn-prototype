@@ -44,7 +44,7 @@ const ProfilePage = () => {
   useEffect(() => {
     if(!profiles) return;
     setProfile(profiles.find((p) => p.id === id));
-  }, [profiles]);
+  }, [profiles, id]);
 
   const [isMyProfile, setIsMyProfile] = useState(null);
 
@@ -82,8 +82,8 @@ const ProfilePage = () => {
     <div>
       <RootNavigation title={"Profile"} />
       <div className="pt-4 pb-8">
-        <ProfileImage isMyProfile={isMyProfile} name={profile.name || profile.official_name || profile.agency_name} imgUrl={profile.img_url} />
-        <SocialMediaSection isMyProfile={isMyProfile} links={profile.social_networks} />
+        <ProfileImage id={id} isMyProfile={isMyProfile} name={profile.name || profile.official_name || profile.agency_name} imgUrl={profile?.img_url} />
+        <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />
         <PrimaryBtn title="Start A Project" classes="w-full block mb-12" onClick={()=> {
           router.push("/projects");
         }} />
@@ -93,6 +93,7 @@ const ProfilePage = () => {
           return (
             <Group
               key={group.id}
+              id={id}
               groupId={group.id}
               title={group.title}
               data={profile[group.column_name]}

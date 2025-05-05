@@ -17,7 +17,7 @@ import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import uploadImageToSupabase from "@/utils/uploadImageToSupabase";
 
-const ProfileImage = ({name, imgUrl, isMyProfile}) => {
+const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
   const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
@@ -41,8 +41,8 @@ const ProfileImage = ({name, imgUrl, isMyProfile}) => {
   };
 
   useEffect(() => {
-      setProfileImg(isMyProfile ? user?.profile_img : imgUrl || "");
-  }, [user]);
+    setProfileImg(isMyProfile ? user?.profile_img : imgUrl || "");
+  }, [user, id, imgUrl, isMyProfile]);
 
   const handleClose = () => {
     setOpen(false);

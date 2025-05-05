@@ -5,11 +5,12 @@ import useUserStore from "@/stores/useUserStore";
 import useProfilesStore from "@/stores/useProfilesStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
-const DetailsPanel = ({ profile, isMyProfile }) => {
+
+const DetailsPanel = ({ id, profile, isMyProfile }) => {
   const { forms } = useQuestionnaireStore();
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
-  const { ALL_FIELDS } = useProfilesStore();
+  const { ALL_FIELDS, setProfiles } = useProfilesStore();
 
   const containerRef = useRef(null);
 
@@ -94,13 +95,13 @@ const DetailsPanel = ({ profile, isMyProfile }) => {
   }
 
   useEffect(() => {
-    if (user?.questionnaire_answers) {
-      convertAnswersWithTitles(user.questionnaire_answers).then((result) => {
+    if (profile?.questionnaire_answers) {
+      convertAnswersWithTitles(profile.questionnaire_answers).then((result) => {
         setAnswersWithTitles(result);
         setSectionTitles(Object.keys(result));
       });
     }
-  }, [user?.questionnaire_answers]);
+  }, [profile?.questionnaire_answers, profile?.id, id]);
 
   const toogleBookmark = async () => {
     const updatedList = user.booked_profiles?.includes(profile.id)
@@ -113,6 +114,9 @@ const DetailsPanel = ({ profile, isMyProfile }) => {
       .eq("id", user.id);
 
     setUser((prev) => ({ ...prev, booked_profiles: updatedList }));
+    setProfiles((prev) =>
+      prev.map((p) => (p.id === user.id ? { ...p, booked_profiles: updatedList } : p))
+    );
   };
 
   return (
