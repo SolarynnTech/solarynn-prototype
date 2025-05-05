@@ -11,6 +11,7 @@ export default function ConfirmPage() {
       if (query?.access_token) {
         const { data, error } =
           await supabase.auth.setSession({ access_token: query.access_token, refresh_token: query.refresh_token, });
+        console.log(data, 'data')
         if (!error) {
           router.replace("/onboarding/start");
         } else {
