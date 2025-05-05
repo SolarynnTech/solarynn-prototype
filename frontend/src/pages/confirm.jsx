@@ -3,30 +3,34 @@ import { useRouter } from "next/router";
 import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 
 export default function ConfirmPage() {
-  const router = useRouter();
-  const supabase = createPagesBrowserClient();
-  console.log("HEY", 'data')
+  const router = useRouter()
+  const supabase = createPagesBrowserClient()
+
   useEffect(() => {
     if (!router.isReady) return
 
-    const code = router.query.code
-    if (!code) return
-   console.log(code, 'code')
+    const { token_hash, next } = router.query
+    console.log(token_hash, "token_hash")
+    if (!token_hash) return
+
     supabase.auth
-      .exchangeCodeForSession(code)
+      .verifyOtp({
+        type: 'email',
+        token: token_hash,
+      })
       .then(({ data, error }) => {
-        console.log('exchangeCodeForSession:', { data, error })
         if (error) {
-          console.error('Error exchanging auth code:', error)
+          console.error('OTP verification failed:', error)
         } else {
-          console.log('aloha')
-          router.push('/onboarding/start')
+          const redirectTo = typeof next === 'string' ? next : '/onboarding/start'
+          router.replace(redirectTo)
         }
       })
-  }, [router.isReady, router.query.code])
+  }, [router.isReady, router.query.token_hash, router.query.next])
+
   return (
     <div className="text-center pt-20">
       <h2>Confirming your email...</h2>
     </div>
-  );
+  )
 }
