@@ -10,6 +10,7 @@ const StartPage = () => {
   const { session, isLoading: sessionLoading } = useSessionContext();
 
   async function fetchData() {
+    console.log(session, "session")
     if(session.user.id) {
         router.push("/onboarding/start");
     }
