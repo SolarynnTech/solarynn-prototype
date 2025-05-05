@@ -20,7 +20,7 @@ export default function ConfirmPage() {
           console.error('Error exchanging auth code:', error)
         } else {
           console.log('aloha')
-          router.replace('/onboarding/start')
+          router.push('/onboarding/start')
         }
       })
   }, [router.isReady, router.query.code])
