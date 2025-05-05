@@ -137,18 +137,17 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
         )}
       </div>
 
-      <div>
+      <div className="p-3 bg-gray-100 rounded-lg shadow-md mb-4 border border-gray-300">
         {sectionTitles.length > 0 && answersWithTitles[sectionTitles[currentFormPage]] && (
           <div key={sectionTitles[currentFormPage]} className="mb-6">
-            <h4 className="font-semibold text-md mb-2">
+            <h4 className="font-semibold text-lg mb-3">
               {sectionTitles[currentFormPage]}
             </h4>
-            <div className="pl-4 space-y-1">
+            <div className="">
               {Object.entries(answersWithTitles[sectionTitles[currentFormPage]]).map(
                 ([questionTitle, value]) => (
-                  <p key={questionTitle} className={"mb-3"}>
-                    <b>{questionTitle}:</b>
-                    <br />
+                  <p key={questionTitle} className={"mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"}>
+                    <p className="mb-2"><b>{questionTitle}:</b></p>
                     <span className="text-gray-700">
                       {Array.isArray(value) ? value.join(", ") : value}
                     </span>
