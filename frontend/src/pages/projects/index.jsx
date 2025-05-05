@@ -13,9 +13,9 @@ export default function ProjectsPage() {
       <nav className="flex items-center justify-between relative py-2 gap4 mb-6">
         <h1>Projects</h1>
         <div className="flex items-center justify-between gap-4">
-          <Mail />
-          <Bell />
-          <Settings />
+          <Mail className="cursor-pointer hover:text-green-800" onClick={() => router.push("/mail")} />
+          <Bell className="cursor-pointer hover:text-green-800" onClick={() => router.push("/notifications")} />
+          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")} />
         </div>
       </nav>
 

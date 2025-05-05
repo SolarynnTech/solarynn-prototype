@@ -15,14 +15,12 @@ import useUserStore from "@/stores/useUserStore";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import profile from "@/pages/profile";
 import uploadImageToSupabase from "@/utils/uploadImageToSupabase";
 
-const ProfileImage = ({name, imgUrl, id}) => {
+const ProfileImage = ({name, imgUrl, isMyProfile}) => {
   const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
-  const yourProfile = user?.id === profile.id || !id;
 
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
@@ -43,7 +41,7 @@ const ProfileImage = ({name, imgUrl, id}) => {
   };
 
   useEffect(() => {
-      setProfileImg(yourProfile ? user?.profile_img : imgUrl || "");
+      setProfileImg(isMyProfile ? user?.profile_img : imgUrl || "");
   }, [user]);
 
   const handleClose = () => {
@@ -104,7 +102,7 @@ const ProfileImage = ({name, imgUrl, id}) => {
     <div className="mb-6 -mx-6 p-6 bg-gray-100">
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-bold mb-0">User Info</h3>
-        {yourProfile && (
+        {isMyProfile && (
         <ActionBtn title="Edit" onClick={handleOpen} />
         )}
       </div>
@@ -126,7 +124,7 @@ const ProfileImage = ({name, imgUrl, id}) => {
         )}
 
         <div style={{textShadow: `0 0 2px rgba(0,0,0,.2)`}} className="text-white font-bold text-xl absolute bottom-3 left-4 z-[2]">
-          {yourProfile ? user?.name : name}
+          {isMyProfile ? user?.name : name}
         </div>
       </div>
 

@@ -14,9 +14,8 @@ import useUserStore from "@/stores/useUserStore";
 import {useSupabaseClient} from "@supabase/auth-helpers-react";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
-import profile from "@/pages/profile";
 
-const SocialMediaSection = ({links, id}) => {
+const SocialMediaSection = ({links, isMyProfile}) => {
   const socialPlatforms = [
     {
       icon: (
@@ -225,11 +224,7 @@ const SocialMediaSection = ({links, id}) => {
   };
 
   const { social_networks, setSocialNetworks, user } = useUserStore();
-
-  const yourProfile = user?.id === profile.id || !id;
-
   const supabase = useSupabaseClient();
-
   const [open, setOpen] = useState(false);
 
   const handleSocialChange = async (event, network) => {
@@ -267,14 +262,14 @@ const SocialMediaSection = ({links, id}) => {
       <div className="mb-12">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-bold mb-0">Social Media</h3>
-          {yourProfile && (
+          {isMyProfile && (
             <ActionBtn title="Edit" onClick={handleOpen} />
           )}
         </div>
 
         <div className="flex flex-wrap gap-2">
           {socialPlatforms.map((platform, index) => {
-            const userLinks = yourProfile ? social_networks : links;
+            const userLinks = isMyProfile ? social_networks : links;
             const url = userLinks?.[platform.name] || platform.link;
 
             return (

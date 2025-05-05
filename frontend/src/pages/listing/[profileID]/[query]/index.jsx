@@ -18,6 +18,16 @@ export default function Listing() {
   const titlesEnum = {
     recently_viewed: "Recently Viewed",
     favorites: "Favorites",
+    key_people: "Founder(s) / key people",
+    founders: "Founder(s)",
+    clients: "Clients / talents",
+    i_support: "I like/support what you doing",
+    showroom: "Showroom",
+    staff_team: "Staff / team",
+    affiliated: "Affiliated company",
+    worked_together: "We worked together",
+    album: "Professional album",
+    staff: "Staff"
   }
 
   useEffect(() => {
@@ -45,6 +55,7 @@ export default function Listing() {
             </div>
           )}
 
+          {results && results.length > 0 ? (
           <div className={"grid grid-cols-2 gap-4"}>
             {results?.map((profile, index) => (
               <div className="flex justify-center">
@@ -58,6 +69,11 @@ export default function Listing() {
               </div>
             ))}
           </div>
+          ) : (
+            <div className="flex justify-center items-center h-[75vh]">
+              <p className="ml-2 text-lg">No results found</p>
+            </div>
+          )}
 
         </div>
       </div>
