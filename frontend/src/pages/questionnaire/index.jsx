@@ -46,7 +46,7 @@ const QuestionsPage = () => {
         console.error('Failed saving answers:', error);
         return;
       }
-      await router.push('/profile');
+      await router.push(`/profile/${user.id}`);
     }
     window.scrollTo(0, 0);
   };
