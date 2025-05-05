@@ -2,13 +2,17 @@ import React from "react";
 import { useRouter } from "next/router";
 import RootNavigation from "@/components/Nav/Nav";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
 
 const StartPage = () => {
   const router = useRouter();
   const supabase = useSupabaseClient();
+  const { session, isLoading: sessionLoading } = useSessionContext();
 
   async function fetchData() {
+    if(session.user.id) {
+        router.push("/onboarding/start");
+    }
     const { data, error } = await supabase
       .from("ad_agencies_data")
       .select("*");
