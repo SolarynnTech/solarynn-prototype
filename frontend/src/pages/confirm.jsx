@@ -1,35 +1,32 @@
-import { useRouter } from "next/router";
-import { useEffect } from "react";
-import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import { createPagesBrowserClient } from '@supabase/auth-helpers-nextjs'
 
 export default function ConfirmPage() {
-  const router = useRouter();
-  const supabase = createPagesBrowserClient();
+  const router = useRouter()
+  const supabase = createPagesBrowserClient()
 
   useEffect(() => {
-    const confirmEmail = async () => {
-      const { query } = router;
-      if (query?.access_token) {
-        // Store session manually
-        const { data, error } = await supabase.auth.setSession({
-          access_token: query.access_token,
-          refresh_token: query.refresh_token,
-        });
+    if (!router.isReady) return
 
-        if (!error) {
-          router.replace("/onboarding/start");
-        } else {
-          console.error("Error confirming email:", error);
-        }
-      }
-    };
+    const { access_token, refresh_token } = router.query
+    if (!access_token || !refresh_token) return
 
-    confirmEmail();
-  }, [router]);
+    supabase.auth
+      .setSession({ access_token, refresh_token })
+      .then(({ error }) => {
+        if (error) console.error('Error confirming email:', error)
+        else router.replace('/onboarding/start')
+      })
+  }, [
+    router.isReady,
+    router.query.access_token,
+    router.query.refresh_token,
+  ])
 
   return (
     <div className="text-center pt-20">
       <h2>Confirming your email...</h2>
     </div>
-  );
+  )
 }

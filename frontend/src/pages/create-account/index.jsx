@@ -9,6 +9,12 @@ import useUserStore from "@/stores/useUserStore";
 const CreateAccountPage = () => {
   const router = useRouter();
   const [error, setError] = useState("");
+  const dev = "development";
+
+  const redirectTo =
+    dev === 'development'
+      ? 'http://localhost:3000/onboarding/start'
+      : 'https://solaryn-dhlx.onrender.com/onboarding/start';
 
   const submitForm = React.useRef(null);
 
@@ -105,7 +111,8 @@ const CreateAccountPage = () => {
           data: {
             phone
           },
-            redirectTo: 'https://solaryn-dhlx.onrender.com/onboarding/start', // Redirect URL after sign-up
+            redirectTo: redirectTo,
+          emailRedirectTo: redirectTo, // Redirect URL after sign-up
         },
       });
 
