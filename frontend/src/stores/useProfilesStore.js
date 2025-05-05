@@ -87,7 +87,9 @@ const useUserStore = create((set) => ({
     { key: "imdb_link", label: "IMDB Link" }
   ],
 
-  setProfiles: (profiles) => set({ profiles }),
+  setProfiles: (updater) => set((state) => ({
+    profiles: typeof updater === "function" ? updater(state.profiles) : updater
+  })),
 }));
 
 export default useUserStore;

@@ -60,7 +60,7 @@ export default function Listing() {
             {results?.map((profile, index) => (
               <div className="flex justify-center">
                 <UserPreview
-                  key={index}
+                  key={profile.id}
                   link={"/profile/" + profile.id}
                   name={profile.name || profile.official_name || profile.agency_name}
                   img_url={profile.profile_img}
