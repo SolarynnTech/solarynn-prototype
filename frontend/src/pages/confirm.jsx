@@ -9,6 +9,7 @@ export default function ConfirmPage() {
   useEffect(() => {
     const confirmEmail = async () => {
       if (!router.isReady) return
+      console.log("HEY", 'data')
       supabase.auth
         .getSessionFromUrl({ storeSession: true })
         .then(({ error }) => {
