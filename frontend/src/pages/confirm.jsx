@@ -7,18 +7,23 @@ export default function ConfirmPage() {
   const supabase = createPagesBrowserClient();
   console.log("HEY", 'data')
   useEffect(() => {
-    const confirmEmail = async () => {
-      if (!router.isReady) return
-      console.log("HEY", 'data')
-      supabase.auth
-        .getSessionFromUrl({ storeSession: true })
-        .then(({ error }) => {
-          if (error) console.error(error)
-          else router.replace('/onboarding/start')
-        })
-    };
-    confirmEmail();
-  }, [router.isReady]);
+    if (!router.isReady) return
+
+    const code = router.query.code
+    if (!code) return
+   console.log(code, 'code')
+    supabase.auth
+      .exchangeCodeForSession(code)
+      .then(({ data, error }) => {
+        console.log('exchangeCodeForSession:', { data, error })
+        if (error) {
+          console.error('Error exchanging auth code:', error)
+        } else {
+          console.log('aloha')
+          router.replace('/onboarding/start')
+        }
+      })
+  }, [router.isReady, router.query.code])
   return (
     <div className="text-center pt-20">
       <h2>Confirming your email...</h2>
