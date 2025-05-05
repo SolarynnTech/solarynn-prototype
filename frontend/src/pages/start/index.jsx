@@ -11,7 +11,7 @@ const StartPage = () => {
 
   async function fetchData() {
     console.log(session, "session")
-    if(session.user.id) {
+    if(session) {
         router.push("/onboarding/start");
     }
     const { data, error } = await supabase
