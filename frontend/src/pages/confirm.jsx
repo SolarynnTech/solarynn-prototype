@@ -8,24 +8,16 @@ export default function ConfirmPage() {
   console.log("HEY", 'data')
   useEffect(() => {
     const confirmEmail = async () => {
-      console.log(router.isReady, "router.isReady")
       if (!router.isReady) return
-      const { query } = router;
-      console.log(query?.access_token, "query?.access_token")
-      if (query?.access_token) {
-        console.log(data, 'data')
-        const { data, error } =
-          await supabase.auth.setSession({ access_token: query.access_token, refresh_token: query.refresh_token, });
-
-        if (!error) {
-          router.replace("/onboarding/start");
-        } else {
-          console.error("Error confirming email:", error);
-        }
-      }
+      supabase.auth
+        .getSessionFromUrl({ storeSession: true })
+        .then(({ error }) => {
+          if (error) console.error(error)
+          else router.replace('/onboarding/start')
+        })
     };
     confirmEmail();
-  }, [router.isReady, router, router.query.access_token]);
+  }, [router.isReady]);
   return (
     <div className="text-center pt-20">
       <h2>Confirming your email...</h2>
