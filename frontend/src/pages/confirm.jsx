@@ -18,7 +18,7 @@ export default function ConfirmPage() {
           console.error('failed:', error)
         } else {
           console.log(data, "data")
-          router.replace('/onboarding/start')
+          // router.replace('/onboarding/start')
         }
       })
   }, [router.isReady, router.query.code])
