@@ -8,11 +8,15 @@ export default function ConfirmPage() {
   console.log("HEY", 'data')
   useEffect(() => {
     const confirmEmail = async () => {
+      console.log(router.isReady, "router.isReady")
+      if (!router.isReady) return
       const { query } = router;
+      console.log(query?.access_token, "query?.access_token")
       if (query?.access_token) {
+        console.log(data, 'data')
         const { data, error } =
           await supabase.auth.setSession({ access_token: query.access_token, refresh_token: query.refresh_token, });
-        console.log(data, 'data')
+
         if (!error) {
           router.replace("/onboarding/start");
         } else {
@@ -21,7 +25,7 @@ export default function ConfirmPage() {
       }
     };
     confirmEmail();
-  }, [router]);
+  }, [router.isReady, router, router.query.access_token]);
   return (
     <div className="text-center pt-20">
       <h2>Confirming your email...</h2>
