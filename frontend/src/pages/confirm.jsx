@@ -5,28 +5,20 @@ import { createPagesBrowserClient } from "@supabase/auth-helpers-nextjs";
 export default function ConfirmPage() {
   const router = useRouter()
   const supabase = createPagesBrowserClient()
+  const { routerReady, query } = { routerReady: router.isReady, query: router.query }
 
   useEffect(() => {
-    if (!router.isReady) return
-
-    const { token_hash, next } = router.query
-    console.log(token_hash, "token_hash")
-    if (!token_hash) return
+    if (!routerReady) return
+    const { token_hash, email, next } = query
+    if (!token_hash || !email) return
 
     supabase.auth
-      .verifyOtp({
-        type: 'email',
-        token: token_hash,
-      })
+      .verifyOtp({ type: 'email', token: token_hash, email })
       .then(({ data, error }) => {
-        if (error) {
-          console.error('OTP verification failed:', error)
-        } else {
-          const redirectTo = typeof next === 'string' ? next : '/onboarding/start'
-          router.replace(redirectTo)
-        }
+        if (error) console.error('OTP verify failed:', error)
+        else router.replace(next || '/')
       })
-  }, [router.isReady, router.query.token_hash, router.query.next])
+  }, [routerReady, query.token_hash, query.email, query.next])
 
   return (
     <div className="text-center pt-20">
