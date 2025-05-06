@@ -15,7 +15,7 @@ const RecentlyViewed = () => {
 
   React.useEffect(() => {
     if(!profiles?.length || !user?.id) return;
-    if (user?.recently_viewed.length) {
+    if (user?.recently_viewed?.length) {
       const viewedProfiles = user.recently_viewed
         .map((id) => profiles.find((profile) => profile.id === id))
         .filter((p) => p);
