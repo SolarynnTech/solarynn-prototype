@@ -1,16 +1,15 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import RootNavigation from "@/components/Nav/Nav";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import LabeledInput from "@/components/forms/LabeledInput";
-import {useSessionContext, useSupabaseClient} from "@supabase/auth-helpers-react";
+import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 
 const CreateAccountPage = () => {
   const router = useRouter();
   const [error, setError] = useState("");
   const dev = "development";
-
 
   const submitForm = React.useRef(null);
 
@@ -38,7 +37,7 @@ const CreateAccountPage = () => {
 
   useEffect(() => {
     if (!isLoading && session?.user) {
-      if(user?.domain && user?.role && user?.subdivision) {
+      if (user?.domain && user?.role && user?.subdivision) {
         router.push("/home");
       } else {
         router.push("/onboarding/start");
@@ -100,14 +99,15 @@ const CreateAccountPage = () => {
     }
 
     try {
-      const { data, error: signUpError } = await supabase.auth.signUp(
-        { email, password },
-        {
+      // emailRedirectTo: `${window.location.origin}/onboarding/start`,
+      const { data, error: signUpError } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: "https://solaryn-dhlx.onrender.com/onboarding/start",
           data: { phone },
-          redirectTo: "https://solaryn-dhlx.onrender.com/onboarding/start",
-          emailRedirectTo: "https://solaryn-dhlx.onrender.com/onboarding/start"
-        }
-      );
+        },
+      });
 
       if (signUpError) {
         setError(signUpError.message);
@@ -124,7 +124,7 @@ const CreateAccountPage = () => {
               id: user.id, // match this with Supabase auth user.id
               email,
               phone,
-              verified: true
+              verified: true,
             },
           ]);
 
@@ -202,11 +202,7 @@ const CreateAccountPage = () => {
             required={true}
           />
 
-          <PrimaryBtn
-            type={"submit"}
-            title={"Continue"}
-            classes={"w-full block mb-4 mt-9"}
-          />
+          <PrimaryBtn type={"submit"} title={"Continue"} classes={"w-full block mb-4 mt-9"} />
 
           <div className="text-green-800 text-center mt-4">
             Already have an account?{" "}
@@ -221,13 +217,7 @@ const CreateAccountPage = () => {
             </button>
           </div>
 
-          {error && (
-            <div
-              style={{ color: "red", textAlign: "center", margin: "10px 0" }}
-            >
-              {error}
-            </div>
-          )}
+          {error && <div style={{ color: "red", textAlign: "center", margin: "10px 0" }}>{error}</div>}
         </form>
       </div>
     </>
