@@ -3,7 +3,9 @@
 This project combines multiple frontend components into a single Next.js application.
 
 ## Flow
+
 The application follows this user flow:
+
 1. Terms and Conditions
 2. Create Account / Login
 3. Onboarding (4 steps)
@@ -27,11 +29,20 @@ npm run dev
 yarn dev
 ```
 
+### Docker
+
+```
+make build - to build the FE
+make up - start the FE on 3002 port
+make app-sh - connect to the FE container
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Component Structure
 
 This app integrates components from multiple source directories into a unified flow:
+
 - terms-and-conditions
 - create-account / login
 - onboard
@@ -40,4 +51,4 @@ This app integrates components from multiple source directories into a unified f
 - onboarding-4
 - profile
 
-Each component maintains its original styling and functionality while being part of a connected user journey. 
+Each component maintains its original styling and functionality while being part of a connected user journey.
