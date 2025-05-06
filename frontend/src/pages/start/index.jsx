@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import RootNavigation from "@/components/Nav/Nav";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
+import Link from 'next/link';
 
 const StartPage = () => {
   const router = useRouter();
@@ -52,7 +53,7 @@ const StartPage = () => {
           </p>
           <p className="mb-4">
             Please review and accept our{" "}
-            <a href="/terms-and-conditions">Terms and Conditions</a> to proceed.
+            <Link href="/terms-and-conditions">Terms and Conditions</Link> to proceed.
             This is a beta version of Solaryn, open for testing and exploration.
             Click Accept to continue
           </p>
