@@ -1,0 +1,23 @@
+FROM node:23.5.0-alpine
+LABEL maintainer="Volodymyr Partyka <vovuk097@gmail.com>"
+
+ENV NODE_ENV=development
+
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git
+
+RUN apk update && apk add python3 make g++ && rm -rf /var/cache/apk/*
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY /frontend/package-lock.json /app/frontend/package-lock.json
+COPY /frontend/package.json /app/frontend/package.json
+RUN cd /app/frontend && npm install -g npm@11.3.0
+RUN cd /app/frontend && npm install
+
+COPY . /app
+
+EXPOSE 3003
+
+ENTRYPOINT /app/docker-entrypoint_development.sh

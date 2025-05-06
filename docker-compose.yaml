@@ -1,0 +1,22 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile_development
+    privileged: true
+    ports:
+      - 3003:3000
+    working_dir: /app
+    volumes:
+      - .:/app
+      - node_modules:/app/frontend/node_modules
+    # networks:
+    #   - solarynn
+
+# networks:
+#   solarynn:
+#     name: solarynn-api_solarynn
+#     external: true
+
+volumes:
+  node_modules:
