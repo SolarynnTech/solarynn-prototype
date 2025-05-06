@@ -46,7 +46,7 @@ const Favorites = () => {
           bookedProfiles?.map((profile, index) => (
             <UserPreview
               key={index}
-              link={"/profile/" + profile.id}
+              link={"/profile/" + profile?.id}
               name={profile.name || profile.official_name || profile.agency_name}
               img_url={profile.profile_img}
               height={300} width={200}

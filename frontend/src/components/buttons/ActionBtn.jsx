@@ -17,7 +17,7 @@ const ActionBtn = ({
       type={type}
       disabled={disabled}
       className={clsx(
-        "rounded-[24px] px-6 py-2 text-sm font-semibold text-center inline-flex items-center",
+        "rounded-[24px] px-6 py-2 text-sm font-semibold text-center inline-flex items-center whitespace-nowrap",
         disabled
           ? "text-gray-400 border border-gray-600"
           : "text-green-800 bg-gray-100 hover:bg-gray-200 border-none cursor-pointer shadow-[0_1px_1px_rgba(0,0,0,0.15)]",

@@ -1,12 +1,72 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { useRouter } from "next/router";
 import { Mail, Bell, Settings, Search } from "lucide-react";
-import NavigationBar from "../../components/profile/NavigationBar";
-import ProjectPreview from "../../components/projects/ProjectPreview";
-import SearchBar from "../../components/SearchBar";
+import NavigationBar from "@/components/profile/NavigationBar";
+import ProjectCategory from "@/components/projects/ProjectCategory";
+import ProjectsSearchBar from "@/components/projects/ProjectsSearchBar";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 export default function ProjectsPage() {
   const router = useRouter();
+
+  const [projects, setProjects] = useState([]);
+  const [projectCategories, setProjectCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const supabase = useSupabaseClient();
+
+  useEffect(() => {
+    async function fetchProjects() {
+      setLoading(true);
+      setProjects([]);
+
+      try {
+        const { data, error } = await supabase
+          .from("projects")
+          .select("*");
+
+        if (error) {
+          console.error("Error fetching projects:", error);
+        } else {
+          setProjects(data || []);
+        }
+      } catch (err) {
+        console.log("An unexpected error occurred:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProjects();
+  }, []);
+
+  useEffect(() => {
+    async function fetchProjectCategories() {
+      setLoading(true);
+      setProjectCategories([]);
+
+      try {
+        const { data, error } = await supabase
+          .from("project_categories")
+          .select("*");
+
+        if (error) {
+          console.error("Error fetching projects:", error);
+        } else {
+          setProjectCategories(data || []);
+        }
+      } catch (err) {
+        console.log("An unexpected error occurred:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchProjectCategories();
+  }, []);
+
+  useEffect(() => {
+    console.log("projects", projects);
+    console.log("projectCategories", projectCategories);
+  }, [projects, projectCategories]);
+
 
   return (
     <div className="pb-8">
@@ -19,14 +79,16 @@ export default function ProjectsPage() {
         </div>
       </nav>
 
-      <SearchBar/>
+      <ProjectsSearchBar/>
 
-      <ProjectPreview name={"Public Figures"} />
-      <ProjectPreview name={"Fashion Brands"} />
-      <ProjectPreview name={"Industry Experts"} />
-      <ProjectPreview name={"Companies"} />
-
-
+      {projectCategories && projectCategories.map((category) => (
+        <ProjectCategory
+          data={projects.filter(project => project.category === category.id)}
+          key={category.id}
+          id={category.id}
+          name={category.title}
+        />
+      ))}
 
       <NavigationBar />
     </div>

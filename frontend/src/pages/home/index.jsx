@@ -39,6 +39,22 @@ export default function HomePage() {
     fetchCategories();
   }, []);
 
+  const universe = [
+    { id: 1, title: "Public Figures", img_url: "", color: "#F29797", link: "public_figures" },
+    { id: 2, title: "Fashion Brands", img_url: "", color: "#A6BBF3", link: "fashion_brands" },
+    { id: 3, title: "Media / Publications", img_url: "", color: "#D084D6", link: "media" },
+    { id: 4, title: "Industry Experts", img_url: "", color: "#AEF3B5", link: "industry" },
+    { id: 5, title: "Companies", img_url: "", color: "#F5BF6D", link: "companies" },
+    { id: 6, title: "Entities", img_url: "", color: "#C2E5FF", link: "entities" },
+    { id: 7, title: "Agencies", img_url: "", color: "#F871B2", link: "agencies" },
+    { id: 8, title: "Events", img_url: "", color: "#5EEC8E", link: "events" },
+    { id: 9, title: "Shop", img_url: "", color: "#FFECBD", link: "shop" },
+    { id: 10, title: "For Sale", img_url: "", color: "#8C9DF7", link: "for_sale" },
+    { id: 11, title: "Book Talent", img_url: "", color: "#9BFCD3", link: "book_talent" },
+    { id: 12, title: "On Loan", img_url: "", color: "#E8F096", link: "on_loan" },
+    { id: 13, title: "Gifting", img_url: "", color: "#D084D6", link: "gifting" },
+  ];
+
   return (
     <div className="pb-8">
       <nav className="flex items-center justify-between relative py-2 gap4 mb-6">
@@ -63,7 +79,7 @@ export default function HomePage() {
         <p>Loading categories...</p>
       ) : (
         <div className="grid grid-cols-2 gap-3 mb-12">
-          {categories.map((category) => (
+          {universe.map((category) => (
             <CategoryTile
               key={category.id}
               title={category.title}

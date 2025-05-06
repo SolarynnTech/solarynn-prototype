@@ -15,10 +15,10 @@ const RecentlyViewed = () => {
 
   React.useEffect(() => {
     if(!profiles?.length || !user?.id) return;
-    if (user?.recently_viewed) {
-      const viewedProfiles = user.recently_viewed.map((id) => {
-        return profiles.find((profile) => profile.id === id);
-      });
+    if (user?.recently_viewed.length) {
+      const viewedProfiles = user.recently_viewed
+        .map((id) => profiles.find((profile) => profile.id === id))
+        .filter((p) => p);
       setRecentlyViewed(viewedProfiles);
     }
   }, [user?.id, profiles]);
@@ -46,7 +46,7 @@ const RecentlyViewed = () => {
           recentlyViewed?.map((profile, index) => (
             <UserPreview
               key={index}
-              link={"/profile/" + profile.id}
+              link={"/profile/" + profile?.id}
               name={profile.name || profile.official_name || profile.agency_name}
               img_url={profile.profile_img}
               height={150} width={150}

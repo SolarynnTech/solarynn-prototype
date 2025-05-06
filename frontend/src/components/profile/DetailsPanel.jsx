@@ -146,12 +146,12 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
             <div className="">
               {Object.entries(answersWithTitles[sectionTitles[currentFormPage]]).map(
                 ([questionTitle, value]) => (
-                  <p key={questionTitle} className={"mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"}>
+                  <div key={questionTitle} className={"mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"}>
                     <p className="mb-2"><b>{questionTitle}:</b></p>
                     <span className="text-gray-700">
                       {Array.isArray(value) ? value.join(", ") : value}
                     </span>
-                  </p>
+                  </div>
                 )
               )}
             </div>
