@@ -1,0 +1,3 @@
+- `node scripts/translate_migration.js` # add translation columns
+- `node scripts/translate_google.js` # fill in missing translations via Google
+- `node scripts/translate_deepl.js` # fill in missing translations via DeepL

@@ -35,6 +35,9 @@ yarn dev
 make build - to build the FE
 make up - start the FE on 3003 port
 make app-sh - connect to the FE container
+
+to fix prettier - run this outside the docker inside frontend folder
+`npm install --save-dev prettier`
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
