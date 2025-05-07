@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import RootNavigation from "@/components/Nav/Nav";
 import { useRouter } from "next/router";
 import {
-  Box,
+  Box, Button, CircularProgress,
   Paper,
   TextField,
   Typography
@@ -10,28 +10,84 @@ import {
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Loader } from "lucide-react";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
+import useUserStore from "@/stores/useUserStore.js";
 
 const textFieldStyles = {
-  '& .MuiInput-underline:before': {
-    borderBottom: '1px solid #000',
+  "& .MuiInput-underline:before": {
+    borderBottom: "1px solid #000",
   },
-  '& .MuiInput-underline:after': {
-    borderBottom: '1px solid #000',
+  "& .MuiInput-underline:after": {
+    borderBottom: "1px solid #000",
   },
 };
 
 const NewProjectPage = () => {
   const { id } = useRouter().query;
   const supabase = useSupabaseClient();
-  const [questions, setQuestions]       = useState([]);
+  const { user } = useUserStore();
+  const [questions, setQuestions] = useState([]);
   const [sectionTitle, setSectionTitle] = useState("");
-  const [loading, setLoading]           = useState(false);
-  const [error, setError]               = useState(null);
-
-  const [title, setTitle]   = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [uploading, setUploading]       = useState(false);
+  const [title, setTitle] = useState("");
   const [imgUrl, setImgUrl] = useState("");
 
   const [answers, setAnswers] = useState({});
+
+  const handleCreateProject = async () => {
+    console.log(user.role, 'user.role')
+    const { error: createErr } = await supabase
+      .from("projects")
+      .insert({
+        title,
+        owner: user.id,
+        category: id,
+        img_url: imgUrl,
+        description: answers
+      })
+    console.log("answers", answers);
+  };
+
+
+  const handleFileChange = async (e) => {
+    // const file = e.target.files?.[0];
+    // if (!file) return;
+    //
+    // setUploading(true);
+    // const fileExt = file.name.split(".").pop();
+    // const fileName = `${crypto.randomUUID()}.${fileExt}`;
+    // const filePath = `${id}/${fileName}`;
+    //
+    // const { error: uploadError } = await supabase
+    //   .storage
+    //   .from("project-images")
+    //   .upload(filePath, file, {
+    //     cacheControl: "3600",
+    //     upsert: false,
+    //   });
+    //
+    // if (uploadError) {
+    //   console.error("Upload failed:", uploadError);
+    //   setError("Image upload failed");
+    //   setUploading(false);
+    //   return;
+    // }
+    //
+    // const { publicURL, error: urlError } = supabase
+    //   .storage
+    //   .from("project-images")
+    //   .getPublicUrl(filePath);
+    //
+    // if (urlError) {
+    //   console.error("Public URL error:", urlError);
+    //   setError("Could not fetch image URL");
+    // } else {
+    //   setImgUrl(publicURL);
+    // }
+    // setUploading(false);
+  };
+
 
   const handleFieldChange = (fieldId, value) => {
     if (fieldId === "title") {
@@ -79,7 +135,7 @@ const NewProjectPage = () => {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-[75vh]">
-        <Loader className="animate-spin text-green-800" />
+        <Loader className="animate-spin text-green-800"/>
         <p className="ml-2">Loading...</p>
       </div>
     );
@@ -100,7 +156,7 @@ const NewProjectPage = () => {
   }
   const fields = [
     { id: "title", question: "Project Title", value: title },
-    { id: "img",   question: "Image URL",     value: imgUrl },
+    { id: "img", question: "Image URL", value: imgUrl },
     ...questions.map(q => ({
       id: q.id,
       question: q.question,
@@ -111,7 +167,7 @@ const NewProjectPage = () => {
 
   return (
     <div>
-      <RootNavigation title="New Project" backBtn />
+      <RootNavigation title="New Project" backBtn/>
       {sectionTitle && (
         <Typography
           variant="h5"
@@ -124,29 +180,49 @@ const NewProjectPage = () => {
       <Paper sx={{ p: 4, mb: 4 }} elevation={2} className="mt-4 !bg-[#F5F5F5]">
         {fields.map((f, i) => (
           <Box key={f.id} mb={3}>
-            <Typography
-              variant="subtitle1"
-              gutterBottom
-              className="!text-sm !font-semibold !mb-3"
-            >
+            <Typography variant="subtitle1" gutterBottom className="!text-sm !font-semibold !mb-3">
               {i + 1}. {f.question}
             </Typography>
-            <TextField
-              fullWidth
-              variant="standard"
-              focused
-              color="black"
-              sx={textFieldStyles}
-              type="text"
-              value={f.value}
-              onChange={e => handleFieldChange(f.id, e.target.value)}
-              InputProps={{ endAdornment: f.suffix || null }}
-            />
+
+            {f.id === "img" ? (
+              <Box>
+                <input
+                  id="img-upload"
+                  type="file"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                  style={{ display: "none" }}
+                />
+                <label htmlFor="img-upload">
+                  <Button variant="outlined" component="span" disabled={uploading}>
+                    {uploading ? <CircularProgress size={20} /> : "Choose Image"}
+                  </Button>
+                </label>
+                {imgUrl && (
+                  <Box mt={2}>
+                    <img src={imgUrl} alt="Cover preview" style={{ maxWidth: "100%", height: 200, objectFit: "cover" }} />
+                  </Box>
+                )}
+              </Box>
+            ) : (
+              <TextField
+                fullWidth
+                variant="standard"
+                focused
+                color="black"
+                sx={textFieldStyles}
+                type="text"
+                value={f.value}
+                onChange={e => handleFieldChange(f.id, e.target.value)}
+                InputProps={{ endAdornment: f.suffix || null }}
+              />
+            )}
           </Box>
         ))}
       </Paper>
+      <PrimaryBtn onClick={handleCreateProject} title={"Create Project"} classes="w-full block"/>
     </div>
   );
 };
 
-export default NewProfilePage;
+export default NewProjectPage;
