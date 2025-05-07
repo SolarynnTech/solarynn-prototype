@@ -33,7 +33,7 @@ yarn dev
 
 ```
 make build - to build the FE
-make up - start the FE on 3002 port
+make up - start the FE on 3003 port
 make app-sh - connect to the FE container
 ```
 

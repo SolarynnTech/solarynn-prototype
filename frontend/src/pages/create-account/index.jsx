@@ -99,12 +99,11 @@ const CreateAccountPage = () => {
     }
 
     try {
-      // emailRedirectTo: `${window.location.origin}/onboarding/start`,
       const { data, error: signUpError } = await supabase.auth.signUp({
         email,
         password,
         options: {
-          emailRedirectTo: "https://solaryn-dhlx.onrender.com/onboarding/start",
+          emailRedirectTo: `${window.location.origin}/onboarding/start`,
           data: { phone },
         },
       });
