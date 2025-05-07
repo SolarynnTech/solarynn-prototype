@@ -53,7 +53,7 @@ const ProjectCategory = ({name, id, data}) => {
         )}
       </div>
 
-      <SecondaryBtn title="Create" classes="block w-full mb-4" onClick={() => router.push("/projects/new")}/>
+      <SecondaryBtn title="Create" classes="block w-full mb-4" onClick={() => router.push(`/projects/new/${id}`)}/>
     </div>
   );
 };

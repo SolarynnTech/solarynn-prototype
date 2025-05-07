@@ -23,10 +23,10 @@ export default function QuestionnaireForm({
 
   const textFieldStyles = {
     '& .MuiInput-underline:before': {
-      borderBottom: '1.5px solid #000',
+      borderBottom: '1px solid #000',
     },
     '& .MuiInput-underline:after': {
-      borderBottom: '1.5px solid #000',
+      borderBottom: '1px solid #000',
     },
   };
 
