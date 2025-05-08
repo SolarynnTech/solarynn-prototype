@@ -1,28 +1,39 @@
-
 const ProjectPreview = ({
-                       name = "",
-                       link,
-                       img_url,
-                       width = "",
-                       height = "",
-                       bgColor = "gray-100"
-                     }) => {
-  return (
-    <a
-      href={link}
-      className={`flex shrink-0 relative rounded-md items-center justify-center bg-${bgColor}`}
-      style={{
-        width: `${width ? width + "px" : "100%"}`,
-        height: `${height ? height + "px" : "100%"}`,
-        backgroundImage: `url(${img_url})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        boxShadow: `rgba(0, 0, 0, 0.25) 0px -30px 25px -10px inset`,
-      }}
+                          name    = "",
+                          link,
+                          img_url,
+                          width   = 150,
+                          height  = 150,
+                          bgColor = "#F3F4F6"
+                        }) => (
+  <a
+    href={link}
+    className="relative flex shrink-0 items-center justify-center rounded-md overflow-hidden"
+    style={{
+      width:           `${width}px`,
+      height:          `${height}px`,
+      backgroundColor: bgColor,
+      boxShadow:       "inset 0 -30px 25px -10px rgba(0,0,0,0.25)",
+    }}
+  >
+    {img_url && (
+      <img
+        src={img_url}
+        alt={name}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+    )}
+
+    <div className="absolute inset-0 bg-black bg-opacity-20" />
+
+    <p
+      className="absolute bottom-1 left-2 right-2 truncate text-sm font-semibold text-white"
+      style={{ textShadow: "0 0 2px rgba(0,0,0,0.5)" }}
     >
-      <p style={{textShadow: `0 0 2px rgba(0,0,0,.2)`}} className="absolute bottom-1 font-semibold left-2 truncate right-2 text-sm text-white z-[2]">{name}</p>
-    </a>
-  );
-};
+      {name}
+    </p>
+  </a>
+);
 
 export default ProjectPreview;
+

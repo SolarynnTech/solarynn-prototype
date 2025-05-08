@@ -37,7 +37,7 @@ const ProjectCategory = ({name, id, data}) => {
       <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
         {data && data.map((project) => (
           <ProjectPreview
-            name={project.name}
+            name={project.title}
             key={project.id}
             img_url={project.img_url}
             link={"/projects/" + project.id}

@@ -93,10 +93,12 @@ export default function Listing() {
               {projects?.map((project, index) => (
                 <div className="flex justify-center">
                   <ProjectPreview
-                    name={project.name}
+                    name={project.title}
                     key={project.id}
                     img_url={project.img_url}
-                    link={"/projects/" + project.id}
+                    link={`/projects/${project.id}`}
+                    width={190}
+                    height={300}
                   />
                 </div>
               ))}
