@@ -12,7 +12,6 @@ const dropZoneStyles = {
 
 const ImageDropZone = ({ onFile, uploading, previewUrl }) => {
 
-  // console.log(previewUrl, "previewUrl")
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     accept: { "image/*": [] },
     multiple: false,
@@ -24,14 +23,14 @@ const ImageDropZone = ({ onFile, uploading, previewUrl }) => {
       <input {...getInputProps()} />
       {/*<CloudUploadIcon sx={{ fontSize: 48, color: "#00AB55" }} />*/}
       <Typography variant="body1" mt={1}>
-        {isDragActive ? "Drop your image here…" : "drag or upload your files"}
+        {isDragActive ? "Drop your image here…" : "Drag or upload your image"}
       </Typography>
       <Typography variant="caption" display="block" color="text.secondary" mt={0.5}>
         You can drop any png, jpg, svg file
       </Typography>
       {uploading && <CircularProgress size={24} sx={{ mt: 2 }} />}
       {previewUrl && (
-        <Box mt={2}>
+        <Box mt={2} className={'flex justify-center items-center'}>
           <img
             src={previewUrl}
             alt="preview"

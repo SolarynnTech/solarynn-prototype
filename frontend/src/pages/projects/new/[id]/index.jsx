@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import RootNavigation from "@/components/Nav/Nav";
 import { useRouter } from "next/router";
 import {
-  Box, Button,
+  Box,
   Paper,
+  Typography,
   TextField,
-  Typography
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
 } from "@mui/material";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore.js";
@@ -25,7 +29,7 @@ const NewProjectPage = () => {
   const { id } = useRouter().query;
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
-
+  const router = useRouter();
   const [questions, setQuestions] = useState([]);
   const [sectionTitle, setSectionTitle] = useState("");
   const [loading, setLoading] = useState(false);
@@ -35,9 +39,10 @@ const NewProjectPage = () => {
   const [localFile, setLocalFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [uploading, setUploading] = useState(false);
-
+  const [created, setCreated]           = useState(false);
   const [answers, setAnswers] = useState({});
-
+  const allAnswered = questions.every(q => (answers[q.id] || "").trim() !== "");
+  const createDisabled = uploading || !allAnswered || !localFile;
   const handleFileChange = (file) => {
     setLocalFile(file);
     setPreviewUrl(URL.createObjectURL(file));
@@ -94,6 +99,7 @@ const NewProjectPage = () => {
       console.error("Insert failed", createErr);
       setError(createErr.message);
     } else {
+      setCreated(true);
       console.log("Project created!");
     }
   };
@@ -174,7 +180,21 @@ const NewProjectPage = () => {
           </Box>
         ))}
       </Paper>
-      <PrimaryBtn onClick={handleCreateProject} title={"Create Project"} classes="w-full block"  disabled={uploading}/>
+      <PrimaryBtn onClick={handleCreateProject} title={"Create Project"} classes="w-full block"  disabled={createDisabled}/>
+      <Dialog open={created} disableEscapeKeyDown>
+        <DialogTitle className="text-center text-xl !font-semibold">Success!</DialogTitle>
+        <DialogContent>
+          <Typography className={"!text-lg"}>Your project was created successfully.</Typography>
+        </DialogContent>
+        <DialogActions sx={{ justifyContent: "center", px: 3, pb: 2 }}>
+          <PrimaryBtn
+            onClick={() => router.push("/projects")}
+            title="To the Projects Page"
+            classes={"!py-2 !px-4 !text-sm"}
+
+          />
+        </DialogActions>
+      </Dialog>
     </div>
   );
 };
