@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import RootNavigation from "@/components/Nav/Nav";
 import { useRouter } from "next/router";
 import {
@@ -22,7 +22,7 @@ const textFieldStyles = {
   },
   "& .MuiInput-underline:after": {
     borderBottom: "1px solid #000",
-  },
+  }
 };
 
 const NewProjectPage = () => {
@@ -36,13 +36,16 @@ const NewProjectPage = () => {
   const [error, setError] = useState(null);
 
   const [title, setTitle] = useState("");
+  const [projectDescription, setProjectDescription] = useState("");
   const [localFile, setLocalFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
   const [uploading, setUploading] = useState(false);
-  const [created, setCreated]           = useState(false);
+  const [created, setCreated] = useState(false);
   const [answers, setAnswers] = useState({});
   const allAnswered = questions.every(q => (answers[q.id] || "").trim() !== "");
-  const createDisabled = uploading || !allAnswered || !localFile;
+  const createDisabled = uploading || !allAnswered || !localFile || !projectDescription.trim();
+  const projectRef = useRef(null)
+
   const handleFileChange = (file) => {
     setLocalFile(file);
     setPreviewUrl(URL.createObjectURL(file));
@@ -86,21 +89,24 @@ const NewProjectPage = () => {
       setUploading(false);
     }
 
-    const { error: createErr } = await supabase
+    const {data, error: createErr } = await supabase
       .from("projects")
       .insert({
         title,
         owner: user.id,
         category: id,
         img_url,
-        description: answers
-      });
+        description: answers,
+        project_description: projectDescription,
+      })
+      .select("id")
+      .maybeSingle();
     if (createErr) {
       console.error("Insert failed", createErr);
       setError(createErr.message);
     } else {
       setCreated(true);
-      console.log("Project created!");
+      projectRef.current = data.id;
     }
   };
 
@@ -139,7 +145,12 @@ const NewProjectPage = () => {
 
   const fields = [
     { id: "title", question: "Project Title", value: title },
-    { id: "img",   question: "Cover Image",   },
+    {
+      id: "description",
+      question: "Project Description",
+      suffix: <span className="text-sm text-gray-500">Max 2000 characters</span>,
+    },
+    { id: "img", question: "Cover Image", },
     ...questions.map((q, i) => ({
       id: q.id,
       question: q.question,
@@ -150,15 +161,46 @@ const NewProjectPage = () => {
 
   return (
     <div>
-      <RootNavigation title="New Project" backBtn />
+      <RootNavigation title="New Project" backBtn/>
       <Typography variant="h5" gutterBottom>{sectionTitle}</Typography>
       <Paper sx={{ p: 4, mb: 4 }}>
         {fields.map((f, i) => (
           <Box key={f.id} mb={3}>
             <Typography variant="subtitle1" gutterBottom>
-              {i+1}. {f.question}
+              {i + 1}. {f.question}
             </Typography>
-            {f.id === "img" ? (
+
+            {f.id === "description" ? (
+              <TextField
+                id="projectDescription"
+                label=""
+                variant="outlined"
+                multiline
+                rows={4}
+                fullWidth
+                inputProps={{ maxLength: 2000 }}
+                value={projectDescription}
+                onChange={e => setProjectDescription(e.target.value)}
+                helperText={`${projectDescription.length}/2000 characters`}
+                FormHelperTextProps={{
+                  sx: { textAlign: "right", fontSize: "0.75rem", color: "#000000" }
+                }}
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "#000",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#000",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#000",
+                      borderWidth: "2px",
+                    },
+                  },
+                }}
+              />
+            ) : f.id === "img" ? (
               <ImageDropZone
                 onFile={handleFileChange}
                 uploading={uploading}
@@ -166,7 +208,8 @@ const NewProjectPage = () => {
               />
             ) : (
               <TextField
-                fullWidth variant="standard"
+                fullWidth
+                variant="standard"
                 value={f.id === "title" ? title : f.value}
                 onChange={e =>
                   f.id === "title"
@@ -180,7 +223,8 @@ const NewProjectPage = () => {
           </Box>
         ))}
       </Paper>
-      <PrimaryBtn onClick={handleCreateProject} title={"Create Project"} classes="w-full block"  disabled={createDisabled}/>
+      <PrimaryBtn onClick={handleCreateProject} title={"Create Project"} classes="w-full block"
+                  disabled={createDisabled}/>
       <Dialog open={created} disableEscapeKeyDown>
         <DialogTitle className="text-center text-xl !font-semibold">Success!</DialogTitle>
         <DialogContent>
@@ -188,7 +232,7 @@ const NewProjectPage = () => {
         </DialogContent>
         <DialogActions sx={{ justifyContent: "center", px: 3, pb: 2 }}>
           <PrimaryBtn
-            onClick={() => router.push("/projects")}
+            onClick={() => router.push(`/projects/${projectRef.current}`)}
             title="To the Projects Page"
             classes={"!py-2 !px-4 !text-sm"}
 

@@ -153,7 +153,7 @@ const QuestionsPage = () => {
             sx={{
               height: 4,
               borderRadius: 2,
-              backgroundColor: "#D1FAE5",
+              backgroundColor: "#F5F5F5",
               "& .MuiLinearProgress-bar": {
                 backgroundColor: "#166534",
               },
@@ -163,7 +163,6 @@ const QuestionsPage = () => {
         <Typography variant="caption" className={"!text-base"}>100%</Typography>
       </Box>
       <div className="content pt-6">
-        <h2 className={"text-xl"}>{role?.title}</h2>
 
         <QuestionnaireForm
           section={currentSection}
