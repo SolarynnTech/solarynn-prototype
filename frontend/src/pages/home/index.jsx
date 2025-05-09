@@ -18,7 +18,20 @@ export default function HomePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [universeCategories, setUniverseCategories] = useState([]);
-  // const [categories, setCategories] = useState([]);
+  const categoryNamesExcluded = [
+    "Public Figures",
+    "Fashion Brands",
+    "Companies",
+    "Media / Publications",
+    "Entities",
+    "Industry Experts",
+    "Agencies",
+    "To Hire",
+  ];
+
+  const includedCategories = universeCategories.filter(
+    el => !categoryNamesExcluded.includes(el.title)
+  );
 
   const fetchUniverseCategories = async () => {
     const { data, error } = await supabase
@@ -74,7 +87,7 @@ export default function HomePage() {
         <p>Loading categories...</p>
       ) : (
         <div className="grid grid-cols-2 gap-3 mb-12">
-          {universeCategories.map((category) => (
+          {includedCategories?.map((category) => (
             <CategoryTile
               key={category.id}
               title={category.title}
