@@ -7,6 +7,7 @@ import QuestionnaireForm from "@/components/forms/QuestionnaireForm";
 import useUserStore from "@/stores/useUserStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Loader } from "lucide-react";
+import { Typography } from "@mui/material";
 
 const QuestionsPage = () => {
   const router = useRouter();
@@ -18,7 +19,8 @@ const QuestionsPage = () => {
   const [error, setError] = useState(null)
   const [answersBySection, setAnswersBySection] = useState({});
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  const totalPages = data.length;
+  const currentPage = currentIndex + 1;
   const handleAnswerChange = (sectionId, questionId, value, option=null) => {
     setAnswersBySection(prev => {
       const sec = prev[sectionId] || {};
@@ -34,20 +36,22 @@ const QuestionsPage = () => {
   };
 
   const handleNext = async () => {
-    if(currentIndex < data.length - 1){
-      setCurrentIndex(idx=>idx+1);
-      console.log(answersBySection, "answersBySection");
+    const { error: saveErr } = await supabase
+      .from("users")
+      .update({ questionnaire_answers: answersBySection })
+      .eq("id", user.id);
+
+    if (saveErr) {
+      console.error("Failed saving answers:", saveErr);
+      return;
+    }
+
+    if (currentIndex < data.length - 1) {
+      setCurrentIndex(idx => idx + 1);
     } else {
-      const { error } = await supabase
-        .from('users')
-        .update({ questionnaire_answers: answersBySection })
-        .eq('id', user.id);
-      if (error) {
-        console.error('Failed saving answers:', error);
-        return;
-      }
       await router.push(`/profile/${user.id}`);
     }
+
     window.scrollTo(0, 0);
   };
 
@@ -112,7 +116,7 @@ const QuestionsPage = () => {
   }, [user?.role, user]);
 
 
-  if(loading || !data.length) {
+  if(loading || !data.length || !currentPage) {
     return (
       <div className="flex justify-center items-center h-[75vh]">
        <Loader className="animate-spin text-green-800"/>
@@ -133,17 +137,22 @@ const QuestionsPage = () => {
   return (
     <div>
       <RootNavigation title="Onboard Questions"/>
-
-      <div className="content pt-12">
+      <div className="flex justify-center">
+        <Typography variant="subtitle2" className={"!font-semibold !text-xl !mt-4"}>
+          Page {currentPage} of {totalPages}
+        </Typography>
+      </div>
+      <div className="content pt-6">
         <h2 className={"text-xl"}>{role?.title}</h2>
 
         <QuestionnaireForm
           section={currentSection}
-          answers={answersBySection[currentSection?.id]||{}}
-          onChange={(qid,val,opt)=>handleAnswerChange(currentSection.id,qid,val,opt)}
+          answers={answersBySection[currentSection?.id] || {}}
+          onChange={(qid, val, opt) => handleAnswerChange(currentSection.id, qid, val, opt)}
         />
 
-        <PrimaryBtn onClick={handleNext} title={currentIndex < data.length-1 ? 'Next' : 'Finish'} classes="w-full block"/>
+        <PrimaryBtn onClick={handleNext} title={currentIndex < data.length - 1 ? 'Next' : 'Finish'}
+                    classes="w-full block"/>
       </div>
     </div>
   );
