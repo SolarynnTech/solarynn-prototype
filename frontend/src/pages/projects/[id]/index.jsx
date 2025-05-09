@@ -1,113 +1,132 @@
-import {useEffect, useState} from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import RootNavigation from "@/components/Nav/Nav";
-import ProfileImage from "@/components/profile/ProfileImage";
-import DetailsPanel from "@/components/profile/DetailsPanel";
-import SocialMediaSection from "@/components/profile/SocialMediaSection";
 import NavigationBar from "@/components/profile/NavigationBar";
-import React from "react";
-import PrimaryBtn from "@/components/buttons/PrimaryBtn";
-import {useSupabaseClient} from "@supabase/auth-helpers-react";
-import useUserStore from "@/stores/useUserStore";
-import useProfilesStore from "@/stores/useProfilesStore";
-import {useRouter} from "next/router";
-import Group from "@/components/profile/Group";
-import { fetchProfileGroups } from "@/libs/fetchProfileGroups";
 
-const ProfilePage = () => {
-  const [profile, setProfile] = useState(null);
-  const {user, setUser} = useUserStore();
-  const supabase = useSupabaseClient();
-  const { profiles } = useProfilesStore();
+const ProjectPage = () => {
   const router = useRouter();
   const { id } = router.query;
-  const [groups, setGroups] = useState([]);
+  const supabase = useSupabaseClient();
+  const [project, setProject] = useState(null);
+  const [answersBySection, setAnswersBySection] = useState({});
+  const [sectionTitles, setSectionTitles] = useState([]);
+  const [currentFormPage, setCurrentFormPage] = useState(0);
 
-  useEffect(() => {
-    const loadGroups = async () => {
-      const allGroups = await fetchProfileGroups();
-      console.log("allGroups", allGroups);
-      if (profile?.role) {
-        const filtered = allGroups.filter((group) =>
-          group.roles.includes(profile.role)
-        );
-        setGroups(filtered);
-      }
+  const loadProject = async () => {
+    const { data: proj, error } = await supabase
+      .from("projects")
+      .select("*")
+      .eq("id", id)
+      .maybeSingle();
+    if (error) {
+      console.error("Error fetching project:", error);
+      return;
+    }
+    setProject(proj);
+  };
+
+  const loadProjectDescription = async (answersMap) => {
+    const qIds = Object.keys(answersMap);
+    if (qIds.length === 0) {
+      setAnswersBySection({});
+      setSectionTitles([]);
+      return;
+    }
+
+    const { data: questions, error: qErr } = await supabase
+      .from("project_questions")
+      .select("id, question")
+      .in("id", qIds);
+    if (qErr) return console.error(qErr);
+
+    const mid = Math.ceil(questions.length / 2);
+    const firstChunk  = questions.slice(0, mid);
+    const secondChunk = questions.slice(mid);
+
+    const buckets = {
+      "Part 1": {},
+      "Part 2": {},
     };
 
-    loadGroups();
-  }, [profile?.role]);
+    firstChunk.forEach(q => {
+      buckets["Part 1"][q.question] = answersMap[q.id];
+    });
+    secondChunk.forEach(q => {
+      buckets["Part 2"][q.question] = answersMap[q.id];
+    });
+
+    setAnswersBySection(buckets);
+    setSectionTitles(["Part 1", "Part 2"]);
+  };
 
   useEffect(() => {
-    console.log("groups",  groups)
-  }, [groups]);
+    if (id) loadProject();
+  }, [id]);
 
   useEffect(() => {
-    if(!profiles) return;
-    setProfile(profiles.find((p) => p.id === id));
-  }, [profiles, id]);
-
-  const [isMyProfile, setIsMyProfile] = useState(null);
-
-  const updateRecentlyViewed = async () => {
-    const { data: userData, error } = await supabase
-      .from("users")
-      .update({recently_viewed: user?.recently_viewed ? [...user?.recently_viewed, id] : [id]})
-      .eq("id", user?.id);
-
-    if (!error) {
-      console.log("User recently viewed updated", userData);
-      setUser((prevUser) => ({
-        ...prevUser,
-        recently_viewed: prevUser?.recently_viewed ? [...prevUser?.recently_viewed, id] : [id],
-      }));
+    if (project?.title) {
+      loadProjectDescription(project.description);
     }
-  }
+  }, [project]);
 
-  useEffect(() => {
-    if (user?.id && user?.id !== id && !user?.recently_viewed?.includes(id)) {
-      updateRecentlyViewed();
-    }
-    setIsMyProfile(user?.id === id);
-  }, [user?.id, id]);
-
-  if (!profile) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <p className="text-lg">Profile is loading...</p>
-      </div>
-    );
-  }
+  if (!project) return <div>Loading…</div>;
 
   return (
-    <div>
-      <RootNavigation title={"Profile"} />
+    <div className={'mb-10'}>
+      <RootNavigation title={project.title} backBtn/>
+
       <div className="pt-4 pb-8">
-        <ProfileImage id={id} isMyProfile={isMyProfile} name={profile.name || profile.official_name || profile.agency_name} imgUrl={profile?.img_url} />
-        <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />
-        <PrimaryBtn title="Start A Project" classes="w-full block mb-12" onClick={()=> {
-          router.push("/projects");
-        }} />
-        <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id} />
-
-        {groups?.length && groups.map((group) => {
-          return (
-            <Group
-              key={group.id}
-              id={id}
-              groupId={group.id}
-              title={group.title}
-              data={profile[group.column_name]}
-              columnName={group.column_name}
-              isMyProfile={isMyProfile}
-              profile={profile}
-            />
-          )
-        })}
-
-        <NavigationBar />
+        <img
+          src={project.img_url}
+          alt="Preview"
+          className="mt-2 rounded-md w-full h-auto max-h-[400px] object-contain"
+        />
+        <NavigationBar/>
       </div>
+      <div className="p-3 bg-gray-100 rounded-lg shadow-md mb-4 border border-gray-300">
+        {sectionTitles.length > 0 &&
+          answersBySection[sectionTitles[currentFormPage]] && (
+            <div key={sectionTitles[currentFormPage]} className="mb-6">
+              <h4 className="font-semibold text-lg mb-3">
+                {sectionTitles[currentFormPage]}
+              </h4>
+              <div>
+                {Object.entries(
+                  answersBySection[sectionTitles[currentFormPage]]
+                ).map(([questionTitle, value]) => (
+                  <div
+                    key={questionTitle}
+                    className="mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"
+                  >
+                    <p className="mb-2">
+                      <b>{questionTitle}:</b>
+                    </p>
+                    <span className="text-gray-700">
+                      {Array.isArray(value) ? value.join(", ") : value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+      </div>
+      {sectionTitles.length > 0 && (
+        <div className="flex items-center justify-between mb-4 overflow-x-auto gap-2 pb-4 -mx-6 px-8">
+          {sectionTitles.map((_, idx) => (
+            <span
+              key={idx}
+              className={`${
+                currentFormPage === idx ? "bg-green-800" : "bg-gray-300"
+              } min-w-8 shrink-0 grow h-1 cursor-pointer rounded-full`}
+              onClick={() => setCurrentFormPage(idx)}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
-export default ProfilePage;
+export default ProjectPage;
