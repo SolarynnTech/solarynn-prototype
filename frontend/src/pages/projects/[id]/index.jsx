@@ -41,7 +41,7 @@ const ProjectPage = () => {
     if (qErr) return console.error(qErr);
 
     const mid = Math.ceil(questions.length / 2);
-    const firstChunk  = questions.slice(0, mid);
+    const firstChunk = questions.slice(0, mid);
     const secondChunk = questions.slice(mid);
 
     const buckets = {
@@ -73,10 +73,10 @@ const ProjectPage = () => {
   if (!project) return <div>Loading…</div>;
 
   return (
-    <div className={'mb-10'}>
+    <div className={"mb-10"}>
       <RootNavigation title={project.title} backBtn/>
 
-      <div className="pt-4 pb-8">
+      <div className="pt-4 pb-6">
         <img
           src={project.img_url}
           alt="Preview"
@@ -84,13 +84,19 @@ const ProjectPage = () => {
         />
         <NavigationBar/>
       </div>
+      <div className={"mb-6"}>
+        <h4 className="font-semibold text-lg mb-1">
+          Project Description:
+        </h4>
+        <p>{project.project_description}</p>
+      </div>
+      <h4 className="font-semibold text-lg mb-2">
+        Details:
+      </h4>
       <div className="p-3 bg-gray-100 rounded-lg shadow-md mb-4 border border-gray-300">
         {sectionTitles.length > 0 &&
           answersBySection[sectionTitles[currentFormPage]] && (
             <div key={sectionTitles[currentFormPage]} className="mb-6">
-              <h4 className="font-semibold text-lg mb-3">
-                {sectionTitles[currentFormPage]}
-              </h4>
               <div>
                 {Object.entries(
                   answersBySection[sectionTitles[currentFormPage]]
