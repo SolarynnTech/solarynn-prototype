@@ -4,14 +4,14 @@ import useQuestionnaireStore from "../../stores/useQuestionnaireStore";
 import useUserStore from "@/stores/useUserStore";
 import useProfilesStore from "@/stores/useProfilesStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-
+import ActionBtn from "@/components/buttons/ActionBtn.jsx";
+import { useRouter } from "next/router";
 
 const DetailsPanel = ({ id, profile, isMyProfile }) => {
-  const { forms } = useQuestionnaireStore();
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
   const { ALL_FIELDS, setProfiles } = useProfilesStore();
-
+  const router = useRouter();
   const containerRef = useRef(null);
 
   const [answersWithTitles, setAnswersWithTitles] = useState({});
@@ -122,7 +122,10 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
   return (
     <div className="mb-12" ref={containerRef}>
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-bold mb-0">Profile Details</h3>
+        <div className="flex items-center justify-between w-full">
+          <h3 className="font-bold mb-0">Profile Details</h3>
+          <ActionBtn title="Edit" onClick={()=>{router.push("/questionnaire")}} />
+        </div>
         {!isMyProfile && (
           <Bookmark
             fill={user.booked_profiles?.includes(profile.id) ? "#166534" : "transparent"}
@@ -146,7 +149,8 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
             <div className="">
               {Object.entries(answersWithTitles[sectionTitles[currentFormPage]]).map(
                 ([questionTitle, value]) => (
-                  <div key={questionTitle} className={"mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"}>
+                  <div key={questionTitle}
+                       className={"mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"}>
                     <p className="mb-2"><b>{questionTitle}:</b></p>
                     <span className="text-gray-700">
                       {Array.isArray(value) ? value.join(", ") : value}
