@@ -110,6 +110,20 @@ const QuestionsPage = () => {
       return;
     }
 
+    const { data: answers, error: answersErr } = await supabase
+      .from("users")
+      .select("questionnaire_answers")
+      .eq("id", user.id)
+      .maybeSingle();
+
+    if (answersErr) {
+      setError(secsErr?.message || "Failed to fetch answrs");
+      setLoading(false);
+      return;
+    } else {
+      setAnswersBySection(answers?.questionnaire_answers || {});
+    }
+
     const result = secs.map((sec) => ({
       ...sec,
       questions: qs.filter((q) => q.sectionId === sec.id),
@@ -179,7 +193,7 @@ const QuestionsPage = () => {
         />
 
         <PrimaryBtn onClick={handleNext} title={currentIndex < data.length - 1 ? "Next" : "Finish"}
-                 disabled={!allAnswered}   classes="w-full block"/>
+                    disabled={!allAnswered} classes="w-full block"/>
       </div>
     </div>
   );
