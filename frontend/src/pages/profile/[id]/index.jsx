@@ -35,7 +35,8 @@ const ProfilePage = () => {
     if (!profiles) return;
     const p = profiles.find((p) => p.id === id);
     setProfile(p);
-    if (p?.bio) setBio(p.bio); setCurrentBio(p.bio);
+    if (p?.bio) setBio(p.bio);
+    setCurrentBio(p.bio);
   }, [profiles, id]);
 
   useEffect(() => {
@@ -59,6 +60,12 @@ const ProfilePage = () => {
   }, [profile?.role]);
 
   const handleSaveBio = async () => {
+    if (bio.trim() === "") {
+      setBio(currentBio);
+      setEditingBio(false);
+      return;
+    }
+
     setSavingBio(true);
     const { data: updated, error } = await supabase
       .from("users")
@@ -72,6 +79,7 @@ const ProfilePage = () => {
     } else {
       setProfile(updated);
       setUser(prev => ({ ...prev, bio: updated.bio }));
+      setCurrentBio(updated.bio);   // обновляем базовый стейт
       setEditingBio(false);
     }
   };
@@ -132,7 +140,7 @@ const ProfilePage = () => {
                       />
                     </>
                   ) : (
-                    <ActionBtn title="Edit" onClick={() => setEditingBio(true)} />
+                    <ActionBtn title="Edit" onClick={() => setEditingBio(true)}/>
                   )}
                 </Box>
               )}
@@ -146,6 +154,12 @@ const ProfilePage = () => {
                     multiline
                     minRows={3}
                     value={bio}
+                    onBlur={() => {
+                      if (bio.trim() === "") {
+                        setBio(currentBio);
+                        setEditingBio(false);
+                      }
+                    }}
                     onChange={e => setBio(e.target.value)}
                     placeholder="Write a public-facing bio or description..."
                     disabled={savingBio}
@@ -173,7 +187,6 @@ const ProfilePage = () => {
             </Box>
           </Box>
         )}
-
 
 
         <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id}/>
