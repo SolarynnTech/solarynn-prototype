@@ -58,6 +58,14 @@ const QuestionsPage = () => {
   };
 
   const currentSection = data[currentIndex];
+  const currentAnswers = answersBySection[currentSection?.id] || {};
+  const allAnswered = currentSection?.questions?.every(q => {
+    const val = currentAnswers[q.id];
+    if (q.type === "multiselect") {
+      return Array.isArray(val) && val.length > 0;
+    }
+    return val !== undefined && val !== null && String(val).trim() !== "";
+  });
 
   const getSectionsAndQuestions = async () => {
     setLoading(true);
@@ -171,7 +179,7 @@ const QuestionsPage = () => {
         />
 
         <PrimaryBtn onClick={handleNext} title={currentIndex < data.length - 1 ? "Next" : "Finish"}
-                    classes="w-full block"/>
+                 disabled={!allAnswered}   classes="w-full block"/>
       </div>
     </div>
   );
