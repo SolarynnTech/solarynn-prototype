@@ -1,17 +1,46 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import RootNavigation from "@/components/Nav/Nav";
 import NavigationBar from "@/components/profile/NavigationBar";
+import useUserStore from "@/stores/useUserStore.js";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { IconButton } from "@mui/material";
+import { Loader } from "lucide-react";
 
 const ProjectPage = () => {
   const router = useRouter();
   const { id } = router.query;
+  const { user } = useUserStore();
+  const [favoriteProjects, setFavoriteProjects] = useState([]);
+  const [isFav, setIsFav] = useState(false);
   const supabase = useSupabaseClient();
   const [project, setProject] = useState(null);
   const [answersBySection, setAnswersBySection] = useState({});
   const [sectionTitles, setSectionTitles] = useState([]);
   const [currentFormPage, setCurrentFormPage] = useState(0);
+
+  const handleToggleFav = async () => {
+    const newFavs = isFav
+      ? favoriteProjects.filter(pid => pid !== id)
+      : [...favoriteProjects, id];
+
+    const { error } = await supabase
+      .from("users")
+      .update({ favorite_projects: newFavs })
+      .eq("id", user.id)
+      .select()
+      .single();
+
+    if (error) {
+      console.error("Could not update favorites:", error);
+      return;
+    }
+
+    setFavoriteProjects(newFavs);
+    setIsFav(!isFav);
+  };
 
   const loadProject = async () => {
     const { data: proj, error } = await supabase
@@ -24,6 +53,21 @@ const ProjectPage = () => {
       return;
     }
     setProject(proj);
+
+    const { data: favProgect, error: favProjError } = await supabase
+      .from("users")
+      .select("favorite_projects")
+      .eq("id", user.id)
+      .single();
+
+    if (favProjError) {
+      console.error("Error fetching project:", favProjError);
+      return;
+    }
+
+    const favs = favProgect.favorite_projects || [];
+    setFavoriteProjects(favs);
+    setIsFav(favs.includes(id));
   };
 
   const loadProjectDescription = async (answersMap) => {
@@ -61,8 +105,8 @@ const ProjectPage = () => {
   };
 
   useEffect(() => {
-    if (id) loadProject();
-  }, [id]);
+    if (id && user?.id) loadProject();
+  }, [id, user?.id]);
 
   useEffect(() => {
     if (project?.title) {
@@ -70,18 +114,42 @@ const ProjectPage = () => {
     }
   }, [project]);
 
-  if (!project) return <div>Loading…</div>;
+  if (!project) {
+    return (
+      <div className="flex justify-center items-center h-[75vh]">
+        <Loader className="animate-spin text-green-800"/>
+        <p className="ml-2">Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className={"mb-10"}>
       <RootNavigation title={project.title} backBtn/>
 
       <div className="pt-4 pb-6">
-        <img
-          src={project.img_url}
-          alt="Preview"
-          className="mt-2 rounded-md w-full h-auto max-h-[400px] object-contain"
-        />
+        <div className={"relative"}>
+          <img
+            src={project.img_url}
+            alt="Preview"
+            className="mt-2 rounded-md w-full h-auto max-h-[400px] object-contain"
+          />
+          <IconButton
+            onClick={handleToggleFav}
+            sx={{
+              position: "absolute",
+              zIndex: 10,
+              top: 16,
+              right: 16,
+              bgcolor: "rgba(255,255,255,1)",
+              "&:hover": { bgcolor: "rgba(255,255,255,0.9)" }
+            }}
+          >
+            {isFav
+              ? <FavoriteIcon color="success"/>
+              : <FavoriteBorderIcon color="success"/>}
+          </IconButton>
+        </div>
         <NavigationBar/>
       </div>
       <div className={"mb-6"}>
