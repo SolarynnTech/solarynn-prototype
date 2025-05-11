@@ -49,24 +49,16 @@ export default function ResetPassword() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter Your Email"
           label="Your Email"
-          required={true}
+          required
         />
 
-        <PrimaryBtn
-          type="submit"
-          title="Send Reset Link"
-          classes="w-full block mt-6"
-        />
+        <PrimaryBtn type="submit" title="Send Reset Link" classes="w-full block mt-6" />
 
         {message && <p className="text-green-700 mt-4 text-center">{message}</p>}
         {error && <p className="text-red-600 mt-4 text-center">{error}</p>}
 
         <div className="text-center mt-6 text-green-800">
-          <button
-            type="button"
-            className="underline bg-transparent border-0"
-            onClick={() => router.push("/login")}
-          >
+          <button type="button" className="underline bg-transparent border-0" onClick={() => router.push("/login")}>
             Back to Login
           </button>
         </div>

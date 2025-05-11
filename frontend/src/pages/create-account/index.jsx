@@ -153,7 +153,7 @@ const CreateAccountPage = () => {
             onChange={handleInputChange}
             placeholder="Enter Your Email"
             label="Your Email"
-            required={true}
+            required
           />
           <LabeledInput
             type="email"
@@ -162,7 +162,7 @@ const CreateAccountPage = () => {
             onChange={handleInputChange}
             placeholder="Confirm Your Email"
             label="Confirm Your Email"
-            required={true}
+            required
           />
           <LabeledInput
             type="password"
@@ -171,7 +171,7 @@ const CreateAccountPage = () => {
             onChange={handleInputChange}
             placeholder="Enter Your Password"
             label="Password"
-            required={true}
+            required
           />
           <LabeledInput
             type="password"
@@ -180,7 +180,7 @@ const CreateAccountPage = () => {
             onChange={handleInputChange}
             placeholder="Confirm Your Password"
             label="Re-Entry Password"
-            required={true}
+            required
           />
           <LabeledInput
             type="tel"
@@ -189,7 +189,7 @@ const CreateAccountPage = () => {
             onChange={handleInputChange}
             placeholder="Enter Your Number"
             label="Your Phone number"
-            required={true}
+            required
           />
           <LabeledInput
             type="tel"
@@ -198,7 +198,7 @@ const CreateAccountPage = () => {
             onChange={handleInputChange}
             placeholder="Confirm Your Number"
             label="Re-Entry Phone Number"
-            required={true}
+            required
           />
 
           <PrimaryBtn type={"submit"} title={"Continue"} classes={"w-full block mb-4 mt-9"} />

@@ -1,0 +1,24 @@
+.settingsContainer {
+  margin-top: 5em;
+}
+.settingsContainer__Item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #BABABA;
+  padding-bottom: 1em;
+}
+.settingsContainer__Item:not(:last-child) {
+  margin-bottom: 3em;
+}
+.settingsContainer__Item__Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.settingsContainer__Item__Header__Title {
+  font-size: 16px;
+  color: #000;
+  font-weight: 500;
+  margin-left: 10px;
+}

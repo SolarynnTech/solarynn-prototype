@@ -29,14 +29,10 @@ export default function HomePage() {
     "To Hire",
   ];
 
-  const includedCategories = universeCategories.filter(
-    el => !categoryNamesExcluded.includes(el.title)
-  );
+  const includedCategories = universeCategories.filter((el) => !categoryNamesExcluded.includes(el.title));
 
   const fetchUniverseCategories = async () => {
-    const { data, error } = await supabase
-      .from("universe_categories")
-      .select("*")
+    const { data, error } = await supabase.from("universe_categories").select("*");
 
     if (error) {
       console.error("Failed to fetch categories:", error);
@@ -44,7 +40,7 @@ export default function HomePage() {
       setUniverseCategories(data);
     }
     setLoading(false);
-  }
+  };
 
   // const fetchCategories = async () => {
   //   const { data, error } = await supabase
@@ -66,7 +62,7 @@ export default function HomePage() {
   return (
     <div className="pb-8">
       <nav className="flex items-center justify-between relative py-2 gap4 mb-6">
-        <h1>Welcome {user?.name}</h1>
+        <h1>Welcome {user?.name || user?.email}</h1>
         <div className="flex items-center justify-between gap-4">
           <Mail className="cursor-pointer hover:text-green-800" onClick={() => router.push("/mail")} />
           <Bell className="cursor-pointer hover:text-green-800" onClick={() => router.push("/notifications")} />
@@ -103,7 +99,6 @@ export default function HomePage() {
     </div>
   );
 }
-
 
 export async function getServerSideProps(context) {
   const supabase = createPagesServerClient(context);

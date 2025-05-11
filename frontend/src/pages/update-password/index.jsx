@@ -51,14 +51,10 @@ export default function UpdatePassword() {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Enter Your New Password"
           label="New Password"
-          required={true}
+          required
         />
 
-        <PrimaryBtn
-          type="submit"
-          title="Update Password"
-          classes="w-full block mt-6"
-        />
+        <PrimaryBtn type="submit" title="Update Password" classes="w-full block mt-6" />
 
         {message && <p className="text-green-700 mt-4 text-center">{message}</p>}
         {error && <p className="text-red-600 mt-4 text-center">{error}</p>}

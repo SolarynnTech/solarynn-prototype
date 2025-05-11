@@ -10,7 +10,7 @@ export default function Login() {
   const router = useRouter();
   const supabase = useSupabaseClient();
   const [error, setError] = useState("");
-  const {user} = useUserStore();
+  const { user } = useUserStore();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -21,7 +21,7 @@ export default function Login() {
 
   useEffect(() => {
     if (!isLoading && session?.user) {
-      if(user?.domain && user?.role && user?.subdivision) {
+      if (user?.domain && user?.role && user?.subdivision) {
         router.push("/home");
       } else {
         router.push("/onboarding");
@@ -104,7 +104,7 @@ export default function Login() {
           onChange={handleInputChange}
           placeholder="Enter Your Email"
           label="Your Email"
-          required={true}
+          required
         />
 
         <LabeledInput
@@ -114,7 +114,7 @@ export default function Login() {
           onChange={handleInputChange}
           placeholder="Enter Your Password"
           label="Password"
-          required={true}
+          required
         />
 
         <div className="text-right">
@@ -129,11 +129,7 @@ export default function Login() {
           </button>
         </div>
 
-        <PrimaryBtn
-          type={"submit"}
-          title={"Login"}
-          classes={"w-full block mb-4 mt-9"}
-        />
+        <PrimaryBtn type={"submit"} title={"Login"} classes={"w-full block mb-4 mt-9"} />
 
         <div className="text-green-800 text-center mt-4">
           New user?{" "}
@@ -148,13 +144,7 @@ export default function Login() {
           </button>
         </div>
 
-        {error && (
-          <div
-            style={{ color: "red", textAlign: "center", margin: "10px 0" }}
-          >
-            {error}
-          </div>
-        )}
+        {error && <div style={{ color: "red", textAlign: "center", margin: "10px 0" }}>{error}</div>}
       </form>
     </div>
   );
