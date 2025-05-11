@@ -6,8 +6,12 @@ import NavigationBar from "@/components/profile/NavigationBar";
 import useUserStore from "@/stores/useUserStore.js";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import { IconButton } from "@mui/material";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { IconButton, Box, Typography, Dialog } from "@mui/material";
 import { Loader } from "lucide-react";
+import ImageDropZone from "@/components/ImageDropZone.jsx";
+import ActionBtn from "@/components/buttons/ActionBtn.jsx";
+import CloseIcon from "@mui/icons-material/Close";
 
 const ProjectPage = () => {
   const router = useRouter();
@@ -20,7 +24,11 @@ const ProjectPage = () => {
   const [answersBySection, setAnswersBySection] = useState({});
   const [sectionTitles, setSectionTitles] = useState([]);
   const [currentFormPage, setCurrentFormPage] = useState(0);
-
+  const [imageUrls, setImageUrls] = useState([]);
+  const [uploadingImages, setUploading] = useState(false);
+  const [editingImages, setEditingImages] = useState(false);
+  const [viewerOpen, setViewerOpen] = useState(false);
+  const [viewerUrl, setViewerUrl] = useState("");
   const handleToggleFav = async () => {
     const newFavs = isFav
       ? favoriteProjects.filter(pid => pid !== id)
@@ -53,7 +61,7 @@ const ProjectPage = () => {
       return;
     }
     setProject(proj);
-
+    setImageUrls(proj.images || []);
     const { data: favProgect, error: favProjError } = await supabase
       .from("users")
       .select("favorite_projects")
@@ -68,6 +76,78 @@ const ProjectPage = () => {
     const favs = favProgect.favorite_projects || [];
     setFavoriteProjects(favs);
     setIsFav(favs.includes(id));
+  };
+
+  const handleUploadImage = async (file) => {
+    setUploading(true);
+
+    const ext = file.name.split(".").pop();
+    const name = `${crypto.randomUUID()}.${ext}`;
+    const path = `private/${id}/${name}`;
+    const { error: upErr } = await supabase
+      .storage
+      .from("project-images")
+      .upload(path, file, { cacheControl: "3600", upsert: false });
+    if (upErr) {
+      console.error("Upload failed:", upErr);
+      setUploading(false);
+      return;
+    }
+
+    const { data: urlData, error: urlErr } = supabase
+      .storage
+      .from("project-images")
+      .getPublicUrl(path);
+    if (urlErr || !urlData?.publicUrl) {
+      console.error("URL error:", urlErr);
+      setUploading(false);
+      return;
+    }
+    const publicUrl = urlData.publicUrl;
+
+    const newUrls = [...imageUrls, publicUrl];
+    setImageUrls(newUrls);
+
+    const { error: dbErr } = await supabase
+      .from("projects")
+      .update({ images: newUrls })
+      .eq("id", id);
+    if (dbErr) console.error("Couldn’t save image URLs:", dbErr);
+
+    setUploading(false);
+  };
+
+  const handleDeleteImage = async (index, url) => {
+    try {
+      const urlObj = new URL(url);
+      const parts = urlObj.pathname.split("/public/project-images/");
+      if (parts.length < 2) {
+        console.error("Couldn't extract storage path from URL:", url);
+        return;
+      }
+      const path = decodeURIComponent(parts[1]);
+      const { error: delErr } = await supabase
+        .storage
+        .from("project-images")
+        .remove([path]);
+
+      if (delErr) {
+        console.error("Delete failed:", delErr);
+        return;
+      }
+
+      const newUrls = imageUrls.filter((_, i) => i !== index);
+      setImageUrls(newUrls);
+
+      const { error: dbErr } = await supabase
+        .from("projects")
+        .update({ images: newUrls })
+        .eq("id", id);
+
+      if (dbErr) console.error("Couldn’t save image URLs:", dbErr);
+    } catch (e) {
+      console.error("Error in handleDeleteImage:", e);
+    }
   };
 
   const loadProjectDescription = async (answersMap) => {
@@ -199,6 +279,117 @@ const ProjectPage = () => {
           ))}
         </div>
       )}
+
+      <Box mb={4}>
+        <div className="flex justify-between items-center mb-4">
+          <h4 className="font-semibold text-lg mb-1">Photos:</h4>
+
+          {user.id === project.owner && (
+            <ActionBtn
+              title={editingImages ? "Done Editing" : "Edit Images"}
+              onClick={() => setEditingImages(!editingImages)}
+            />
+          )}
+        </div>
+
+        {editingImages && user.id === project.owner && (
+          <>
+            <Box mb={2}>
+              {uploadingImages ? (
+                <p>Uploading…</p>
+              ) : imageUrls.length < 10 ? (
+                <ImageDropZone
+                  onFile={handleUploadImage}
+                  uploading={uploadingImages}
+                  previewUrl={null}
+                />
+              ) : null}
+            </Box>
+            <Box className="flex justify-end mb-2">
+              <Typography variant="caption" className="text-gray-600">
+                {imageUrls.length} / 10 images
+              </Typography>
+            </Box>
+          </>
+        )}
+
+        <Box className="overflow-x-auto hide-scrollbar -mx-6 px-6 mt-4">
+          <Box className="flex gap-4 flex-nowrap relative">
+            {imageUrls.map((url, idx) => (
+              <Box key={url} className="relative flex-shrink-0">
+                <img
+                  src={url}
+                  alt="Project asset"
+                  className={`w-44 h-60 object-cover rounded ${
+                    !editingImages ? "cursor-pointer" : ""
+                  }`}
+                  onClick={() => {
+                    if (!editingImages) {
+                      setViewerUrl(url);
+                      setViewerOpen(true);
+                    }
+                  }}
+                />
+
+                {editingImages && user.id === project.owner && (
+                  <IconButton
+                    size="small"
+                    onClick={() => handleDeleteImage(idx, url)}
+                    sx={{
+                      position: "absolute",
+                      top: 4,
+                      right: 4,
+                      width: 32,
+                      height: 32,
+                      p: 0,
+                      borderRadius: "50%",
+                      bgcolor: "rgba(255,255,255,1)",
+                      boxShadow: "0px 2px 4px rgba(0,0,0,0.2)",
+                      "&:hover": { bgcolor: "rgba(255,255,255,0.8)" },
+                    }}
+                  >
+                    <DeleteIcon fontSize="small" sx={{ color: "black" }}/>
+                  </IconButton>
+                )}
+              </Box>
+            ))}
+          </Box>
+        </Box>
+      </Box>
+      <Dialog
+        open={viewerOpen}
+        onClose={() => setViewerOpen(false)}
+        maxWidth="xl"
+        fullWidth
+        PaperProps={{
+          sx: { backgroundColor: "transparent", boxShadow: "none" }
+        }}
+      >
+        <IconButton
+          onClick={() => setViewerOpen(false)}
+          sx={{
+            position: "absolute",
+            top: 16,
+            right: 16,
+            zIndex: 10,
+            bgcolor: "rgba(0,0,0,0.5)",
+            color: "#fff",
+            "&:hover": { bgcolor: "rgba(0,0,0,0.7)" },
+          }}
+        >
+          <CloseIcon/>
+        </IconButton>
+        <Box
+          component="img"
+          src={viewerUrl}
+          sx={{
+            width: "100%",
+            height: "100vh",
+            objectFit: "contain",
+            bgcolor: "rgba(0,0,0,0.9)",
+          }}
+        />
+      </Dialog>
     </div>
   );
 };
