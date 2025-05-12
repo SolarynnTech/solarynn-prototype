@@ -1,9 +1,26 @@
 import React from "react";
 import PrimaryBtn from "../../components/buttons/PrimaryBtn";
 import { useRouter } from "next/router";
+import useUserStore from "@/stores/useUserStore";
 
 const OnboardingStartPage = () => {
   const router = useRouter();
+
+  const {user} = useUserStore();
+
+  React.useEffect(() => {
+    if (user){
+      if(user.role && !user.domain) {
+        router.push("/onboarding/domain");
+      } else if (user.role && user.domain && !user.subdivision) {
+        router.push("/onboarding/sub-division");
+      } else if(user.role && user.domain && user.subdivision && (!user.questionnaire_answers || !Object.keys(user.questionnaire_answers).length)) {
+        router.push("/questionnaire");
+      } else {
+        router.push("/home");
+      }
+    }
+  }, [user]);
 
   return (
     <div className="flex flex-col h-full justify-between grow">

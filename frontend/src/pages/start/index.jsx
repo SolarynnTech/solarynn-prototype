@@ -7,28 +7,13 @@ import Link from 'next/link';
 
 const StartPage = () => {
   const router = useRouter();
-  const supabase = useSupabaseClient();
   const { session, isLoading: sessionLoading } = useSessionContext();
 
-  async function fetchData() {
-    console.log(session, "session")
-    if(session) {
-        router.push("/onboarding/start");
-    }
-    const { data, error } = await supabase
-      .from("ad_agencies_data")
-      .select("*");
-
-    if (error) {
-      console.error("Error fetching use case templates:", error);
-    } else {
-      console.log("Fetched data:", data);
-    }
-  }
-
   React.useEffect(() => {
-    fetchData();
-  }, []);
+    if(session) {
+      router.push("/onboarding/start");
+    }
+  }, [session]);
 
   return (
     <div>
