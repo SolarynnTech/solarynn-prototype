@@ -29,8 +29,6 @@ export default function HomePage() {
     "To Hire",
   ];
 
-  const includedCategories = universeCategories.filter((el) => !categoryNamesExcluded.includes(el.title));
-
   const fetchUniverseCategories = async () => {
     const { data, error } = await supabase.from("universe_categories").select("*");
 
@@ -82,11 +80,19 @@ export default function HomePage() {
         <p>Loading categories...</p>
       ) : (
         <div className="grid grid-cols-2 gap-3 mb-12">
-          {includedCategories?.map((category) => (
+          {universeCategories?.sort((a, b) => {
+            const aAvailable = !categoryNamesExcluded.includes(a.title);
+            const bAvailable = !categoryNamesExcluded.includes(b.title);
+            if (aAvailable && !bAvailable) return -1;
+            if (!aAvailable && bAvailable) return 1;
+            return 0;
+            }
+          ).map((category) => (
             <CategoryTile
               key={category.id}
               title={category.title}
               img_url={category.img_url}
+              isAvailable={!categoryNamesExcluded.includes(category.title)}
               bg_color={category.color}
               onClick={() => router.push("/universe-categories/" + category.id)}
             />
