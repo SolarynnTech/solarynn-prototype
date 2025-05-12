@@ -4,6 +4,7 @@ import RootNavigation from "@/components/Nav/Nav";
 import LabeledInput from "@/components/forms/LabeledInput";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import useUserStore from "@/stores/useUserStore";
 
 export default function UpdatePhone() {
   const [currentPhone, setCurrentPhone] = useState("");
@@ -12,12 +13,17 @@ export default function UpdatePhone() {
   const [error, setError] = useState("");
   const supabase = useSupabaseClient();
   const router = useRouter();
+  const { user } = useUserStore();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
-    if (!newPhone || !reNewPhone) {
+    if (!currentPhone || !newPhone || !reNewPhone) {
       setError("All fields are required.");
+      return;
+    }
+    if (currentPhone !== user.phone) {
+      setError("Current Phone number does not match.");
       return;
     }
     if (newPhone !== reNewPhone) {
@@ -26,10 +32,15 @@ export default function UpdatePhone() {
     }
 
     try {
-      const { error: updateError } = await supabase.auth.updateUser({ phone: newPhone });
+      const { error: updateError } = await supabase
+        .from("users")
+        .update({
+          phone: newPhone,
+        })
+        .eq("id", user.id);
 
       if (updateError) {
-        setError(updateError.message);
+        setError("Failed to update Phone Number.");
         return;
       }
 
@@ -43,7 +54,7 @@ export default function UpdatePhone() {
     <div>
       <RootNavigation title="Update Phone Number" backBtn={true} />
       <form onSubmit={handleSubmit} className="pt-4">
-        {/* <LabeledInput
+        <LabeledInput
           label="Your Phone Number"
           type="tel"
           name="currentPhone"
@@ -51,7 +62,7 @@ export default function UpdatePhone() {
           onChange={(e) => setCurrentPhone(e.target.value)}
           placeholder="Enter Your Current Phone Number"
           required
-        /> */}
+        />
         <LabeledInput
           label="Your New Phone Number"
           type="tel"
