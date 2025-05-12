@@ -1,100 +1,53 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import RootNavigation from "@/components/Nav/Nav";
-import PrimaryBtn from "@/components/buttons/PrimaryBtn";
-import CategoryTile from "@/components/tiles/CategoryTile";
+import { CategorySelection } from '@/components/onboarding/CategorySelection';
 import useCategoriesStore from "@/stores/useCategoriesStore";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
-export default function SelectRole() {
-  const router = useRouter();
+export default function () {
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
-  const { role, setRole } = useCategoriesStore();
+  const { role, setRole, setDomain, setSubDivision } = useCategoriesStore();
 
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  const fetchCategories = async () => {
-    const { data, error } = await supabase
+  const fetchRoles = () => {
+    return supabase
       .from("categories")
       .select("*")
       .eq("is_role", true);
-
-    if (error) {
-      console.error("Error fetching categories:", error);
-    } else {
-      setCategories(data);
-    }
-
-    setLoading(false);
   };
 
-  const selectRole = async (category) => {
-    console.log("user", user);
-    const { data, error } = await supabase
-      .from("users")
-      .update({ role: category?.id })
-      .eq("id", user?.id);
-
-    if (error) {
-      console.error("Error updating role:", error);
-      return;
-    }
-
+  const selectRole = (category) => {
     setRole({ ...category, level: "role" });
   };
 
-  const handleNext = () => {
-    if (role) {
-      router.push("/onboarding/domain");
+  const saveRole = async (id) => {
+    // Reset the domain and subDivision when the role changes
+    const { error, data } = await supabase
+      .from("users")
+      .update({ role: id, domain: null, subdivision: null })
+      .eq("id", user?.id);
+
+    if (!error) {
+      setDomain(null);
+      setSubDivision(null);
     }
+
+    return { error, data };
   };
 
-  useEffect(() => {
-    fetchCategories();
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="flex items-center justify-center h-screen">
-        <p>Loading categories...</p>
-      </div>
-    );
-  }
+  // TODO: properly handle no user logged in
+  if (!user) return null;
 
   return (
-    <div>
-      <RootNavigation title={"Role / Activity"} backBtn={true} />
-
-      <div className="pt-4">
-        <h3 className="mb-4 font-medium">
-          Please select 1 of {categories.length} roles that define you the most,
-          or what you belong to
-        </h3>
-
-        <div className="grid grid-cols-2 gap-3">
-          {categories.map((category) => (
-            <CategoryTile
-              key={category.id}
-              title={category.title}
-              img_url={category.img_url}
-              bg_color={category.color}
-              isSelected={role?.title === category.title}
-              onClick={() => selectRole(category)}
-            />
-          ))}
-        </div>
-      </div>
-
-      <PrimaryBtn
-        onClick={handleNext}
-        disabled={!role}
-        title="Next"
-        classes="block w-full mt-8"
-      />
-    </div>
+    <CategorySelection
+      title="Role / Activity"
+      subtitle={null}
+      description="Please select a role that defines you the most, or what you belong to"
+      nextRoute="/onboarding/domain"
+      selectedCategory={role}
+      selectCategory={selectRole}
+      saveCategory={saveRole}
+      fetchCategories={fetchRoles}
+    />
   );
 }
 
