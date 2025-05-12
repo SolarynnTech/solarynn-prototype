@@ -169,34 +169,6 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
               />
               <TextField
                 id="outlined-basic"
-                label="Email"
-                variant="standard"
-                fullWidth
-                name="email"
-                slotProps={{
-                  inputLabel: {
-                    shrink: true,
-                  },
-                }}
-                value={user?.email ? user.email : ""}
-                onChange={handleChange}
-              />
-              <TextField
-                id="outlined-basic"
-                label="Phone Number"
-                variant="standard"
-                fullWidth
-                name="phone"
-                slotProps={{
-                  inputLabel: {
-                    shrink: true,
-                  },
-                }}
-                value={user?.phone ? user.phone : ""}
-                onChange={handleChange}
-              />
-              <TextField
-                id="outlined-basic"
                 label="Address"
                 variant="standard"
                 fullWidth
