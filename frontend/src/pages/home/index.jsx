@@ -61,10 +61,9 @@ export default function HomePage() {
 
   return (
     <div className="pb-8">
-      <nav className="flex items-center justify-between relative py-2 gap4 mb-6">
+      <nav className="flex items-start justify-between relative gap4 mb-6">
         <h1>Welcome {user?.name || user?.email}</h1>
-        <div className="flex items-center justify-between gap-4">
-          <Mail className="cursor-pointer hover:text-green-800" onClick={() => router.push("/mail")} />
+        <div className="flex items-center justify-between gap-4 pt-2">
           <Bell className="cursor-pointer hover:text-green-800" onClick={() => router.push("/notifications")} />
           <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")} />
         </div>

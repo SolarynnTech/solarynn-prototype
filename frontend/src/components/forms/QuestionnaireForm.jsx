@@ -31,7 +31,7 @@ export default function QuestionnaireForm({
   };
 
   return (
-    <Paper sx={{ p: 4, mb: 4 }} elevation={2} className={'mt-4 !bg-[#F5F5F5]'}>
+    <Paper sx={{ p: 3, mb: 4 }} elevation={2} className={'mt-4 !bg-[#F5F5F5]'}>
       {section.title && (
         <Typography variant="h5" gutterBottom className={"!font-bold !text-base !mb-4"}>
           {section.title}
