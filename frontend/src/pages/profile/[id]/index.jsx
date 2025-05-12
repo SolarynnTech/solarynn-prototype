@@ -95,7 +95,7 @@ const ProfilePage = () => {
   return (
     <div>
       <RootNavigation title={isMyProfile ? "My Profile" : "Profile"} backBtn/>
-      <div className="pt-4 pb-8 px-4">
+      <div className="pt-4 pb-8">
         <ProfileImage
           id={id}
           isMyProfile={isMyProfile}

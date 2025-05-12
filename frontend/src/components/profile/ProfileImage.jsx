@@ -99,7 +99,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
   };
 
   return (
-    <div className="mb-6 -mx-6 p-6 bg-gray-100">
+    <div className="mb-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-bold mb-0">User Info</h3>
         {isMyProfile && (
