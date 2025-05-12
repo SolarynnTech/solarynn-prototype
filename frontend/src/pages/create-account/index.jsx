@@ -15,11 +15,9 @@ const CreateAccountPage = () => {
 
   const [formData, setFormData] = useState({
     email: "",
-    confirmEmail: "",
     password: "",
     confirmPassword: "",
     phone: "",
-    confirmPhone: "",
   });
 
   const supabase = useSupabaseClient();
@@ -92,8 +90,8 @@ const CreateAccountPage = () => {
     e.preventDefault();
 
     // Basic validation
-    const { email, confirmEmail, password, confirmPassword, phone, confirmPhone } = formData;
-    if (email !== confirmEmail || password !== confirmPassword || phone !== confirmPhone) {
+    const { email, password, confirmPassword, phone } = formData;
+    if (password !== confirmPassword ) {
       setError("Please make sure all fields match.");
       return;
     }
