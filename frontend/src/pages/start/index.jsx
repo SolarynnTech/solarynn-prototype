@@ -4,10 +4,12 @@ import RootNavigation from "@/components/Nav/Nav";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
 import Link from 'next/link';
+import {Checkbox} from "@mui/material";
 
 const StartPage = () => {
   const router = useRouter();
   const { session, isLoading: sessionLoading } = useSessionContext();
+  const [tosAccepted, setTosAccepted] = React.useState(false);
 
   React.useEffect(() => {
     if(session) {
@@ -42,6 +44,20 @@ const StartPage = () => {
             This is a beta version of Solaryn, open for testing and exploration.
             Click Accept to continue
           </p>
+
+          <div className="flex items-center mb-8">
+            <Checkbox
+              size={'small'}
+              color="success"
+              disableRipple
+              disableTouchRipple
+              checked={tosAccepted}
+              onChange={(e) => setTosAccepted(e.target.checked)}
+            />
+            <label htmlFor="tos-acceptance">
+              I accept the terms and conditions
+            </label>
+          </div>
         </div>
 
         <PrimaryBtn
@@ -53,7 +69,8 @@ const StartPage = () => {
               router.push("/create-account");
             }
           }}
-          title="I Accept"
+          disabled={sessionLoading || !tosAccepted}
+          title="Continue"
           classes="w-full block"
         />
       </div>

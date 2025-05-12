@@ -156,12 +156,12 @@ const CreateAccountPage = () => {
             required
           />
           <LabeledInput
-            type="email"
-            name="confirmEmail"
-            value={formData.confirmEmail}
+            type="tel"
+            name="phone"
+            value={formData.phone}
             onChange={handleInputChange}
-            placeholder="Confirm Your Email"
-            label="Confirm Your Email"
+            placeholder="Enter Your Number"
+            label="Your Phone number"
             required
           />
           <LabeledInput
@@ -182,24 +182,7 @@ const CreateAccountPage = () => {
             label="Re-Entry Password"
             required
           />
-          <LabeledInput
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            placeholder="Enter Your Number"
-            label="Your Phone number"
-            required
-          />
-          <LabeledInput
-            type="tel"
-            name="confirmPhone"
-            value={formData.confirmPhone}
-            onChange={handleInputChange}
-            placeholder="Confirm Your Number"
-            label="Re-Entry Phone Number"
-            required
-          />
+
 
           <PrimaryBtn type={"submit"} title={"Continue"} classes={"w-full block mb-4 mt-9"} />
 
