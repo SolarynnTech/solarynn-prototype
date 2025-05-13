@@ -1,0 +1,49 @@
+import React, { useState, useEffect } from "react";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import { Bell } from "lucide-react";
+import { useRouter } from "next/router";
+
+import useUserStore from "@/stores/useUserStore";
+
+export default function Icon() {
+  const supabase = useSupabaseClient();
+  const { user } = useUserStore();
+  const router = useRouter();
+
+  const [unreadCount, setUnreadCount] = useState(0);
+
+  useEffect(() => {
+    if (!user) return;
+    const fetchUnreadCount = async () => {
+      const { count, error } = await supabase
+        .from("requests")
+        .select("*", { count: "exact", head: true })
+        .or(
+          [
+            `and(status.eq.pending,assigner_id.eq.${user.id},read.eq.false)`,
+            `and(status.neq.pending,requester_id.eq.${user.id},read.eq.false)`,
+          ].join(",")
+        );
+
+      if (error) {
+        console.error("Error fetching unread count:", error);
+      } else {
+        setUnreadCount(count);
+      }
+    };
+    fetchUnreadCount();
+  }, [user]);
+
+  return (
+    <div onClick={() => router.push("/notifications")}>
+      <div class="relative">
+        <Bell className="cursor-pointer hover:text-green-800" />
+        {unreadCount > 0 && (
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+            {unreadCount}
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}

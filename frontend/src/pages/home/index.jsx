@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Mail, Bell, Settings } from "lucide-react";
-import Favorites from "../../components/home/Favorites";
-import RecentlyViewed from "../../components/home/RecentlyViewed";
-import YourConnections from "../../components/home/YourConnections";
-import TakeALook from "../../components/home/TakeAlook";
-import NavigationBar from "../../components/profile/NavigationBar";
-import CategoryTile from "../../components/tiles/CategoryTile";
-import SearchBar from "../../components/SearchBar";
+import { Settings } from "lucide-react";
+import Favorites from "@/components/home/Favorites";
+import RecentlyViewed from "@/components/home/RecentlyViewed";
+import YourConnections from "@/components/home/YourConnections";
+import TakeALook from "@/components/home/TakeAlook";
+import NavigationBar from "@/components/profile/NavigationBar";
+import CategoryTile from "@/components/tiles/CategoryTile";
+import SearchBar from "@/components/SearchBar";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
+import NotificationIcon from "@/components/Notifications/Icon";
 
 export default function HomePage() {
   const { user } = useUserStore();
@@ -19,9 +20,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [universeCategories, setUniverseCategories] = useState([]);
 
-  const categoryNamesExcluded = [
-    "Book Talent",
-  ];
+  const categoryNamesExcluded = ["Book Talent"];
 
   const fetchUniverseCategories = async () => {
     const { data, error } = await supabase.from("universe_categories").select("*");
@@ -56,7 +55,7 @@ export default function HomePage() {
       <nav className="flex items-start justify-between relative gap4 mb-6">
         <h1>Welcome {user?.name || user?.email}</h1>
         <div className="flex items-center justify-between gap-4 pt-2">
-          <Bell className="cursor-pointer hover:text-green-800" onClick={() => router.push("/notifications")} />
+          <NotificationIcon />
           <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")} />
         </div>
       </nav>
@@ -74,23 +73,24 @@ export default function HomePage() {
         <p>Loading categories...</p>
       ) : (
         <div className="grid grid-cols-2 gap-3 mb-12">
-          {universeCategories?.sort((a, b) => {
-            const aAvailable = !categoryNamesExcluded.includes(a.title);
-            const bAvailable = !categoryNamesExcluded.includes(b.title);
-            if (aAvailable && !bAvailable) return -1;
-            if (!aAvailable && bAvailable) return 1;
-            return 0;
-            }
-          ).map((category) => (
-            <CategoryTile
-              key={category.id}
-              title={category.title}
-              img_url={category.img_url}
-              isAvailable={!categoryNamesExcluded.includes(category.title)}
-              bg_color={category.color}
-              onClick={() => router.push("/universe-categories/" + category.id)}
-            />
-          ))}
+          {universeCategories
+            ?.sort((a, b) => {
+              const aAvailable = !categoryNamesExcluded.includes(a.title);
+              const bAvailable = !categoryNamesExcluded.includes(b.title);
+              if (aAvailable && !bAvailable) return -1;
+              if (!aAvailable && bAvailable) return 1;
+              return 0;
+            })
+            .map((category) => (
+              <CategoryTile
+                key={category.id}
+                title={category.title}
+                img_url={category.img_url}
+                isAvailable={!categoryNamesExcluded.includes(category.title)}
+                bg_color={category.color}
+                onClick={() => router.push("/universe-categories/" + category.id)}
+              />
+            ))}
         </div>
       )}
 

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Mail, Bell, Settings, Search, Loader } from "lucide-react";
+import { Settings, Loader } from "lucide-react";
 import NavigationBar from "@/components/profile/NavigationBar";
 import ProjectCategory from "@/components/projects/ProjectCategory";
 import ProjectsSearchBar from "@/components/projects/ProjectsSearchBar";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import NotificationIcon from "@/components/Notifications/Icon";
 
 export default function ProjectsPage() {
   const router = useRouter();
@@ -20,10 +21,11 @@ export default function ProjectsPage() {
       setProjects([]);
 
       try {
-        const {
-          data,
-          error
-        } = await supabase.from("projects").select("*").not("is_hidden", "eq", true).not("project_visibility", "eq", "private");
+        const { data, error } = await supabase
+          .from("projects")
+          .select("*")
+          .not("is_hidden", "eq", true)
+          .not("project_visibility", "eq", "private");
 
         if (error) {
           console.error("Error fetching projects:", error);
@@ -66,7 +68,7 @@ export default function ProjectsPage() {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-[75vh]">
-        <Loader className="animate-spin text-green-800"/>
+        <Loader className="animate-spin text-green-800" />
         <p className="ml-2">Loading...</p>
       </div>
     );
@@ -77,12 +79,12 @@ export default function ProjectsPage() {
       <nav className="flex items-start justify-between relative gap4 mb-6">
         <h1>Projects</h1>
         <div className="flex items-center justify-between gap-4 pt-2">
-          <Bell className="cursor-pointer hover:text-green-800" onClick={() => router.push("/notifications")}/>
-          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")}/>
+          <NotificationIcon />
+          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")} />
         </div>
       </nav>
 
-      <ProjectsSearchBar/>
+      <ProjectsSearchBar />
 
       {projectCategories &&
         projectCategories.map((category) => (
@@ -94,7 +96,7 @@ export default function ProjectsPage() {
           />
         ))}
 
-      <NavigationBar/>
+      <NavigationBar />
     </div>
   );
 }
