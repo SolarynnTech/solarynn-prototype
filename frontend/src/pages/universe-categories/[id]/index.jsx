@@ -6,6 +6,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 export default function UniverseCategories() {
   const { id } = useRouter().query;
+  const router = useRouter();
   const supabase = useSupabaseClient();
   const [categories, setCategories] = useState([]);
   const [color, setColor] = useState(null);
@@ -74,7 +75,7 @@ export default function UniverseCategories() {
                 title={category.title}
                 img_url={category.img_url}
                 bg_color={color}
-                onClick={() => router.push("/profiles/" + category.id)}
+                onClick={() => router.push("/universe-categories/" + id + "/" + category.id)}
               />
             ))}
           </div>

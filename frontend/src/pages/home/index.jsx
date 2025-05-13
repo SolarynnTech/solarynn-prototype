@@ -18,15 +18,9 @@ export default function HomePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [universeCategories, setUniverseCategories] = useState([]);
+
   const categoryNamesExcluded = [
-    "Public Figures",
-    "Fashion Brands",
-    "Companies",
-    "Media / Publications",
-    "Entities",
-    "Industry Experts",
-    "Agencies",
-    "To Hire",
+    "Book Talent",
   ];
 
   const fetchUniverseCategories = async () => {

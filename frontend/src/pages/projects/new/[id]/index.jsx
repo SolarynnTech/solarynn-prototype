@@ -162,8 +162,8 @@ const NewProjectPage = () => {
   return (
     <div>
       <RootNavigation title="New Project" backBtn/>
-      <Typography variant="h5" gutterBottom>{sectionTitle}</Typography>
-      <Paper sx={{ p: 4, mb: 4 }} className={"!bg-[#F5F5F5]"}>
+      <h4 className={"text-lg mb-4 mt-4 text-center"}>{sectionTitle}</h4>
+      <Paper sx={{ p: 3, mb: 4 }} className={"!bg-[#F5F5F5]"}>
         {fields.map((f, i) => (
           <Box key={f.id} mb={3}>
             <Typography variant="subtitle1" gutterBottom>
