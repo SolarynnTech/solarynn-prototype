@@ -79,7 +79,6 @@ export default function Login() {
       return;
     }
 
-    console.log("Signed in user:", data.user);
     router.push("/home");
   };
 

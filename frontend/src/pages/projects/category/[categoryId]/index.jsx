@@ -4,7 +4,7 @@ import RootNavigation from "@/components/Nav/Nav";
 import { Loader } from "lucide-react";
 import ProjectsSearchBar from "@/components/projects/ProjectsSearchBar";
 import ProjectPreview from "@/components/projects/ProjectPreview";
-import {useSupabaseClient} from "@supabase/auth-helpers-react";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 
 export default function Listing() {
   const router = useRouter();
@@ -14,19 +14,14 @@ export default function Listing() {
   const [projectCategory, setProjectCategory] = useState([]);
   const supabase = useSupabaseClient();
 
-  console.log("categoryId", categoryId);
-
   useEffect(() => {
-    if(!categoryId) return;
+    if (!categoryId) return;
     async function fetchProjectCategory() {
       setLoading(true);
       setProjectCategory([]);
 
       try {
-        const { data, error } = await supabase
-          .from("project_categories")
-          .select("title")
-          .eq("id", categoryId);
+        const { data, error } = await supabase.from("project_categories").select("title").eq("id", categoryId);
 
         if (error) {
           console.error("Error fetching projects:", error);
@@ -43,16 +38,13 @@ export default function Listing() {
   }, [categoryId]);
 
   useEffect(() => {
-    if(!categoryId) return;
+    if (!categoryId) return;
     async function fetchProjects() {
       setLoading(true);
       setProjects([]);
 
       try {
-        const { data, error } = await supabase
-          .from("projects")
-          .select("*")
-          .eq("category", categoryId);
+        const { data, error } = await supabase.from("projects").select("*").eq("category", categoryId);
 
         if (error) {
           console.error("Error fetching projects:", error);
@@ -68,17 +60,12 @@ export default function Listing() {
     fetchProjects();
   }, [categoryId]);
 
-  useEffect(() => {
-    console.log("projectCategory", projectCategory)
-  }, [projectCategory]);
-
   return (
     <div>
       <RootNavigation title={projectCategory[0]?.title} backBtn={true} />
 
       <div className="pt-12">
-
-        <ProjectsSearchBar/>
+        <ProjectsSearchBar />
 
         <div className="mb-4">
           {loading && (
@@ -108,10 +95,8 @@ export default function Listing() {
               <p className="ml-2 text-lg">No results found</p>
             </div>
           )}
-
         </div>
       </div>
     </div>
   );
 }
-

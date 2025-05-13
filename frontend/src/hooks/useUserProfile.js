@@ -11,15 +11,9 @@ export default function useUserProfile() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    console.log("Session loading:", sessionLoading, "Session:", session);
-  }, [sessionLoading, session]);
-
-  useEffect(() => {
     if (sessionLoading || !session?.user) return;
 
     const fetchData = async () => {
-      console.log("Fetching user profile...");
-
       setLoading(true);
 
       try {

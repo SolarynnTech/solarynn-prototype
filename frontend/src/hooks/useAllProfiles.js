@@ -12,11 +12,21 @@ export default function useAllProfiles() {
     { title: "Business Figures", table: "demo_business_figures", column: "name", displayField: "name" },
     { title: "Entertainment Figures", table: "demo_entertainment_figures", column: "name", displayField: "name" },
     { title: "Fashion Figures", table: "demo_fashion_figures", column: "name", displayField: "name" },
-    { title: "Literature Journalism Figures", table: "demo_literature_journalism_figures", column: "name", displayField: "name" },
+    {
+      title: "Literature Journalism Figures",
+      table: "demo_literature_journalism_figures",
+      column: "name",
+      displayField: "name",
+    },
     { title: "Music Figures", table: "demo_music_figures", column: "name", displayField: "name" },
     { title: "Partial Ad Agencies", table: "demo_ad_agencies", column: "agency_name", displayField: "agency_name" },
     { title: "Education", table: "demo_education_entities", column: "official_name", displayField: "official_name" },
-    { title: "Fashion Image Agencies", table: "demo_fashion_image_agencies", column: "agency_name", displayField: "agency_name" },
+    {
+      title: "Fashion Image Agencies",
+      table: "demo_fashion_image_agencies",
+      column: "agency_name",
+      displayField: "agency_name",
+    },
     { title: "Political Figures", table: "demo_political_figures", column: "name", displayField: "name" },
     { title: "Social Media Figures", table: "demo_social_media_figures", column: "name", displayField: "name" },
     { title: "Sports Figures", table: "demo_sports_figures", column: "name", displayField: "name" },
@@ -28,13 +38,8 @@ export default function useAllProfiles() {
   const { profiles, setProfiles } = useProfilesStore();
 
   useEffect(() => {
-
-    console.log("session", session);
     if (sessionLoading) return;
     async function fetchAllProfiles() {
-
-      console.log("Fetching all profiles...");
-
       setLoading(true);
       const allRecords = [];
 

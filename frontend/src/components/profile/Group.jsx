@@ -7,19 +7,11 @@ import UserPreview from "@/components/UserPreview";
 import useProfilesStore from "@/stores/useProfilesStore";
 import useUserStore from "@/stores/useUserStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  TextField,
-} from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogActions, TextField } from "@mui/material";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 
 const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) => {
-  const SIZE = groupId === "dddc641a-049a-454a-af31-1112fb6727be"
-    ? { h: 300, w: 200 }
-    : { h: 150, w: 150 };
+  const SIZE = groupId === "dddc641a-049a-454a-af31-1112fb6727be" ? { h: 300, w: 200 } : { h: 150, w: 150 };
 
   const { profiles, setProfiles } = useProfilesStore();
   const { user, setUser } = useUserStore();
@@ -34,9 +26,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
   useEffect(() => {
     if (!profiles?.length || !data) return;
-    const dataMapped = data
-      .map((id) => profiles.find((p) => p.id === id))
-      .filter(Boolean);
+    const dataMapped = data.map((id) => profiles.find((p) => p.id === id)).filter(Boolean);
     setDataToDisplay(dataMapped);
   }, [data, profiles, id]);
 
@@ -72,11 +62,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
       [columnName]: updated,
     }));
 
-    setProfiles((prevProfiles) =>
-      prevProfiles.map((p) =>
-        p.id === user.id ? { ...p, [columnName]: updated } : p
-      )
-    );
+    setProfiles((prevProfiles) => prevProfiles.map((p) => (p.id === user.id ? { ...p, [columnName]: updated } : p)));
 
     setOpen(false);
   };
@@ -86,10 +72,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-bold mb-0">{title}</h3>
         {dataToDisplay.length > 1 && (
-          <ActionBtn
-            title={"See All"}
-            onClick={() => router.push("/listing/" + profile.id + "/" + columnName)}
-          />
+          <ActionBtn title={"See All"} onClick={() => router.push("/listing/" + profile.id + "/" + columnName)} />
         )}
       </div>
 
@@ -132,7 +115,6 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
               </div>
 
               <div className={"overflow-y-auto max-h-[400px] scrollbar hide-scrollbar h-full"}>
-
                 {filtered.slice(0, visibleCount).map((p, index) => (
                   <div
                     key={p.id + index}
@@ -143,24 +125,17 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
                   </div>
                 ))}
 
-
                 {filtered.length > visibleCount && (
                   <div className="text-center my-4">
-                    <PrimaryBtn
-                      title="Load More"
-                      onClick={() => setVisibleCount((prev) => prev + 20)}
-                    />
+                    <PrimaryBtn title="Load More" onClick={() => setVisibleCount((prev) => prev + 20)} />
                   </div>
                 )}
-
               </div>
 
-              {filtered.length === 0 && (
-                <p className="text-gray-500 mt-4">No matching profiles</p>
-              )}
+              {filtered.length === 0 && <p className="text-gray-500 mt-4">No matching profiles</p>}
             </DialogContent>
             <DialogActions>
-              <SecondaryBtn title={"Cancel"} onClick={() => setOpen(false)}/>
+              <SecondaryBtn title={"Cancel"} onClick={() => setOpen(false)} />
             </DialogActions>
           </Dialog>
         </>

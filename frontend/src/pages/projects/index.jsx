@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { Mail, Bell, Settings, Search } from "lucide-react";
 import NavigationBar from "@/components/profile/NavigationBar";
@@ -20,9 +20,7 @@ export default function ProjectsPage() {
       setProjects([]);
 
       try {
-        const { data, error } = await supabase
-          .from("projects")
-          .select("*");
+        const { data, error } = await supabase.from("projects").select("*");
 
         if (error) {
           console.error("Error fetching projects:", error);
@@ -44,9 +42,7 @@ export default function ProjectsPage() {
       setProjectCategories([]);
 
       try {
-        const { data, error } = await supabase
-          .from("project_categories")
-          .select("*");
+        const { data, error } = await supabase.from("project_categories").select("*");
 
         if (error) {
           console.error("Error fetching projects:", error);
@@ -62,12 +58,6 @@ export default function ProjectsPage() {
     fetchProjectCategories();
   }, []);
 
-  useEffect(() => {
-    console.log("projects", projects);
-    console.log("projectCategories", projectCategories);
-  }, [projects, projectCategories]);
-
-
   return (
     <div className="pb-8">
       <nav className="flex items-start justify-between relative gap4 mb-6">
@@ -78,16 +68,17 @@ export default function ProjectsPage() {
         </div>
       </nav>
 
-      <ProjectsSearchBar/>
+      <ProjectsSearchBar />
 
-      {projectCategories && projectCategories.map((category) => (
-        <ProjectCategory
-          data={projects.filter(project => project.category === category.id)}
-          key={category.id}
-          id={category.id}
-          name={category.title}
-        />
-      ))}
+      {projectCategories &&
+        projectCategories.map((category) => (
+          <ProjectCategory
+            data={projects.filter((project) => project.category === category.id)}
+            key={category.id}
+            id={category.id}
+            name={category.title}
+          />
+        ))}
 
       <NavigationBar />
     </div>
