@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Mail, Bell, Settings, Search } from "lucide-react";
+import { Mail, Bell, Settings, Search, Loader } from "lucide-react";
 import NavigationBar from "@/components/profile/NavigationBar";
 import ProjectCategory from "@/components/projects/ProjectCategory";
 import ProjectsSearchBar from "@/components/projects/ProjectsSearchBar";
@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       setProjects([]);
 
       try {
-        const { data, error } = await supabase.from("projects").select("*");
+        const { data, error } = await supabase.from("projects").select("*").not("is_hidden", "eq", true);
 
         if (error) {
           console.error("Error fetching projects:", error);
@@ -57,6 +57,15 @@ export default function ProjectsPage() {
     }
     fetchProjectCategories();
   }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[75vh]">
+        <Loader className="animate-spin text-green-800"/>
+        <p className="ml-2">Loading...</p>
+      </div>
+    );
+  }
 
   return (
     <div className="pb-8">

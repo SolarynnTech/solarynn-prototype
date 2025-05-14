@@ -7,7 +7,7 @@ import useUserStore from "@/stores/useUserStore.js";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { IconButton, Box, Typography, Dialog } from "@mui/material";
+import { IconButton, Box, Typography, Dialog, Button, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 import { Loader } from "lucide-react";
 import ImageDropZone from "@/components/ImageDropZone.jsx";
 import ActionBtn from "@/components/buttons/ActionBtn.jsx";
@@ -29,6 +29,29 @@ const ProjectPage = () => {
   const [editingImages, setEditingImages] = useState(false);
   const [viewerOpen, setViewerOpen] = useState(false);
   const [viewerUrl, setViewerUrl] = useState("");
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [deleteSuccess, setDeleteSuccess] = useState(false);
+
+
+  const handleDeleteClick = () => setDeleteDialogOpen(true);
+
+  const handleConfirmDelete = async () => {
+    const { error } = await supabase
+      .from("projects")
+      .update({ is_hidden: true })
+      .eq("id", id);
+
+    if (error) {
+      console.error("Failed to delete/archive:", error);
+      return;
+    }
+
+    setDeleteSuccess(true);
+    setTimeout(() => router.push("/projects"), 2000);
+  };
+
+
+
   const handleToggleFav = async () => {
     const newFavs = isFav
       ? favoriteProjects.filter(pid => pid !== id)
@@ -221,22 +244,50 @@ const ProjectPage = () => {
               zIndex: 10,
               top: 16,
               right: 16,
-              bgcolor: "rgba(255,255,255,1)",
+              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+              bgcolor: "rgba(255,255,255, 1)",
               "&:hover": { bgcolor: "rgba(255,255,255,0.9)" }
             }}
           >
             {isFav
-              ? <FavoriteIcon color="success"/>
-              : <FavoriteBorderIcon color="success"/>}
+              ? <FavoriteIcon color="success"  sx={{ fontSize: 28 }} />
+              : <FavoriteBorderIcon color="success" sx={{ fontSize: 28 }}  />}
           </IconButton>
+          {user.id === project.owner && (
+            <IconButton
+              onClick={handleDeleteClick}
+              sx={{
+                position: "absolute",
+                zIndex: 10,
+                top: 74,
+                right: 16,
+                bgcolor: "white",
+                color: "error.main",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+                "&:hover": { bgcolor: "rgba(255,255,255,0.9)" }
+              }}
+            >
+              <DeleteIcon sx={{ fontSize: 28 }} />
+            </IconButton>
+          )}
         </div>
         <NavigationBar/>
       </div>
-      <div className={"mb-6"}>
-        <h4 className="font-semibold text-lg mb-1">
+      <div className="mb-6">
+        <h4 className="font-semibold text-lg mb-4">
           Project Description:
         </h4>
-        <p>{project.project_description}</p>
+
+        {project.project_description ? (
+          <p>{project.project_description}</p>
+        ) : (
+          <p className="text-gray-400 text-center !text-sm">
+            {user.id === project.owner
+              ? "You haven’t added a project description yet."
+              : "There is no description available for this project."
+            }
+          </p>
+        )}
       </div>
       <h4 className="font-semibold text-lg mb-2">
         Details:
@@ -283,7 +334,6 @@ const ProjectPage = () => {
       <Box mb={4}>
         <div className="flex justify-between items-center mb-4">
           <h4 className="font-semibold text-lg mb-1">Photos:</h4>
-
           {user.id === project.owner && (
             <ActionBtn
               title={editingImages ? "Done Editing" : "Edit Images"}
@@ -313,48 +363,58 @@ const ProjectPage = () => {
           </>
         )}
 
-        <Box className="overflow-x-auto hide-scrollbar -mx-6 px-6 mt-4">
-          <Box className="flex gap-4 flex-nowrap relative">
-            {imageUrls.map((url, idx) => (
-              <Box key={url} className="relative flex-shrink-0">
-                <img
-                  src={url}
-                  alt="Project asset"
-                  className={`w-44 h-60 object-cover rounded ${
-                    !editingImages ? "cursor-pointer" : ""
-                  }`}
-                  onClick={() => {
-                    if (!editingImages) {
-                      setViewerUrl(url);
-                      setViewerOpen(true);
-                    }
-                  }}
-                />
-
-                {editingImages && user.id === project.owner && (
-                  <IconButton
-                    size="small"
-                    onClick={() => handleDeleteImage(idx, url)}
-                    sx={{
-                      position: "absolute",
-                      top: 4,
-                      right: 4,
-                      width: 32,
-                      height: 32,
-                      p: 0,
-                      borderRadius: "50%",
-                      bgcolor: "rgba(255,255,255,1)",
-                      boxShadow: "0px 2px 4px rgba(0,0,0,0.2)",
-                      "&:hover": { bgcolor: "rgba(255,255,255,0.8)" },
-                    }}
-                  >
-                    <DeleteIcon fontSize="small" sx={{ color: "black" }}/>
-                  </IconButton>
-                )}
-              </Box>
-            ))}
+        {imageUrls.length === 0 ? (
+          <Box className="mt-4 text-center text-gray-400">
+            <Typography variant="body2" className={"!text-sm"}>
+              {user.id === project.owner
+                ? "You haven’t added any photos yet."
+                : "There are no additional photos for this project."
+              }
+            </Typography>
           </Box>
-        </Box>
+        ) : (
+          <Box className="overflow-x-auto hide-scrollbar -mx-6 px-6 mt-4">
+            <Box className="flex gap-4 flex-nowrap relative">
+              {imageUrls.map((url, idx) => (
+                <Box key={url} className="relative flex-shrink-0">
+                  <img
+                    src={url}
+                    alt="Project asset"
+                    className={`w-44 h-60 object-cover rounded ${
+                      !editingImages ? "cursor-pointer" : ""
+                    }`}
+                    onClick={() => {
+                      if (!editingImages) {
+                        setViewerUrl(url);
+                        setViewerOpen(true);
+                      }
+                    }}
+                  />
+                  {editingImages && user.id === project.owner && (
+                    <IconButton
+                      size="small"
+                      onClick={() => handleDeleteImage(idx, url)}
+                      sx={{
+                        position: "absolute",
+                        top: 4,
+                        right: 4,
+                        width: 32,
+                        height: 32,
+                        p: 0,
+                        borderRadius: "50%",
+                        bgcolor: "rgba(255,255,255,1)",
+                        boxShadow: "0px 2px 4px rgba(0,0,0,0.2)",
+                        "&:hover": { bgcolor: "rgba(255,255,255,0.8)" },
+                      }}
+                    >
+                      <DeleteIcon fontSize="small" sx={{ color: "black" }}/>
+                    </IconButton>
+                  )}
+                </Box>
+              ))}
+            </Box>
+          </Box>
+        )}
       </Box>
       <Dialog
         open={viewerOpen}
@@ -389,6 +449,48 @@ const ProjectPage = () => {
             bgcolor: "rgba(0,0,0,0.9)",
           }}
         />
+      </Dialog>
+
+      <Dialog
+        PaperProps={{
+          sx: {
+            width: { xs: '90%', sm: 400 },
+          }
+        }}
+        open={deleteDialogOpen}
+        onClose={() => deleteSuccess ? null : setDeleteDialogOpen(false)}
+      >
+        <DialogTitle className={"!font-semibold !text-xl"}>
+          {deleteSuccess ? "" : "Are you sure?"}
+        </DialogTitle>
+
+        <DialogContent>
+          {deleteSuccess ? (
+            <Typography color="success.main" className={"!font-semibold !text-lg text-center"}>
+              Your project was successfully deleted.
+            </Typography>
+          ) : (
+            <Typography>
+              This will archive (hide) your project. You won’t be able to see it afterward.
+            </Typography>
+          )}
+        </DialogContent>
+
+        <DialogActions>
+          {!deleteSuccess && (
+            <>
+              <ActionBtn
+                title={"Cancel"}
+                onClick={() => setDeleteDialogOpen(false)}
+              />
+              <ActionBtn
+                title={"Yes, delete"}
+                onClick={handleConfirmDelete}
+                classes={"bg-red-600 hover:bg-red-700 text-white"}
+              />
+            </>
+          )}
+        </DialogActions>
       </Dialog>
     </div>
   );
