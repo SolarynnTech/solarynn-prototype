@@ -14,14 +14,14 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogTitle,
-  TextField, MenuItem, Tooltip, ClickAwayListener
+  DialogTitle, Tooltip, ClickAwayListener, Chip
 } from "@mui/material";
+import LockIcon from "@mui/icons-material/Lock";
+import PublicIcon from "@mui/icons-material/Public";
 import { InfoIcon, Loader } from "lucide-react";
 import ImageDropZone from "@/components/ImageDropZone.jsx";
 import ActionBtn from "@/components/buttons/ActionBtn.jsx";
 import CloseIcon from "@mui/icons-material/Close";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 
 const ProjectPage = ({ accessDenied }) => {
@@ -42,9 +42,14 @@ const ProjectPage = ({ accessDenied }) => {
   const [viewerUrl, setViewerUrl] = useState("");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [deleteSuccess, setDeleteSuccess] = useState(false);
-  const [visibility, setVisibility] = useState("public");
-  const [privateTipOpen, setPrivateTipOpen] = useState(false);
   const handleDeleteClick = () => setDeleteDialogOpen(true);
+  const [tipOpen, setTipOpen] = useState(false);
+
+  const icon =
+    project?.project_visibility === "private" ? <LockIcon fontSize="small"/> :
+      <PublicIcon fontSize="small"/>;
+
+  const text = project?.project_visibility.replace("_", " ");
 
   const handleConfirmDelete = async () => {
     const { error } = await supabase
@@ -94,9 +99,6 @@ const ProjectPage = ({ accessDenied }) => {
     }
 
     setProject(proj);
-    if (proj?.project_visibility) {
-      setVisibility(proj.project_visibility);
-    }
 
     setImageUrls(proj.images || []);
     const { data: favProgect, error: favProjError } = await supabase
@@ -254,31 +256,6 @@ const ProjectPage = ({ accessDenied }) => {
   return (
     <div className="mb-10">
       <RootNavigation title={project.title} backBtn/>
-      {visibility === "private" && (
-        <ClickAwayListener onClickAway={() => setPrivateTipOpen(false)}>
-          <Tooltip
-            arrow
-            placement="top"
-            open={privateTipOpen}
-            onClose={() => setPrivateTipOpen(false)}
-            title="If this project is private, only users who were invited to it (and haven’t yet responded to the invite), collaborators or owner can view it."
-          >
-            <Box
-              onClick={() => setPrivateTipOpen(open => !open)}
-              className="px-6 py-2 mt-4 mb-4 rounded"
-              sx={{
-                backgroundColor: "rgba(255,193,7,0.3)",
-                color: "warning.main",
-                cursor: "pointer",
-              }}
-            >
-              <Typography align="center" fontWeight="bold" className={"flex gap-2 items-center justify-center"}>
-                This project is private. <InfoIcon size={16}/>
-              </Typography>
-            </Box>
-          </Tooltip>
-        </ClickAwayListener>
-      )}
       <div className="pt-4 pb-6">
         <div className={"relative"}>
           <img
@@ -338,59 +315,57 @@ const ProjectPage = ({ accessDenied }) => {
           </p>
         )}
       </div>
-      {user.id === project.owner && (
-        <Box className="mb-6">
-          <h4 className="font-semibold text-lg mb-2">
-            Project Visibility:
-          </h4>
-          <TextField
-            select
-            variant="standard"
-            fullWidth
-            value={visibility}
-            onChange={async e => {
-              const newVis = e.target.value;
-              const { error } = await supabase
-                .from("projects")
-                .update({ project_visibility: newVis })
-                .eq("id", id);
-              if (!error) {
-                setVisibility(newVis);
-                setProject(prev => ({ ...prev, project_visibility: newVis }));
-              }
-            }}
-            SelectProps={{
-              IconComponent: ArrowDropDownIcon,
-            }}
-            sx={{
-              "& .MuiInput-underline:before": { borderBottomColor: "#000" },
-              "& .MuiInput-underline:hover:before": { borderBottomColor: "#000" },
-              "& .MuiInput-underline.Mui-focused:after": {
-                borderBottomColor: "#000",
-                borderBottomWidth: 2,
-              },
-              "& .MuiSelect-select": { pr: 4 },
-            }}
+      <Box className="mb-6">
+        <Typography variant="subtitle1" className="!mb-4 !font-semibold !text-lg">
+          Project Visibility:
+        </Typography>
+        <ClickAwayListener onClickAway={() => setTipOpen(false)}>
+          <Tooltip
+            arrow
+            placement="top"
+            open={tipOpen}
+            onOpen={() => setTipOpen(true)}
+            onClose={() => setTipOpen(false)}
+            title={
+              project.project_visibility === "private"
+                ? "If this project is private, only invited users or collaborators can view it."
+                : "This project is public—anyone can view it."
+            }
           >
-            <MenuItem value="private" sx={{
-              "&.Mui-selected": {
-                backgroundColor: "rgba(0, 128, 0, 0.2)",
-              },
-              "&.Mui-selected:hover": {
-                backgroundColor: "rgba(0, 128, 0, 0.3)",
-              },
-            }}>Private</MenuItem>
-            <MenuItem value="public" sx={{
-              "&.Mui-selected": {
-                backgroundColor: "rgba(0, 128, 0, 0.2)",
-              },
-              "&.Mui-selected:hover": {
-                backgroundColor: "rgba(0, 128, 0, 0.3)",
-              },
-            }}>Public</MenuItem>
-          </TextField>
-        </Box>
-      )}
+            <Box
+              onClick={() => setTipOpen(prev => !prev)}
+              sx={{ display: "inline-block", cursor: "pointer" }}
+            >
+              <Chip
+                icon={icon}
+                label={text}
+                variant="outlined"
+                sx={{
+                  textTransform: "capitalize",
+                  fontWeight: 500,
+                  fontSize: "1rem",
+                  borderRadius: "9999px",
+                  borderColor:
+                    project.project_visibility === "private"
+                      ? "grey.400"
+                      : project.project_visibility === "semi_public"
+                        ? "warning.main"
+                        : "success.main",
+                  color:
+                    project.project_visibility === "private"
+                      ? "grey.800"
+                      : project.project_visibility === "semi_public"
+                        ? "warning.dark"
+                        : "success.dark",
+                  px: 1.5,
+                  py: 2,
+                  width: "fit-content",
+                }}
+                deleteIcon={<InfoIcon/>}/>
+            </Box>
+          </Tooltip>
+        </ClickAwayListener>
+      </Box>
       <h4 className="font-semibold text-lg mb-2">
         Details:
       </h4>

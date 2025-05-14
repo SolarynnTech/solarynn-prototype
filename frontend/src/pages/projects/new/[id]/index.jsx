@@ -228,6 +228,9 @@ const NewProjectPage = () => {
                     "&.Mui-selected:hover": {
                       backgroundColor: "rgba(0, 128, 0, 0.3)",
                     },
+                    "&:hover": {
+                      backgroundColor: "rgba(0, 128, 0, 0.1)",
+                    },
                   }}>
                     {label}
                   </MenuItem>
