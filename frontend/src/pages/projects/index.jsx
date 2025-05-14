@@ -20,7 +20,10 @@ export default function ProjectsPage() {
       setProjects([]);
 
       try {
-        const { data, error } = await supabase.from("projects").select("*").not("is_hidden", "eq", true);
+        const {
+          data,
+          error
+        } = await supabase.from("projects").select("*").not("is_hidden", "eq", true).not("project_visibility", "eq", "private");
 
         if (error) {
           console.error("Error fetching projects:", error);
@@ -33,6 +36,7 @@ export default function ProjectsPage() {
         setLoading(false);
       }
     }
+
     fetchProjects();
   }, []);
 
@@ -55,6 +59,7 @@ export default function ProjectsPage() {
         setLoading(false);
       }
     }
+
     fetchProjectCategories();
   }, []);
 
@@ -72,12 +77,12 @@ export default function ProjectsPage() {
       <nav className="flex items-start justify-between relative gap4 mb-6">
         <h1>Projects</h1>
         <div className="flex items-center justify-between gap-4 pt-2">
-          <Bell className="cursor-pointer hover:text-green-800" onClick={() => router.push("/notifications")} />
-          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")} />
+          <Bell className="cursor-pointer hover:text-green-800" onClick={() => router.push("/notifications")}/>
+          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")}/>
         </div>
       </nav>
 
-      <ProjectsSearchBar />
+      <ProjectsSearchBar/>
 
       {projectCategories &&
         projectCategories.map((category) => (
@@ -89,7 +94,7 @@ export default function ProjectsPage() {
           />
         ))}
 
-      <NavigationBar />
+      <NavigationBar/>
     </div>
   );
 }

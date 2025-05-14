@@ -9,12 +9,13 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions,
+  DialogActions, FormControl, InputLabel, Select, MenuItem,
 } from "@mui/material";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore.js";
 import ImageDropZone from "@/components/ImageDropZone.jsx";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const textFieldStyles = {
   "& .MuiInput-underline:before": {
@@ -43,8 +44,9 @@ const NewProjectPage = () => {
   const [created, setCreated] = useState(false);
   const [answers, setAnswers] = useState({});
   const allAnswered = questions.every(q => (answers[q.id] || "").trim() !== "");
-  const createDisabled = uploading || !allAnswered || !localFile || !projectDescription.trim();
-  const projectRef = useRef(null)
+  const [visibility, setVisibility] = useState("public");
+  const createDisabled = uploading || !allAnswered || !localFile || !projectDescription.trim() || !visibility.trim() || !title.trim();
+  const projectRef = useRef(null);
 
   const handleFileChange = (file) => {
     setLocalFile(file);
@@ -89,7 +91,7 @@ const NewProjectPage = () => {
       setUploading(false);
     }
 
-    const {data, error: createErr } = await supabase
+    const { data, error: createErr } = await supabase
       .from("projects")
       .insert({
         title,
@@ -98,6 +100,7 @@ const NewProjectPage = () => {
         img_url,
         description: answers,
         project_description: projectDescription,
+        project_visibility: visibility
       })
       .select("id")
       .maybeSingle();
@@ -146,6 +149,12 @@ const NewProjectPage = () => {
   const fields = [
     { id: "title", question: "Project Title", value: title },
     {
+      id: "visibility", question: "Project Visibility", values: {
+        private: "Private",
+        public: "Public"
+      }
+    },
+    {
       id: "description",
       question: "Project Description",
       suffix: <span className="text-sm text-gray-500">Max 2000 characters</span>,
@@ -170,26 +179,83 @@ const NewProjectPage = () => {
               {i + 1}. {f.question}
             </Typography>
 
-            {f.id === "description" ? (
+            {f.id === "visibility" ? (
+              <TextField
+                select
+                variant="standard"
+                fullWidth
+                value={visibility}
+                onChange={e => setVisibility(e.target.value)}
+                SelectProps={{
+                  IconComponent: ArrowDropDownIcon,
+                  sx: { right: 0, position: "absolute" },
+                }}
+                sx={{
+                  "& .MuiInput-underline:before": {
+                    borderBottomColor: "#000",
+                  },
+                  "& .MuiInput-underline:hover:before": {
+                    borderBottomColor: "#000",
+                  },
+                  "& .MuiInput-underline.Mui-focused:after": {
+                    borderBottomColor: "#000",
+                    borderBottomWidth: "2px",
+                  },
+                  "& .MuiSelect-select": {
+                    pr: 4,
+                  },
+                }}
+                Input={{
+                  disableUnderline: false,
+                  sx: {
+                    "&:before": { borderBottomColor: "#000" },
+                    "&:hover:before": {
+                      borderBottomColor: "#000",
+                    },
+                    "&:after": {
+                      borderBottomColor: "#000",
+                      borderBottomWidth: 2,
+                    },
+                    pr: 4,
+                  },
+                }}
+              >
+                {Object.entries(f.values).map(([val, label]) => (
+                  <MenuItem key={val} value={val} sx={{
+                    "&.Mui-selected": {
+                      backgroundColor: "rgba(0, 128, 0, 0.2)",
+                    },
+                    "&.Mui-selected:hover": {
+                      backgroundColor: "rgba(0, 128, 0, 0.3)",
+                    },
+                  }}>
+                    {label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            ) : f.id === "description" ? (
               <TextField
                 id="projectDescription"
-                label=""
                 variant="outlined"
                 multiline
                 rows={4}
                 fullWidth
-                inputProps={{ maxLength: 2000 }}
+                htmlInput={{ maxLength: 2000 }}
                 value={projectDescription}
-                onChange={e => setProjectDescription(e.target.value)}
+                onChange={e =>
+                  setProjectDescription(e.target.value)
+                }
                 helperText={`${projectDescription.length}/2000 characters`}
-                FormHelperTextProps={{
-                  sx: { textAlign: "right", fontSize: "0.75rem", color: "#000000" }
+                formHelperText={{
+                  sx: {
+                    textAlign: "right",
+                    fontSize: "0.75rem",
+                    color: "#000",
+                  },
                 }}
                 sx={{
                   "& .MuiOutlinedInput-root": {
-                    "& fieldset": {
-                      borderColor: "#000",
-                    },
+                    "& fieldset": { borderColor: "#000" },
                     "&:hover fieldset": {
                       borderColor: "#000",
                     },
@@ -210,14 +276,18 @@ const NewProjectPage = () => {
               <TextField
                 fullWidth
                 variant="standard"
-                value={f.id === "title" ? title : f.value}
+                value={
+                  f.id === "title" ? title : f.value
+                }
                 onChange={e =>
                   f.id === "title"
                     ? setTitle(e.target.value)
                     : handleFieldChange(f.id, e.target.value)
                 }
                 sx={textFieldStyles}
-                InputProps={{ endAdornment: f.suffix || null }}
+                Input={{
+                  endAdornment: f.suffix || null,
+                }}
               />
             )}
           </Box>

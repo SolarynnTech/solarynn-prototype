@@ -7,13 +7,24 @@ import useUserStore from "@/stores/useUserStore.js";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { IconButton, Box, Typography, Dialog, Button, DialogActions, DialogContent, DialogTitle } from "@mui/material";
-import { Loader } from "lucide-react";
+import {
+  IconButton,
+  Box,
+  Typography,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  TextField, MenuItem, Tooltip, ClickAwayListener
+} from "@mui/material";
+import { InfoIcon, Loader } from "lucide-react";
 import ImageDropZone from "@/components/ImageDropZone.jsx";
 import ActionBtn from "@/components/buttons/ActionBtn.jsx";
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 
-const ProjectPage = () => {
+const ProjectPage = ({ accessDenied }) => {
   const router = useRouter();
   const { id } = router.query;
   const { user } = useUserStore();
@@ -31,8 +42,8 @@ const ProjectPage = () => {
   const [viewerUrl, setViewerUrl] = useState("");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [deleteSuccess, setDeleteSuccess] = useState(false);
-
-
+  const [visibility, setVisibility] = useState("public");
+  const [privateTipOpen, setPrivateTipOpen] = useState(false);
   const handleDeleteClick = () => setDeleteDialogOpen(true);
 
   const handleConfirmDelete = async () => {
@@ -49,8 +60,6 @@ const ProjectPage = () => {
     setDeleteSuccess(true);
     setTimeout(() => router.push("/projects"), 2000);
   };
-
-
 
   const handleToggleFav = async () => {
     const newFavs = isFav
@@ -83,7 +92,12 @@ const ProjectPage = () => {
       console.error("Error fetching project:", error);
       return;
     }
+
     setProject(proj);
+    if (proj?.project_visibility) {
+      setVisibility(proj.project_visibility);
+    }
+
     setImageUrls(proj.images || []);
     const { data: favProgect, error: favProjError } = await supabase
       .from("users")
@@ -226,10 +240,45 @@ const ProjectPage = () => {
     );
   }
 
-  return (
-    <div className={"mb-10"}>
-      <RootNavigation title={project.title} backBtn/>
+  if (accessDenied) {
+    return (
+      <Box className="flex flex-col items-center justify-center h-[90vh] px-6">
+        <Typography variant="body1" align="center">
+          This project is private.<br/>
+          You can ask the owner to grant you access or invite you to view this page.
+        </Typography>
+      </Box>
+    );
+  }
 
+  return (
+    <div className="mb-10">
+      <RootNavigation title={project.title} backBtn/>
+      {visibility === "private" && (
+        <ClickAwayListener onClickAway={() => setPrivateTipOpen(false)}>
+          <Tooltip
+            arrow
+            placement="top"
+            open={privateTipOpen}
+            onClose={() => setPrivateTipOpen(false)}
+            title="If this project is private, only users who were invited to it (and haven’t yet responded to the invite), collaborators or owner can view it."
+          >
+            <Box
+              onClick={() => setPrivateTipOpen(open => !open)}
+              className="px-6 py-2 mt-4 mb-4 rounded"
+              sx={{
+                backgroundColor: "rgba(255,193,7,0.3)",
+                color: "warning.main",
+                cursor: "pointer",
+              }}
+            >
+              <Typography align="center" fontWeight="bold" className={"flex gap-2 items-center justify-center"}>
+                This project is private. <InfoIcon size={16}/>
+              </Typography>
+            </Box>
+          </Tooltip>
+        </ClickAwayListener>
+      )}
       <div className="pt-4 pb-6">
         <div className={"relative"}>
           <img
@@ -250,8 +299,8 @@ const ProjectPage = () => {
             }}
           >
             {isFav
-              ? <FavoriteIcon color="success"  sx={{ fontSize: 28 }} />
-              : <FavoriteBorderIcon color="success" sx={{ fontSize: 28 }}  />}
+              ? <FavoriteIcon color="success" sx={{ fontSize: 28 }}/>
+              : <FavoriteBorderIcon color="success" sx={{ fontSize: 28 }}/>}
           </IconButton>
           {user.id === project.owner && (
             <IconButton
@@ -267,7 +316,7 @@ const ProjectPage = () => {
                 "&:hover": { bgcolor: "rgba(255,255,255,0.9)" }
               }}
             >
-              <DeleteIcon sx={{ fontSize: 28 }} />
+              <DeleteIcon sx={{ fontSize: 28 }}/>
             </IconButton>
           )}
         </div>
@@ -289,6 +338,59 @@ const ProjectPage = () => {
           </p>
         )}
       </div>
+      {user.id === project.owner && (
+        <Box className="mb-6">
+          <h4 className="font-semibold text-lg mb-2">
+            Project Visibility:
+          </h4>
+          <TextField
+            select
+            variant="standard"
+            fullWidth
+            value={visibility}
+            onChange={async e => {
+              const newVis = e.target.value;
+              const { error } = await supabase
+                .from("projects")
+                .update({ project_visibility: newVis })
+                .eq("id", id);
+              if (!error) {
+                setVisibility(newVis);
+                setProject(prev => ({ ...prev, project_visibility: newVis }));
+              }
+            }}
+            SelectProps={{
+              IconComponent: ArrowDropDownIcon,
+            }}
+            sx={{
+              "& .MuiInput-underline:before": { borderBottomColor: "#000" },
+              "& .MuiInput-underline:hover:before": { borderBottomColor: "#000" },
+              "& .MuiInput-underline.Mui-focused:after": {
+                borderBottomColor: "#000",
+                borderBottomWidth: 2,
+              },
+              "& .MuiSelect-select": { pr: 4 },
+            }}
+          >
+            <MenuItem value="private" sx={{
+              "&.Mui-selected": {
+                backgroundColor: "rgba(0, 128, 0, 0.2)",
+              },
+              "&.Mui-selected:hover": {
+                backgroundColor: "rgba(0, 128, 0, 0.3)",
+              },
+            }}>Private</MenuItem>
+            <MenuItem value="public" sx={{
+              "&.Mui-selected": {
+                backgroundColor: "rgba(0, 128, 0, 0.2)",
+              },
+              "&.Mui-selected:hover": {
+                backgroundColor: "rgba(0, 128, 0, 0.3)",
+              },
+            }}>Public</MenuItem>
+          </TextField>
+        </Box>
+      )}
       <h4 className="font-semibold text-lg mb-2">
         Details:
       </h4>
@@ -305,7 +407,7 @@ const ProjectPage = () => {
                     className="mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"
                   >
                     <p className="mb-2">
-                      <b>{questionTitle}:</b>
+                      <b>{questionTitle}</b>
                     </p>
                     <span className="text-gray-700">
                       {Array.isArray(value) ? value.join(", ") : value}
@@ -454,7 +556,7 @@ const ProjectPage = () => {
       <Dialog
         PaperProps={{
           sx: {
-            width: { xs: '90%', sm: 400 },
+            width: { xs: "90%", sm: 400 },
           }
         }}
         open={deleteDialogOpen}
@@ -494,6 +596,53 @@ const ProjectPage = () => {
       </Dialog>
     </div>
   );
+};
+
+export const getServerSideProps = async (ctx) => {
+  const supabase = createPagesServerClient(ctx);
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  const userId = session?.user.id;
+  const projectId = ctx.params?.id;
+  if (!userId) {
+    return {
+      props: {
+        accessDenied: true,
+      },
+    };
+  }
+
+  const { data: proj, error } = await supabase
+    .from("projects")
+    .select("owner, owner_requests, collaborator_users, project_visibility")
+    .eq("id", projectId)
+    .maybeSingle();
+
+  if (error || !proj) {
+    return { notFound: true };
+  }
+
+  const isOwner = proj.owner === userId;
+  const isInvited = proj.owner_requests?.includes(userId);
+  const isMember = proj.collaborator_users?.includes(userId);
+  const isPrivate = proj.project_visibility === "private";
+
+  if (isPrivate && !isOwner && !isInvited && !isMember) {
+    return {
+      props: {
+        project: null,
+        accessDenied: true,
+      },
+    };
+  }
+
+  return {
+    props: {
+      project: proj,
+      accessDenied: false,
+    },
+  };
 };
 
 export default ProjectPage;
