@@ -8,7 +8,6 @@ import {
   Box,
   Typography,
 } from "@mui/material";
-import { Loader } from "lucide-react";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 import ConfirmDeleteProjectModal from "@/components/modals/ConfirmDeleteProjectModal.jsx";
 import ImageViewerModal from "@/components/modals/ImageViewerModal.jsx";
@@ -18,6 +17,7 @@ import ProjectVisibilitySection from "@/components/project/ProjectVisibilitySect
 import ProjectDescription from "@/components/project/DescriptionSection.jsx";
 import ProjectImage from "@/components/project/ProjectImage.jsx";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
+import { LoaderItem } from "@/components/Loader.jsx";
 
 const ProjectPage = ({ accessDenied }) => {
   const router = useRouter();
@@ -235,7 +235,7 @@ const ProjectPage = ({ accessDenied }) => {
     }
   }, [project?.id]);
 
-  if (!project) return <Loader/>;
+  if (!project || !user) return <LoaderItem/>;
 
   if (accessDenied) {
     return (
