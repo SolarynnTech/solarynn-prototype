@@ -18,6 +18,7 @@ import ProjectDescription from "@/components/project/DescriptionSection.jsx";
 import ProjectImage from "@/components/project/ProjectImage.jsx";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 import { LoaderItem } from "@/components/Loader.jsx";
+import ProgressTracker from "@/components/project/ProgressTracker.jsx";
 
 const ProjectPage = ({ accessDenied }) => {
   const router = useRouter();
@@ -40,6 +41,19 @@ const ProjectPage = ({ accessDenied }) => {
   const [tipOpen, setTipOpen] = useState(false);
   const [editingVisibility, setEditingVisibility] = useState(false);
   const [visibilityValue, setVisibilityValue] = useState(project?.project_visibility);
+  const [completionPercentage, setCompletionPercentage] = useState(0);
+
+  const onCompletionPercentageChange = async (newValue) => {
+    const { error } = await supabase
+      .from("projects")
+      .update({ completion_percentage: newValue })
+      .eq("id", id)
+    if(error) {
+      console.error("Error updating completion percentage:", error);
+      return;
+    }
+    setCompletionPercentage(newValue);
+  }
 
   const saveVisibility = async () => {
     const { error } = await supabase
@@ -102,6 +116,7 @@ const ProjectPage = ({ accessDenied }) => {
 
     setProject(proj);
     setVisibilityValue(proj.project_visibility);
+    setCompletionPercentage(proj.completion_percentage || 0);
     setImageUrls(proj.images || []);
     const { data: favProgect, error: favProjError } = await supabase
       .from("users")
@@ -263,7 +278,7 @@ const ProjectPage = ({ accessDenied }) => {
         />
         <NavigationBar/>
       </div>
-
+      <ProgressTracker percentage={completionPercentage} isOwner={user.id === project.owner} onSave={onCompletionPercentageChange}/>
       <ProjectDescription
         description={project.project_description}
         isOwner={user.id === project.owner}
