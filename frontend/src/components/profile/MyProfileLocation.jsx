@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
-import { TextField, Typography, Box, Button } from "@mui/material";
+import { useState } from "react";
+import { Typography, Box } from "@mui/material";
 import ActionBtn from "../buttons/ActionBtn";
+import CountryPicker from "./CountryPicker";
 
 const MyProfileLocation = ({ location }) => {
   const [country, setCountry] = useState(location || null);
@@ -8,6 +9,14 @@ const MyProfileLocation = ({ location }) => {
 
   const toggleEdit = () => {
     setEditing(!editing);
+  };
+
+  const onSave = () => {
+    setEditing(false);
+  };
+
+  const handleCountryChange = (country) => {
+    setCountry(country?.name || null);
   };
 
   return (
@@ -18,7 +27,7 @@ const MyProfileLocation = ({ location }) => {
         <Box display="flex" gap={2}>
           {editing ? (
             <>
-              <ActionBtn title="Save" />
+              <ActionBtn title="Save" disabled={!country} onClick={onSave} />
               <ActionBtn title="Cancel" onClick={toggleEdit} />
             </>
           ) : (
@@ -28,15 +37,16 @@ const MyProfileLocation = ({ location }) => {
       </div>
 
       <Box className="mt-4">
-        {!editing &&
-          (country ? (
-            <Typography className="text-gray-700">{country}</Typography>
-          ) : (
-            <Typography className="text-gray-500 italic">
-              You haven’t added a location yet. <br />
-              Click Edit to add one.
-            </Typography>
-          ))}
+        {editing ? (
+          <CountryPicker onChange={handleCountryChange} />
+        ) : country ? (
+          <Typography className="text-gray-700">{country}</Typography>
+        ) : (
+          <Typography className="text-gray-500 italic">
+            You haven’t added a location yet. <br />
+            Click Edit to add one.
+          </Typography>
+        )}
       </Box>
     </Box>
   );
