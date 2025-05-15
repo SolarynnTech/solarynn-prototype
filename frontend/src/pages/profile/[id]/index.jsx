@@ -14,6 +14,8 @@ import Group from "@/components/profile/Group";
 import { fetchProfileGroups } from "@/libs/fetchProfileGroups";
 import { TextField, Typography, Box, Button } from "@mui/material";
 import ActionBtn from "@/components/buttons/ActionBtn.jsx";
+import MyProfileLocation from "@/components/profile/MyProfileLocation";
+import ProfileLocation from "@/components/profile/ProfileLocation";
 
 const ProfilePage = () => {
   const [profile, setProfile] = useState(null);
@@ -49,9 +51,7 @@ const ProfilePage = () => {
     const loadGroups = async () => {
       const allGroups = await fetchProfileGroups();
       if (profile?.role) {
-        const filtered = allGroups.filter((group) =>
-          group.roles.includes(profile.role)
-        );
+        const filtered = allGroups.filter((group) => group.roles.includes(profile.role));
         setGroups(filtered);
       }
     };
@@ -67,19 +67,14 @@ const ProfilePage = () => {
     }
 
     setSavingBio(true);
-    const { data: updated, error } = await supabase
-      .from("users")
-      .update({ bio })
-      .eq("id", user.id)
-      .select()
-      .single();
+    const { data: updated, error } = await supabase.from("users").update({ bio }).eq("id", user.id).select().single();
     setSavingBio(false);
     if (error) {
       console.error("Failed to save bio:", error);
     } else {
       setProfile(updated);
-      setUser(prev => ({ ...prev, bio: updated.bio }));
-      setCurrentBio(updated.bio);   // обновляем базовый стейт
+      setUser((prev) => ({ ...prev, bio: updated.bio }));
+      setCurrentBio(updated.bio); // обновляем базовый стейт
       setEditingBio(false);
     }
   };
@@ -94,7 +89,7 @@ const ProfilePage = () => {
 
   return (
     <div>
-      <RootNavigation title={isMyProfile ? "My Profile" : "Profile"} backBtn/>
+      <RootNavigation title={isMyProfile ? "My Profile" : "Profile"} backBtn />
       <div className="pt-4 pb-8">
         <ProfileImage
           id={id}
@@ -103,23 +98,13 @@ const ProfilePage = () => {
           imgUrl={profile.img_url}
         />
 
-        <SocialMediaSection
-          id={id}
-          isMyProfile={isMyProfile}
-          links={profile.social_networks}
-        />
-        <PrimaryBtn
-          title="Start A Project"
-          classes="w-full block mb-12"
-          onClick={() => router.push("/projects")}
-        />
+        <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />
+        <PrimaryBtn title="Start A Project" classes="w-full block mb-12" onClick={() => router.push("/projects")} />
 
         {(isMyProfile || profile.bio) && (
           <Box className="my-8">
             <div className="flex justify-between items-center w-full">
-              <h3 className="font-bold mb-0">
-                {isMyProfile ? "Your Bio" : "About"}
-              </h3>
+              <h3 className="font-bold mb-0">{isMyProfile ? "Your Bio" : "About"}</h3>
 
               {isMyProfile && (
                 <Box display="flex" gap={2}>
@@ -140,7 +125,7 @@ const ProfilePage = () => {
                       />
                     </>
                   ) : (
-                    <ActionBtn title="Edit" onClick={() => setEditingBio(true)}/>
+                    <ActionBtn title="Edit" onClick={() => setEditingBio(true)} />
                   )}
                 </Box>
               )}
@@ -160,7 +145,7 @@ const ProfilePage = () => {
                         setEditingBio(false);
                       }
                     }}
-                    onChange={e => setBio(e.target.value)}
+                    onChange={(e) => setBio(e.target.value)}
                     placeholder="Write a public-facing bio or description..."
                     disabled={savingBio}
                     sx={{
@@ -188,25 +173,31 @@ const ProfilePage = () => {
           </Box>
         )}
 
+        {isMyProfile ? (
+          <MyProfileLocation location={profile.country} />
+        ) : (
+          profile.country && <ProfileLocation location={profile.country} />
+        )}
 
-        <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id}/>
+        <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id} />
 
-        {groups?.length && groups.map((group) => {
-          return (
-            <Group
-              key={group.id}
-              id={id}
-              groupId={group.id}
-              title={group.title}
-              data={profile[group.column_name]}
-              columnName={group.column_name}
-              isMyProfile={isMyProfile}
-              profile={profile}
-            />
-          );
-        })}
+        {groups?.length &&
+          groups.map((group) => {
+            return (
+              <Group
+                key={group.id}
+                id={id}
+                groupId={group.id}
+                title={group.title}
+                data={profile[group.column_name]}
+                columnName={group.column_name}
+                isMyProfile={isMyProfile}
+                profile={profile}
+              />
+            );
+          })}
 
-        <NavigationBar/>
+        <NavigationBar />
       </div>
     </div>
   );
