@@ -19,6 +19,7 @@ import ProjectImage from "@/components/project/ProjectImage.jsx";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 import { LoaderItem } from "@/components/Loader.jsx";
 import ProgressTracker from "@/components/project/ProgressTracker.jsx";
+import MilestonesSection from "@/components/project/MilestonesSection.jsx";
 
 const ProjectPage = ({ accessDenied }) => {
   const router = useRouter();
@@ -42,6 +43,7 @@ const ProjectPage = ({ accessDenied }) => {
   const [editingVisibility, setEditingVisibility] = useState(false);
   const [visibilityValue, setVisibilityValue] = useState(project?.project_visibility);
   const [completionPercentage, setCompletionPercentage] = useState(0);
+  const [milestones, setMilestones] = useState([]);
 
   const onCompletionPercentageChange = async (newValue) => {
     const { error } = await supabase
@@ -53,6 +55,18 @@ const ProjectPage = ({ accessDenied }) => {
       return;
     }
     setCompletionPercentage(newValue);
+  }
+
+  const onMilestonesSave = async (newValue) => {
+    const { error } = await supabase
+      .from("projects")
+      .update({ milestones: newValue })
+      .eq("id", id)
+    if(error) {
+      console.error("Error updating completion percentage:", error);
+      return;
+    }
+    setMilestones(newValue);
   }
 
   const saveVisibility = async () => {
@@ -115,6 +129,7 @@ const ProjectPage = ({ accessDenied }) => {
     }
 
     setProject(proj);
+    setMilestones(proj.milestones || []);
     setVisibilityValue(proj.project_visibility);
     setCompletionPercentage(proj.completion_percentage || 0);
     setImageUrls(proj.images || []);
@@ -283,6 +298,8 @@ const ProjectPage = ({ accessDenied }) => {
         description={project.project_description}
         isOwner={user.id === project.owner}
       />
+
+      <MilestonesSection isOwner={user.id === project.owner} onSave={onMilestonesSave} milestones={milestones}/>
 
       <ProjectVisibilitySection
         projectVisibility={project.project_visibility}
