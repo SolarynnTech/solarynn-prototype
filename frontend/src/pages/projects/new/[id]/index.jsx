@@ -9,13 +9,13 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions, FormControl, InputLabel, Select, MenuItem,
+  DialogActions
 } from "@mui/material";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore.js";
 import ImageDropZone from "@/components/ImageDropZone.jsx";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import VisibilitySelect from "@/components/forms/VisibilitySelect.jsx";
 
 const textFieldStyles = {
   "& .MuiInput-underline:before": {
@@ -149,10 +149,7 @@ const NewProjectPage = () => {
   const fields = [
     { id: "title", question: "Project Title", value: title },
     {
-      id: "visibility", question: "Project Visibility", values: {
-        private: "Private",
-        public: "Public"
-      }
+      id: "visibility", question: "Project Visibility", options: ["public", "private"],
     },
     {
       id: "description",
@@ -180,62 +177,11 @@ const NewProjectPage = () => {
             </Typography>
 
             {f.id === "visibility" ? (
-              <TextField
-                select
-                variant="standard"
-                fullWidth
+              <VisibilitySelect
                 value={visibility}
                 onChange={e => setVisibility(e.target.value)}
-                SelectProps={{
-                  IconComponent: ArrowDropDownIcon,
-                  sx: { right: 0, position: "absolute" },
-                }}
-                sx={{
-                  "& .MuiInput-underline:before": {
-                    borderBottomColor: "#000",
-                  },
-                  "& .MuiInput-underline:hover:before": {
-                    borderBottomColor: "#000",
-                  },
-                  "& .MuiInput-underline.Mui-focused:after": {
-                    borderBottomColor: "#000",
-                    borderBottomWidth: "2px",
-                  },
-                  "& .MuiSelect-select": {
-                    pr: 4,
-                  },
-                }}
-                Input={{
-                  disableUnderline: false,
-                  sx: {
-                    "&:before": { borderBottomColor: "#000" },
-                    "&:hover:before": {
-                      borderBottomColor: "#000",
-                    },
-                    "&:after": {
-                      borderBottomColor: "#000",
-                      borderBottomWidth: 2,
-                    },
-                    pr: 4,
-                  },
-                }}
-              >
-                {Object.entries(f.values).map(([val, label]) => (
-                  <MenuItem key={val} value={val} sx={{
-                    "&.Mui-selected": {
-                      backgroundColor: "rgba(0, 128, 0, 0.2)",
-                    },
-                    "&.Mui-selected:hover": {
-                      backgroundColor: "rgba(0, 128, 0, 0.3)",
-                    },
-                    "&:hover": {
-                      backgroundColor: "rgba(0, 128, 0, 0.1)",
-                    },
-                  }}>
-                    {label}
-                  </MenuItem>
-                ))}
-              </TextField>
+                options={f.options}
+              />
             ) : f.id === "description" ? (
               <TextField
                 id="projectDescription"

@@ -4,25 +4,20 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import RootNavigation from "@/components/Nav/Nav";
 import NavigationBar from "@/components/profile/NavigationBar";
 import useUserStore from "@/stores/useUserStore.js";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import DeleteIcon from "@mui/icons-material/Delete";
 import {
-  IconButton,
   Box,
   Typography,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogTitle, Tooltip, ClickAwayListener, Chip
 } from "@mui/material";
-import LockIcon from "@mui/icons-material/Lock";
-import PublicIcon from "@mui/icons-material/Public";
-import { InfoIcon, Loader } from "lucide-react";
-import ImageDropZone from "@/components/ImageDropZone.jsx";
-import ActionBtn from "@/components/buttons/ActionBtn.jsx";
-import CloseIcon from "@mui/icons-material/Close";
+import { Loader } from "lucide-react";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
+import ConfirmDeleteProjectModal from "@/components/modals/ConfirmDeleteProjectModal.jsx";
+import ImageViewerModal from "@/components/modals/ImageViewerModal.jsx";
+import PhotosSection from "@/components/project/PhotosSection.jsx";
+import ProjectDetails from "@/components/project/ProjectDetailsSection.jsx";
+import ProjectVisibilitySection from "@/components/project/ProjectVisibilitySection.jsx";
+import ProjectDescription from "@/components/project/DescriptionSection.jsx";
+import ProjectImage from "@/components/project/ProjectImage.jsx";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 
 const ProjectPage = ({ accessDenied }) => {
   const router = useRouter();
@@ -42,14 +37,21 @@ const ProjectPage = ({ accessDenied }) => {
   const [viewerUrl, setViewerUrl] = useState("");
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [deleteSuccess, setDeleteSuccess] = useState(false);
-  const handleDeleteClick = () => setDeleteDialogOpen(true);
   const [tipOpen, setTipOpen] = useState(false);
+  const [editingVisibility, setEditingVisibility] = useState(false);
+  const [visibilityValue, setVisibilityValue] = useState(project?.project_visibility);
 
-  const icon =
-    project?.project_visibility === "private" ? <LockIcon fontSize="small"/> :
-      <PublicIcon fontSize="small"/>;
+  const saveVisibility = async () => {
+    const { error } = await supabase
+      .from("projects")
+      .update({ project_visibility: visibilityValue })
+      .eq("id", id);
 
-  const text = project?.project_visibility.replace("_", " ");
+    if (!error) {
+      setProject(prev => ({ ...prev, project_visibility: visibilityValue }));
+      setEditingVisibility(false);
+    }
+  };
 
   const handleConfirmDelete = async () => {
     const { error } = await supabase
@@ -99,7 +101,7 @@ const ProjectPage = ({ accessDenied }) => {
     }
 
     setProject(proj);
-
+    setVisibilityValue(proj.project_visibility);
     setImageUrls(proj.images || []);
     const { data: favProgect, error: favProjError } = await supabase
       .from("users")
@@ -231,16 +233,9 @@ const ProjectPage = ({ accessDenied }) => {
     if (project?.title) {
       loadProjectDescription(project.description);
     }
-  }, [project]);
+  }, [project?.id]);
 
-  if (!project) {
-    return (
-      <div className="flex justify-center items-center h-[75vh]">
-        <Loader className="animate-spin text-green-800"/>
-        <p className="ml-2">Loading...</p>
-      </div>
-    );
-  }
+  if (!project) return <Loader/>;
 
   if (accessDenied) {
     return (
@@ -257,318 +252,80 @@ const ProjectPage = ({ accessDenied }) => {
     <div className="mb-10">
       <RootNavigation title={project.title} backBtn/>
       <div className="pt-4 pb-6">
-        <div className={"relative"}>
-          <img
-            src={project.img_url}
-            alt="Preview"
-            className="mt-2 rounded-md w-full h-auto max-h-[400px] object-contain"
-          />
-          <IconButton
-            onClick={handleToggleFav}
-            sx={{
-              position: "absolute",
-              zIndex: 10,
-              top: 16,
-              right: 16,
-              boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
-              bgcolor: "rgba(255,255,255, 1)",
-              "&:hover": { bgcolor: "rgba(255,255,255,0.9)" }
-            }}
-          >
-            {isFav
-              ? <FavoriteIcon color="success" sx={{ fontSize: 28 }}/>
-              : <FavoriteBorderIcon color="success" sx={{ fontSize: 28 }}/>}
-          </IconButton>
-          {user.id === project.owner && (
-            <IconButton
-              onClick={handleDeleteClick}
-              sx={{
-                position: "absolute",
-                zIndex: 10,
-                top: 74,
-                right: 16,
-                bgcolor: "white",
-                color: "error.main",
-                boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
-                "&:hover": { bgcolor: "rgba(255,255,255,0.9)" }
-              }}
-            >
-              <DeleteIcon sx={{ fontSize: 28 }}/>
-            </IconButton>
-          )}
-        </div>
-        <NavigationBar/>
-      </div>
-      <div className="mb-6">
-        <h4 className="font-semibold text-lg mb-4">
-          Project Description:
-        </h4>
-
-        {project.project_description ? (
-          <p>{project.project_description}</p>
-        ) : (
-          <p className="text-gray-400 text-center !text-sm">
-            {user.id === project.owner
-              ? "You haven’t added a project description yet."
-              : "There is no description available for this project."
-            }
-          </p>
-        )}
-      </div>
-      <Box className="mb-6">
-        <Typography variant="subtitle1" className="!mb-4 !font-semibold !text-lg">
-          Project Visibility:
-        </Typography>
-        <ClickAwayListener onClickAway={() => setTipOpen(false)}>
-          <Tooltip
-            arrow
-            placement="top"
-            open={tipOpen}
-            onOpen={() => setTipOpen(true)}
-            onClose={() => setTipOpen(false)}
-            title={
-              project.project_visibility === "private"
-                ? "If this project is private, only invited users or collaborators can view it."
-                : "This project is public—anyone can view it."
-            }
-          >
-            <Box
-              onClick={() => setTipOpen(prev => !prev)}
-              sx={{ display: "inline-block", cursor: "pointer" }}
-            >
-              <Chip
-                icon={icon}
-                label={text}
-                variant="outlined"
-                sx={{
-                  textTransform: "capitalize",
-                  fontWeight: 500,
-                  fontSize: "1rem",
-                  borderRadius: "9999px",
-                  borderColor:
-                    project.project_visibility === "private"
-                      ? "grey.400"
-                      : project.project_visibility === "semi_public"
-                        ? "warning.main"
-                        : "success.main",
-                  color:
-                    project.project_visibility === "private"
-                      ? "grey.800"
-                      : project.project_visibility === "semi_public"
-                        ? "warning.dark"
-                        : "success.dark",
-                  px: 1.5,
-                  py: 2,
-                  width: "fit-content",
-                }}
-                deleteIcon={<InfoIcon/>}/>
-            </Box>
-          </Tooltip>
-        </ClickAwayListener>
-      </Box>
-      <h4 className="font-semibold text-lg mb-2">
-        Details:
-      </h4>
-      <div className="p-3 bg-gray-100 rounded-lg shadow-md mb-4 border border-gray-300">
-        {sectionTitles.length > 0 &&
-          answersBySection[sectionTitles[currentFormPage]] && (
-            <div key={sectionTitles[currentFormPage]} className="mb-6">
-              <div>
-                {Object.entries(
-                  answersBySection[sectionTitles[currentFormPage]]
-                ).map(([questionTitle, value]) => (
-                  <div
-                    key={questionTitle}
-                    className="mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"
-                  >
-                    <p className="mb-2">
-                      <b>{questionTitle}</b>
-                    </p>
-                    <span className="text-gray-700">
-                      {Array.isArray(value) ? value.join(", ") : value}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-      </div>
-      {sectionTitles.length > 0 && (
-        <div className="flex items-center justify-between mb-4 overflow-x-auto gap-2 pb-4 -mx-6 px-8">
-          {sectionTitles.map((_, idx) => (
-            <span
-              key={idx}
-              className={`${
-                currentFormPage === idx ? "bg-green-800" : "bg-gray-300"
-              } min-w-8 shrink-0 grow h-1 cursor-pointer rounded-full`}
-              onClick={() => setCurrentFormPage(idx)}
-            />
-          ))}
-        </div>
-      )}
-
-      <Box mb={4}>
-        <div className="flex justify-between items-center mb-4">
-          <h4 className="font-semibold text-lg mb-1">Photos:</h4>
-          {user.id === project.owner && (
-            <ActionBtn
-              title={editingImages ? "Done Editing" : "Edit Images"}
-              onClick={() => setEditingImages(!editingImages)}
-            />
-          )}
-        </div>
-
-        {editingImages && user.id === project.owner && (
-          <>
-            <Box mb={2}>
-              {uploadingImages ? (
-                <p>Uploading…</p>
-              ) : imageUrls.length < 10 ? (
-                <ImageDropZone
-                  onFile={handleUploadImage}
-                  uploading={uploadingImages}
-                  previewUrl={null}
-                />
-              ) : null}
-            </Box>
-            <Box className="flex justify-end mb-2">
-              <Typography variant="caption" className="text-gray-600">
-                {imageUrls.length} / 10 images
-              </Typography>
-            </Box>
-          </>
-        )}
-
-        {imageUrls.length === 0 ? (
-          <Box className="mt-4 text-center text-gray-400">
-            <Typography variant="body2" className={"!text-sm"}>
-              {user.id === project.owner
-                ? "You haven’t added any photos yet."
-                : "There are no additional photos for this project."
-              }
-            </Typography>
-          </Box>
-        ) : (
-          <Box className="overflow-x-auto hide-scrollbar -mx-6 px-6 mt-4">
-            <Box className="flex gap-4 flex-nowrap relative">
-              {imageUrls.map((url, idx) => (
-                <Box key={url} className="relative flex-shrink-0">
-                  <img
-                    src={url}
-                    alt="Project asset"
-                    className={`w-44 h-60 object-cover rounded ${
-                      !editingImages ? "cursor-pointer" : ""
-                    }`}
-                    onClick={() => {
-                      if (!editingImages) {
-                        setViewerUrl(url);
-                        setViewerOpen(true);
-                      }
-                    }}
-                  />
-                  {editingImages && user.id === project.owner && (
-                    <IconButton
-                      size="small"
-                      onClick={() => handleDeleteImage(idx, url)}
-                      sx={{
-                        position: "absolute",
-                        top: 4,
-                        right: 4,
-                        width: 32,
-                        height: 32,
-                        p: 0,
-                        borderRadius: "50%",
-                        bgcolor: "rgba(255,255,255,1)",
-                        boxShadow: "0px 2px 4px rgba(0,0,0,0.2)",
-                        "&:hover": { bgcolor: "rgba(255,255,255,0.8)" },
-                      }}
-                    >
-                      <DeleteIcon fontSize="small" sx={{ color: "black" }}/>
-                    </IconButton>
-                  )}
-                </Box>
-              ))}
-            </Box>
-          </Box>
-        )}
-      </Box>
-      <Dialog
-        open={viewerOpen}
-        onClose={() => setViewerOpen(false)}
-        maxWidth="xl"
-        fullWidth
-        PaperProps={{
-          sx: { backgroundColor: "transparent", boxShadow: "none" }
-        }}
-      >
-        <IconButton
-          onClick={() => setViewerOpen(false)}
-          sx={{
-            position: "absolute",
-            top: 16,
-            right: 16,
-            zIndex: 10,
-            bgcolor: "rgba(0,0,0,0.5)",
-            color: "#fff",
-            "&:hover": { bgcolor: "rgba(0,0,0,0.7)" },
-          }}
-        >
-          <CloseIcon/>
-        </IconButton>
-        <Box
-          component="img"
-          src={viewerUrl}
-          sx={{
-            width: "100%",
-            height: "100vh",
-            objectFit: "contain",
-            bgcolor: "rgba(0,0,0,0.9)",
+        <ProjectImage
+          imgUrl={project.img_url}
+          isFav={isFav}
+          onToggleFav={handleToggleFav}
+          onImageClick={() => {
+            setViewerUrl(project.img_url);
+            setViewerOpen(true);
           }}
         />
-      </Dialog>
+        <NavigationBar/>
+      </div>
 
-      <Dialog
-        PaperProps={{
-          sx: {
-            width: { xs: "90%", sm: 400 },
-          }
+      <ProjectDescription
+        description={project.project_description}
+        isOwner={user.id === project.owner}
+      />
+
+      <ProjectVisibilitySection
+        projectVisibility={project.project_visibility}
+        isOwner={user.id === project.owner}
+        editing={editingVisibility}
+        visibilityValue={visibilityValue}
+        tipOpen={tipOpen}
+        onToggleTip={() => setTipOpen(prev => !prev)}
+        onToggleEdit={() => setEditingVisibility(true)}
+        onSave={saveVisibility}
+        onCancel={() => {
+          setVisibilityValue(project.project_visibility);
+          setEditingVisibility(false);
         }}
-        open={deleteDialogOpen}
-        onClose={() => deleteSuccess ? null : setDeleteDialogOpen(false)}
-      >
-        <DialogTitle className={"!font-semibold !text-xl"}>
-          {deleteSuccess ? "" : "Are you sure?"}
-        </DialogTitle>
+        onChange={(e) => setVisibilityValue(e.target.value)}
+      />
 
-        <DialogContent>
-          {deleteSuccess ? (
-            <Typography color="success.main" className={"!font-semibold !text-lg text-center"}>
-              Your project was successfully deleted.
-            </Typography>
-          ) : (
-            <Typography>
-              This will archive (hide) your project. You won’t be able to see it afterward.
-            </Typography>
-          )}
-        </DialogContent>
+      <ProjectDetails
+        answersBySection={answersBySection}
+        sectionTitles={sectionTitles}
+        currentFormPage={currentFormPage}
+        onPageChange={setCurrentFormPage}
+      />
 
-        <DialogActions>
-          {!deleteSuccess && (
-            <>
-              <ActionBtn
-                title={"Cancel"}
-                onClick={() => setDeleteDialogOpen(false)}
-              />
-              <ActionBtn
-                title={"Yes, delete"}
-                onClick={handleConfirmDelete}
-                classes={"bg-red-600 hover:bg-red-700 text-white"}
-              />
-            </>
-          )}
-        </DialogActions>
-      </Dialog>
+      <PhotosSection
+        imageUrls={imageUrls}
+        uploadingImages={uploadingImages}
+        editingImages={editingImages}
+        onToggleEditing={() => setEditingImages(!editingImages)}
+        onUploadImage={handleUploadImage}
+        onDeleteImage={handleDeleteImage}
+        onViewImage={url => {
+          setViewerUrl(url);
+          setViewerOpen(true);
+        }}
+        userId={user.id}
+        ownerId={project.owner}
+      />
+
+      <ImageViewerModal
+        open={viewerOpen}
+        onClose={() => setViewerOpen(false)}
+        src={viewerUrl}
+      />
+
+      {user.id === project.owner && (
+        <PrimaryBtn
+          title="Delete Project"
+          onClick={() => setDeleteDialogOpen(true)}
+          classes="bg-red-600 hover:bg-red-700 text-white w-full mb-2 transition duration-200"
+        />
+      )}
+
+      <ConfirmDeleteProjectModal open={deleteDialogOpen}
+                                 deleteSuccess={deleteSuccess}
+                                 onClose={() => setDeleteDialogOpen(false)}
+                                 onCancel={() => setDeleteDialogOpen(false)}
+                                 onConfirm={handleConfirmDelete}/>
     </div>
   );
 };
