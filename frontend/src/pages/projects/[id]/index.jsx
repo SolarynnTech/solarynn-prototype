@@ -235,9 +235,21 @@ const ProjectPage = ({ accessDenied }) => {
       .in("id", qIds);
     if (qErr) return console.error(qErr);
 
-    const mid = Math.ceil(questions.length / 2);
-    const firstChunk = questions.slice(0, mid);
-    const secondChunk = questions.slice(mid);
+    let questionsToUse = questions;
+
+    if (!questionsToUse || questionsToUse.length === 0) {
+      const { data: questionsUniverse, error: qErr } = await supabase
+        .from("universe_questions")
+        .select("id, question")
+        .in("id", qIds);
+      if (qErr) return console.error(qErr);
+
+      questionsToUse = questionsUniverse;
+    }
+
+    const mid = Math.ceil(questionsToUse.length / 2);
+    const firstChunk = questionsToUse.slice(0, mid);
+    const secondChunk = questionsToUse.slice(mid);
 
     const buckets = {
       "Part 1": {},

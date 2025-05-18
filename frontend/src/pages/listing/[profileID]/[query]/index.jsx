@@ -58,9 +58,8 @@ export default function Listing() {
           {results && results.length > 0 ? (
           <div className={"grid grid-cols-2 gap-4"}>
             {results?.length && results?.map((profile, index) => (
-              <div className="flex justify-center">
+              <div className="flex justify-center" key={profile.id}>
                 <UserPreview
-                  key={profile.id}
                   link={"/profile/" + profile?.id}
                   name={profile.name || profile.official_name || profile.agency_name}
                   img_url={profile.profile_img}

@@ -20,6 +20,7 @@ export default function HomePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [universeCategories, setUniverseCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
 
   const categoryNamesExcluded = ["Book Talent"];
 
@@ -34,20 +35,20 @@ export default function HomePage() {
     setLoading(false);
   };
 
-  // const fetchCategories = async () => {
-  //   const { data, error } = await supabase
-  //     .from("categories")
-  //     .select("*")
-  //     .eq("is_role", true);
-  //   if (error) {
-  //     console.error("Failed to fetch categories:", error);
-  //   } else {
-  //     setCategories(data);
-  //   }
-  // };
+  const fetchCategories = async () => {
+    const { data, error } = await supabase
+      .from("categories")
+      .select("*")
+      .eq("is_role", true);
+    if (error) {
+      console.error("Failed to fetch categories:", error);
+    } else {
+      setCategories(data);
+    }
+  };
 
   useEffect(() => {
-    // fetchCategories();
+    fetchCategories();
     fetchUniverseCategories();
   }, []);
 
@@ -66,33 +67,47 @@ export default function HomePage() {
       <Favorites/>
       <RecentlyViewed/>
       <YourConnections/>
-      <TakeALook/>
+      {/*<TakeALook/>*/}
       <MyProjects/>
       <h2 className="mb-8">Our Universe</h2>
 
       {loading ? (
         <p>Loading categories...</p>
       ) : (
-        <div className="grid grid-cols-2 gap-3 mb-12">
-          {universeCategories
-            ?.sort((a, b) => {
-              const aAvailable = !categoryNamesExcluded.includes(a.title);
-              const bAvailable = !categoryNamesExcluded.includes(b.title);
-              if (aAvailable && !bAvailable) return -1;
-              if (!aAvailable && bAvailable) return 1;
-              return 0;
-            })
-            .map((category) => (
-              <CategoryTile
-                key={category.id}
-                title={category.title}
-                img_url={category.img_url}
-                isAvailable={!categoryNamesExcluded.includes(category.title)}
-                bg_color={category.color}
-                onClick={() => router.push("/universe-categories/" + category.id)}
-              />
-            ))}
-        </div>
+        <>
+          <div className="grid grid-cols-2 gap-3 mb-12">
+            {universeCategories
+              ?.sort((a, b) => {
+                const aAvailable = !categoryNamesExcluded.includes(a.title);
+                const bAvailable = !categoryNamesExcluded.includes(b.title);
+                if (aAvailable && !bAvailable) return -1;
+                if (!aAvailable && bAvailable) return 1;
+                return 0;
+              })
+              .map((category) => (
+                <CategoryTile
+                  key={category.id}
+                  title={category.title}
+                  img_url={category.img_url}
+                  isAvailable={!categoryNamesExcluded.includes(category.title)}
+                  bg_color={category.color}
+                  onClick={() => router.push("/universe-categories/" + category.id)}
+                />
+              ))}
+          </div>
+          <div className="grid grid-cols-2 gap-3 mb-12">
+            {!loading && categories && categories.length > 0 &&
+              categories.map((category, index) => (
+                <CategoryTile
+                  key={index}
+                  title={category.title}
+                  img_url={category.img_url}
+                  bg_color={category.color}
+                  onClick={() => router.push("/listing/category/" + category.id)}
+                />
+              ))}
+          </div>
+        </>
       )}
 
       <NavigationBar/>

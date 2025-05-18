@@ -16,7 +16,7 @@ const CategoryTile = ({
       className={` 
         ${isSelected ? "shadow-[0_0_0_2px_#166534]" : ""} 
         ${disabled ? "opacity-60" : "hover:scale-105 cursor-pointer"} 
-        ${!isAvailable ? "!bg-gray-400 !scale-100 !cursor-default text-gray-700" : ""} 
+        ${!isAvailable ? "!hidden !bg-gray-400 !scale-100 !cursor-default text-gray-700" : ""} 
         ${isEmpty ? "items-center" : "items-start"} 
         flex pr-24 rounded-lg py-3 pl-3 relative h-24 ease-in transition-transform overflow-hidden`}
       onClick={onClick}

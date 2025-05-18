@@ -47,7 +47,7 @@ const MyProjects = () => {
       <div
         className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
         <Box display="flex" gap={2} overflowX="auto" px={-6} className="hide-scrollbar">
-          {projects.length > 0 ? (
+          {projects && projects.length > 0 ? (
             projects.map((proj) => (
               <ProjectPreview
                 key={proj.id}

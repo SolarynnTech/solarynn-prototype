@@ -115,32 +115,66 @@ const NewProjectPage = () => {
 
   useEffect(() => {
     if (!id) return;
-    (async () => {
-      setLoading(true);
-      const { data: cat, error: catErr } = await supabase
-        .from("project_categories")
-        .select("title")
-        .eq("id", id)
-        .maybeSingle();
-      if (catErr || !cat) {
-        setError(catErr?.message || "Category not found");
-        setLoading(false);
-        return;
-      }
-      setSectionTitle(cat.title);
 
-      const { data: qs, error: qsErr } = await supabase
-        .from("project_questions")
-        .select("*")
-        .eq("category", id);
-      if (qsErr || !qs) {
-        setError(qsErr?.message || "Failed to fetch questions");
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        // Fetch category title (from project_categories or universe_sub_categories)
+        const { data: cat, error: catErr } = await supabase
+          .from("project_categories")
+          .select("title")
+          .eq("id", id)
+          .maybeSingle();
+
+        let title = cat?.title || null;
+
+        if (!title) {
+          const { data: subCat, error: subCatErr } = await supabase
+            .from("universe_sub_categories")
+            .select("title")
+            .eq("id", id)
+            .maybeSingle();
+
+          if (subCatErr) throw new Error(subCatErr.message);
+          title = subCat?.title || null;
+        }
+
+        if (!title) throw new Error("Category not found");
+        setSectionTitle(title);
+
+        // Fetch questions (from project_questions or universe_questions)
+        const { data: qs, error: qsErr } = await supabase
+          .from("project_questions")
+          .select("*")
+          .eq("category", id);
+
+        let projectQuestions = qs || null;
+
+        if (!projectQuestions || !projectQuestions.length) {
+          const { data: uqs, error: uqsErr } = await supabase
+            .from("universe_questions")
+            .select("*")
+            .eq("universe_sub_category", id);
+
+          console.log("uqs", uqs);
+
+          if (uqsErr) throw new Error(uqsErr.message);
+          projectQuestions = uqs || [];
+        }
+
+        if (!projectQuestions || !projectQuestions.length) {
+          throw new Error("No questions found");
+        }
+
+        setQuestions(projectQuestions);
+      } catch (err) {
+        setError(err.message || "Unexpected error");
+      } finally {
         setLoading(false);
-        return;
       }
-      setQuestions(qs);
-      setLoading(false);
-    })();
+    };
+
+    fetchData();
   }, [id, supabase]);
 
   if (loading) return <div>Loading…</div>;
@@ -189,19 +223,21 @@ const NewProjectPage = () => {
                 multiline
                 rows={4}
                 fullWidth
-                htmlInput={{ maxLength: 2000 }}
-                value={projectDescription}
-                onChange={e =>
-                  setProjectDescription(e.target.value)
-                }
-                helperText={`${projectDescription.length}/2000 characters`}
-                formHelperText={{
+                slotProps={{
+                  htmlInput: {
+                    maxLength: 2000,
+                  },
                   sx: {
                     textAlign: "right",
                     fontSize: "0.75rem",
                     color: "#000",
                   },
                 }}
+                value={projectDescription}
+                onChange={e =>
+                  setProjectDescription(e.target.value)
+                }
+                helperText={`${projectDescription.length}/2000 characters`}
                 sx={{
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": { borderColor: "#000" },
@@ -234,9 +270,11 @@ const NewProjectPage = () => {
                     : handleFieldChange(f.id, e.target.value)
                 }
                 sx={textFieldStyles}
-                Input={{
-                  endAdornment: f.suffix || null,
-                }}
+                slotProps={{
+                    input: {
+                      endAdornment: f.suffix || null,
+                    }
+                  }}
               />
             )}
           </Box>

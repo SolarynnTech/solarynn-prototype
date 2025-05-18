@@ -5,6 +5,7 @@ import { Loader } from "lucide-react";
 import ProjectsSearchBar from "@/components/projects/ProjectsSearchBar";
 import ProjectPreview from "@/components/projects/ProjectPreview";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 
 export default function Listing() {
   const router = useRouter();
@@ -44,7 +45,7 @@ export default function Listing() {
       setProjects([]);
 
       try {
-        const { data, error } = await supabase.from("universe_projects").select("*").eq("sub-category", subCategoryId);
+        const { data, error } = await supabase.from("projects").select("*").eq("category", subCategoryId);
 
         if (error) {
           console.error("Error fetching projects:", error);
@@ -66,6 +67,10 @@ export default function Listing() {
 
       <div className="pt-12">
         <ProjectsSearchBar />
+
+        <div className={"mb-6"}>
+          <PrimaryBtn classes={"w-full"} title="Create new project" onClick={() => router.push("/projects/new/" + subCategoryId)} />
+        </div>
 
         <div className="mb-4">
           {loading && (

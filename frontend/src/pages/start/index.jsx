@@ -55,7 +55,7 @@ const StartPage = () => {
               onChange={(e) => setTosAccepted(e.target.checked)}
             />
             <label htmlFor="tos-acceptance">
-              I accept the terms and conditions
+              I accept the <strong>Terms and Conditions</strong>
             </label>
           </div>
         </div>
