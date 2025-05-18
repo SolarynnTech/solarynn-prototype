@@ -40,7 +40,7 @@ const MyProjects = () => {
         {projects.length > 2 && (
           <ActionBtn
             title="See All"
-            onClick={() => router.push("/projects")}
+            onClick={() => router.push("/projects/my-projects")}
           />
         )}
       </Box>
