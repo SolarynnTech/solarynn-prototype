@@ -16,6 +16,7 @@ import { TextField, Typography, Box, Button } from "@mui/material";
 import ActionBtn from "@/components/buttons/ActionBtn.jsx";
 import MyProfileLocation from "@/components/profile/MyProfileLocation";
 import ProfileLocation from "@/components/profile/ProfileLocation";
+import ChatsSendMessage from "@/components/chats/SendMessage";
 
 const ProfilePage = () => {
   const [profile, setProfile] = useState(null);
@@ -101,9 +102,10 @@ const ProfilePage = () => {
         <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />
         <PrimaryBtn
           title={isMyProfile ? "Start A Project" : "Send a Project"}
-          classes="w-full block mb-12"
+          classes="w-full block mb-2"
           onClick={() => router.push("/projects")}
         />
+        {!isMyProfile && <ChatsSendMessage id={id} />}
 
         {(isMyProfile || profile.bio) && (
           <Box className="my-8">

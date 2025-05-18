@@ -1,12 +1,4 @@
-
-const UserPreview = ({
-                       name = "",
-                       link,
-                       img_url,
-                       width = "",
-                       height = "",
-                       bgColor = "gray-100"
-}) => {
+const UserPreview = ({ name = "", link, img_url, width = "", height = "", bgColor = "gray-100" }) => {
   return (
     <a
       href={link}
@@ -20,7 +12,12 @@ const UserPreview = ({
         boxShadow: `rgba(0, 0, 0, 0.25) 0px -30px 25px -10px inset`,
       }}
     >
-      <p style={{textShadow: `0 0 2px rgba(0,0,0,.2)`}} className="absolute bottom-1 font-semibold left-2 truncate right-2 text-sm text-white z-[2]">{name}</p>
+      <p
+        style={{ textShadow: `0 0 2px rgba(0,0,0,.2)` }}
+        className="absolute bottom-1 font-semibold left-2 truncate right-2 text-sm text-white z-[2]"
+      >
+        {name}
+      </p>
     </a>
   );
 };

@@ -104,3 +104,10 @@ body [chrome-autofilled] {
   flex-direction: column;
   margin: 0 auto;
 }
+
+.bg-chat-normal {
+  background-color: #F1FFF2;
+}
+.bg-chat-light {
+  background-color: #DCE3DC;
+}

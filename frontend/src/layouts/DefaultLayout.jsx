@@ -1,19 +1,27 @@
+import { useRouter } from "next/router";
+import classNames from "classnames";
 
 import useUserProfile from "@/hooks/useUserProfile";
 import useAllProfiles from "@/hooks/useAllProfiles";
 
-const DefaultLayout = ({children, }) => {
+import styles from "./DefaultLayout.module.css";
+
+const DefaultLayout = ({ children }) => {
+  const router = useRouter();
   useUserProfile();
   useAllProfiles();
 
   return (
     <main
-      className="app-container"
-      style={{ maxWidth: "440px" }}
+      className={classNames(
+        "app-container",
+        styles.AppContainer,
+        router.pathname.includes("chats/") && "bg-chat-light"
+      )}
     >
       {children}
     </main>
   );
-}
+};
 
 export default DefaultLayout;

@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 import useUserStore from "@/stores/useUserStore";
 
-export default function Icon() {
+export default function NotificationsRequests() {
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
   const router = useRouter();

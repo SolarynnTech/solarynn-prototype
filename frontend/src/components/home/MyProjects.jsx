@@ -37,16 +37,10 @@ const MyProjects = () => {
         <Typography variant="h6" fontWeight="bold">
           My Projects
         </Typography>
-        {projects.length > 2 && (
-          <ActionBtn
-            title="See All"
-            onClick={() => router.push("/projects/my-projects")}
-          />
-        )}
+        {projects.length > 2 && <ActionBtn title="See All" onClick={() => router.push("/projects/my-projects")} />}
       </Box>
-      <div
-        className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
-        <Box display="flex" gap={2} overflowX="auto" px={-6} className="hide-scrollbar">
+      <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
+        <Box display="flex" gap={2} overflowx="auto" px={-6} className="hide-scrollbar">
           {projects && projects.length > 0 ? (
             projects.map((proj) => (
               <ProjectPreview
@@ -54,14 +48,15 @@ const MyProjects = () => {
                 link={`/projects/${proj.id}`}
                 title={proj.title}
                 img_url={proj.img_url}
-                height={150} width={150}
+                height={150}
+                width={150}
               />
             ))
           ) : (
             <>
-              <PlaceholderBox height={200} width={300}/>
-              <PlaceholderBox height={200} width={300}/>
-              <PlaceholderBox height={200} width={300}/>
+              <PlaceholderBox height={200} width={300} />
+              <PlaceholderBox height={200} width={300} />
+              <PlaceholderBox height={200} width={300} />
             </>
           )}
         </Box>
