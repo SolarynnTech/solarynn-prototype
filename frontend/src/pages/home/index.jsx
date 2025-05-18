@@ -12,6 +12,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 import NotificationIcon from "@/components/Notifications/Icon";
+import MyProjects from "@/components/home/MyProjects.jsx";
 
 export default function HomePage() {
   const { user } = useUserStore();
@@ -55,18 +56,18 @@ export default function HomePage() {
       <nav className="flex items-start justify-between relative gap4 mb-6">
         <h1>Welcome {user?.name || user?.email}</h1>
         <div className="flex items-center justify-between gap-4 pt-2">
-          <NotificationIcon />
-          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")} />
+          <NotificationIcon/>
+          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")}/>
         </div>
       </nav>
 
-      <SearchBar />
+      <SearchBar/>
 
-      <Favorites />
-      <RecentlyViewed />
-      <YourConnections />
-      <TakeALook />
-
+      <Favorites/>
+      <RecentlyViewed/>
+      <YourConnections/>
+      <TakeALook/>
+      <MyProjects/>
       <h2 className="mb-8">Our Universe</h2>
 
       {loading ? (
@@ -94,7 +95,7 @@ export default function HomePage() {
         </div>
       )}
 
-      <NavigationBar />
+      <NavigationBar/>
     </div>
   );
 }
