@@ -19,8 +19,6 @@ export default () => {
           <CategoryTile
             title={ role?.title ?? "Select the main category" }
             onClick={() => router.push("/onboarding/role")}
-            img_url={role?.img_url}
-            bg_color={role?.color}
             disabled={false}
             isEmpty={!role}
           />
@@ -28,8 +26,6 @@ export default () => {
           <CategoryTile
             title={ domain?.title ?? "Select the subcategory" }
             onClick={() => router.push("/onboarding/domain")}
-            img_url={domain?.img_url}
-            bg_color={domain?.color}
             disabled={!role}
             isEmpty={!domain}
           />
@@ -37,8 +33,6 @@ export default () => {
           <CategoryTile
             title={ subDivision?.title ?? "Select the subdomain" }
             onClick={() => router.push("/onboarding/sub-division")}
-            img_url={subDivision?.img_url}
-            bg_color={subDivision?.color}
             disabled={!domain}
             isEmpty={!subDivision}
           />

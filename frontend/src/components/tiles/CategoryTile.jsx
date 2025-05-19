@@ -1,4 +1,5 @@
 import React from "react";
+import { ChevronRight } from "lucide-react";
 
 const CategoryTile = ({
   title,
@@ -14,19 +15,17 @@ const CategoryTile = ({
   return (
     <div
       className={` 
-        ${isSelected ? "shadow-[0_0_0_2px_#166534]" : ""} 
-        ${disabled ? "opacity-60" : "hover:scale-105 cursor-pointer"} 
-        ${!isAvailable ? "!hidden !bg-gray-400 !scale-100 !cursor-default text-gray-700" : ""} 
-        ${isEmpty ? "items-center" : "items-start"} 
-        flex pr-24 rounded-lg py-3 pl-3 relative h-24 ease-in transition-transform overflow-hidden`}
+         flex items-center pr-24 rounded-xl py-3 pl-3 relative min-h-14 ease-in transition-transform overflow-hidden bg-white border border-gray-300
+        ${isSelected ? "border-indigo-500 bg-indigo-100" : ""} 
+        ${disabled ? "opacity-60" : "group hover:border-indigo-500 hover:text-indigo-500 cursor-pointer"} 
+        ${!isAvailable ? "!hidden !bg-gray-400 !cursor-default text-gray-700" : ""}
+        `}
       onClick={onClick}
-      style={{ backgroundColor: bg_color }}
     >
-      <h5 className="relative z-[2]">{title}</h5>
+      <h4 className="relative z-[2] font-medium">{title}</h4>
 
-      <div className="flex justify-end items-end absolute z-[1] bottom-0 right-0 w-20 h-20">
-        <img className={`max-h-full ${!img_url ? "opacity-30" : ""}`} src={img_url || "/images/categories/empty.png"} alt={title} />
-      </div>
+      <ChevronRight className="absolute top-1/2 -mt-3 right-2 text-gray-300 group-hover:text-indigo-500" />
+
       {!isAvailable && (
         <div className="absolute bottom-2 left-2 bg-gray-500 z-[2] text-white px-2 py-0.5 rounded-xl text-xs">
           Coming soon...

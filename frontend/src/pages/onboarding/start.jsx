@@ -1,15 +1,38 @@
-import React from "react";
+import React, {useEffect} from "react";
 import PrimaryBtn from "../../components/buttons/PrimaryBtn";
 import { useRouter } from "next/router";
 import useUserStore from "@/stores/useUserStore";
+import {useSupabaseClient} from "@supabase/auth-helpers-react";
 
 const OnboardingStartPage = () => {
   const router = useRouter();
 
   const {user} = useUserStore();
 
-  React.useEffect(() => {
-    if (user){
+  const supabase = useSupabaseClient();
+
+  useEffect(() => {
+    const restoreSession = async () => {
+      const url = new URL(window.location.href);
+      const code = url.searchParams.get("code");
+      const type = url.searchParams.get("type");
+
+      if (!code || !type) return; // skip if not magic link or signup
+
+      const { error } = await supabase.auth.exchangeCodeForSession();
+      if (error) {
+        console.error("Error restoring session", error.message);
+        await router.push("/login");
+      }
+    };
+
+    if (router.isReady) {
+      restoreSession();
+    }
+  }, [router.isReady]);
+
+  useEffect(() => {
+    if (user && user.role){
       if(user.role && !user.domain) {
         router.push("/onboarding/domain");
       } else if (user.role && user.domain && !user.subdivision) {

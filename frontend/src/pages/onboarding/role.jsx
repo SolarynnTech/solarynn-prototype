@@ -2,17 +2,20 @@ import { CategorySelection } from '@/components/onboarding/CategorySelection';
 import useCategoriesStore from "@/stores/useCategoriesStore";
 import useUserStore from "@/stores/useUserStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import {useEffect} from "react";
 
 export default function () {
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
   const { role, setRole, setDomain, setSubDivision } = useCategoriesStore();
 
-  const fetchRoles = () => {
-    return supabase
+  const fetchRoles = async () => {
+    const {data, error} = await supabase
       .from("categories")
       .select("*")
       .eq("is_role", true);
+
+    return { data, error};
   };
 
   const selectRole = (category) => {

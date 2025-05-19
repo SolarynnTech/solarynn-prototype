@@ -74,7 +74,7 @@ const QuestionsPage = () => {
     const { data: cat, error: catErr } = await supabase
       .from("categories")
       .select("sectionIds")
-      .eq("id", user?.role)
+      .eq("id", role.id)
       .maybeSingle();
 
     if (catErr || !cat) {
@@ -134,10 +134,10 @@ const QuestionsPage = () => {
   };
 
   useEffect(() => {
-    if (user && user.role) {
+    if (user && role) {
       getSectionsAndQuestions();
     }
-  }, [user?.role, user, role]);
+  }, [user, role]);
 
   if (loading || !data.length || !currentPage) {
     return (

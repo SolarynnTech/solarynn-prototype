@@ -36,7 +36,7 @@ export default function useUserProfile() {
         if (categoryIds.length) {
           const { data: catData, error: catError } = await supabase
             .from("categories")
-            .select("id, title, color, img_url")
+            .select("id, title")
             .in("id", categoryIds);
 
           if (catError) {
