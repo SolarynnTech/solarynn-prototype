@@ -96,7 +96,7 @@ export function CategorySelection({ title, subtitle, description, selectedCatego
   };
 
   return (
-    <div>
+    <div className={"pt-8"}>
       <RootNavigation title={title} backBtn={true} />
 
       <Snackbar open={isErrorToastShown} autoHideDuration={6000} onClose={dismissErrorToast} message={error} />
