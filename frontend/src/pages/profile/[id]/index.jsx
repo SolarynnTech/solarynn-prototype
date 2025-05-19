@@ -99,7 +99,11 @@ const ProfilePage = () => {
         />
 
         <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />
-        <PrimaryBtn title="Start A Project" classes="w-full block mb-12" onClick={() => router.push("/projects")} />
+        <PrimaryBtn
+          title={isMyProfile ? "Start A Project" : "Send a Project"}
+          classes="w-full block mb-12"
+          onClick={() => router.push("/projects")}
+        />
 
         {(isMyProfile || profile.bio) && (
           <Box className="my-8">
