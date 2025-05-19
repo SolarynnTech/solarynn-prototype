@@ -1,23 +1,16 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 import ActionBtn from "../buttons/ActionBtn";
-import {
-  Backdrop,
-  Box,
-  Fade,
-  Modal,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Backdrop, Box, Fade, Modal, Stack, TextField, Typography } from "@mui/material";
 import PlaceholderBox from "../PlaceholderBox";
 import useUserStore from "@/stores/useUserStore";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import uploadImageToSupabase from "@/utils/uploadImageToSupabase";
+import ReportProfile from "./ReportProfile";
 
-const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
+const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
   const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
@@ -56,9 +49,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
     e.preventDefault();
     const { name, email, address } = user;
 
-    const profile_img = imageFile
-      ? await uploadImageToSupabase(supabase, imageFile, user.id)
-      : user.profile_img;
+    const profile_img = imageFile ? await uploadImageToSupabase(supabase, imageFile, user.id) : user.profile_img;
 
     const { data, error } = await supabase
       .from("users")
@@ -73,7 +64,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
       email,
       address,
       profile_img,
-    }))
+    }));
 
     if (error) {
       console.error("Error updating user:", error);
@@ -83,7 +74,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
     setTimeout(() => {
       setOpen(false);
     }, 100);
-  }
+  };
 
   const style = {
     position: "absolute",
@@ -101,19 +92,13 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
     <div className="mb-6">
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-bold mb-0">User Info</h3>
-        {isMyProfile && (
-        <ActionBtn title="Edit" onClick={handleOpen} />
-        )}
+        {isMyProfile ? <ActionBtn title="Edit" onClick={handleOpen} /> : <ReportProfile />}
       </div>
 
       <div className="relative overflow-hidden rounded-md">
         <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] shadow-[inset_0_-40px_40px_-20px_rgba(0,0,0,0.35)]"></div>
 
-        {profileImg ? (
-          <img src={`${profileImg}?t=${Date.now()}`} alt={user.name} />
-        ) : (
-          <PlaceholderBox height={400} />
-        )}
+        {profileImg ? <img src={`${profileImg}?t=${Date.now()}`} alt={user.name} /> : <PlaceholderBox height={400} />}
 
         {user?.verified && (
           <div className="flex items-center text-sm uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-4 py-1.5 absolute top-4 right-4">
@@ -122,7 +107,10 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
           </div>
         )}
 
-        <div style={{textShadow: `0 0 2px rgba(0,0,0,.2)`}} className="text-white font-bold text-xl absolute bottom-3 left-4 z-[2]">
+        <div
+          style={{ textShadow: `0 0 2px rgba(0,0,0,.2)` }}
+          className="text-white font-bold text-xl absolute bottom-3 left-4 z-[2]"
+        >
           {isMyProfile ? user?.name : name}
         </div>
       </div>
@@ -142,12 +130,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
       >
         <Fade in={open}>
           <Box sx={style}>
-            <Typography
-              id="modal-modal-title"
-              variant="h6"
-              component="h2"
-              gutterBottom
-            >
+            <Typography id="modal-modal-title" variant="h6" component="h2" gutterBottom>
               Edit Profile
             </Typography>
 
@@ -182,9 +165,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
               />
 
               <label htmlFor="profile-image-upload" className="cursor-pointer">
-                <p className={"text-indigo-500 font-semibold my-2"}>
-                  Upload Profile Image
-                </p>
+                <p className={"text-indigo-500 font-semibold my-2"}>Upload Profile Image</p>
                 <input
                   id="profile-image-upload"
                   type="file"
@@ -202,11 +183,10 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
                   />
                 )}
               </label>
-
             </Stack>
             <div className="flex justify-end mt-8 gap-2">
               <SecondaryBtn title={"Cancel"} onClick={handleClose} />
-              <PrimaryBtn title={"Save"} onClick={handleSubmit}/>
+              <PrimaryBtn title={"Save"} onClick={handleSubmit} />
             </div>
           </Box>
         </Fade>
