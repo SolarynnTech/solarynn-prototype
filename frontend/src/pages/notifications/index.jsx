@@ -149,7 +149,7 @@ export default function Notifications() {
   };
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="Notifications" backBtn />
 
       <div className="pt-12">

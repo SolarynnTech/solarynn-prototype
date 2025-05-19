@@ -18,7 +18,7 @@ const StartPage = () => {
   }, [session]);
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title={"Solaryyn"} />
 
       <div className="content pt-6">

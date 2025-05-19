@@ -34,7 +34,7 @@ export default function MyProjectsPage() {
   }, [user?.id, supabase]);
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="My Projects" backBtn/>
 
       <div className="pt-12">

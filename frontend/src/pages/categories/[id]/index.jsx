@@ -43,7 +43,7 @@ export default function Category() {
   }, [id]);
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title={"Categories"} backBtn={true} />
 
       <div className="pt-4">

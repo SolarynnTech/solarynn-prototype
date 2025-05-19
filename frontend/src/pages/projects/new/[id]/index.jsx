@@ -200,7 +200,7 @@ const NewProjectPage = () => {
   ];
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="New Project" backBtn/>
       <h4 className={"text-lg mb-4 mt-4 text-center"}>{sectionTitle}</h4>
       <Paper sx={{ p: 3, mb: 4 }} className={"!bg-[#F5F5F5]"}>

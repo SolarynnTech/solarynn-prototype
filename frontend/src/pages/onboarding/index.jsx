@@ -9,7 +9,7 @@ export default () => {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col h-full justify-between grow">
+    <div className="flex flex-col h-full justify-between grow pt-8">
       <RootNavigation title="Select Categories" />
 
       <div className="flex grow flex-col justify-center">

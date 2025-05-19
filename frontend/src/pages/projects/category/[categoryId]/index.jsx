@@ -61,7 +61,7 @@ export default function Listing() {
   }, [categoryId]);
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title={projectCategory[0]?.title} backBtn={true} />
 
       <div className="pt-12">

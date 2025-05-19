@@ -291,7 +291,7 @@ const ProjectPage = ({ accessDenied }) => {
   }
 
   return (
-    <div className="mb-10">
+    <div className="mb-10 pt-8">
       <RootNavigation title={project.title} backBtn/>
       <div className="pt-4 pb-6">
         <ProjectImage

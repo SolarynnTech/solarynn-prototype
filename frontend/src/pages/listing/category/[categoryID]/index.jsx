@@ -36,7 +36,7 @@ export default function Listing() {
   }, [categoryID, profiles]);
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title={categoryName} backBtn={true} />
       <div className="pt-12">
         <div className="mb-4">

@@ -88,7 +88,7 @@ const ProfilePage = () => {
   }
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title={isMyProfile ? "My Profile" : "Profile"} backBtn />
       <div className="pt-4 pb-8">
         <ProfileImage

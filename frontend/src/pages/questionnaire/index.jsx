@@ -124,7 +124,13 @@ const QuestionsPage = () => {
       setAnswersBySection(answers?.questionnaire_answers || {});
     }
 
-    const result = secs.map((sec) => ({
+    const sortedSecs = [...secs].sort((a, b) => {
+      if (a.title === "Key Information") return -1;
+      if (b.title === "Key Information") return 1;
+      return 0;
+    });
+
+    const result = sortedSecs.map((sec) => ({
       ...sec,
       questions: qs.filter((q) => q.sectionId === sec.id),
     }));
@@ -158,7 +164,7 @@ const QuestionsPage = () => {
   }
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="Onboard Questions"/>
       <Box
         sx={{
@@ -167,22 +173,24 @@ const QuestionsPage = () => {
           width: "100%",
         }}
       >
-        <Typography variant="caption" className={"!text-base"}>0%</Typography>
-        <Box sx={{ flexGrow: 1, mx: 1 }}>
+
+        <Box sx={{ flexGrow: 1, mx: 0 }}>
           <LinearProgress
             variant="determinate"
             value={progressPct}
             sx={{
               height: 4,
-              borderRadius: 2,
+              borderRadius: 0,
+              marginLeft: "-24px",
+              marginRight: "-24px",
               backgroundColor: "#F5F5F5",
               "& .MuiLinearProgress-bar": {
-                backgroundColor: "#166534",
+                backgroundColor: "#615FFF",
               },
             }}
           />
         </Box>
-        <Typography variant="caption" className={"!text-base"}>100%</Typography>
+
       </Box>
       <div className="content pt-6">
 

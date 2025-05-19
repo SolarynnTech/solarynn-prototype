@@ -8,7 +8,7 @@ const TermsAndConditionsPage = () => {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title={"Solaryyn"} />
 
       <div className="content pt-12">

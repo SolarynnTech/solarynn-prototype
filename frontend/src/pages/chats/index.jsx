@@ -7,7 +7,7 @@ export default function Chats() {
   const router = useRouter();
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="Your Chats" backBtn={true} />
 
       <div className="pt-12">

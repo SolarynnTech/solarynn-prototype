@@ -51,7 +51,7 @@ export default function UpdatePhone() {
   };
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="Update Phone Number" backBtn={true} />
       <form onSubmit={handleSubmit} className="pt-4">
         <LabeledInput

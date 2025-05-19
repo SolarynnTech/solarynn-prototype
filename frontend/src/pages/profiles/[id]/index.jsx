@@ -31,7 +31,7 @@ export default function Profiles() {
   );
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title={"Profiles"} backBtn={true} />
 
       <div className="pt-12">

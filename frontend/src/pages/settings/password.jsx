@@ -59,7 +59,7 @@ export default function UpdatePassword() {
   };
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="Update Password" backBtn={true} />
       <form onSubmit={handleSubmit} className="pt-4">
         <LabeledInput

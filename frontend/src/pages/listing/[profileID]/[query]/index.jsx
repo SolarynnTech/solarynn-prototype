@@ -40,7 +40,7 @@ export default function Listing() {
     }, [profileID, query, profiles]);
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title={titlesEnum[query]} backBtn={true} />
 
       <div className="pt-12">

@@ -55,8 +55,8 @@ export default function HomePage() {
   return (
     <div className="pb-8">
       <nav className="flex items-start justify-between relative gap4 mb-6">
-        <h1>Welcome {user?.name || user?.email}</h1>
-        <div className="flex items-center justify-between gap-4 pt-2">
+        <h2>Welcome {user?.name || user?.email}</h2>
+        <div className="flex items-center justify-between gap-4 pt-1">
           <NotificationIcon/>
           <Settings className="cursor-pointer hover:text-indigo-500" onClick={() => router.push("/settings")}/>
         </div>
@@ -75,7 +75,7 @@ export default function HomePage() {
         <p>Loading categories...</p>
       ) : (
         <>
-          <div className="grid grid-cols-2 gap-3 mb-12">
+          <div className="grid grid-cols-1 gap-3 mb-12">
             {universeCategories
               ?.sort((a, b) => {
                 const aAvailable = !categoryNamesExcluded.includes(a.title);
@@ -95,7 +95,7 @@ export default function HomePage() {
                 />
               ))}
           </div>
-          <div className="grid grid-cols-2 gap-3 mb-12">
+          <div className="grid grid-cols-1 gap-3 mb-12">
             {!loading && categories && categories.length > 0 &&
               categories.map((category, index) => (
                 <CategoryTile

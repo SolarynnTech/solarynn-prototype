@@ -54,7 +54,7 @@ export default function Search() {
   }, [searchQuery, profiles]);
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="Search Results" backBtn={true} />
 
       <div className="pt-12">

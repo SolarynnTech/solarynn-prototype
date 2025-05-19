@@ -44,7 +44,7 @@ export default function UpdateEmail() {
   };
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="Update Email" backBtn={true} />
 
       {emailSent ? (

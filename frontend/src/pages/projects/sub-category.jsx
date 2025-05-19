@@ -7,7 +7,7 @@ import SearchBar from "@/components/SearchBar";
 
 export default function HomePage() {
   return (
-    <div className="pb-8">
+    <div className="py-8">
       <RootNavigation title={"Fashion"} backBtn={true} />
 
       <SearchBar/>

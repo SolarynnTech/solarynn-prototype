@@ -117,7 +117,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
 
         {user?.verified && (
           <div className="flex items-center text-sm uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-4 py-1.5 absolute top-4 right-4">
-            <Star size={20} color="#087B43" className="mr-2" />
+            <Star size={20} color="#615FFF" className="mr-2" />
             <div>Verified</div>
           </div>
         )}

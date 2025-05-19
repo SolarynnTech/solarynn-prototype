@@ -39,7 +39,7 @@ export default function Settings() {
   ];
 
   return (
-    <div>
+    <div className="pt-8">
       <RootNavigation title="Settings" backBtn={true} />
 
       <div className={styles.settingsContainer}>
@@ -53,7 +53,6 @@ export default function Settings() {
               <item.icon />
               <span
                 className={classNames(
-                  "cursor-pointer hover:text-indigo-500",
                   styles.settingsContainer__Item__Header__Title
                 )}
               >
