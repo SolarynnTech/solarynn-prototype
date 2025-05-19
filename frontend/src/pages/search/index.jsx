@@ -4,11 +4,12 @@ import RootNavigation from "@/components/Nav/Nav";
 import { Loader } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import useProfilesStore from "@/stores/useProfilesStore";
+import UserPreview from "@/components/UserPreview.jsx";
 
 export default function Search() {
   const router = useRouter();
   const { searchQuery } = router.query;
-  const { profiles, DETAIL_FIELDS, LINK_FIELDS } = useProfilesStore();
+  const { profiles, DETAIL_FIELDS } = useProfilesStore();
 
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -24,7 +25,7 @@ export default function Search() {
         const allResults = [];
 
         profiles.forEach((profile) => {
-          if(profile.name === searchQuery || profile.agency_name === searchQuery || profile.official_name === searchQuery) {
+          if(profile.name?.toLowerCase().includes(searchQuery.toLowerCase()) || profile.email?.toLowerCase().includes(searchQuery.toLowerCase())) {
             const { __title, __displayField, ...rest } = profile;
             const group = allResults.find((g) => g.title === __title);
 
@@ -75,47 +76,19 @@ export default function Search() {
             <div className="">
               {searchResults.map((group, groupIndex) => (
                 <div key={groupIndex} className="mb-4">
-                  <h2 className="text-xl font-semibold mb-2">{group.title}</h2>
-                  <ul>
-                    {group.data.map((item, itemIndex) => (
-                      <li key={itemIndex} className="mb-4 pb-4 border-b border-gray-200">
-                        <a
-                          href={`/profile/${item.id}`}
-                          className="text-blue-500 hover:underline font-medium"
-                        >
-                          {item[group.displayField]}
-                        </a>
-
-                        {/* Render standard fields */}
-                        {DETAIL_FIELDS.map((field) =>
-                          item[field] ? (
-                            <p key={field} className="text-gray-600">
-                              <b>{field
-                                .split("_")
-                                .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-                                .join(" ")}:</b> {item[field]}
-                            </p>
-                          ) : null
-                        )}
-
-                        {/* Render link fields */}
-                        {LINK_FIELDS.map(
-                          ({ key, label }) =>
-                            item[key] && (
-                              <a
-                                key={key}
-                                href={item[key]}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-blue-500 hover:underline block"
-                              >
-                                {label}
-                              </a>
-                            )
-                        )}
-                      </li>
+                  <h2 className="text-xl font-semibold mb-4">{group.title}:</h2>
+                  <div className={"grid grid-cols-2 gap-4"}>
+                    {group.data.map((profile, itemIndex) => (
+                      <div className="flex justify-center" key={profile.id}>
+                        <UserPreview
+                          link={"/profile/" + profile?.id}
+                          name={profile.name || profile.email}
+                          img_url={profile.profile_img}
+                          height={150} width={150}
+                        />
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>

@@ -82,11 +82,6 @@ const useUserStore = create((set) => ({
 // { name: "Styles", key: "styles" },
 // { name: "Galleries Exhibits", key: "galleries_exhibits" }
 
-  LINK_FIELDS: [
-    { key: "website", label: "Website" },
-    { key: "imdb_link", label: "IMDB Link" }
-  ],
-
   setProfiles: (updater) => set((state) => ({
     profiles: typeof updater === "function" ? updater(state.profiles) : updater
   })),
