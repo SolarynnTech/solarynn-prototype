@@ -13,7 +13,6 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 
-
 export default function Conversation() {
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
@@ -269,9 +268,7 @@ export default function Conversation() {
               >
                 <p className="text-sm">{message.content}</p>
                 <div className="flex items-center justify-end space-x-2 mt-1.5">
-                  <i
-                    className={`text-xs ${message.sender_id === otherUser?.id ? "text-gray-500" : "text-indigo-200"}`}
-                  >
+                  <i className={`text-xs ${message.sender_id === otherUser?.id ? "text-gray-500" : "text-indigo-200"}`}>
                     {new Date() - new Date(message.created_at) < 3600000
                       ? formatDistanceToNow(new Date(message.created_at), { addSuffix: true })
                       : moment(message.created_at).format("LT DD/MM/YYYY")}
