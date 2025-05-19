@@ -49,7 +49,7 @@ const ProgressTracker = ({ percentage, isOwner, onSave }) => {
 
       {!editing ? (
         <Box height={10} bgcolor="#e0e0e0" borderRadius={5} overflow="hidden">
-          <Box width={`${percentage}%`} height="100%" bgcolor="#2e7d32" />
+          <Box width={`${percentage}%`} height="100%" bgcolor="#6366F1" />
         </Box>
       ) : (
         <Slider
@@ -61,13 +61,9 @@ const ProgressTracker = ({ percentage, isOwner, onSave }) => {
           max={100}
           sx={{
             height: 8,
-            '& .MuiSlider-track': {
-              backgroundColor: '#2e7d32',
-              height: 8,
-            },
+
             '& .MuiSlider-rail': {
               backgroundColor: '#e0e0e0',
-
               height: 8,
             },
             '& .MuiSlider-thumb': {
@@ -78,7 +74,7 @@ const ProgressTracker = ({ percentage, isOwner, onSave }) => {
                 boxShadow: '0 0 0 8px rgba(46, 125, 50, 0.16)',
               },
             },
-            color: '#2e7d32',
+
           }}
         />
       )}

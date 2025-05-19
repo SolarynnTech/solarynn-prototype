@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Loader } from "lucide-react";
 import moment from "moment";
 import Link from "next/link";
 import { Alert } from "@mui/material";
@@ -11,6 +10,7 @@ import { REQUEST_STATUSES, REQUEST_STATUSES_VERBS } from "@/models/request";
 
 import RootNavigation from "@/components/Nav/Nav";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
+import { LoaderItem } from "@/components/Loader.jsx";
 
 export default function Notifications() {
   const supabase = useSupabaseClient();
@@ -19,6 +19,55 @@ export default function Notifications() {
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  const [projectAlerts, setProjectAlerts] = useState([]);
+  const [alertsLoading, setAlertsLoading] = useState(true);
+
+  useEffect(() => {
+    if (!user) return;
+    const fetchProjectAlerts = async () => {
+      setAlertsLoading(true);
+
+      const { data, error } = await supabase
+        .from('new_project_alerts')
+        .select('project_id, title, updated_at')
+        .eq('user_id', user.id);
+
+      if (error) {
+        console.error('Error loading project alerts:', error);
+        setAlertsLoading(false);
+        return;
+      }
+
+      setProjectAlerts(
+        data.map(r => ({
+          project_id: r.project_id,
+          title:      r.title,
+          updated_at: r.updated_at,
+        }))
+      );
+
+      if (data.length > 0) {
+        const ids = data.map(a => a.project_id);
+        const now = new Date().toISOString();
+
+        const { error: updErr } = await supabase
+          .from('project_alerts')
+          .update({ last_viewed_at: now })
+          .eq('user_id', user.id)
+          .in('project_id', ids);
+
+        if (updErr) {
+          console.error('Error bumping last_viewed_at:', updErr);
+        }
+      }
+
+      setAlertsLoading(false);
+    };
+
+    fetchProjectAlerts();
+  }, [user]);
+
 
   useEffect(() => {
     if (!user) return;
@@ -148,17 +197,27 @@ export default function Notifications() {
     fetchRequests();
   };
 
+  if (loading || alertsLoading)
+    return (
+    <LoaderItem/>
+  );
+
   return (
     <div className="pt-8">
-      <RootNavigation title="Notifications" backBtn />
+      <RootNavigation title="Notifications" backBtn/>
 
       <div className="pt-12">
-        {loading && (
-          <div className="flex justify-center items-center h-[75vh]">
-            <Loader className="animate-spin text-indigo-500" />
-            <p className="ml-2">Loading...</p>
-          </div>
-        )}
+
+        {projectAlerts.length > 0 && (
+          <Stack spacing={1} mb={4}>
+            {projectAlerts.map(pa => (
+              <Alert key={pa.project_id} severity="info">
+                Project <a href={`/projects/${pa.project_id}`} className={"text-black font-semibold underline cursor-pointer"}>{pa.title}</a> was updated at{" "}
+                {moment(pa.updated_at).format("DD/MM/YYYY HH:mm")}
+              </Alert>
+            ))}
+          </Stack>)
+        }
 
         {error && <p className="text-red-500">{error}</p>}
 

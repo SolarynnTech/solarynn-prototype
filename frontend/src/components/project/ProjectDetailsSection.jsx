@@ -45,7 +45,7 @@ const ProjectDetails = ({ answersBySection, sectionTitles, currentFormPage, onPa
                 width: "50%",
                 height: 4,
                 borderRadius: 2,
-                backgroundColor: currentFormPage === idx ? '#2e7d32' : '#e0e0e0',
+                backgroundColor: currentFormPage === idx ? '#6366F1' : '#e0e0e0',
                 cursor: 'pointer',
               }}
             />

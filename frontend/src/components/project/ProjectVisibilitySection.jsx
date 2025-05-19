@@ -21,18 +21,15 @@ const ProjectVisibilitySection = ({
 
   const borderColor =
     projectVisibility === "private" ? "grey.400" :
-      projectVisibility === "semi_public" ? "warning.main" :
-        "success.main";
+        "#6366F1";
 
   const textColor =
     projectVisibility === "private" ? "grey.800" :
-      projectVisibility === "semi_public" ? "warning.dark" :
-        "success.main";
+        "#6366F1";
 
   const iconColor =
     projectVisibility === "private" ? undefined :
-      projectVisibility === "semi_public" ? "warning.main" :
-        "success.main";
+        "#6366F1";
 
   const icon =
     projectVisibility === "private" ? (

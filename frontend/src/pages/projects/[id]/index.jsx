@@ -44,6 +44,7 @@ const ProjectPage = ({ accessDenied }) => {
   const [visibilityValue, setVisibilityValue] = useState(project?.project_visibility);
   const [completionPercentage, setCompletionPercentage] = useState(0);
   const [milestones, setMilestones] = useState([]);
+  const [notificationEnabled, setNotificationEnabled] = useState(false);
 
   const onCompletionPercentageChange = async (newValue) => {
     const { error } = await supabase
@@ -148,6 +149,28 @@ const ProjectPage = ({ accessDenied }) => {
     setFavoriteProjects(favs);
     setIsFav(favs.includes(id));
   };
+
+  useEffect(() => {
+    if (!user?.id || !project?.id) return;
+
+    const fetchAlertStatus = async () => {
+      const { data, error } = await supabase
+        .from('project_alerts')
+        .select('enabled')
+        .eq('user_id', user.id)
+        .eq('project_id', project.id)
+        .maybeSingle();
+
+      if (error) {
+        console.error('Error fetching alert status:', error);
+        return;
+      }
+
+      setNotificationEnabled(data?.enabled === true);
+    };
+
+    fetchAlertStatus();
+  }, [user?.id, project?.id, supabase]);
 
   const handleUploadImage = async (file) => {
     setUploading(true);
@@ -267,6 +290,41 @@ const ProjectPage = ({ accessDenied }) => {
     setSectionTitles(["Part 1", "Part 2"]);
   };
 
+  const onToggleAlerts = async () => {
+    let newStatus = true;
+
+    const { data: existing, error: fetchError } = await supabase
+      .from('project_alerts')
+      .select('id, enabled')
+      .eq('user_id', user.id)
+      .eq('project_id', id)
+      .maybeSingle();
+
+    if (fetchError) {
+      console.error('Error fetching alert status:', fetchError);
+      return;
+    }
+
+    if (existing) {
+      newStatus = !existing.enabled;
+    }
+
+    const { error: upsertError } = await supabase
+      .from('project_alerts')
+      .upsert({
+        user_id: user.id,
+        project_id: project.id,
+        enabled: newStatus,
+      }, { onConflict: ['user_id', 'project_id'] });
+
+    if (upsertError) {
+      console.error('Error updating alert subscription:', upsertError);
+      return;
+    }
+
+    setNotificationEnabled(newStatus);
+  };
+
   useEffect(() => {
     if (id && user?.id) loadProject();
   }, [id, user?.id]);
@@ -302,6 +360,8 @@ const ProjectPage = ({ accessDenied }) => {
             setViewerUrl(project.img_url);
             setViewerOpen(true);
           }}
+          alertsEnabled={notificationEnabled}
+          onToggleAlerts={onToggleAlerts}
         />
         <NavigationBar/>
       </div>
@@ -309,6 +369,7 @@ const ProjectPage = ({ accessDenied }) => {
       <ProjectDescription
         description={project.project_description}
         isOwner={user.id === project.owner}
+        budget={project.budget}
       />
 
       <MilestonesSection isOwner={user.id === project.owner} onSave={onMilestonesSave} milestones={milestones}/>

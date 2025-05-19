@@ -104,34 +104,8 @@ const MilestonesSection = ({ milestones = [], isOwner, onSave }) => {
                         fullWidth: true,
                         InputProps: {
                           disableUnderline: false,
-                          sx: {
-                            '&:before': { borderBottomColor: '#e0e0e0' },
-                            '&:hover:before': { borderBottomColor: '#2e7d32' },
-                            '&.Mui-focused:after': {
-                              borderBottomColor: '#2e7d32',
-                              borderBottomWidth: 2
-                            },
-                            '& .MuiSvgIcon-root': { color: '#2e7d32' }
-                          }
                         },
-                        InputLabelProps: {
-                          sx: { '&.Mui-focused': { color: '#2e7d32' } }
-                        }
                       },
-                      day: {
-                        sx: {
-                          '&.Mui-selected': {
-                            backgroundColor: '#2e7d32 !important',
-                            color: '#fff !important'
-                          },
-                          '&.Mui-selected:hover': {
-                            backgroundColor: 'rgba(46,125,50,0.8) !important'
-                          },
-                          '&.MuiPickersDay-today': {
-                            borderColor: '#2e7d32'
-                          }
-                        }
-                      }
                     }}
                   />
 
@@ -147,34 +121,8 @@ const MilestonesSection = ({ milestones = [], isOwner, onSave }) => {
                         fullWidth: true,
                         InputProps: {
                           disableUnderline: false,
-                          sx: {
-                            '&:before': { borderBottomColor: '#e0e0e0' },
-                            '&:hover:before': { borderBottomColor: '#2e7d32' },
-                            '&.Mui-focused:after': {
-                              borderBottomColor: '#2e7d32',
-                              borderBottomWidth: 2
-                            },
-                            '& .MuiSvgIcon-root': { color: '#2e7d32' }
-                          }
                         },
-                        InputLabelProps: {
-                          sx: { '&.Mui-focused': { color: '#2e7d32' } }
-                        }
                       },
-                      day: {
-                        sx: {
-                          '&.Mui-selected': {
-                            backgroundColor: '#2e7d32 !important',
-                            color: '#fff !important'
-                          },
-                          '&.Mui-selected:hover': {
-                            backgroundColor: 'rgba(46,125,50,0.8) !important'
-                          },
-                          '&.MuiPickersDay-today': {
-                            borderColor: '#2e7d32'
-                          }
-                        }
-                      }
                     }}
                   />
                 </div>

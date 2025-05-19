@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Bell } from "lucide-react";
 import { useRouter } from "next/router";
-
 import useUserStore from "@/stores/useUserStore";
 
 export default function NotificationsRequests() {
@@ -11,6 +10,7 @@ export default function NotificationsRequests() {
   const router = useRouter();
 
   const [unreadCount, setUnreadCount] = useState(0);
+  const [projectAlertCount, setProjectAlertCount] = useState(0);
 
   useEffect(() => {
     if (!user) return;
@@ -30,17 +30,35 @@ export default function NotificationsRequests() {
       } else {
         setUnreadCount(count);
       }
+
+      const { count: alertCount, error: alertErr } = await supabase
+        .from('new_project_alerts')
+        .select('project_id', { head: true, count: 'exact' })
+        .eq('user_id', user.id);
+      if (alertErr) {
+        console.error('Error fetching project alerts count:', alertErr);
+      } else {
+        setProjectAlertCount(alertCount || 0);
+      }
     };
+
     fetchUnreadCount();
-  }, [user]);
+  }, [user, supabase]);
+
+  const total = unreadCount + projectAlertCount;
 
   return (
     <div onClick={() => router.push("/notifications")}>
       <div className="relative">
-        <Bell className="cursor-pointer hover:text-indigo-500" />
-        {unreadCount > 0 && (
-          <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
-            {unreadCount}
+        <Bell className="cursor-pointer hover:text-indigo-500"/>
+        {total > 0 && (
+          <span className="
+            absolute -top-1 -right-1
+            bg-red-500 text-white text-xs
+            rounded-full w-4 h-4
+            flex items-center justify-center
+          ">
+            {total}
           </span>
         )}
       </div>
