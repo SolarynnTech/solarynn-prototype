@@ -6,7 +6,6 @@ import Snackbar from '@mui/material/Snackbar';
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-
 /**
  * Displays a list of Roles, Domains or Subdivisions that the user can select from.
  */

@@ -174,7 +174,7 @@ const QuestionsPage = () => {
         }}
       >
 
-        <Box sx={{ flexGrow: 1, mx: 0 }}>
+        <Box sx={{ flexGrow: 1, mx: 0, mt: -1.5 }}>
           <LinearProgress
             variant="determinate"
             value={progressPct}
