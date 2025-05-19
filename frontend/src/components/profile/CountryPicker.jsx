@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Autocomplete, TextField, CircularProgress, Box, Typography, Avatar } from "@mui/material";
 
-const CountryPicker = ({ onChange }) => {
+const CountryPicker = ({ value, onChange }) => {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState(null);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -28,15 +29,37 @@ const CountryPicker = ({ onChange }) => {
     fetchCountries();
   }, []);
 
+  useEffect(() => {
+    if (!countries.length || !value) return;
+
+    const matched = countries.find(
+      (c) => c.code.toLowerCase() === value.toLowerCase() || c.name.toLowerCase() === value.toLowerCase()
+    );
+
+    if (matched) {
+      setSelected(matched);
+    }
+  }, [countries, value]);
+
+  useEffect(() => {
+    if (countries.length > 0) {
+      setOpen(true);
+    }
+  }, [countries]);
+
   const handleChange = (_, newValue) => {
     setSelected(newValue);
     if (onChange) {
       onChange(newValue);
+      setOpen(false);
     }
   };
 
   return (
     <Autocomplete
+      open={open}
+      onOpen={() => setOpen(true)}
+      onClose={() => setOpen(false)}
       options={countries}
       getOptionLabel={(option) => option.name}
       loading={loading}
@@ -64,7 +87,7 @@ const CountryPicker = ({ onChange }) => {
               "&:hover fieldset": { borderColor: "#000" },
               "&.Mui-focused fieldset": {
                 borderColor: "#000",
-                borderWidth: "2px",
+                borderWidth: "1px",
               },
             },
           }}

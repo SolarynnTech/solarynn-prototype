@@ -1,22 +1,55 @@
 import { useState } from "react";
+import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Typography, Box } from "@mui/material";
+import useUserStore from "@/stores/useUserStore";
 import ActionBtn from "../buttons/ActionBtn";
 import CountryPicker from "./CountryPicker";
 
 const MyProfileLocation = ({ location }) => {
-  const [country, setCountry] = useState(location || null);
+  const [countryName, setCountryName] = useState(location || null);
+  const [originalCountry, setOriginalCountry] = useState(location || null);
   const [editing, setEditing] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const { user, setUser } = useUserStore();
+  const supabase = useSupabaseClient();
 
   const toggleEdit = () => {
-    setEditing(!editing);
+    setOriginalCountry(countryName);
+    setEditing(true);
   };
 
-  const onSave = () => {
+  const onCancel = () => {
+    setCountryName(originalCountry);
     setEditing(false);
   };
 
+  const onSave = async () => {
+    if (!countryName || countryName.trim() === "") {
+      setEditing(false);
+      return;
+    }
+
+    setSaving(true);
+
+    const { data: updated, error } = await supabase
+      .from("users")
+      .update({ country: countryName })
+      .eq("id", user.id)
+      .select()
+      .single();
+
+    if (error) {
+      console.error("Failed to save country:", error);
+    } else {
+      setUser((prev) => ({ ...prev, country: updated.country }));
+      setEditing(false);
+    }
+
+    setSaving(false);
+  };
+
   const handleCountryChange = (country) => {
-    setCountry(country?.name || null);
+    setCountryName(country?.name || null);
   };
 
   return (
@@ -27,8 +60,8 @@ const MyProfileLocation = ({ location }) => {
         <Box display="flex" gap={2}>
           {editing ? (
             <>
-              <ActionBtn title="Save" disabled={!country} onClick={onSave} />
-              <ActionBtn title="Cancel" onClick={toggleEdit} />
+              <ActionBtn title={saving ? "Saving..." : "Save"} disabled={!countryName || saving} onClick={onSave} />
+              <ActionBtn title="Cancel" onClick={onCancel} />
             </>
           ) : (
             <ActionBtn title="Edit" onClick={toggleEdit} />
@@ -38,13 +71,13 @@ const MyProfileLocation = ({ location }) => {
 
       <Box className="mt-4">
         {editing ? (
-          <CountryPicker onChange={handleCountryChange} />
-        ) : country ? (
-          <Typography className="text-gray-700">{country}</Typography>
+          <CountryPicker value={countryName} onChange={handleCountryChange} />
+        ) : countryName ? (
+          <Typography className="text-gray-700">{countryName}</Typography>
         ) : (
           <Typography className="text-gray-500 italic">
             You haven’t added a location yet. <br />
-            Click Edit to add one.
+            Click Edit to update.
           </Typography>
         )}
       </Box>
