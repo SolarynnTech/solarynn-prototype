@@ -43,6 +43,8 @@ const NewProjectPage = () => {
   const [uploading, setUploading] = useState(false);
   const [created, setCreated] = useState(false);
   const [answers, setAnswers] = useState({});
+  const [paymentInfo, setPaymentInfo] = useState("");
+  const [budget, setBudget] = useState("");
   const allAnswered = questions.every(q => (answers[q.id] || "").trim() !== "");
   const [visibility, setVisibility] = useState("public");
   const createDisabled = uploading || !allAnswered || !localFile || !projectDescription.trim() || !visibility.trim() || !title.trim();
@@ -100,7 +102,9 @@ const NewProjectPage = () => {
         img_url,
         description: answers,
         project_description: projectDescription,
-        project_visibility: visibility
+        project_visibility: visibility,
+        payment_info: paymentInfo,
+        budget
       })
       .select("id")
       .maybeSingle();
@@ -190,6 +194,14 @@ const NewProjectPage = () => {
       question: "Project Description",
       suffix: <span className="text-sm text-gray-500">Max 2000 characters</span>,
     },
+    {
+      id: "payment_info",
+      question: "Payment Information",
+    },
+    {
+      id: "budget",
+      question: "Define project budget",
+    },
     { id: "img", question: "Cover Image", },
     ...questions.map((q, i) => ({
       id: q.id,
@@ -224,9 +236,7 @@ const NewProjectPage = () => {
                 rows={4}
                 fullWidth
                 slotProps={{
-                  htmlInput: {
-                    maxLength: 2000,
-                  },
+                  htmlInput: { maxLength: 2000 },
                   sx: {
                     textAlign: "right",
                     fontSize: "0.75rem",
@@ -234,22 +244,40 @@ const NewProjectPage = () => {
                   },
                 }}
                 value={projectDescription}
-                onChange={e =>
-                  setProjectDescription(e.target.value)
-                }
+                onChange={e => setProjectDescription(e.target.value)}
                 helperText={`${projectDescription.length}/2000 characters`}
                 sx={{
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": { borderColor: "#000" },
-                    "&:hover fieldset": {
-                      borderColor: "#000",
-                    },
+                    "&:hover fieldset": { borderColor: "#000" },
                     "&.Mui-focused fieldset": {
                       borderColor: "#000",
                       borderWidth: "2px",
                     },
                   },
                 }}
+              />
+            ) : f.id === "payment_info" ? (
+              <TextField
+                fullWidth
+                variant="standard"
+                placeholder="Paypal, Stripe, etc."
+                value={paymentInfo || ""}
+                onChange={e => setPaymentInfo(e.target.value)}
+                sx={textFieldStyles}
+              />
+            ) : f.id === "budget" ? (
+              <TextField
+                fullWidth
+                variant="standard"
+                type="number"
+                placeholder="0.00"
+                InputProps={{
+                  startAdornment: <span style={{ marginRight: 4 }}>$</span>,
+                }}
+                value={budget || ""}
+                onChange={e => setBudget(e.target.value)}
+                sx={textFieldStyles}
               />
             ) : f.id === "img" ? (
               <ImageDropZone
@@ -271,10 +299,8 @@ const NewProjectPage = () => {
                 }
                 sx={textFieldStyles}
                 slotProps={{
-                    input: {
-                      endAdornment: f.suffix || null,
-                    }
-                  }}
+                  input: { endAdornment: f.suffix || null },
+                }}
               />
             )}
           </Box>

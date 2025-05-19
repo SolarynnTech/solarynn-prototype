@@ -13,17 +13,6 @@ const VisibilitySelect = ({ value, onChange, options }) => {
     "& .MuiSelect-select": { pr: 4 },
   };
 
-  const menuItemStyles = {
-    "&&.Mui-selected": {
-      backgroundColor: "rgba(0, 128, 0, 0.2)",
-    },
-    "&&.Mui-selected:hover": {
-      backgroundColor: "rgba(0, 128, 0, 0.3)",
-    },
-    "&:hover": {
-      backgroundColor: "rgba(0, 128, 0, 0.1)",
-    },
-  };
 
   return (
     <TextField
@@ -39,7 +28,7 @@ const VisibilitySelect = ({ value, onChange, options }) => {
       sx={selectStyles}
     >
       {options.map(opt => (
-        <MenuItem key={opt} value={opt} sx={menuItemStyles}>
+        <MenuItem key={opt} value={opt} >
           {opt}
         </MenuItem>
       ))}
