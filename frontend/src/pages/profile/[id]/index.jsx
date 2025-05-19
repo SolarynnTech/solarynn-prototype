@@ -46,6 +46,14 @@ const ProfilePage = () => {
     if (user?.id) {
       setIsMyProfile(user.id === id);
     }
+    if(user && user.id !== id){
+      const viewed = user.recently_viewed || [];
+      if (!viewed.includes(id)) {
+        viewed.push(id);
+        setUser((prev) => ({ ...prev, recently_viewed: viewed }));
+        supabase.from("users").update({ recently_viewed: viewed }).eq("id", user.id);
+      }
+    }
   }, [user?.id, id]);
 
   useEffect(() => {
@@ -95,8 +103,8 @@ const ProfilePage = () => {
         <ProfileImage
           id={id}
           isMyProfile={isMyProfile}
-          name={profile.name || profile.official_name || profile.agency_name}
-          imgUrl={profile.img_url}
+          name={profile.name || profile.email}
+          imgUrl={profile.profile_img}
         />
 
         <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />

@@ -47,7 +47,7 @@ const RecentlyViewed = () => {
             <UserPreview
               key={index}
               link={"/profile/" + profile?.id}
-              name={profile.name || profile.official_name || profile.agency_name}
+              name={profile.name || profile.email}
               img_url={profile.profile_img}
               height={150} width={150}
             />

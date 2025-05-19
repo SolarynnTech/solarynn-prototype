@@ -124,7 +124,9 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center justify-between w-full">
           <h3 className="font-bold mb-0">Profile Details</h3>
-          <ActionBtn title="Edit" onClick={()=>{router.push("/questionnaire")}} />
+          {isMyProfile && (
+            <ActionBtn title="Edit" onClick={()=>{router.push("/questionnaire")}} />
+          )}
         </div>
         {!isMyProfile && (
           <Bookmark
@@ -135,7 +137,7 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
               user.booked_profiles?.includes(profile.id)
                 ? "text-indigo-500"
                 : "text-gray-600"
-            } cursor-pointer mr-3`}
+            } cursor-pointer ml-3`}
           />
         )}
       </div>

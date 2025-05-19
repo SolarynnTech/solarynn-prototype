@@ -35,6 +35,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
 
   useEffect(() => {
     setProfileImg(isMyProfile ? user?.profile_img : imgUrl || "");
+    console.log("imgUrl", imgUrl);
   }, [user, id, imgUrl, isMyProfile]);
 
   const handleClose = () => {
