@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Star } from "lucide-react";
 import ActionBtn from "../buttons/ActionBtn";
-import { Backdrop, Box, Fade, Modal, Stack, TextField, Typography } from "@mui/material";
+import { Backdrop, Box, Fade, FormControlLabel, Modal, Stack, Switch, TextField, Typography } from "@mui/material";
 import PlaceholderBox from "../PlaceholderBox";
 import useUserStore from "@/stores/useUserStore";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
@@ -20,7 +20,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
   const [profileImg, setProfileImg] = useState("");
 
   const handleChange = (event) => {
-    const { name, value, files } = event.target;
+    const { name, value, files, type, checked } = event.target;
 
     if (name === "profile_image" && files?.[0]) {
       setImageFile(files[0]);
@@ -28,7 +28,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
     } else {
       setUser((prevUser) => ({
         ...prevUser,
-        [name]: value,
+        [name]: type === "checkbox" ? checked : value,
       }));
     }
   };
@@ -53,7 +53,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
 
     const { data, error } = await supabase
       .from("users")
-      .update({ name, email, address, profile_img })
+      .update({ name, email, address, profile_img, is_private: user.is_private })
       .eq("id", user.id);
 
     setProfileImg(profile_img);
@@ -184,6 +184,12 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
                 )}
               </label>
             </Stack>
+            <Box>
+              <FormControlLabel
+                control={<Switch name="is_private" checked={user.is_private} onChange={handleChange} />}
+                label={user.is_private ? "Private Profile" : "Public Profile"}
+              />
+            </Box>
             <div className="flex justify-end mt-8 gap-2">
               <SecondaryBtn title={"Cancel"} onClick={handleClose} />
               <PrimaryBtn title={"Save"} onClick={handleSubmit} />
