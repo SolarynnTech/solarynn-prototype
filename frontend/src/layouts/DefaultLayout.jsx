@@ -15,8 +15,7 @@ const DefaultLayout = ({ children }) => {
     <main
       className={classNames(
         "app-container",
-        styles.AppContainer,
-        router.pathname.includes("chats/") && "bg-chat-light"
+        styles.AppContainer
       )}
     >
       {children}

@@ -12,28 +12,28 @@ const ChatNavigation = ({ user, backBtn = false }) => {
   };
 
   return (
-    <nav className="fixed top-0 bg-chat-normal z-10 max-w-[440px] w-full -mx-6 px-8 py-2 flex items-center gap-3">
+    <nav className="fixed top-0 bg-gray-50 border-b border-gray-200 z-20 max-w-[440px] w-full -mx-6 px-8 py-3 flex items-center gap-3">
       {backBtn && (
         <button
           type="button"
-          className="absolute left-0 top-1.5 outline-0 bg-transparent border-0 p-1.5 hover:text-indigo-500"
+          className="absolute left-0 top-2 outline-0 bg-transparent border-0 p-1.5 hover:text-indigo-500"
           onClick={onBackButtonClick}
         >
           <ChevronLeft />
         </button>
       )}
 
-      <>
+      <div className={"grow flex items-center gap-2 justify-center"}>
         {user?.profile_img && (
-          <UserPreview key={user.id} link={"/profile/" + user.id} img_url={user.profile_img} height={32} width={32} />
+          <UserPreview key={user.id} link={"/profile/" + user.id} img_url={user.profile_img} height={30} width={30} />
         )}
-        <h2
+        <h3
           className="text-center cursor-pointer hover:text-indigo-500"
           onClick={() => router.push("/profile/" + user.id)}
         >
           {user?.name || user?.email || "Chat"}
-        </h2>
-      </>
+        </h3>
+      </div>
     </nav>
   );
 };

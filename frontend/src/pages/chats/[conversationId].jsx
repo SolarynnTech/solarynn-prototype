@@ -6,9 +6,13 @@ import ChatNavigation from "@/components/Nav/ChatNavigation";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import { Send, X, Edit, Trash } from "lucide-react";
-import { Tooltip } from "@mui/material";
 import { Smile } from "lucide-react";
 import EmojiPicker from "emoji-picker-react";
+import { IconButton, Menu, MenuItem } from "@mui/material";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import DeleteIcon from "@mui/icons-material/Delete";
+import EditIcon from "@mui/icons-material/Edit";
+
 
 export default function Conversation() {
   const supabase = useSupabaseClient();
@@ -23,6 +27,20 @@ export default function Conversation() {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const emojiPickerRef = useRef(null);
   const messagesEndRef = useRef(null);
+
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [openMessage, setOpenMessage] = useState(null);
+  const open = Boolean(anchorEl);
+
+  const handleMenuOpen = (event, messageId) => {
+    setAnchorEl(event.currentTarget);
+    setOpenMessageId(messageId);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+    setOpenMessageId(null);
+  };
 
   useEffect(() => {
     if (!conversationId) return;
@@ -245,48 +263,36 @@ export default function Conversation() {
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`flex ${message.sender_id === otherUser?.id ? "justify-start" : "justify-end"}`}
+                className={`flex flex-col max-w-[75%] rounded-lg p-3 pr-6 relative ${message.sender_id === otherUser?.id ? "mr-auto" : "ml-auto"} ${
+                  message.sender_id === otherUser?.id ? "bg-indigo-100 text-gray-900" : "bg-indigo-600 text-white"
+                }`}
               >
-                <div
-                  className={`max-w-[70%] rounded-lg p-3 ${
-                    message.sender_id === otherUser?.id ? "bg-green-100 text-gray-900" : "bg-green-700 text-white"
-                  }`}
-                >
-                  <p className="text-sm">{message.content}</p>
-                  <div className="flex items-center justify-end space-x-2 mt-1">
-                    <i
-                      className={`text-xs ${message.sender_id === otherUser?.id ? "text-gray-500" : "text-green-200"}`}
-                    >
-                      {new Date() - new Date(message.created_at) < 3600000
-                        ? formatDistanceToNow(new Date(message.created_at), { addSuffix: true })
-                        : moment(message.created_at).format("LT DD/MM/YYYY")}
-                    </i>
-                    {message.sender_id !== otherUser?.id && (
-                      <i className="text-xs text-green-200">{message.is_read ? "✓✓" : "✓"}</i>
-                    )}
-                  </div>
+                <p className="text-sm">{message.content}</p>
+                <div className="flex items-center justify-end space-x-2 mt-1.5">
+                  <i
+                    className={`text-xs ${message.sender_id === otherUser?.id ? "text-gray-500" : "text-indigo-200"}`}
+                  >
+                    {new Date() - new Date(message.created_at) < 3600000
+                      ? formatDistanceToNow(new Date(message.created_at), { addSuffix: true })
+                      : moment(message.created_at).format("LT DD/MM/YYYY")}
+                  </i>
+                  {message.sender_id !== otherUser?.id && (
+                    <i className="text-xs text-indigo-200">{message.is_read ? "✓✓" : "✓"}</i>
+                  )}
                 </div>
+
                 {message.sender_id === user?.id && (
-                  <div className="flex items-center ml-2">
-                    <div className="flex flex-col space-y-4">
-                      <Tooltip placement="left" title="Edit">
-                        <Edit
-                          size={12}
-                          onClick={() => {
-                            setEditingMessage(message);
-                            setNewMessage(message.content);
-                          }}
-                          className="hover:text-indigo-500"
-                        />
-                      </Tooltip>
-                      <Tooltip placement="left" title="Delete">
-                        <Trash
-                          size={12}
-                          onClick={() => handleDeleteMessage(message.id)}
-                          className="hover:text-indigo-500"
-                        />
-                      </Tooltip>
-                    </div>
+                  <div className="absolute z-10 right-0 top-0">
+                    <IconButton
+                      size="small"
+                      aria-label="more"
+                      onClick={(e) => {
+                        setAnchorEl(e.currentTarget);
+                        setOpenMessage(message);
+                      }}
+                    >
+                      <MoreVertIcon className={"text-white"} fontSize="small" />
+                    </IconButton>
                   </div>
                 )}
               </div>
@@ -294,20 +300,54 @@ export default function Conversation() {
             <div ref={messagesEndRef} />
           </div>
         )}
+
+        <Menu
+          id="message-options-menu"
+          anchorEl={anchorEl}
+          open={Boolean(anchorEl)}
+          onClose={() => {
+            setAnchorEl(null);
+            setOpenMessage(null);
+          }}
+          anchorOrigin={{ vertical: "top", horizontal: "left" }}
+          transformOrigin={{ vertical: "top", horizontal: "right" }}
+        >
+          <MenuItem
+            onClick={() => {
+              setEditingMessage(openMessage);
+              setNewMessage(openMessage?.content || "");
+              setAnchorEl(null);
+              setOpenMessage(null);
+            }}
+          >
+            <EditIcon fontSize="small" className="mr-2" />
+            Edit
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              handleDeleteMessage(openMessage?.id);
+              setAnchorEl(null);
+              setOpenMessage(null);
+            }}
+          >
+            <DeleteIcon fontSize="small" className="mr-2" />
+            Delete
+          </MenuItem>
+        </Menu>
       </div>
 
       <form
         onSubmit={handleSendMessage}
-        className="fixed bg-chat-light bottom-0 z-10 max-w-[440px] w-full -mx-6 px-6 py-4 flex items-center justify-around border-t-4 border-gray-200"
+        className="fixed bg-indigo-50 bottom-0 z-10 max-w-[440px] w-full -mx-6 px-6 py-4 flex items-center justify-around border-t border-gray-200"
       >
-        <div className="w-full flex space-x-1">
+        <div className="w-full flex gap-2">
           <div className="relative flex-1">
             <input
               type="text"
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
               placeholder={editingMessage ? "Edit your message..." : "Type a message..."}
-              className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-green-500 bg-white"
+              className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-1 focus:ring-indigo-500 bg-white"
               style={{ paddingRight: "2.5rem" }}
             />
             <button
@@ -326,9 +366,9 @@ export default function Conversation() {
           <button
             type="submit"
             disabled={!newMessage.trim()}
-            className="px-3 py-2 bg-green-800 text-white rounded-full hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 disabled:opacity-50 flex items-center gap-2"
+            className="px-4 py-2 bg-indigo-500 text-white rounded-full hover:bg-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 disabled:opacity-50 flex items-center gap-2"
           >
-            <Send />
+            <Send className={"mr-0.5"} />
             Send
           </button>
           {editingMessage && (
