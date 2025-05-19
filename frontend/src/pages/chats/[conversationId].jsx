@@ -262,7 +262,7 @@ export default function Conversation() {
             {messages.map((message) => (
               <div
                 key={message.id}
-                className={`flex flex-col max-w-[75%] rounded-lg p-3 pr-6 relative ${message.sender_id === otherUser?.id ? "mr-auto" : "ml-auto"} ${
+                className={`flex flex-col w-fit max-w-[75%] rounded-lg p-3 pr-6 relative ${message.sender_id === otherUser?.id ? "mr-auto" : "ml-auto"} ${
                   message.sender_id === otherUser?.id ? "bg-indigo-100 text-gray-900" : "bg-indigo-600 text-white"
                 }`}
               >
