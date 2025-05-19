@@ -126,7 +126,7 @@ const ProjectDetails = () => {
       {/*    <span*/}
       {/*      key={index}*/}
       {/*      className={`${*/}
-      {/*        currentFormPage === index ? "bg-green-800" : "bg-gray-300"*/}
+      {/*        currentFormPage === index ? "bg-indigo-500" : "bg-gray-300"*/}
       {/*      } min-w-8 shrink-0 grow h-1 cursor-pointer rounded-full block`}*/}
       {/*      onClick={() => setCurrentFormPage(index)}*/}
       {/*    />*/}

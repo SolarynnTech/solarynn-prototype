@@ -68,7 +68,7 @@ export default function ProjectsPage() {
   if (loading) {
     return (
       <div className="flex justify-center items-center h-[75vh]">
-        <Loader className="animate-spin text-green-800" />
+        <Loader className="animate-spin text-indigo-500" />
         <p className="ml-2">Loading...</p>
       </div>
     );
@@ -80,7 +80,7 @@ export default function ProjectsPage() {
         <h1>Projects</h1>
         <div className="flex items-center justify-between gap-4 pt-2">
           <NotificationIcon />
-          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")} />
+          <Settings className="cursor-pointer hover:text-indigo-500" onClick={() => router.push("/settings")} />
         </div>
       </nav>
 

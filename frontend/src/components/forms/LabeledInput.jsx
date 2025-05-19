@@ -16,7 +16,7 @@ const LabeledInput = ({ label, type = "input", name, required = false, value, on
         placeholder={placeholder}
         required={required}
         className="border text-black bg-white border-black
-        rounded-lg p-3 focus:outline-none focus:border-green-800"
+        rounded-lg p-3 focus:outline-none focus:border-indigo-500"
       />
     </div>
   );

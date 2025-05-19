@@ -17,7 +17,6 @@ const CreateAccountPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    phone: "",
   });
 
   const supabase = useSupabaseClient();
@@ -90,7 +89,7 @@ const CreateAccountPage = () => {
     e.preventDefault();
 
     // Basic validation
-    const { email, password, confirmPassword, phone } = formData;
+    const { email, password, confirmPassword } = formData;
     if (password !== confirmPassword ) {
       setError("Please make sure all fields match.");
       return;
@@ -102,7 +101,6 @@ const CreateAccountPage = () => {
         password,
         options: {
           emailRedirectTo: `${window.location.origin}/onboarding/start`,
-          data: { phone },
         },
       });
 
@@ -120,7 +118,6 @@ const CreateAccountPage = () => {
             {
               id: user.id, // match this with Supabase auth user.id
               email,
-              phone,
               verified: true,
             },
           ]);
@@ -131,7 +128,7 @@ const CreateAccountPage = () => {
         }
       }
 
-      router.push("/verify-email");
+      await router.push("/verify-email");
     } catch (err) {
       console.error("Supabase registration error:", err);
       setError("Registration failed. Please try again.");
@@ -153,15 +150,15 @@ const CreateAccountPage = () => {
             label="Your Email"
             required
           />
-          <LabeledInput
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleInputChange}
-            placeholder="Enter Your Number"
-            label="Your Phone number"
-            required
-          />
+          {/*<LabeledInput*/}
+          {/*  type="tel"*/}
+          {/*  name="phone"*/}
+          {/*  value={formData.phone}*/}
+          {/*  onChange={handleInputChange}*/}
+          {/*  placeholder="Enter Your Number"*/}
+          {/*  label="Your Phone number"*/}
+          {/*  required*/}
+          {/*/>*/}
           <LabeledInput
             type="password"
             name="password"
@@ -184,11 +181,11 @@ const CreateAccountPage = () => {
 
           <PrimaryBtn type={"submit"} title={"Continue"} classes={"w-full block mb-4 mt-9"} />
 
-          <div className="text-green-800 text-center mt-4">
+          <div className="text-indigo-500 text-center mt-4">
             Already have an account?{" "}
             <button
               type="button"
-              className="text-green-800 border-0 p-o bg-transparent underline focus:outline-none focus:ring-0"
+              className="text-indigo-500 border-0 p-o bg-transparent underline focus:outline-none focus:ring-0"
               onClick={() => {
                 router.push("/login");
               }}

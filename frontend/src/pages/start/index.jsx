@@ -21,7 +21,7 @@ const StartPage = () => {
     <div>
       <RootNavigation title={"Solaryyn"} />
 
-      <div className="content pt-12 ">
+      <div className="content pt-6">
         <div className="mb-4">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/6aa16236d7d2303d78c21642039e4cccc56b6ef3?placeholderIfAbsent=true"
@@ -29,26 +29,25 @@ const StartPage = () => {
           />
         </div>
 
-        <div className="text-center px-2">
+        <div className="px-2">
+          <h4 className="text-center mb-6">Welcome to the beta version of Solarynn!</h4>
           <p className="mb-4">
-            You're accessing a test version designed for the image industry,
-            open to all types of users. Before moving forward, please review and
-            accept our terms and conditions.
-          </p>
-          <p className="mb-8">
-            We’re excited to have you on board for this journey!
+            In our world, we see projects (in its more common form: ideas) as the most important asset in human history and believe it should be simpler to develop, reach the right people, or connect with those who might be interested.
           </p>
           <p className="mb-4">
-            Please review and accept our{" "}
-            <Link href="/terms-and-conditions">Terms and Conditions</Link> to proceed.
-            This is a beta version of Solaryn, open for testing and exploration.
-            Click Accept to continue
+            No potential project or idea that could have changed your outcome (or someone else's) should end up in the graveyard of what could have been, simply for lack of a proper platform.
           </p>
+          <p className="mb-4">Please allow us to introduce a beta version of our upcoming platform, dedicated to the image industry (Fashion – Modelling – Casting – Marketing – Advertising – Public Appearances…).</p>
+          <p className="mb-4">As we build our first mobile application, more industries will be added. We look forward to helping facilitate processes that allow you to develop multiple projects dear to you.</p>
+          <p className="mb-4">
+            Please note this is a beta platform, intended only to help you get started and understand our platform. For more information, please review our <br/> <Link href="/terms-and-conditions">terms and conditions</Link>.
+          </p>
+          <p className="mb-8">Now, let’s get you started!</p>
 
           <div className="flex items-center mb-8">
             <Checkbox
               size={'small'}
-              color="success"
+              color="primary"
               disableRipple
               disableTouchRipple
               checked={tosAccepted}

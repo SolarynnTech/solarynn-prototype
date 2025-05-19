@@ -40,9 +40,9 @@ export default function () {
 
   return (
     <CategorySelection
-      title="Domain"
+      title="Categories"
       subtitle={role?.title}
-      description="Please select an area of your expertise or interest"
+      description="What area best describes your work? This will shape how others see you, and it can’t be changed later"
       nextRoute="/onboarding/sub-division"
       selectedCategory={domain}
       selectCategory={selectDomain}

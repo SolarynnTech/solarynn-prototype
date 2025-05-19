@@ -54,7 +54,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, phone, address } = user;
+    const { name, email, address } = user;
 
     const profile_img = imageFile
       ? await uploadImageToSupabase(supabase, imageFile, user.id)
@@ -62,7 +62,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
 
     const { data, error } = await supabase
       .from("users")
-      .update({ name, email, phone, address, profile_img })
+      .update({ name, email, address, profile_img })
       .eq("id", user.id);
 
     setProfileImg(profile_img);
@@ -71,7 +71,6 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
       ...prevUser,
       name,
       email,
-      phone,
       address,
       profile_img,
     }))
@@ -117,7 +116,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
         )}
 
         {user?.verified && (
-          <div className="flex items-center text-sm uppercase font-semibold text-green-800 bg-green-100 rounded-full px-4 py-1.5 absolute top-4 right-4">
+          <div className="flex items-center text-sm uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-4 py-1.5 absolute top-4 right-4">
             <Star size={20} color="#087B43" className="mr-2" />
             <div>Verified</div>
           </div>
@@ -183,7 +182,7 @@ const ProfileImage = ({name, id, imgUrl, isMyProfile}) => {
               />
 
               <label htmlFor="profile-image-upload" className="cursor-pointer">
-                <p className={"text-green-800 font-semibold my-2"}>
+                <p className={"text-indigo-500 font-semibold my-2"}>
                   Upload Profile Image
                 </p>
                 <input

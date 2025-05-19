@@ -58,7 +58,7 @@ export default function HomePage() {
         <h1>Welcome {user?.name || user?.email}</h1>
         <div className="flex items-center justify-between gap-4 pt-2">
           <NotificationIcon/>
-          <Settings className="cursor-pointer hover:text-green-800" onClick={() => router.push("/settings")}/>
+          <Settings className="cursor-pointer hover:text-indigo-500" onClick={() => router.push("/settings")}/>
         </div>
       </nav>
 

@@ -193,7 +193,7 @@ const SocialMediaSection = ({ id, links, isMyProfile }) => {
 
             return (
               <a href={url} key={index} target="_blank" rel="noopener noreferrer">
-                <Badge bgColor="gray-100" textColor="green-800">
+                <Badge bgColor="gray-100" textColor="indigo-500">
                   <span className="inline-flex min-h-5 items-center justify-center">{platform.icon}</span>
                 </Badge>
               </a>

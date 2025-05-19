@@ -19,7 +19,7 @@ const SecondaryBtn = ({
         "rounded-[24px] bg-transparent px-6 py-3 text-[16px] font-semibold text-center leading-[1.3] border",
         disabled
           ? "text-gray-400 border border-gray-600"
-          : "text-green-800 hover:bg-green-100 transition-colors border-green-800 hover:border-green-900 cursor-pointer",
+          : "text-indigo-500 hover:bg-indigo-100 transition-colors border-indigo-500 hover:border-indigo-600 cursor-pointer",
         classes
       )}
     >

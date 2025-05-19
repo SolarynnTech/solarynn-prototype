@@ -21,11 +21,11 @@ export default function Settings() {
       icon: Mail,
       onClick: () => router.push("/settings/email"),
     },
-    {
-      title: "Update/Change Phone Number",
-      icon: Phone,
-      onClick: () => router.push("/settings/phone"),
-    },
+    // {
+    //   title: "Update/Change Phone Number",
+    //   icon: Phone,
+    //   onClick: () => router.push("/settings/phone"),
+    // },
     {
       title: "Update/Change Password",
       icon: Lock,
@@ -46,14 +46,14 @@ export default function Settings() {
         {items.map((item, index) => (
           <div
             key={index}
-            className={classNames("cursor-pointer hover:text-green-800", styles.settingsContainer__Item)}
+            className={classNames("cursor-pointer hover:text-indigo-500", styles.settingsContainer__Item)}
             onClick={item.onClick}
           >
             <div className={styles.settingsContainer__Item__Header}>
               <item.icon />
               <span
                 className={classNames(
-                  "cursor-pointer hover:text-green-800",
+                  "cursor-pointer hover:text-indigo-500",
                   styles.settingsContainer__Item__Header__Title
                 )}
               >

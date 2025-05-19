@@ -31,9 +31,9 @@ export default function () {
 
   return (
     <CategorySelection
-      title="Subdivision"
+      title="Focus"
       subtitle={domain?.title}
-      description="Please select a subdomain that defines you the most"
+      description="Refining your details helps us improve your visibility across the platform"
       nextRoute="/onboarding"
       selectedCategory={subDivision}
       selectCategory={selectSubDivision}

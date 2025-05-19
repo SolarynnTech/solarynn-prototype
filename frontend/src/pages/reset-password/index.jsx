@@ -57,7 +57,7 @@ export default function ResetPassword() {
         {message && <p className="text-green-700 mt-4 text-center">{message}</p>}
         {error && <p className="text-red-600 mt-4 text-center">{error}</p>}
 
-        <div className="text-center mt-6 text-green-800">
+        <div className="text-center mt-6 text-indigo-500">
           <button type="button" className="underline bg-transparent border-0" onClick={() => router.push("/login")}>
             Back to Login
           </button>

@@ -26,19 +26,12 @@ const OnboardingStartPage = () => {
     <div className="flex flex-col h-full justify-between grow">
       <div className="flex grow flex-col justify-center items-center px-2">
         <h3 className="text-center mb-4">
-          Now, let’s start building your profile to set you up for success
+          Ready to set yourself up for success?
         </h3>
 
-        <ul className="list-disc text-left mb-4 pl-6">
-          <li className="mb-3">
-            This is a crucial step to ensure efficiency, measurable results, and
-            steady progress throughout your project.
-          </li>
-          <li className="mb-3">
-            Completing your profile will take approximately 5 minutes. Please
-            answer all questions as accurately and thoroughly as possible
-          </li>
-        </ul>
+        <p className="mb-4">Begin by building your profile. On the next screens, you'll choose your user categories and complete our onboarding questions.</p>
+        <p className="mb-4">This vital step is central to our platform, so please provide your most accurate responses. Your input affects how others discover you and your potential fit for projects. This will take just a few minutes.</p>
+        <p className="mb-4">Thanks!</p>
       </div>
 
       <PrimaryBtn

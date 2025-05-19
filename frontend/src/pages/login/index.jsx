@@ -119,7 +119,7 @@ export default function Login() {
         <div className="text-right">
           <button
             type="button"
-            className="text-green-800 border-0 p-o bg-transparent hover:underline focus:outline-none focus:ring-0"
+            className="text-indigo-500 border-0 p-o bg-transparent hover:underline focus:outline-none focus:ring-0"
             onClick={async () => {
               router.push("/reset-password");
             }}
@@ -130,11 +130,11 @@ export default function Login() {
 
         <PrimaryBtn type={"submit"} title={"Login"} classes={"w-full block mb-4 mt-9"} />
 
-        <div className="text-green-800 text-center mt-4">
+        <div className="text-indigo-500 text-center mt-4">
           New user?{" "}
           <button
             type="button"
-            className="text-green-800 border-0 p-o bg-transparent underline focus:outline-none focus:ring-0"
+            className="text-indigo-500 border-0 p-o bg-transparent underline focus:outline-none focus:ring-0"
             onClick={() => {
               router.push("/create-account");
             }}

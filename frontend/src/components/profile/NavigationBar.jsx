@@ -12,14 +12,14 @@ const NavigationBar = () => {
   return (
     <nav className="fixed bottom-0 bg-white z-10 max-w-[440px] w-full -mx-6 px-6 py-4 flex items-center justify-around border-t border-gray-200">
       <div
-        className={`${ router.pathname.includes('home') ? "text-green-800" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-green-800`}
+        className={`${ router.pathname.includes('home') ? "text-indigo-500" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-indigo-500`}
         onClick={() => router.push("/home")}
       >
         <House className="mb-2" />
         Home
       </div>
       <div
-        className={`${ router.pathname.includes('projects') ? "text-green-800" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-green-800`}
+        className={`${ router.pathname.includes('projects') ? "text-indigo-500" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-indigo-500`}
         onClick={() => router.push("/projects")}
       >
         <Inbox className="mb-2" />
@@ -27,7 +27,7 @@ const NavigationBar = () => {
       </div>
       <Tooltip title="Is coming...">
         <div
-          className={`${ router.pathname.includes('chats') ? "text-green-800" : ""} flex relative flex-col items-center justify-center text-xs opacity-40`}
+          className={`${ router.pathname.includes('chats') ? "text-indigo-500" : ""} flex relative flex-col items-center justify-center text-xs opacity-40`}
           // onClick={() => router.push("/chats")}
         >
           <MessageSquare className="mb-2" />
@@ -35,7 +35,7 @@ const NavigationBar = () => {
         </div>
       </Tooltip>
       <div
-        className={`${ router.pathname.includes('profile') ? "text-green-800" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-green-800`}
+        className={`${ router.pathname.includes('profile') ? "text-indigo-500" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-indigo-500`}
         onClick={() => router.push("/profile/" + user.id)}
       >
         <User className="mb-2" />

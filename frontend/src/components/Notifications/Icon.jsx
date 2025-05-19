@@ -37,7 +37,7 @@ export default function Icon() {
   return (
     <div onClick={() => router.push("/notifications")}>
       <div className="relative">
-        <Bell className="cursor-pointer hover:text-green-800" />
+        <Bell className="cursor-pointer hover:text-indigo-500" />
         {unreadCount > 0 && (
           <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
             {unreadCount}

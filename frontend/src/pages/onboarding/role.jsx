@@ -39,9 +39,9 @@ export default function () {
 
   return (
     <CategorySelection
-      title="Role / Activity"
+      title="Select Your User Type"
       subtitle={null}
-      description="Please select a role that defines you the most, or what you belong to"
+      description="How would you like to be seen on the platform? This will define your experience and can’t be changed later"
       nextRoute="/onboarding/domain"
       selectedCategory={role}
       selectCategory={selectRole}
