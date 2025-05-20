@@ -1,7 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Star } from "lucide-react";
+import { BellOff, LaptopMinimalCheck, MessageCircleQuestion, Star } from "lucide-react";
 import ActionBtn from "../buttons/ActionBtn";
-import { Backdrop, Box, Fade, FormControlLabel, Modal, Stack, Switch, TextField, Typography } from "@mui/material";
+import {
+  Backdrop,
+  Box,
+  Fade,
+  FormControl,
+  FormControlLabel,
+  InputLabel,
+  MenuItem,
+  Modal,
+  Select,
+  Stack,
+  Switch,
+  TextField,
+  Typography,
+} from "@mui/material";
 import PlaceholderBox from "../PlaceholderBox";
 import useUserStore from "@/stores/useUserStore";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
@@ -9,6 +23,27 @@ import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import uploadImageToSupabase from "@/utils/uploadImageToSupabase";
 import ReportProfile from "./ReportProfile";
+
+export const availabilityStatusMap = {
+  ["open_to_project"]: {
+    title: "Open To Project",
+    icon: <LaptopMinimalCheck />,
+  },
+  ["by_request"]: {
+    title: "Available by Request",
+    icon: <MessageCircleQuestion />,
+  },
+  ["not_available"]: {
+    title: "Not Available",
+    icon: <BellOff />,
+  },
+};
+
+export const availabilityStatusOptions = Object.entries(availabilityStatusMap).map(([value, { title, icon }]) => ({
+  value,
+  title,
+  icon,
+}));
 
 const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
   const [open, setOpen] = useState(false);
@@ -48,14 +83,26 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, address } = user;
+    const { name, email, address, is_private, availability_status } = user;
 
     const profile_img = imageFile ? await uploadImageToSupabase(supabase, imageFile, user.id) : user.profile_img;
 
     const { data, error } = await supabase
       .from("users")
-      .update({ name, email, address, profile_img, is_private: user.is_private })
+      .update({
+        name,
+        email,
+        address,
+        profile_img,
+        is_private,
+        availability_status,
+      })
       .eq("id", user.id);
+
+    if (error) {
+      console.error("Error updating user:", error);
+      return;
+    }
 
     setProfileImg(profile_img);
 
@@ -65,12 +112,9 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
       email,
       address,
       profile_img,
+      is_private,
+      availability_status,
     }));
-
-    if (error) {
-      console.error("Error updating user:", error);
-      return;
-    }
 
     setTimeout(() => {
       setOpen(false);
@@ -89,6 +133,21 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
     p: 4,
   };
 
+  const availabilityStatusMap = {
+    ["open_to_project"]: {
+      title: "Open To Project",
+      icon: <LaptopMinimalCheck />,
+    },
+    ["by_request"]: {
+      title: "Available by Request",
+      icon: <MessageCircleQuestion />,
+    },
+    ["not_available"]: {
+      title: "Not Available",
+      icon: <MessageCircleQuestion />,
+    },
+  };
+
   return (
     <div className="mb-6">
       <div className="flex items-center justify-between mb-4">
@@ -100,6 +159,13 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
         <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] shadow-[inset_0_-40px_40px_-20px_rgba(0,0,0,0.35)]"></div>
 
         {profileImg ? <img src={`${profileImg}?t=${Date.now()}`} alt={user?.name} /> : <PlaceholderBox height={400} />}
+
+        {user?.verified && (
+          <div className="flex items-center text-sm uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-4 py-1.5 absolute top-px-32 right-4">
+            <Star size={20} color="#615FFF" className="mr-2" />
+            <div>{availabilityStatusMap["open_to_project"].title}</div>
+          </div>
+        )}
 
         {user?.verified && (
           <div className="flex items-center text-sm uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-4 py-1.5 absolute top-4 right-4">
@@ -164,6 +230,30 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
                 value={user?.address ? user.address : ""}
                 onChange={handleChange}
               />
+              <Box sx={{ mt: 2, mb: 2 }}>
+                <FormControl variant="standard" fullWidth>
+                  <InputLabel id="availability-label" shrink sx={{ color: "text.primary" }}>
+                    Availability
+                  </InputLabel>
+                  <Select
+                    labelId="availability-label"
+                    id="availability_status"
+                    name="availability_status"
+                    value={user.availability_status || ""}
+                    onChange={handleChange}
+                    fullWidth
+                  >
+                    {availabilityStatusOptions.map(({ value, title, icon }) => (
+                      <MenuItem key={value} value={value}>
+                        <Box display="flex" alignItems="center" gap={1}>
+                          {icon}
+                          <span>{title}</span>
+                        </Box>
+                      </MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Box>
 
               <label htmlFor="profile-image-upload" className="cursor-pointer">
                 <p className={"text-indigo-500 font-semibold my-2"}>Upload Profile Image</p>
@@ -191,6 +281,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
                 label={user?.is_private ? "Private Profile" : "Public Profile"}
               />
             </Box>
+
             <div className="flex justify-end mt-8 gap-2">
               <SecondaryBtn title={"Cancel"} onClick={handleClose} />
               <PrimaryBtn title={"Save"} onClick={handleSubmit} />

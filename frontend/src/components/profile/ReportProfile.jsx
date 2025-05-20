@@ -1,8 +1,8 @@
 import { useState } from "react";
-import AnnouncementOutlinedIcon from "@mui/icons-material/AnnouncementOutlined";
 import { Backdrop, Box, Fade, Modal, TextField, Typography } from "@mui/material";
 import SecondaryBtn from "../buttons/SecondaryBtn";
 import PrimaryBtn from "../buttons/PrimaryBtn";
+import { MessageSquareWarning } from "lucide-react";
 
 const ReportProfile = () => {
   const [open, setOpen] = useState(false);
@@ -40,7 +40,7 @@ const ReportProfile = () => {
   return (
     <>
       <button type="button" onClick={handleOpen}>
-        <AnnouncementOutlinedIcon />
+        <MessageSquareWarning />
       </button>
 
       <Modal
