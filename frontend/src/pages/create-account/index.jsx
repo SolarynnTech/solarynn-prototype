@@ -120,8 +120,7 @@ const CreateAccountPage = () => {
           .insert([
             {
               id: user.id, // match this with Supabase auth user.id
-              email,
-              verified: true,
+              email
             },
           ]);
 
