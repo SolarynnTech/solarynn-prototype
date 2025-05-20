@@ -187,8 +187,8 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
             </Stack>
             <Box>
               <FormControlLabel
-                control={<Switch name="is_private" checked={user.is_private} onChange={handleChange} />}
-                label={user.is_private ? "Private Profile" : "Public Profile"}
+                control={<Switch name="is_private" checked={user?.is_private} onChange={handleChange} />}
+                label={user?.is_private ? "Private Profile" : "Public Profile"}
               />
             </Box>
             <div className="flex justify-end mt-8 gap-2">

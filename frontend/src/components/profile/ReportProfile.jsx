@@ -30,6 +30,7 @@ const ReportProfile = () => {
 
   const handleSubmit = (value) => {
     console.log("send");
+    setOpen(false);
   };
 
   const handleChange = (event) => {
@@ -89,7 +90,7 @@ const ReportProfile = () => {
             />
             <div className="flex justify-end mt-8 gap-2">
               <SecondaryBtn title={"Cancel"} onClick={handleClose} />
-              <PrimaryBtn title={"Submit"} onClick={handleSubmit} />
+              <PrimaryBtn disabled={!complaint} title={"Submit"} onClick={handleSubmit} />
             </div>
           </Box>
         </Fade>

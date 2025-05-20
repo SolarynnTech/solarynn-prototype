@@ -65,13 +65,9 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
   }, [currentFormPage]);
 
   async function convertAnswersWithTitles(rawAnswers) {
-    const { data: sectionsData, error: sectionsError } = await supabase
-      .from("sections")
-      .select("id, title");
+    const { data: sectionsData, error: sectionsError } = await supabase.from("sections").select("id, title");
 
-    const { data: questionsData, error: questionsError } = await supabase
-      .from("questions")
-      .select("id, question");
+    const { data: questionsData, error: questionsError } = await supabase.from("questions").select("id, question");
 
     if (sectionsError || questionsError) {
       console.error("Failed to fetch titles", sectionsError || questionsError);
@@ -108,15 +104,10 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
       ? user.booked_profiles.filter((p) => p !== profile.id)
       : [...(user.booked_profiles || []), profile.id];
 
-    const { data, error } = await supabase
-      .from("users")
-      .update({ booked_profiles: updatedList })
-      .eq("id", user.id);
+    const { data, error } = await supabase.from("users").update({ booked_profiles: updatedList }).eq("id", user.id);
 
     setUser((prev) => ({ ...prev, booked_profiles: updatedList }));
-    setProfiles((prev) =>
-      prev.map((p) => (p.id === user.id ? { ...p, booked_profiles: updatedList } : p))
-    );
+    setProfiles((prev) => prev.map((p) => (p.id === user.id ? { ...p, booked_profiles: updatedList } : p)));
   };
 
   return (
@@ -125,7 +116,12 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
         <div className="flex items-center justify-between w-full">
           <h3 className="font-bold mb-0">Profile Details</h3>
           {isMyProfile && (
-            <ActionBtn title="Edit" onClick={()=>{router.push("/questionnaire")}} />
+            <ActionBtn
+              title="Edit"
+              onClick={() => {
+                router.push("/questionnaire");
+              }}
+            />
           )}
         </div>
         {!isMyProfile && (
@@ -134,9 +130,7 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
             onClick={toogleBookmark}
             size={24}
             className={`${
-              user.booked_profiles?.includes(profile.id)
-                ? "text-indigo-500"
-                : "text-gray-600"
+              user.booked_profiles?.includes(profile.id) ? "text-indigo-500" : "text-gray-600"
             } cursor-pointer ml-3`}
           />
         )}
@@ -145,32 +139,29 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
       <div className="p-3 bg-gray-100 rounded-lg shadow-md mb-4 border border-gray-300">
         {sectionTitles.length > 0 && answersWithTitles[sectionTitles[currentFormPage]] && (
           <div key={sectionTitles[currentFormPage]} className="mb-6">
-            <h4 className="font-semibold text-lg mb-3">
-              {sectionTitles[currentFormPage]}
-            </h4>
+            <h4 className="font-semibold text-lg mb-3">{sectionTitles[currentFormPage]}</h4>
             <div className="">
-              {Object.entries(answersWithTitles[sectionTitles[currentFormPage]]).map(
-                ([questionTitle, value]) => (
-                  <div key={questionTitle}
-                       className={"mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"}>
-                    <p className="mb-2"><b>{questionTitle}:</b></p>
-                    <span className="text-gray-700">
-                      {Array.isArray(value) ? value.join(", ") : value}
-                    </span>
-                  </div>
-                )
-              )}
+              {Object.entries(answersWithTitles[sectionTitles[currentFormPage]]).map(([questionTitle, value]) => (
+                <div
+                  key={questionTitle}
+                  className={"mb-4 pb-4 border-b border-gray-300 last:border-0 last:mb-0 last:pb-0"}
+                >
+                  <p className="mb-2">
+                    <b>{questionTitle}:</b>
+                  </p>
+                  <span className="text-gray-700">{Array.isArray(value) ? value.join(", ") : value}</span>
+                </div>
+              ))}
             </div>
           </div>
         )}
 
-        {profile && ALL_FIELDS.filter((field) => profile[field.key]).map((field) => (
-          <p key={field.key} className={"mb-2"}>
-            <b>{field.name}:</b>{" "}
-            <span className="text-gray-600">{profile[field.key]}</span>
-          </p>
-        ))}
-
+        {profile &&
+          ALL_FIELDS.filter((field) => profile[field.key]).map((field) => (
+            <p key={field.key} className={"mb-2"}>
+              <b>{field.name}:</b> <span className="text-gray-600">{profile[field.key]}</span>
+            </p>
+          ))}
       </div>
 
       {sectionTitles.length > 1 && (

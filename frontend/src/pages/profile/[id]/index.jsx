@@ -188,7 +188,7 @@ const ProfilePage = () => {
         )}
 
         {isMyProfile ? (
-          <MyProfileLocation location={profile.country} />
+          <MyProfileLocation location={{ country: profile.country, city: profile.city }} />
         ) : (
           profile.country && <ProfileLocation location={profile.country} />
         )}
