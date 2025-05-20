@@ -12,13 +12,27 @@ import useProfilesStore from "@/stores/useProfilesStore";
 import { useRouter } from "next/router";
 import Group from "@/components/profile/Group";
 import { fetchProfileGroups } from "@/libs/fetchProfileGroups";
-import { TextField, Typography, Box, Button } from "@mui/material";
+import {TextField, Typography, Box, Button, Backdrop, Fade, Modal} from "@mui/material";
 import ActionBtn from "@/components/buttons/ActionBtn.jsx";
 import MyProfileLocation from "@/components/profile/MyProfileLocation";
 import ProfileLocation from "@/components/profile/ProfileLocation";
 import ChatsSendMessage from "@/components/chats/SendMessage";
+import SecondaryBtn from "@/components/buttons/SecondaryBtn.jsx";
+import ProjectPreview from "@/components/projects/ProjectPreview.jsx";
 
 const ProfilePage = () => {
+  const style = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    borderRadius: "8px",
+    boxShadow: 24,
+    p: 4,
+  };
+
   const [profile, setProfile] = useState(null);
   const { user, setUser } = useUserStore();
   const supabase = useSupabaseClient();
@@ -33,13 +47,73 @@ const ProfilePage = () => {
   const [savingBio, setSavingBio] = useState(false);
 
   const [isMyProfile, setIsMyProfile] = useState(null);
+  const [sendProjectOpen, setSendProjectOpen] = useState(false);
+  const [selectedPrivateProject, setSelectedPrivateProject] = useState(null);
+  const [myPrivateProjects, setMyPrivateProjects] = useState([]);
+
+  const handleSendPrivateProjectClose = () => {
+    setSendProjectOpen(false);
+    setSelectedPrivateProject(null);
+  };
+
+  const handleSendPrivateProjectOpen = () => {
+    setSendProjectOpen(true);
+  };
+
+  const fetchMyPrivateProjects = async () => {
+    const { data, error } = await supabase
+      .from("projects")
+      .select("*")
+      .eq("owner", user.id)
+      .eq("project_visibility", "private")
+      .order("created_at", { ascending: false });
+
+    if (error) {
+      console.error("Error fetching private projects:", error);
+    } else {
+      setMyPrivateProjects(data);
+    }
+  }
+
+  useEffect(() => {
+    if (user?.id) {
+      fetchMyPrivateProjects();
+    }
+  }, [user?.id]);
+
+  const sendPrivateProject = async () => {
+    const { data: requests, error: requestsError } = await supabase
+      .from("projects")
+      .select("requests")
+      .eq("id", selectedPrivateProject)
+      .single();
+
+    if (!requestsError) {
+      if(!requests.includes(user?.id)) {
+        const { data, error } = await supabase
+          .from("projects")
+          .update({ requests: requests.length ? [...requests, user?.id] : [user?.id] })
+          .eq("id", selectedPrivateProject);
+        if (error) {
+          console.error("Error sending project:", error);
+        }
+        if (data) {
+          console.log("Project sent successfully:", data);
+        }
+      }
+    }
+
+    handleSendPrivateProjectClose();
+  }
 
   useEffect(() => {
     if (!profiles) return;
     const p = profiles.find((p) => p.id === id);
     setProfile(p);
-    if (p?.bio) setBio(p.bio);
-    setCurrentBio(p.bio);
+    if (p?.bio) {
+      setBio(p.bio);
+      setCurrentBio(p.bio);
+    }
   }, [profiles, id]);
 
   useEffect(() => {
@@ -92,10 +166,20 @@ const ProfilePage = () => {
     }
   };
 
-  if (!profile) {
+  if (!profiles) {
     return (
       <div className="flex items-center justify-center h-screen">
         <p className="text-lg">Profile is loading...</p>
+      </div>
+    );
+  } else if (!profile) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen">
+        <p className="text-lg mb-8">Profile not found</p>
+        <PrimaryBtn
+          title="Go to Home"
+          onClick={() => router.push("/home")}
+        />
       </div>
     );
   }
@@ -117,10 +201,15 @@ const ProfilePage = () => {
           <PrimaryBtn title={"Start A Project"} classes="w-full block mb-2" onClick={() => router.push("/projects")} />
         ) : (
           profile.availability_status !== availabilityStatusMap.not_available.key && (
-            <PrimaryBtn title={"Send a Project"} classes="w-full block mb-2" onClick={() => router.push("/projects")} />
+            <PrimaryBtn title={"Send a Project"} classes="w-full block mb-2" onClick={()=>{
+            if (isMyProfile) {
+              router.push("/projects/create");
+            } else {
+              handleSendPrivateProjectOpen();
+            }
+          }} />
           )
         )}
-
         {!isMyProfile && <ChatsSendMessage id={id} />}
 
         {(isMyProfile || profile.bio) && (
@@ -221,6 +310,56 @@ const ProfilePage = () => {
 
         <NavigationBar />
       </div>
+
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        open={sendProjectOpen}
+        onClose={handleSendPrivateProjectClose}
+        closeAfterTransition
+        slots={{ backdrop: Backdrop }}
+        slotProps={{
+          backdrop: {
+            timeout: 500,
+          },
+        }}
+      >
+        <Fade in={sendProjectOpen}>
+          <Box sx={style}>
+            <Box sx={{ mb: 2 }}>
+              <Typography id="modal-modal-title" variant="h6" component="h2">
+                Send a Project
+              </Typography>
+            </Box>
+
+            <div className={"grid grid-cols-1 gap-2 max-h-60 overflow-y-auto"}>
+              {myPrivateProjects?.length && myPrivateProjects.map((proj) => (
+                  <label key={proj.id} className={`flex w-full items-center mb-4 cursor-pointer p-2 rounded-xl border border-transparent ${selectedPrivateProject === proj.id ? "!border-indigo-500" : ""}`}>
+                    <input
+                      type="radio"
+                      id={proj.id}
+                      name="project"
+                      value={proj.id}
+                      checked={selectedPrivateProject === proj.id}
+                      onChange={() => setSelectedPrivateProject(proj.id)}
+                      className="mr-2 hidden"
+                    />
+
+                      <img className={"mr-2 rounded-md"} src={proj.img_url} width={"40"} height={"40"} alt={proj.title} />
+
+                    <span className="text-gray-700">{proj.title}</span>
+                  </label>
+                ))}
+            </div>
+
+
+            <div className="flex justify-end mt-8 gap-2">
+              <SecondaryBtn title={"Cancel"} onClick={handleSendPrivateProjectClose} />
+              <PrimaryBtn disabled={false} title={"Submit"} onClick={sendPrivateProject} />
+            </div>
+          </Box>
+        </Fade>
+      </Modal>
     </div>
   );
 };

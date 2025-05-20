@@ -13,6 +13,7 @@ import useUserStore from "@/stores/useUserStore";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 import NotificationsRequests from "@/components/Notifications/Requests";
 import MyProjects from "@/components/home/MyProjects.jsx";
+import ProjectsReceived from "@/components/home/ProjectsReceived.jsx";
 
 export default function HomePage() {
   const { user } = useUserStore();
@@ -72,6 +73,7 @@ export default function HomePage() {
       <YourConnections />
       {/*<TakeALook/>*/}
       <MyProjects />
+      <ProjectsReceived/>
       <h2 className="mb-8">Our Universe</h2>
 
       {loading ? (

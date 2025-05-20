@@ -63,8 +63,8 @@ export default function Listing() {
                   <div className="flex justify-center" key={profile.id}>
                     <UserPreview
                       link={"/profile/" + profile?.id}
-                      name={profile.name || profile.official_name || profile.agency_name}
-                      img_url={profile.profile_img}
+                      name={profile?.name || profile?.email}
+                      img_url={profile?.profile_img}
                       height={150}
                       width={150}
                     />

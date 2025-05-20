@@ -48,8 +48,8 @@ export default function Profiles() {
               <div key={profile.id} className="flex justify-center">
                 <UserPreview
                   link={"/profile/" + profile?.id}
-                  name={profile.name || profile.official_name || profile.agency_name}
-                  img_url={profile.profile_img}
+                  name={profile?.name || profile?.email}
+                  img_url={profile?.profile_img}
                   height={150}
                   width={150}
                 />

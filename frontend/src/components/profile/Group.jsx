@@ -158,7 +158,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
             album.map((img_url, index) => {
               return (
                 <div
-                  key={index}
+                  key={img_url}
                   className={`flex shrink-0 relative rounded-md items-center justify-center bg-gray-100`}
                   style={{
                     width: SIZE.w,
@@ -176,11 +176,11 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
           )
         ) : dataToDisplay.length > 0 ? (
           dataToDisplay.map((profile, index) => (
-            <UserPreview
-              key={index}
-              link={`/profile/${profile.id}`}
-              name={profile.name || profile.official_name || profile.agency_name}
-              img_url={profile.profile_img}
+              <UserPreview
+              key={profile?.id}
+              link={`/profile/${profile?.id}`}
+              name={profile?.name || profile?.email}
+              img_url={profile?.profile_img}
               height={SIZE.h}
               width={SIZE.w}
             />
@@ -193,7 +193,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
       {isMyProfile && (
         <>
           {/* add better handling column case */}
-          {columnName != "album" ? (
+          {columnName !== "album" ? (
             <SecondaryBtn title="Add" classes="w-full block" onClick={() => setOpen(true)} />
           ) : (
             <>
@@ -230,11 +230,11 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
               <div className={"overflow-y-auto max-h-[400px] scrollbar hide-scrollbar h-full"}>
                 {filtered.slice(0, visibleCount).map((p, index) => (
                   <div
-                    key={p.id + index}
+                    key={p.id}
                     className="cursor-pointer hover:bg-gray-100 px-2 py-2 border-b"
                     onClick={() => handleAddProfile(p.id)}
                   >
-                    {p.name || p.agency_name || p.official_name}
+                    {p.name || p.email}
                   </div>
                 ))}
 
