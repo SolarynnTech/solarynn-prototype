@@ -26,18 +26,21 @@ import ReportProfile from "./ReportProfile";
 
 export const availabilityStatusMap = {
   ["open_to_project"]: {
+    key: "open_to_project",
     title: "Open To Project",
     icon: <LaptopMinimalCheck />,
     bgColor: "#cef7e7",
     textColor: "#297c03",
   },
   ["by_request"]: {
+    key: "by_request",
     title: "Available by Request",
     icon: <MessageCircleQuestion />,
     bgColor: "#dde1fe",
     textColor: "#061a98",
   },
   ["not_available"]: {
+    key: "not_available",
     title: "Not Available",
     icon: <BellOff />,
     bgColor: "#fee2b9",

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import RootNavigation from "@/components/Nav/Nav";
-import ProfileImage from "@/components/profile/ProfileImage";
+import ProfileImage, { availabilityStatusMap } from "@/components/profile/ProfileImage";
 import DetailsPanel from "@/components/profile/DetailsPanel";
 import SocialMediaSection from "@/components/profile/SocialMediaSection";
 import NavigationBar from "@/components/profile/NavigationBar";
@@ -113,11 +113,14 @@ const ProfilePage = () => {
         />
 
         <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />
-        <PrimaryBtn
-          title={isMyProfile ? "Start A Project" : "Send a Project"}
-          classes="w-full block mb-2"
-          onClick={() => router.push("/projects")}
-        />
+        {isMyProfile ? (
+          <PrimaryBtn title={"Start A Project"} classes="w-full block mb-2" onClick={() => router.push("/projects")} />
+        ) : (
+          profile.availability_status !== availabilityStatusMap.not_available.key && (
+            <PrimaryBtn title={"Send a Project"} classes="w-full block mb-2" onClick={() => router.push("/projects")} />
+          )
+        )}
+
         {!isMyProfile && <ChatsSendMessage id={id} />}
 
         {(isMyProfile || profile.bio) && (

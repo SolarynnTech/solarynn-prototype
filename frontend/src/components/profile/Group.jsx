@@ -10,6 +10,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, CircularProgress } from "@mui/material";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import SendRequest from "@/components/requests/SendRequest";
+import { availabilityStatusMap } from "./ProfileImage";
 
 const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) => {
   const SIZE = groupId === "dddc641a-049a-454a-af31-1112fb6727be" ? { h: 300, w: 200 } : { h: 150, w: 150 };
@@ -253,7 +254,9 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
         </>
       )}
 
-      {!isMyProfile && <SendRequest assignerId={profile.id} groupId={groupId} />}
+      {!isMyProfile && profile.availability_status !== availabilityStatusMap.not_available.key && (
+        <SendRequest assignerId={profile.id} groupId={groupId} />
+      )}
     </div>
   );
 };
