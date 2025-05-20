@@ -11,6 +11,7 @@ import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, CircularP
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import SendRequest from "@/components/requests/SendRequest";
 import { availabilityStatusMap } from "./ProfileImage";
+import {Trash2} from "lucide-react";
 
 const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) => {
   const SIZE = groupId === "dddc641a-049a-454a-af31-1112fb6727be" ? { h: 300, w: 200 } : { h: 150, w: 150 };
@@ -26,7 +27,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
   const [filtered, setFiltered] = useState([]);
   const [visibleCount, setVisibleCount] = useState(20);
   const [uploading, setUploading] = useState(false);
-  const [album, setAlbum] = useState([]);
+  const [album, setAlbum] = useState(profile.album || []);
 
   const inputRef = useRef(null);
 
@@ -40,12 +41,6 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
     setDataToDisplay(dataMapped);
   }, [data, profiles, id]);
-
-  useEffect(() => {
-    if (profile.album?.length) {
-      setAlbum(profile.album);
-    }
-  }, [profile]);
 
   useEffect(() => {
     const lower = search.toLowerCase();
@@ -128,9 +123,28 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
       album: updatedAlbum,
     }));
 
+    setAlbum(updatedAlbum);
+
     // setPreviewUrl(newImageUrl);
     setUploading(false);
   };
+
+  const deleteImage = async (imageUrl) => {
+    const updatedAlbum = album.filter((img) => img !== imageUrl);
+    const { error } = await supabase.from("users").update({ album: updatedAlbum }).eq("id", user.id);
+
+    if (error) {
+      console.error("Failed to update user album:", error.message);
+      return;
+    }
+
+    setUser((prev) => ({
+      ...prev,
+      album: updatedAlbum,
+    }));
+
+    setAlbum(updatedAlbum);
+  }
 
   const ImagePlaceholder = () => {
     return (
@@ -159,7 +173,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
               return (
                 <div
                   key={img_url}
-                  className={`flex shrink-0 relative rounded-md items-center justify-center bg-gray-100`}
+                  className={`flex group shrink-0 relative rounded-md items-center justify-center bg-gray-100`}
                   style={{
                     width: SIZE.w,
                     height: SIZE.h,
@@ -168,7 +182,14 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
                     backgroundPosition: "center",
                     boxShadow: `rgba(0, 0, 0, 0.25) 0px -30px 25px -10px inset`,
                   }}
-                ></div>
+                >
+                  <div
+                    className="absolute opacity-0 group-hover:opacity-100 top-0 right-0 p-1 cursor-pointer"
+                    onClick={() => deleteImage(img_url)}
+                  >
+                    <Trash2 className={"text-red-800"} size={"24"} />
+                  </div>
+                </div>
               );
             })
           ) : (
@@ -200,7 +221,9 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
               {!uploading ? (
                 <SecondaryBtn title="Add" classes="w-full block" onClick={() => addImagesToAlbum()} />
               ) : (
-                <CircularProgress size={24} sx={{ mt: 2 }} />
+                <div className={"text-center"}>
+                  <CircularProgress size={24} sx={{ mt: 2 }} />
+                </div>
               )}
 
               <input
