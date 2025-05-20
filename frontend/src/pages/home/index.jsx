@@ -37,6 +37,12 @@ export default function HomePage() {
 
   const fetchCategories = async () => {
     const { data, error } = await supabase.from("categories").select("*").eq("is_role", true);
+    //sort by number column
+    if (data) {
+      data.sort((a, b) => {
+        return a.number - b.number;
+      });
+    }
     if (error) {
       console.error("Failed to fetch categories:", error);
     } else {
@@ -73,6 +79,21 @@ export default function HomePage() {
       ) : (
         <>
           <div className="grid grid-cols-1 gap-3 mb-12">
+            {!loading &&
+              categories &&
+              categories.length > 0 &&
+              categories.map((category, index) => (
+                <CategoryTile
+                  key={index}
+                  title={category.title}
+                  img_url={category.img_url}
+                  bg_color={category.color}
+                  onClick={() => router.push("/listing/category/" + category.id)}
+                />
+              ))}
+          </div>
+
+          <div className="grid grid-cols-1 gap-3 mb-12">
             {universeCategories
               ?.sort((a, b) => {
                 const aAvailable = !categoryNamesExcluded.includes(a.title);
@@ -89,20 +110,6 @@ export default function HomePage() {
                   isAvailable={!categoryNamesExcluded.includes(category.title)}
                   bg_color={category.color}
                   onClick={() => router.push("/universe-categories/" + category.id)}
-                />
-              ))}
-          </div>
-          <div className="grid grid-cols-1 gap-3 mb-12">
-            {!loading &&
-              categories &&
-              categories.length > 0 &&
-              categories.map((category, index) => (
-                <CategoryTile
-                  key={index}
-                  title={category.title}
-                  img_url={category.img_url}
-                  bg_color={category.color}
-                  onClick={() => router.push("/listing/category/" + category.id)}
                 />
               ))}
           </div>
