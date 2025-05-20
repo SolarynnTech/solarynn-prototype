@@ -35,7 +35,6 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
   useEffect(() => {
     if (!profiles?.length || !data) return;
     const dataMapped = data.map((id) => profiles.find((p) => p.id === id)).filter(Boolean);
-    console.log(dataMapped);
 
     setDataToDisplay(dataMapped);
   }, [data, profiles, id]);
