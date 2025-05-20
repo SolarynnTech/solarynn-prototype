@@ -25,6 +25,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
   const [filtered, setFiltered] = useState([]);
   const [visibleCount, setVisibleCount] = useState(20);
   const [uploading, setUploading] = useState(false);
+  const [album, setAlbum] = useState([]);
 
   const inputRef = useRef(null);
 
@@ -38,6 +39,12 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
     setDataToDisplay(dataMapped);
   }, [data, profiles, id]);
+
+  useEffect(() => {
+    if (profile.album?.length) {
+      setAlbum(profile.album);
+    }
+  }, [profile]);
 
   useEffect(() => {
     const lower = search.toLowerCase();
@@ -124,6 +131,16 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
     setUploading(false);
   };
 
+  const ImagePlaceholder = () => {
+    return (
+      <>
+        <PlaceholderBox height={SIZE.h} width={SIZE.w} />
+        <PlaceholderBox height={SIZE.h} width={SIZE.w} />
+        <PlaceholderBox height={SIZE.h} width={SIZE.w} />
+      </>
+    );
+  };
+
   return (
     <div className="mb-12">
       <div className="flex items-center justify-between mb-4">
@@ -134,28 +151,49 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
       </div>
 
       <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
-        {dataToDisplay.length > 0 ? (
+        {/* add better handling column case */}
+        {columnName === "album" ? (
+          album.length > 0 ? (
+            album.map((img_url, index) => {
+              return (
+                <div
+                  key={index}
+                  className={`flex shrink-0 relative rounded-md items-center justify-center bg-gray-100`}
+                  style={{
+                    width: SIZE.w,
+                    height: SIZE.h,
+                    backgroundImage: `url(${img_url})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    boxShadow: `rgba(0, 0, 0, 0.25) 0px -30px 25px -10px inset`,
+                  }}
+                ></div>
+              );
+            })
+          ) : (
+            <ImagePlaceholder />
+          )
+        ) : dataToDisplay.length > 0 ? (
           dataToDisplay.map((profile, index) => (
-            <UserPreview
-              key={index}
-              link={`/profile/${profile.id}`}
-              name={profile.name || profile.official_name || profile.agency_name}
-              img_url={profile.profile_img}
-              height={SIZE.h}
-              width={SIZE.w}
-            />
+            <>
+              <UserPreview
+                key={index}
+                link={`/profile/${profile.id}`}
+                name={profile.name || profile.official_name || profile.agency_name}
+                img_url={profile.profile_img}
+                height={SIZE.h}
+                width={SIZE.w}
+              />
+            </>
           ))
         ) : (
-          <>
-            <PlaceholderBox height={SIZE.h} width={SIZE.w} />
-            <PlaceholderBox height={SIZE.h} width={SIZE.w} />
-            <PlaceholderBox height={SIZE.h} width={SIZE.w} />
-          </>
+          <ImagePlaceholder />
         )}
       </div>
 
       {isMyProfile && (
         <>
+          {/* add better handling column case */}
           {columnName != "album" ? (
             <SecondaryBtn title="Add" classes="w-full block" onClick={() => setOpen(true)} />
           ) : (
