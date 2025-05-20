@@ -11,7 +11,7 @@ import { LinearProgress, Box, Typography } from "@mui/material";
 
 const QuestionsPage = () => {
   const router = useRouter();
-  const { user } = useUserStore();
+  const { user, setUser } = useUserStore();
   const { role } = useCategoriesStore();
   const supabase = useSupabaseClient();
   const [data, setData] = useState([]);
@@ -47,6 +47,11 @@ const QuestionsPage = () => {
       console.error("Failed saving answers:", saveErr);
       return;
     }
+
+    setUser(prev => ({
+      ...prev,
+      questionnaire_answers: answersBySection,
+    }));
 
     if (currentIndex < data.length - 1) {
       setCurrentIndex(idx => idx + 1);
