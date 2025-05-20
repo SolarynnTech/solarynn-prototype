@@ -28,14 +28,20 @@ export const availabilityStatusMap = {
   ["open_to_project"]: {
     title: "Open To Project",
     icon: <LaptopMinimalCheck />,
+    bgColor: "#cef7e7",
+    textColor: "#297c03",
   },
   ["by_request"]: {
     title: "Available by Request",
     icon: <MessageCircleQuestion />,
+    bgColor: "#dde1fe",
+    textColor: "#061a98",
   },
   ["not_available"]: {
     title: "Not Available",
     icon: <BellOff />,
+    bgColor: "#fee2b9",
+    textColor: "#a06103",
   },
 };
 
@@ -45,7 +51,7 @@ export const availabilityStatusOptions = Object.entries(availabilityStatusMap).m
   icon,
 }));
 
-const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
+const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => {
   const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
@@ -53,6 +59,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
   const [profileImg, setProfileImg] = useState("");
+  const [profileStatus, setProfileStatus] = useState("");
 
   const handleChange = (event) => {
     const { name, value, files, type, checked } = event.target;
@@ -70,8 +77,11 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
 
   useEffect(() => {
     setProfileImg(isMyProfile ? user?.profile_img : imgUrl || "");
-    console.log("imgUrl", imgUrl);
   }, [user, id, imgUrl, isMyProfile]);
+
+  useEffect(() => {
+    setProfileStatus(isMyProfile ? user?.availability_status : availabilityStatus || "");
+  }, [user, id, availabilityStatus, isMyProfile]);
 
   const handleClose = () => {
     setOpen(false);
@@ -105,6 +115,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
     }
 
     setProfileImg(profile_img);
+    setProfileStatus(availability_status);
 
     setUser((prevUser) => ({
       ...prevUser,
@@ -133,21 +144,6 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
     p: 4,
   };
 
-  const availabilityStatusMap = {
-    ["open_to_project"]: {
-      title: "Open To Project",
-      icon: <LaptopMinimalCheck />,
-    },
-    ["by_request"]: {
-      title: "Available by Request",
-      icon: <MessageCircleQuestion />,
-    },
-    ["not_available"]: {
-      title: "Not Available",
-      icon: <MessageCircleQuestion />,
-    },
-  };
-
   return (
     <div className="mb-6">
       <div className="flex items-center justify-between mb-4">
@@ -160,10 +156,17 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
 
         {profileImg ? <img src={`${profileImg}?t=${Date.now()}`} alt={user?.name} /> : <PlaceholderBox height={400} />}
 
-        {user?.verified && (
-          <div className="flex items-center text-sm uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-4 py-1.5 absolute top-px-32 right-4">
-            <Star size={20} color="#615FFF" className="mr-2" />
-            <div>{availabilityStatusMap["open_to_project"].title}</div>
+        {profileStatus && (
+          <div
+            className="flex items-center text-sm uppercase rounded-full px-4 py-1.5 absolute right-4"
+            style={{
+              top: "58px",
+              color: availabilityStatusMap[profileStatus].textColor,
+              background: availabilityStatusMap[profileStatus].bgColor,
+            }}
+          >
+            {availabilityStatusMap[profileStatus].icon}
+            <span className="ml-2">{availabilityStatusMap[profileStatus].title}</span>
           </div>
         )}
 
@@ -239,7 +242,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
                     labelId="availability-label"
                     id="availability_status"
                     name="availability_status"
-                    value={user.availability_status || ""}
+                    value={user?.availability_status || ""}
                     onChange={handleChange}
                     fullWidth
                   >

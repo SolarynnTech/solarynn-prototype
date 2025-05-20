@@ -70,7 +70,7 @@ const ProfilePage = () => {
         await supabase.from("users").update({ recently_viewed: viewed }).eq("id", user.id);
       }
     }
-  }
+  };
 
   const handleSaveBio = async () => {
     if (bio.trim() === "") {
@@ -109,6 +109,7 @@ const ProfilePage = () => {
           isMyProfile={isMyProfile}
           name={profile.name || profile.email}
           imgUrl={profile.profile_img}
+          availabilityStatus={profile.availability_status}
         />
 
         <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />

@@ -175,16 +175,14 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
           )
         ) : dataToDisplay.length > 0 ? (
           dataToDisplay.map((profile, index) => (
-            <>
-              <UserPreview
-                key={index}
-                link={`/profile/${profile.id}`}
-                name={profile.name || profile.official_name || profile.agency_name}
-                img_url={profile.profile_img}
-                height={SIZE.h}
-                width={SIZE.w}
-              />
-            </>
+            <UserPreview
+              key={index}
+              link={`/profile/${profile.id}`}
+              name={profile.name || profile.official_name || profile.agency_name}
+              img_url={profile.profile_img}
+              height={SIZE.h}
+              width={SIZE.w}
+            />
           ))
         ) : (
           <ImagePlaceholder />
