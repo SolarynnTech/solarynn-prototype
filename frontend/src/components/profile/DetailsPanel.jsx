@@ -100,8 +100,8 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
   }, [profile?.questionnaire_answers, profile?.id, id]);
 
   const toogleBookmark = async () => {
-    const updatedList = user.booked_profiles?.includes(profile.id)
-      ? user.booked_profiles.filter((p) => p !== profile.id)
+    const updatedList = user?.booked_profiles?.includes(profile.id)
+      ? user?.booked_profiles.filter((p) => p !== profile.id)
       : [...(user.booked_profiles || []), profile.id];
 
     const { data, error } = await supabase.from("users").update({ booked_profiles: updatedList }).eq("id", user.id);
@@ -126,11 +126,11 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
         </div>
         {!isMyProfile && (
           <Bookmark
-            fill={user.booked_profiles?.includes(profile.id) ? "#166534" : "transparent"}
+            fill={user?.booked_profiles?.includes(profile.id) ? "#166534" : "transparent"}
             onClick={toogleBookmark}
             size={24}
             className={`${
-              user.booked_profiles?.includes(profile.id) ? "text-indigo-500" : "text-gray-600"
+              user?.booked_profiles?.includes(profile.id) ? "text-indigo-500" : "text-gray-600"
             } cursor-pointer ml-3`}
           />
         )}

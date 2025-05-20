@@ -99,7 +99,7 @@ const ProfileImage = ({ name, id, imgUrl, isMyProfile }) => {
       <div className="relative overflow-hidden rounded-md">
         <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] shadow-[inset_0_-40px_40px_-20px_rgba(0,0,0,0.35)]"></div>
 
-        {profileImg ? <img src={`${profileImg}?t=${Date.now()}`} alt={user.name} /> : <PlaceholderBox height={400} />}
+        {profileImg ? <img src={`${profileImg}?t=${Date.now()}`} alt={user?.name} /> : <PlaceholderBox height={400} />}
 
         {user?.verified && (
           <div className="flex items-center text-sm uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-4 py-1.5 absolute top-4 right-4">

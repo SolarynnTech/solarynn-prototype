@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import ActionBtn from "../buttons/ActionBtn";
 import SecondaryBtn from "../buttons/SecondaryBtn";
@@ -7,7 +7,7 @@ import UserPreview from "@/components/UserPreview";
 import useProfilesStore from "@/stores/useProfilesStore";
 import useUserStore from "@/stores/useUserStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { Dialog, DialogTitle, DialogContent, DialogActions, TextField } from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogActions, TextField, CircularProgress } from "@mui/material";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import SendRequest from "@/components/requests/SendRequest";
 
@@ -24,10 +24,19 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
   const [search, setSearch] = useState("");
   const [filtered, setFiltered] = useState([]);
   const [visibleCount, setVisibleCount] = useState(20);
+  const [uploading, setUploading] = useState(false);
+
+  const inputRef = useRef(null);
+
+  const addImagesToAlbum = () => {
+    inputRef.current?.click();
+  };
 
   useEffect(() => {
     if (!profiles?.length || !data) return;
     const dataMapped = data.map((id) => profiles.find((p) => p.id === id)).filter(Boolean);
+    console.log(dataMapped);
+
     setDataToDisplay(dataMapped);
   }, [data, profiles, id]);
 
@@ -68,6 +77,54 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
     setOpen(false);
   };
 
+  const handleFileChange = async (e) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+
+    const ext = file.name.split(".").pop();
+    const name = `${crypto.randomUUID()}.${ext}`;
+    const path = `private/${user.id}/${name}`;
+
+    const { error: uploadError } = await supabase.storage.from("professional-album").upload(path, file, {
+      cacheControl: "3600",
+      upsert: false,
+    });
+
+    if (uploadError) {
+      console.error("Upload failed:", uploadError.message);
+      setUploading(false);
+      return;
+    }
+
+    const { data: urlData, error: urlError } = supabase.storage.from("professional-album").getPublicUrl(path);
+
+    if (urlError || !urlData?.publicUrl) {
+      console.error("Failed to get public URL:", urlError?.message);
+      setUploading(false);
+      return;
+    }
+
+    const newImageUrl = urlData.publicUrl;
+    const updatedAlbum = [...(user.album || []), newImageUrl];
+    const { error: dbError } = await supabase.from("users").update({ album: updatedAlbum }).eq("id", user.id);
+
+    if (dbError) {
+      console.error("Failed to update user album:", dbError.message);
+      setUploading(false);
+      return;
+    }
+
+    setUser((prev) => ({
+      ...prev,
+      album: updatedAlbum,
+    }));
+
+    // setPreviewUrl(newImageUrl);
+    setUploading(false);
+  };
+
   return (
     <div className="mb-12">
       <div className="flex items-center justify-between mb-4">
@@ -100,7 +157,26 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
       {isMyProfile && (
         <>
-          <SecondaryBtn title="Add" classes="w-full block" onClick={() => setOpen(true)} />
+          {columnName != "album" ? (
+            <SecondaryBtn title="Add" classes="w-full block" onClick={() => setOpen(true)} />
+          ) : (
+            <>
+              {!uploading ? (
+                <SecondaryBtn title="Add" classes="w-full block" onClick={() => addImagesToAlbum()} />
+              ) : (
+                <CircularProgress size={24} sx={{ mt: 2 }} />
+              )}
+
+              <input
+                ref={inputRef}
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={handleFileChange}
+                style={{ display: "none" }}
+              />
+            </>
+          )}
           <Dialog open={open} onClose={() => setOpen(false)} fullWidth maxWidth="sm">
             <DialogTitle>Search and Add Profiles</DialogTitle>
             <DialogContent dividers>

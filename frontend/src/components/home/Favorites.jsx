@@ -4,25 +4,23 @@ import PlaceholderBox from "../PlaceholderBox";
 import UserPreview from "@/components/UserPreview";
 import useUserStore from "@/stores/useUserStore";
 import useProfilesStore from "@/stores/useProfilesStore";
-import {useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 const Favorites = () => {
-
-  const {user } = useUserStore();
-  const {profiles} = useProfilesStore();
+  const { user } = useUserStore();
+  const { profiles } = useProfilesStore();
   const [bookedProfiles, setBookedProfiles] = React.useState([]);
   const router = useRouter();
 
   React.useEffect(() => {
-    if(!profiles?.length || !user?.id) return;
+    if (!profiles?.length || !user?.id) return;
     if (user?.booked_profiles) {
-      const bookmarked = user.booked_profiles.map((id) => {
+      const bookmarked = user?.booked_profiles.map((id) => {
         return profiles.find((profile) => profile.id === id);
       });
       setBookedProfiles(bookmarked);
     }
   }, [user?.id, profiles]);
-
 
   return (
     <div className="mb-12">
@@ -49,7 +47,8 @@ const Favorites = () => {
               link={"/profile/" + profile?.id}
               name={profile.name || profile.official_name || profile.agency_name}
               img_url={profile.profile_img}
-              height={300} width={200}
+              height={300}
+              width={200}
             />
           ))
         ) : (
@@ -59,7 +58,6 @@ const Favorites = () => {
             <PlaceholderBox height={300} width={200} />
           </>
         )}
-
       </div>
     </div>
   );
