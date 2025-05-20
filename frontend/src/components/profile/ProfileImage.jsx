@@ -58,6 +58,7 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
   const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
+  const [originalUser, setOriginalUser] = useState();
 
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
@@ -86,7 +87,14 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
     setProfileStatus(isMyProfile ? user?.availability_status : availabilityStatus || "");
   }, [user, id, availabilityStatus, isMyProfile]);
 
+  useEffect(() => {
+    if (open) {
+      setOriginalUser(user);
+    }
+  }, [open]);
+
   const handleClose = () => {
+    setUser(originalUser);
     setOpen(false);
   };
 
