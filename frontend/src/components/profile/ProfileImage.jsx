@@ -28,21 +28,21 @@ export const availabilityStatusMap = {
   ["open_to_project"]: {
     key: "open_to_project",
     title: "Open To Project",
-    icon: <LaptopMinimalCheck />,
+    icon: <LaptopMinimalCheck size={20} />,
     bgColor: "#cef7e7",
     textColor: "#297c03",
   },
   ["by_request"]: {
     key: "by_request",
     title: "Available by Request",
-    icon: <MessageCircleQuestion />,
+    icon: <MessageCircleQuestion size={20} />,
     bgColor: "#dde1fe",
     textColor: "#061a98",
   },
   ["not_available"]: {
     key: "not_available",
     title: "Not Available",
-    icon: <BellOff />,
+    icon: <BellOff size={20} />,
     bgColor: "#fee2b9",
     textColor: "#a06103",
   },
@@ -167,26 +167,28 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
 
         {profileImg ? <img src={`${profileImg}?t=${Date.now()}`} alt={user?.name} /> : <PlaceholderBox height={400} />}
 
-        {profileStatus && (
-          <div
-            className="flex items-center text-sm uppercase rounded-full px-4 py-1.5 absolute right-4"
-            style={{
-              top: "58px",
-              color: availabilityStatusMap[profileStatus].textColor,
-              background: availabilityStatusMap[profileStatus].bgColor,
-            }}
-          >
-            {availabilityStatusMap[profileStatus].icon}
-            <span className="ml-2">{availabilityStatusMap[profileStatus].title}</span>
-          </div>
-        )}
+        <div className={"flex gap-2 items-start justify-end absolute top-2 right-2 z-[2]"}>
+          {profileStatus && (
+            <div
+              className="flex items-center text-xs font-semibold uppercase rounded-full px-3 py-1"
+              style={{
+                color: availabilityStatusMap[profileStatus].textColor,
+                background: availabilityStatusMap[profileStatus].bgColor,
+              }}
+            >
+              {availabilityStatusMap[profileStatus].icon}
+              <span className="ml-2">{availabilityStatusMap[profileStatus].title}</span>
+            </div>
+          )}
 
-        {user?.verified && (
-          <div className="flex items-center text-sm uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-4 py-1.5 absolute top-4 right-4">
-            <Star size={20} color="#615FFF" className="mr-2" />
-            <div>Verified</div>
-          </div>
-        )}
+          {user?.verified && (
+            <div className="flex items-center text-xs uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-3 py-1">
+              <Star size={20} color="#615FFF" className="mr-2" />
+              <div>Verified</div>
+            </div>
+          )}
+        </div>
+
 
         <div
           style={{ textShadow: `0 0 2px rgba(0,0,0,.2)` }}
@@ -269,6 +271,13 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
                 </FormControl>
               </Box>
 
+              <Box>
+                <FormControlLabel
+                  control={<Switch name="is_private" checked={user?.is_private} onChange={handleChange} />}
+                  label={user?.is_private ? "Private Profile" : "Public Profile"}
+                />
+              </Box>
+
               <label htmlFor="profile-image-upload" className="cursor-pointer">
                 <p className={"text-indigo-500 font-semibold my-2"}>Upload Profile Image</p>
                 <input
@@ -289,12 +298,7 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
                 )}
               </label>
             </Stack>
-            <Box>
-              <FormControlLabel
-                control={<Switch name="is_private" checked={user?.is_private} onChange={handleChange} />}
-                label={user?.is_private ? "Private Profile" : "Public Profile"}
-              />
-            </Box>
+
 
             <div className="flex justify-end mt-8 gap-2">
               <SecondaryBtn title={"Cancel"} onClick={handleClose} />
