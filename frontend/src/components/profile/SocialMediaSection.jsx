@@ -186,17 +186,19 @@ const SocialMediaSection = ({ id, links, isMyProfile }) => {
           {isMyProfile && <ActionBtn title="Edit" onClick={handleOpen} />}
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="grid grid-cols-4 gap-2">
           {socialPlatforms.map((platform, index) => {
             const userLinks = isMyProfile ? social_networks : links;
             const url = userLinks?.[platform.name] || platform.link;
 
             return (
-              <a href={url} key={index} target="_blank" rel="noopener noreferrer">
-                <Badge bgColor="gray-100" textColor="indigo-500">
-                  <span className="inline-flex min-h-5 items-center justify-center">{platform.icon}</span>
-                </Badge>
-              </a>
+              <div className={"text-center"}>
+                <a className={"px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md inline-flex items-center"} href={url} key={index} target="_blank" rel="noopener noreferrer">
+                  <Badge textColor="indigo-500">
+                    <span className="inline-flex min-h-5 items-center justify-center">{platform.icon}</span>
+                  </Badge>
+                </a>
+              </div>
             );
           })}
         </div>

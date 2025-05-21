@@ -184,7 +184,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
                   }}
                 >
                   <div
-                    className="absolute opacity-0 group-hover:opacity-100 top-0 right-0 p-1 cursor-pointer"
+                    className="flex rounded-full w-10 h-10 items-center justify-center bg-gray-100 absolute opacity-0 group-hover:opacity-100 top-0 right-0 p-1 cursor-pointer"
                     onClick={() => deleteImage(img_url)}
                   >
                     <Trash2 className={"text-red-800"} size={"24"} />
