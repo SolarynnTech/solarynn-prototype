@@ -36,7 +36,6 @@ export default function Settings() {
         alert("Account deleted");
         await logOut();
       } else {
-        console.log(result);
         alert("Failed to delete account: " + result.error);
       }
     } catch (err) {

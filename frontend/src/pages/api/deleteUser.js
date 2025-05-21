@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   try {
     // 1. Delete from auth.users
     const { error: authError } = await supabaseAdmin.auth.admin.deleteUser(userId);
-    console.error("Failed to delete user:", authError);
+
     if (authError) throw authError;
 
     // 2. Optionally delete from custom users table
