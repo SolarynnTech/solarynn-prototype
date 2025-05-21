@@ -23,11 +23,12 @@ import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import uploadImageToSupabase from "@/utils/uploadImageToSupabase";
 import ReportProfile from "./ReportProfile";
+import LabeledInput from "@/components/forms/LabeledInput.jsx";
 
 export const availabilityStatusMap = {
   ["open_to_project"]: {
     key: "open_to_project",
-    title: "Open To Project",
+    title: "Open To Projects",
     icon: <LaptopMinimalCheck size={20} />,
     bgColor: "#cef7e7",
     textColor: "#297c03",
@@ -218,39 +219,50 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
             </Typography>
 
             <Stack spacing={2}>
-              <TextField
-                id="outlined-basic"
-                label="Name"
-                variant="standard"
-                fullWidth
+              <LabeledInput
+                type="name"
                 name="name"
-                slotProps={{
-                  inputLabel: {
-                    shrink: true,
-                  },
-                }}
                 value={user?.name ? user.name : ""}
                 onChange={handleChange}
+                placeholder="Enter Your Name"
+                label="Your Name"
               />
-              <TextField
-                id="outlined-basic"
-                label="Address"
-                variant="standard"
-                fullWidth
-                name="address"
-                slotProps={{
-                  inputLabel: {
-                    shrink: true,
-                  },
-                }}
-                value={user?.address ? user.address : ""}
-                onChange={handleChange}
-              />
+
+              {/*<TextField*/}
+              {/*  id="outlined-basic"*/}
+              {/*  label="Address"*/}
+              {/*  variant="standard"*/}
+              {/*  fullWidth*/}
+              {/*  name="address"*/}
+              {/*  slotProps={{*/}
+              {/*    inputLabel: {*/}
+              {/*      shrink: true,*/}
+              {/*    },*/}
+              {/*  }}*/}
+              {/*  value={user?.address ? user.address : ""}*/}
+              {/*  onChange={handleChange}*/}
+              {/*/>*/}
               <Box sx={{ mt: 2, mb: 2 }}>
-                <FormControl variant="standard" fullWidth>
-                  <InputLabel id="availability-label" shrink sx={{ color: "text.primary" }}>
-                    Availability
-                  </InputLabel>
+                <FormControl variant="outlined" fullWidth sx={{
+                  "& .MuiOutlinedInput-root": {
+                      "& .MuiSelect-select": {
+                        padding: "13.5px 14px",
+                      },
+
+                      "& fieldset": {
+                        borderColor: "#d1d5db", // Default border color
+                        borderRadius: ".5rem",
+                        borderWidth: "1px !important",
+                        outline: "none",
+                        boxShadow: "none",
+                      },
+                      "&:hover fieldset": {
+                        borderColor: "#d1d5db", // On hover
+                      },
+                      "&.Mui-focused fieldset": {
+                        borderColor: "#6366f1", // On focus
+                      },
+                    }}}>
                   <Select
                     labelId="availability-label"
                     id="availability_status"
@@ -278,21 +290,27 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
                 />
               </Box>
 
-              <label htmlFor="profile-image-upload" className="cursor-pointer">
-                <p className={"text-indigo-500 font-semibold my-2"}>Upload Profile Image</p>
+              <label
+                htmlFor="profile-image-upload"
+                className="cursor-pointer flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-md p-6 hover:border-indigo-500 transition-colors text-center"
+              >
+                <p className="text-gray-600 mb-2">Click to upload profile image</p>
+                <p className="text-indigo-500 font-semibold">Browse files</p>
+
                 <input
                   id="profile-image-upload"
                   type="file"
                   accept="image/*"
                   name="profile_image"
                   onChange={handleChange}
-                  style={{ display: "none" }}
+                  className="hidden"
                 />
+
                 {imagePreview && (
                   <img
                     src={imagePreview}
                     alt="Preview"
-                    className="mt-2 rounded-md"
+                    className="mt-4 rounded-md"
                     style={{ width: 100, height: 100, objectFit: "cover" }}
                   />
                 )}
