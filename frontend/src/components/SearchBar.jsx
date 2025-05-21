@@ -15,7 +15,7 @@ const SearchBar = () => {
         }}
         value={searchQuery}
         className="border-0 grow block bg-transparent text-black placeholder:text-gray-500 focus:outline-none"
-        placeholder="Type Here For Search"
+        placeholder="Search"
         onKeyDown={key => {
           if (key.key === "Enter") {
             // Handle search
