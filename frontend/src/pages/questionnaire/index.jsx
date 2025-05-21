@@ -8,10 +8,12 @@ import useUserStore from "@/stores/useUserStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Loader } from "lucide-react";
 import { LinearProgress, Box, Typography } from "@mui/material";
+import useProfilesStore from "@/stores/useProfilesStore";
 
 const QuestionsPage = () => {
   const router = useRouter();
   const { user, setUser } = useUserStore();
+  const { setProfiles } = useProfilesStore();
   const { role } = useCategoriesStore();
   const supabase = useSupabaseClient();
   const [data, setData] = useState([]);
@@ -52,6 +54,14 @@ const QuestionsPage = () => {
       ...prev,
       questionnaire_answers: answersBySection,
     }));
+
+    setProfiles((prev) =>
+      prev.map((p) =>
+        p.id === user.id
+          ? { ...p, questionnaire_answers: answersBySection }
+          : p
+      )
+    );
 
     if (currentIndex < data.length - 1) {
       setCurrentIndex(idx => idx + 1);

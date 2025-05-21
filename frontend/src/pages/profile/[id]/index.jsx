@@ -138,7 +138,7 @@ const ProfilePage = () => {
     };
 
     loadGroups();
-  }, [profile?.role]);
+  }, [profile]);
 
   const addRecentlyViewed = async () => {
     if (user && user.id !== id) {
@@ -297,7 +297,7 @@ const ProfilePage = () => {
 
         <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id} />
 
-        {groups?.length ?
+        {profile && groups?.length ?
           groups.map((group) => {
             return (
               <Group
