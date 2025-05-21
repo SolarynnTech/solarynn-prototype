@@ -64,7 +64,7 @@ const ProfilePage = () => {
     const { data, error } = await supabase
       .from("projects")
       .select("*")
-      .eq("owner", user.id)
+      .eq("owner", id)
       .eq("project_visibility", "private")
       .order("created_at", { ascending: false });
 
@@ -76,10 +76,10 @@ const ProfilePage = () => {
   }
 
   useEffect(() => {
-    if (user?.id) {
+    if (user?.id && isMyProfile) {
       fetchMyPrivateProjects();
     }
-  }, [user?.id]);
+  }, [user?.id, isMyProfile]);
 
   const sendPrivateProject = async () => {
     const { data: requests, error: requestsError } = await supabase
@@ -109,6 +109,7 @@ const ProfilePage = () => {
   useEffect(() => {
     if (!profiles) return;
     const p = profiles.find((p) => p.id === id);
+    console.log("Profile data:", p);
     setProfile(p);
     if (p?.bio) {
       setBio(p.bio);
@@ -124,8 +125,12 @@ const ProfilePage = () => {
   }, [user?.id, id]);
 
   useEffect(() => {
+    console.log("Profile data 1:", p);
+    if (!profile) return;
+    console.log("Profile data 2:", p);
     const loadGroups = async () => {
       const allGroups = await fetchProfileGroups();
+      console.log("All groups:", allGroups);
       if (profile?.role) {
         const filtered = allGroups.filter((group) => group.roles.includes(profile.role));
         setGroups(filtered);
@@ -292,7 +297,7 @@ const ProfilePage = () => {
 
         <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id} />
 
-        {groups?.length &&
+        {groups?.length ?
           groups.map((group) => {
             return (
               <Group
@@ -306,7 +311,7 @@ const ProfilePage = () => {
                 profile={profile}
               />
             );
-          })}
+            }) : null}
 
         <NavigationBar />
       </div>
