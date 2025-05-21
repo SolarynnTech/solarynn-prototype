@@ -15,6 +15,8 @@ export default function () {
       .select("*")
       .eq("is_role", true);
 
+    data.sort((a, b) => a.number - b.number);
+
     return { data, error};
   };
 
