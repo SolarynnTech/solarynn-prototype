@@ -6,6 +6,10 @@ import LabeledInput from "@/components/forms/LabeledInput";
 import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import Link from "next/link";
+import {DatePicker} from "@mui/x-date-pickers";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
+import LabeledDatePicker from "@/components/forms/LabeledDatepicker";
 
 const CreateAccountPage = () => {
   const router = useRouter();
@@ -18,6 +22,7 @@ const CreateAccountPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
+    birthday: null,
   });
 
   const supabase = useSupabaseClient();
@@ -96,6 +101,22 @@ const CreateAccountPage = () => {
       return;
     }
 
+    const today = new Date();
+    const birthDate = new Date(formData.birthday);
+
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    const dayDiff = today.getDate() - birthDate.getDate();
+
+    if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+      age--;
+    }
+
+    if (age < 18) {
+      setError("The required age is 18 years or older.");
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -120,7 +141,8 @@ const CreateAccountPage = () => {
           .insert([
             {
               id: user.id, // match this with Supabase auth user.id
-              email
+              email,
+              birthday: formData.birthday,
             },
           ]);
 
@@ -192,6 +214,18 @@ const CreateAccountPage = () => {
           disabled={loading}
           required
         />
+
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+          <LabeledDatePicker
+            label="Birthday"
+            message="This service is only available for users 18 years and older"
+            value={formData.birthday}
+            onChange={(newDate) =>
+              setFormData((prev) => ({ ...prev, birthday: newDate }))
+            }
+          />
+        </LocalizationProvider>
+
       </div>
 
       <div>
