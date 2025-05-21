@@ -5,14 +5,7 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import classNames from "classnames";
 import styles from "./Settings.module.css";
 import { ChevronRight, Mail, Lock, LogOut, Trash2 } from "lucide-react";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogActions,
-  Button,
-  Typography,
-} from "@mui/material";
+import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography } from "@mui/material";
 
 export default function Settings() {
   const router = useRouter();
@@ -26,23 +19,31 @@ export default function Settings() {
   };
 
   const handleDeleteAccount = async () => {
-    const user = await supabase.auth.getUser();
-    const userId = user.data.user?.id;
-    if (!userId) return;
+    setLoadingDelete(true);
+    try {
+      const user = await supabase.auth.getUser();
+      const userId = user.data.user?.id;
+      if (!userId) throw new Error("No user ID");
 
-    const res = await fetch("/api/deleteUser", {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ userId }),
-    });
+      const res = await fetch("/api/deleteUser", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId }),
+      });
 
-    const result = await res.json();
-    if (result.success) {
-      alert("Account deleted");
-      await logOut();
-    } else {
-      alert("Failed to delete account: " + result.error);
+      const result = await res.json();
+      if (result.success) {
+        alert("Account deleted");
+        await logOut();
+      } else {
+        console.log(result);
+        alert("Failed to delete account: " + result.error);
+      }
+    } catch (err) {
+      console.error("Error deleting account:", err);
+      alert("An error occurred");
     }
+    setLoadingDelete(false);
   };
 
   const items = [
@@ -64,6 +65,7 @@ export default function Settings() {
     {
       title: "Delete Account",
       icon: Trash2,
+      textColorClasses: "text-red-500",
       onClick: () => setOpenModal(true),
     },
     // {
@@ -81,14 +83,16 @@ export default function Settings() {
         {items.map((item, index) => (
           <div
             key={index}
-            className={classNames("cursor-pointer hover:text-indigo-500", styles.settingsContainer__Item)}
+            className={classNames(
+              "cursor-pointer hover:text-indigo-500",
+              styles.settingsContainer__Item,
+              item.textColorClasses
+            )}
             onClick={item.onClick}
           >
             <div className={styles.settingsContainer__Item__Header}>
               <item.icon />
-              <span className={styles.settingsContainer__Item__Header__Title}>
-                {item.title}
-              </span>
+              <span className={styles.settingsContainer__Item__Header__Title}>{item.title}</span>
             </div>
             <ChevronRight />
           </div>
@@ -106,15 +110,7 @@ export default function Settings() {
           <Button onClick={() => setOpenModal(false)} disabled={loadingDelete}>
             Cancel
           </Button>
-          <Button
-            onClick={async () => {
-              setLoadingDelete(true);
-              await handleDeleteAccount();
-              setLoadingDelete(false);
-            }}
-            color="error"
-            disabled={loadingDelete}
-          >
+          <Button onClick={handleDeleteAccount} color="error" disabled={loadingDelete}>
             {loadingDelete ? "Deleting..." : "Delete"}
           </Button>
         </DialogActions>
