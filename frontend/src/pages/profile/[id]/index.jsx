@@ -125,9 +125,9 @@ const ProfilePage = () => {
   }, [user?.id, id]);
 
   useEffect(() => {
-    console.log("Profile data 1:", p);
+    console.log("Profile data 1:", profile);
     if (!profile) return;
-    console.log("Profile data 2:", p);
+    console.log("Profile data 2:", profile);
     const loadGroups = async () => {
       const allGroups = await fetchProfileGroups();
       console.log("All groups:", allGroups);
