@@ -4,7 +4,9 @@ import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import RootNavigation from "@/components/Nav/Nav";
 import NavigationBar from "@/components/profile/NavigationBar";
 import useUserStore from "@/stores/useUserStore.js";
+import useProjectStore from "@/stores/useProjectStore.js";
 import {
+  Alert,
   Box,
   Typography,
 } from "@mui/material";
@@ -20,15 +22,18 @@ import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 import { LoaderItem } from "@/components/Loader.jsx";
 import ProgressTracker from "@/components/project/ProgressTracker.jsx";
 import MilestonesSection from "@/components/project/MilestonesSection.jsx";
+import {REQUEST_STATUSES} from "@/models/request.js";
+import ProjectParticipants from "@/components/project/ProjectParticipants.jsx";
 
-const ProjectPage = ({ accessDenied }) => {
+const ProjectPage = ({ accessDenied, projectFromServer }) => {
   const router = useRouter();
   const { id } = router.query;
   const { user, setUser } = useUserStore();
+  const { allProjects } = useProjectStore();
   const [favoriteProjects, setFavoriteProjects] = useState([]);
   const [isFav, setIsFav] = useState(false);
   const supabase = useSupabaseClient();
-  const [project, setProject] = useState(null);
+  const [project, setProject] = useState(projectFromServer);
   const [answersBySection, setAnswersBySection] = useState({});
   const [sectionTitles, setSectionTitles] = useState([]);
   const [currentFormPage, setCurrentFormPage] = useState(0);
@@ -45,6 +50,11 @@ const ProjectPage = ({ accessDenied }) => {
   const [completionPercentage, setCompletionPercentage] = useState(0);
   const [milestones, setMilestones] = useState([]);
   const [notificationEnabled, setNotificationEnabled] = useState(false);
+
+  const [requestStatus, setRequestStatus] = useState(null);
+  const [requestError, setRequestError] = useState(null);
+
+  console.log("projectFromServer", projectFromServer);
 
   const onCompletionPercentageChange = async (newValue) => {
     const { error } = await supabase
@@ -330,6 +340,50 @@ const ProjectPage = ({ accessDenied }) => {
     setNotificationEnabled(newStatus);
   };
 
+  const sendRequestToJoin = async () => {
+    setRequestStatus(REQUEST_STATUSES.PENDING);
+    setRequestError(null);
+
+    const isRequestAlreadySent = await supabase
+      .from("requests")
+      .select("*")
+      .eq("requester_id", user.id)
+      .eq("assigner_id", project.owner)
+      .eq("target_id", id)
+      .eq("target_type", "project_request");
+
+    if (isRequestAlreadySent.data.length > 0) {
+      setRequestStatus("failed");
+      setRequestError("Request already sent");
+      cleanRequestMsg();
+      return;
+    }
+
+    const { error } = await supabase.from("requests").insert({
+      requester_id: user.id,
+      assigner_id: project.owner,
+      status: REQUEST_STATUSES.PENDING,
+      target_id: id,
+      target_type: "project_request",
+    });
+
+    if (error) {
+      setRequestStatus("failed");
+      setRequestError(error.message);
+    } else {
+      setRequestStatus("success");
+    }
+
+    cleanRequestMsg();
+  }
+
+  const cleanRequestMsg = () => {
+    setTimeout(() => {
+      setRequestStatus(null);
+      setRequestError(null);
+    }, 3000);
+  };
+
   useEffect(() => {
     if (id && user?.id) loadProject();
   }, [id, user?.id]);
@@ -370,6 +424,27 @@ const ProjectPage = ({ accessDenied }) => {
         />
         <NavigationBar/>
       </div>
+
+      <div>
+        {requestStatus === "pending" && (
+          <Alert severity="info" className="mb-2">
+            Request is being sent...
+          </Alert>
+        )}
+        {requestStatus === "success" && (
+          <Alert severity="success" className="mb-2">
+            Request sent successfully
+          </Alert>
+        )}
+        {requestStatus === "failed" && (
+          <Alert severity="error" className="mb-2">
+            {requestError}
+          </Alert>
+        )}
+      </div>
+
+      <PrimaryBtn title={"Request to Join"} classes={"w-full mb-6"} onClick={sendRequestToJoin}/>
+
       <ProgressTracker percentage={completionPercentage} isOwner={user.id === project.owner}
                        onSave={onCompletionPercentageChange}/>
       <ProjectDescription
@@ -395,6 +470,8 @@ const ProjectPage = ({ accessDenied }) => {
         }}
         onChange={(e) => setVisibilityValue(e.target.value)}
       />
+
+      <ProjectParticipants projectId={id} participants={project.participants}/>
 
       <ProjectDetails
         answersBySection={answersBySection}
@@ -458,7 +535,7 @@ export const getServerSideProps = async (ctx) => {
 
   const { data: proj, error } = await supabase
     .from("projects")
-    .select("owner, owner_requests, collaborator_users, project_visibility")
+    .select("owner, owner_requests, collaborator_users, participants, project_visibility")
     .eq("id", projectId)
     .maybeSingle();
 
@@ -474,7 +551,7 @@ export const getServerSideProps = async (ctx) => {
   if (isPrivate && !isOwner && !isInvited && !isMember) {
     return {
       props: {
-        project: null,
+        projectFromServer: null,
         accessDenied: true,
       },
     };
@@ -482,7 +559,7 @@ export const getServerSideProps = async (ctx) => {
 
   return {
     props: {
-      project: proj,
+      projectFromServer: proj,
       accessDenied: false,
     },
   };

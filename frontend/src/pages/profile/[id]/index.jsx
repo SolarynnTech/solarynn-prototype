@@ -81,6 +81,7 @@ const ProfilePage = () => {
     }
   }, [user?.id, isMyProfile]);
 
+  //TODO!
   const sendPrivateProject = async () => {
     const { data: requests, error: requestsError } = await supabase
       .from("projects")

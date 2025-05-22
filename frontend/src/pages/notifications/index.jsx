@@ -107,10 +107,14 @@ export default function Notifications() {
     const groupIds = [...new Set(requests.filter((e) => e.target_type === "groups").map((e) => e.target_id))];
     const { data: groups } = await supabase.from("groups").select("id, title").in("id", groupIds);
     const groupsMap = Object.fromEntries((groups || []).map((e) => [e.id, e]));
+    const projectIds = [...new Set(requests.filter((e) => e.target_type === "project_request").map((e) => e.target_id))];
+    const { data: projects } = await supabase.from("projects").select("id, title").in("id", projectIds);
+    const projectsMap = Object.fromEntries((projects || []).map((e) => [e.id, e]));
 
     const _data = requests.map((e) => ({
       ...e,
       group: e.target_type === "groups" ? groupsMap[e.target_id] : {},
+      project: e.target_type === "projects" ? projectsMap[e.target_id] : {},
     }));
 
     if (error) {
@@ -152,9 +156,10 @@ export default function Notifications() {
   };
 
   const requestTarget = (request) => {
-    if (!request.group.title) return "";
+    const title = request.group?.title || request.project?.title;
+    if (!title) return "";
     const targetName = request.target_type.charAt(0).toUpperCase() + request.target_type.slice(1).slice(0, -1);
-    return `for ${targetName} - ${request.group.title}`;
+    return `for ${targetName} - ${title}`;
   };
 
   const handleAction = async (request, action) => {
@@ -174,9 +179,37 @@ export default function Notifications() {
         .maybeSingle();
       if (error) {
         console.error("Error processing request:", error);
+      } else {
+        if(request.target_type === "project_request") {
+          const { data: projectParticipants, error: projectError } = await supabase
+            .from("projects")
+            .select("participants")
+            .eq("id", request.target_id);
+
+          console.log("Project participants:", projectParticipants);
+
+          if(!projectError) {
+            const participants = projectParticipants[0].participants || [];
+            const newParticipants = [...new Set([...participants, request.requester_id])];
+
+            const { error: updateProjectError } = await supabase
+              .from("projects")
+              .update({ participants: newParticipants })
+              .eq("id", request.target_id);
+
+            if (updateProjectError) {
+              console.error("Error updating project participants:", updateProjectError);
+            }
+          }
+
+          if (projectError) {
+            console.error("Error updating project status:", projectError);
+          }
+        }
       }
       return newRequest;
     };
+
     const updateCurrentRequest = async (newRequest) => {
       const { error } = await supabase
         .from("requests")

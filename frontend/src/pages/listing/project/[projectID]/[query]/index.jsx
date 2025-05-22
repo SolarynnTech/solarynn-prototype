@@ -3,43 +3,35 @@ import { useRouter } from "next/router";
 import RootNavigation from "@/components/Nav/Nav";
 import { Loader } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
-import useProfilesStore from "@/stores/useProfilesStore";
 import UserPreview from "@/components/UserPreview";
+import useProjectStore from "@/stores/useProjectStore.js";
+import useProfilesStore from "@/stores/useProfilesStore";
 
-export default function Listing() {
+export default function ProjectListing() {
   const router = useRouter();
+  const { allProjects } = useProjectStore();
   const { profiles } = useProfilesStore();
-  const { profileID, query } = router.query;
+  const { projectID, query } = router.query;
 
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
   const titlesEnum = {
-    recently_viewed: "Recently Viewed",
-    favorites: "Favorites",
-    key_people: "Founder(s) / key people",
-    founders: "Founder(s)",
-    clients: "Clients / talents",
-    i_support: "I like/support what you doing",
-    showroom: "Showroom",
-    staff_team: "Staff / team",
-    affiliated: "Affiliated company",
-    worked_together: "We worked together",
-    album: "Professional album",
-    staff: "Staff"
+    participants: "Participants",
   }
 
   useEffect(() => {
-    if (!profileID || !profiles?.length) return;
-    const profilesIDs = profiles.find((profile) => profile.id === profileID)[query];
+    if (!projectID || !allProjects?.length) return;
+
+    const profilesIDs = allProjects.find((project) => project.id === projectID)[query];
     if (!profilesIDs) return;
     setResults(
       profilesIDs.map((id) => {
         return profiles.find((profile) => profile.id === id);
       }).filter((p) => p)
     );
-  }, [profileID, query, profiles]);
+  }, [projectID, query, allProjects]);
 
   return (
     <div className="pt-8">
