@@ -10,7 +10,13 @@ const useProjectStore = create((set) => ({
     additional_information: null,
   },
 
+  allProjects: [],
+
   setProject: (project) => set({ project }),
+
+  setAllProjects: (updater) => set((state) => ({
+    allProjects: typeof updater === "function" ? updater(state.allProjects) : updater
+  })),
 
 }));
 

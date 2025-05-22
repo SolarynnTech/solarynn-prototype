@@ -10,6 +10,7 @@ import {DatePicker} from "@mui/x-date-pickers";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import LabeledDatePicker from "@/components/forms/LabeledDatepicker";
+import {availabilityStatusMap} from "@/components/profile/ProfileImage.jsx";
 
 const CreateAccountPage = () => {
   const router = useRouter();
@@ -143,6 +144,7 @@ const CreateAccountPage = () => {
               id: user.id, // match this with Supabase auth user.id
               email,
               birthday: formData.birthday,
+              availability_status: "open_to_project",
             },
           ]);
 

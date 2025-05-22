@@ -25,7 +25,7 @@ const Favorites = () => {
   return (
     <div className="mb-12">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-bold mb-0">Favorites</h3>
+        <h3 className="font-bold mb-0">Favorite Profiles</h3>
 
         <div className="flex items-center">
           {bookedProfiles?.length > 2 && (

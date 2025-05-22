@@ -68,7 +68,7 @@ export default function UniverseCategories() {
         ) : categories.length === 0 ? (
           <p className="text-gray-500">No subcategories were found.</p>
         ) : (
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3">
             {categories.map((category, index) => (
               <CategoryTile
                 key={index}

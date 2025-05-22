@@ -24,7 +24,7 @@ import MilestonesSection from "@/components/project/MilestonesSection.jsx";
 const ProjectPage = ({ accessDenied }) => {
   const router = useRouter();
   const { id } = router.query;
-  const { user } = useUserStore();
+  const { user, setUser } = useUserStore();
   const [favoriteProjects, setFavoriteProjects] = useState([]);
   const [isFav, setIsFav] = useState(false);
   const supabase = useSupabaseClient();
@@ -113,6 +113,11 @@ const ProjectPage = ({ accessDenied }) => {
       console.error("Could not update favorites:", error);
       return;
     }
+
+    setUser(prev => ({
+      ...prev,
+      favorite_projects: newFavs,
+    }));
 
     setFavoriteProjects(newFavs);
     setIsFav(!isFav);

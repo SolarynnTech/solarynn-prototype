@@ -14,6 +14,7 @@ import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 import NotificationsRequests from "@/components/Notifications/Requests";
 import MyProjects from "@/components/home/MyProjects.jsx";
 import ProjectsReceived from "@/components/home/ProjectsReceived.jsx";
+import FavoriteProjects from "@/components/home/FavoriteProjects.jsx";
 
 export default function HomePage() {
   const { user } = useUserStore();
@@ -69,10 +70,12 @@ export default function HomePage() {
       <SearchBar />
 
       <Favorites />
+
       <RecentlyViewed />
       <YourConnections />
       {/*<TakeALook/>*/}
       <MyProjects />
+      <FavoriteProjects/>
       <ProjectsReceived/>
       <h2 className="mb-8">Our Universe</h2>
 
