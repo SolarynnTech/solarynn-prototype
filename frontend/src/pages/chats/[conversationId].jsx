@@ -34,9 +34,6 @@ export default function Conversation() {
   const [blockedByMe, setBlockedByMe] = useState(false);
   const [blockedByOther, setBlockedByOther] = useState(false);
 
-  console.log(blockedByMe, "blockedByMe");
-  console.log(blockedByOther, "blockedByOther");
-
   const handleMenuOpen = (event, messageId) => {
     setAnchorEl(event.currentTarget);
     setOpenMessageId(messageId);

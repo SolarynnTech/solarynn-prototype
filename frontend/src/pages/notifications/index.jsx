@@ -4,17 +4,17 @@ import moment from "moment";
 import Link from "next/link";
 import { Alert } from "@mui/material";
 import Stack from "@mui/material/Stack";
-
 import useUserStore from "@/stores/useUserStore";
 import { REQUEST_STATUSES, REQUEST_STATUSES_VERBS } from "@/models/request";
-
 import RootNavigation from "@/components/Nav/Nav";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import { LoaderItem } from "@/components/Loader.jsx";
+import { useRouter } from "next/router";
 
 export default function Notifications() {
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
+  const router = useRouter();
 
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -29,12 +29,12 @@ export default function Notifications() {
       setAlertsLoading(true);
 
       const { data, error } = await supabase
-        .from('new_project_alerts')
-        .select('project_id, title, updated_at')
-        .eq('user_id', user.id);
+        .from("new_project_alerts")
+        .select("project_id, title, updated_at")
+        .eq("user_id", user.id);
 
       if (error) {
-        console.error('Error loading project alerts:', error);
+        console.error("Error loading project alerts:", error);
         setAlertsLoading(false);
         return;
       }
@@ -52,13 +52,13 @@ export default function Notifications() {
         const now = new Date().toISOString();
 
         const { error: updErr } = await supabase
-          .from('project_alerts')
+          .from("project_alerts")
           .update({ last_viewed_at: now })
-          .eq('user_id', user.id)
-          .in('project_id', ids);
+          .eq("user_id", user.id)
+          .in("project_id", ids);
 
         if (updErr) {
-          console.error('Error bumping last_viewed_at:', updErr);
+          console.error("Error bumping last_viewed_at:", updErr);
         }
       }
 
@@ -67,7 +67,6 @@ export default function Notifications() {
 
     fetchProjectAlerts();
   }, [user]);
-
 
   useEffect(() => {
     if (!user) return;
@@ -165,6 +164,20 @@ export default function Notifications() {
   const handleAction = async (request, action) => {
     setLoading(true);
 
+    if (request.target_type === "chat_request") {
+      const { error } = await supabase
+        .from("requests")
+        .update({ status: action })
+        .eq("id", request.id);
+      if (error) {
+        console.error("Error updating chat request status:", error);
+      } else if (action === REQUEST_STATUSES.ACCEPTED) {
+        router.push(`/profile/${request.requester_id}`);
+      }
+      setLoading(false);
+      return fetchRequests();
+    }
+
     const approve = async () => {
       const { data: newRequest, error } = await supabase
         .from("requests")
@@ -180,15 +193,13 @@ export default function Notifications() {
       if (error) {
         console.error("Error processing request:", error);
       } else {
-        if(request.target_type === "project_request") {
+        if (request.target_type === "project_request") {
           const { data: projectParticipants, error: projectError } = await supabase
             .from("projects")
             .select("participants")
             .eq("id", request.target_id);
 
-          console.log("Project participants:", projectParticipants);
-
-          if(!projectError) {
+          if (!projectError) {
             const participants = projectParticipants[0].participants || [];
             const newParticipants = [...new Set([...participants, request.requester_id])];
 
