@@ -77,6 +77,27 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
     setOpen(false);
   };
 
+  const handleISupport = async () => {
+    const currentSupport = profile.i_support || [];
+
+    if (currentSupport.includes(user.id)) return;
+
+    const updated = [...currentSupport, user.id];
+
+    const { error } = await supabase
+      .from("users")
+      .update({ i_support: updated })
+      .eq("id", profile.id);
+
+    if (error) return console.error("Failed to update user:", error.message);
+
+    setProfiles((prevProfiles) =>
+      prevProfiles.map((p) =>
+        p.id === profile.id ? { ...p, i_support: updated } : p
+      )
+    );
+  };
+
   const handleFileChange = async (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -275,8 +296,12 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
         </>
       )}
 
-      {!isMyProfile && profile.availability_status !== availabilityStatusMap.not_available.key && (
+      {!isMyProfile && columnName !== "i_support" && profile.availability_status !== availabilityStatusMap.not_available.key && (
         <SendRequest assignerId={profile.id} groupId={groupId} />
+      )}
+
+      {!isMyProfile && columnName === "i_support" && (
+        <SecondaryBtn classes={"w-full"} title="I support" onClick={handleISupport} />
       )}
     </div>
   );

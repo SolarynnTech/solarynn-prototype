@@ -12,15 +12,16 @@ import useProfilesStore from "@/stores/useProfilesStore";
 import { useRouter } from "next/router";
 import Group from "@/components/profile/Group";
 import { fetchProfileGroups } from "@/libs/fetchProfileGroups";
-import {TextField, Typography, Box, Button, Backdrop, Fade, Modal} from "@mui/material";
+import {TextField, Typography, Box, IconButton, Tooltip, Backdrop, Fade, Modal} from "@mui/material";
 import ActionBtn from "@/components/buttons/ActionBtn.jsx";
 import MyProfileLocation from "@/components/profile/MyProfileLocation";
 import ProfileLocation from "@/components/profile/ProfileLocation";
 import ChatsSendMessage from "@/components/chats/SendMessage";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn.jsx";
-import ProjectPreview from "@/components/projects/ProjectPreview.jsx";
 import CategoryTile from "@/components/tiles/CategoryTile.jsx";
-import ProjectCategory from "@/components/projects/ProjectCategory.jsx";
+import ReportProfile from "@/components/profile/ReportProfile.jsx";
+import BlockIcon from "@mui/icons-material/Block";
+import PersonOffIcon from "@mui/icons-material/PersonOff";
 
 const ProfilePage = () => {
   const style = {
@@ -64,6 +65,34 @@ const ProfilePage = () => {
 
   const handleSendPrivateProjectOpen = () => {
     setSendProjectOpen(true);
+  };
+
+  const [blockedUsers, setBlockedUsers] = useState(user?.blocked_users || []);
+  const [isBlocked, setIsBlocked]   = useState(
+    blockedUsers.includes(id)
+  );
+
+  const onToggleBlock = async () => {
+    const newBlocked = isBlocked
+      ? blockedUsers.filter(uid => uid !== id)
+      : [...blockedUsers, id];
+
+    const { error } = await supabase
+      .from('users')
+      .update({ blocked_users: newBlocked })
+      .eq('id', user.id);
+
+    if (error) {
+      console.error('Error updating block list:', error.message);
+      return;
+    }
+
+    setBlockedUsers(newBlocked);
+    setIsBlocked(!isBlocked);
+    setUser(prev => ({
+      ...prev,
+      blocked_users: newBlocked
+    }));
   };
 
   useEffect(() => {
@@ -310,7 +339,7 @@ const ProfilePage = () => {
         <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id} />
 
         {profile && groups?.length ?
-          groups.map((group) => {
+          groups.filter((group) => !(group.column_name === "i_support" && isMyProfile)).map((group) => {
             return (
               <Group
                 key={group.id}
@@ -325,6 +354,25 @@ const ProfilePage = () => {
             );
             }) : null}
 
+        {!isMyProfile && (
+        <div className={"flex justify-end items-center gap-4 mb-8"}>
+            <ReportProfile/>
+
+          <div className={"flex items-center cursor-pointer"} onClick={onToggleBlock}>
+            <IconButton
+              size="small"
+              sx={{
+                color: isBlocked ? "grey.500" : "error.main"
+              }}
+            >
+              {isBlocked ? <PersonOffIcon/> : <BlockIcon/>}
+            </IconButton>
+            <span className={"ml-1 text-xs"}>{isBlocked ? "Unblock" : "Block"}</span>
+          </div>
+
+
+        </div>
+            )}
         <NavigationBar />
       </div>
 

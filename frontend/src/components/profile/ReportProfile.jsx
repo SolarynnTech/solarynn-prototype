@@ -39,8 +39,9 @@ const ReportProfile = () => {
 
   return (
     <>
-      <button type="button" onClick={handleOpen}>
+      <button type="button" className={"flex items-center"} onClick={handleOpen}>
         <MessageSquareWarning />
+        <span className="ml-2 text-xs">Report</span>
       </button>
 
       <Modal

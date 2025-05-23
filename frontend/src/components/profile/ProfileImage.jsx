@@ -6,13 +6,12 @@ import {
   Box,
   Fade,
   FormControl,
-  FormControlLabel, IconButton,
+  FormControlLabel,
   MenuItem,
   Modal,
   Select,
   Stack,
   Switch,
-  Tooltip,
   Typography,
 } from "@mui/material";
 import PlaceholderBox from "../PlaceholderBox";
@@ -21,10 +20,7 @@ import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import uploadImageToSupabase from "@/utils/uploadImageToSupabase";
-import ReportProfile from "./ReportProfile";
 import LabeledInput from "@/components/forms/LabeledInput.jsx";
-import BlockIcon from "@mui/icons-material/Block";
-import PersonOffIcon from '@mui/icons-material/PersonOff';
 
 export const availabilityStatusMap = {
   ["open_to_project"]: {
@@ -66,33 +62,6 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
   const [imagePreview, setImagePreview] = useState(null);
   const [profileImg, setProfileImg] = useState("");
   const [profileStatus, setProfileStatus] = useState("");
-  const [blockedUsers, setBlockedUsers] = useState(user.blocked_users || []);
-  const [isBlocked, setIsBlocked]   = useState(
-    blockedUsers.includes(id)
-  );
-
-  const onToggleBlock = async () => {
-    const newBlocked = isBlocked
-      ? blockedUsers.filter(uid => uid !== id)
-      : [...blockedUsers, id];
-
-    const { error } = await supabase
-      .from('users')
-      .update({ blocked_users: newBlocked })
-      .eq('id', user.id);
-
-    if (error) {
-      console.error('Error updating block list:', error.message);
-      return;
-    }
-
-    setBlockedUsers(newBlocked);
-    setIsBlocked(!isBlocked);
-    setUser(prev => ({
-      ...prev,
-      blocked_users: newBlocked
-    }));
-  };
 
   const handleChange = (event) => {
     const { name, value, files, type, checked } = event.target;
@@ -189,20 +158,7 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-bold mb-0">User Info</h3>
         <div className={"flex gap-2"}>
-          {isMyProfile ? <ActionBtn title="Edit" onClick={handleOpen}/> : <ReportProfile/>}
-          {!isMyProfile && (
-            <Tooltip title={isBlocked ? "Unblock User" : "Block User"}>
-              <IconButton
-                size="small"
-                onClick={onToggleBlock}
-                sx={{
-                  color: isBlocked ? "grey.500" : "error.main"
-                }}
-              >
-                {isBlocked ? <PersonOffIcon/> : <BlockIcon/>}
-              </IconButton>
-            </Tooltip>
-          )}
+          {isMyProfile && (<ActionBtn title="Edit" onClick={handleOpen}/>)}
         </div>
       </div>
 
