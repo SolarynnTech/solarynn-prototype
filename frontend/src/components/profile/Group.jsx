@@ -49,9 +49,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
     const matches = profiles.filter(
       (p) =>
         !ids.includes(p.id) &&
-        (p.name?.toLowerCase().includes(lower) ||
-          p.agency_name?.toLowerCase().includes(lower) ||
-          p.official_name?.toLowerCase().includes(lower))
+        (p.name?.toLowerCase().includes(lower))
     );
 
     setFiltered(matches);

@@ -3,7 +3,7 @@ import { ChevronRight } from "lucide-react";
 
 const CategoryTile = ({
   title,
-  img_url,
+  img_url = "",
   bg_color = "#B4B4B4",
   isSelected = false,
   onClick,

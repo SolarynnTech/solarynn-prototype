@@ -18,7 +18,7 @@ const FavoriteProjects = () => {
     if (user?.favorite_projects) {
       const bookmarked = user?.favorite_projects.map((id) => {
         return allProjects.find((project) => project.id === id);
-      });
+      }).filter((p) => p);
       setFavoriteProjects(bookmarked);
     }
   }, [user?.id, allProjects]);
