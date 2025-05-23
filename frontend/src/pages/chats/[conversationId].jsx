@@ -5,7 +5,7 @@ import { formatDistanceToNow } from "date-fns";
 import ChatNavigation from "@/components/Nav/ChatNavigation";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
-import { Send, X, Edit, Trash } from "lucide-react";
+import { Send, X } from "lucide-react";
 import { Smile } from "lucide-react";
 import EmojiPicker from "emoji-picker-react";
 import { IconButton, Menu, MenuItem } from "@mui/material";
@@ -30,6 +30,12 @@ export default function Conversation() {
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMessage, setOpenMessage] = useState(null);
   const open = Boolean(anchorEl);
+
+  const [blockedByMe, setBlockedByMe] = useState(false);
+  const [blockedByOther, setBlockedByOther] = useState(false);
+
+  console.log(blockedByMe, "blockedByMe");
+  console.log(blockedByOther, "blockedByOther");
 
   const handleMenuOpen = (event, messageId) => {
     setAnchorEl(event.currentTarget);
@@ -136,18 +142,26 @@ export default function Conversation() {
               id,
               name,
               email,
-              profile_img
+              profile_img,
+              blocked_users
             )
           )
         `
         )
         .eq("id", conversationId)
         .single();
-
       if (convError) throw convError;
 
       const otherParticipant = conversation.participants.find((p) => p.user.id !== user?.id);
       setOtherUser(otherParticipant?.user);
+      setBlockedByMe(
+        Array.isArray(user.blocked_users) &&
+        user.blocked_users.includes(otherParticipant.user.id)
+      );
+      setBlockedByOther(
+        Array.isArray(otherParticipant.user.blocked_users) &&
+        otherParticipant.user.blocked_users.includes(user.id)
+      );
 
       // Fetch messages
       const { data: messages, error: msgError } = await supabase
@@ -246,9 +260,10 @@ export default function Conversation() {
 
   return (
     <div className="flex flex-col">
-      <ChatNavigation user={otherUser} backBtn onBack={() => router.push("/chats")} />
+      <ChatNavigation user={otherUser} backBtn onBack={() => router.push("/chats")}/>
 
-      <div className="flex-1 overflow-y-auto pt-20 pb-20">
+      <div className="flex-1 overflow-y-auto pt-20 pb-20 relative">
+
         {loading ? (
           <div className="flex justify-center items-center h-full">
             <p>Loading messages...</p>
@@ -288,13 +303,13 @@ export default function Conversation() {
                         setOpenMessage(message);
                       }}
                     >
-                      <MoreVertIcon className={"text-white"} fontSize="small" />
+                      <MoreVertIcon className={"text-white"} fontSize="small"/>
                     </IconButton>
                   </div>
                 )}
               </div>
             ))}
-            <div ref={messagesEndRef} />
+            <div ref={messagesEndRef}/>
           </div>
         )}
 
@@ -317,7 +332,7 @@ export default function Conversation() {
               setOpenMessage(null);
             }}
           >
-            <EditIcon fontSize="small" className="mr-2" />
+            <EditIcon fontSize="small" className="mr-2"/>
             Edit
           </MenuItem>
           <MenuItem
@@ -327,21 +342,37 @@ export default function Conversation() {
               setOpenMessage(null);
             }}
           >
-            <DeleteIcon fontSize="small" className="mr-2" />
+            <DeleteIcon fontSize="small" className="mr-2"/>
             Delete
           </MenuItem>
         </Menu>
       </div>
 
+
       <form
         onSubmit={handleSendMessage}
-        className="fixed bg-indigo-50 bottom-0 z-10 max-w-[440px] w-full -mx-6 px-6 py-4 flex items-center justify-around border-t border-gray-200"
+        className="fixed flex-col bg-indigo-50 bottom-0 z-10 max-w-[440px] w-full -mx-6 px-6 py-4 flex items-center justify-around border-t border-gray-200"
       >
+        {(blockedByOther || blockedByMe) && (
+          <div className="mb-4">
+            {blockedByOther && (
+              <div className="px-4 py-2 bg-red-100 text-red-600 text-center">
+                This user has blocked you. You cannot send messages.
+              </div>
+            )}
+            {blockedByMe && (
+              <div className="px-4 py-2 bg-gray-100 text-red-600 text-center">
+                You have blocked this user. Unblock to resume messaging.
+              </div>
+            )}
+          </div>
+        )}
         <div className="w-full flex gap-2">
           <div className="relative flex-1">
             <input
               type="text"
               value={newMessage}
+              disabled={blockedByMe || blockedByOther}
               onChange={(e) => setNewMessage(e.target.value)}
               placeholder={editingMessage ? "Edit your message..." : "Type a message..."}
               className="w-full px-4 py-2 border rounded-full focus:outline-none focus:ring-1 focus:ring-indigo-500 bg-white"
@@ -352,20 +383,20 @@ export default function Conversation() {
               onClick={() => setShowEmojiPicker(!showEmojiPicker)}
               className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700"
             >
-              <Smile size={20} />
+              <Smile size={20}/>
             </button>
             {showEmojiPicker && (
               <div ref={emojiPickerRef} className="absolute bottom-12 right-0">
-                <EmojiPicker onEmojiClick={onEmojiClick} width={310} />
+                <EmojiPicker onEmojiClick={onEmojiClick} width={310}/>
               </div>
             )}
           </div>
           <button
             type="submit"
-            disabled={!newMessage.trim()}
+            disabled={!newMessage.trim() || blockedByMe || blockedByOther}
             className="px-4 py-2 bg-indigo-500 text-white rounded-full hover:bg-indigo-600 focus:outline-none focus:ring-1 focus:ring-indigo-500 disabled:opacity-50 flex items-center gap-2"
           >
-            <Send className={"mr-0.5"} />
+            <Send className={"mr-0.5"}/>
             Send
           </button>
           {editingMessage && (
@@ -375,9 +406,10 @@ export default function Conversation() {
                 setEditingMessage(null);
                 setNewMessage("");
               }}
+
               className="px-3 py-2 bg-gray-500 text-white rounded-full hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 flex items-center gap-2"
             >
-              <X />
+              <X/>
             </button>
           )}
         </div>

@@ -33,7 +33,7 @@ const ProjectDescription = ({
   };
 
   return (
-    <Box mb={6}>
+    <Box className={"mb-2"}>
       <Box className="flex justify-between items-center mb-4">
         <h4 className="font-semibold text-lg">
           Description
