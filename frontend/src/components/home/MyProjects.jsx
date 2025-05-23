@@ -61,9 +61,9 @@ const MyProjects = () => {
           ))
         ) : (
           <>
-            <PlaceholderBox height={200} width={300} />
-            <PlaceholderBox height={200} width={300} />
-            <PlaceholderBox height={200} width={300} />
+            <PlaceholderBox height={150} width={150} />
+            <PlaceholderBox height={150} width={150} />
+            <PlaceholderBox height={150} width={150} />
           </>
         )}
       </div>

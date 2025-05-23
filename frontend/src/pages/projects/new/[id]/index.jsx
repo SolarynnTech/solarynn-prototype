@@ -194,10 +194,10 @@ const NewProjectPage = () => {
       question: "Project Description",
       suffix: <span className="text-sm text-gray-500">Max 2000 characters</span>,
     },
-    {
-      id: "payment_info",
-      question: "Payment Information",
-    },
+    // {
+    //   id: "payment_info",
+    //   question: "Payment Information",
+    // },
     {
       id: "budget",
       question: "Define project budget",
