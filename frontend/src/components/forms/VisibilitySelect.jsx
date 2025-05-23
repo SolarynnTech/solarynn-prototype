@@ -2,7 +2,7 @@ import React from "react";
 import { MenuItem, TextField } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
-const VisibilitySelect = ({ value, onChange, options }) => {
+const VisibilitySelect = ({ value, onChange, options, readOnly = false }) => {
   const selectStyles = {
     "& .MuiInput-underline:before": { borderBottomColor: "#000" },
     "& .MuiInput-underline:hover:before": { borderBottomColor: "#000" },
@@ -21,6 +21,7 @@ const VisibilitySelect = ({ value, onChange, options }) => {
       fullWidth
       value={value}
       onChange={onChange}
+      disabled={readOnly}
       SelectProps={{
         IconComponent: ArrowDropDownIcon,
         sx: { right: 0, position: "absolute" },

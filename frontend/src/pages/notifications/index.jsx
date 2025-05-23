@@ -264,7 +264,7 @@ export default function Notifications() {
             <Stack sx={{ width: "100%" }} spacing={1}>
               {requests.map((request) => (
                 <Alert key={request.id} severity={requestSeverity(request)}>
-                  <p>
+                  <div>
                     {request.requester.id === user.id && request.status === REQUEST_STATUSES.PENDING && (
                       <>
                         {userDisplayName(request.requester)} {REQUEST_STATUSES_VERBS[request.status]} a request to{" "}
@@ -306,7 +306,7 @@ export default function Notifications() {
                         {userDisplayName(request.requester)}'s request {requestTarget(request)}
                       </>
                     )}
-                  </p>
+                  </div>
                   <p>Request Date: {moment(request.created_at).format("DD/MM/YYYY LT")}</p>
                 </Alert>
               ))}

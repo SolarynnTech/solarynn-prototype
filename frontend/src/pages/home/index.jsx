@@ -15,7 +15,6 @@ import NotificationsRequests from "@/components/Notifications/Requests";
 import MyProjects from "@/components/home/MyProjects.jsx";
 import ProjectsReceived from "@/components/home/ProjectsReceived.jsx";
 import FavoriteProjects from "@/components/home/FavoriteProjects.jsx";
-import ProjectCategory from "@/components/projects/ProjectCategory.jsx";
 
 export default function HomePage() {
   const { user } = useUserStore();
@@ -24,7 +23,6 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [universeCategories, setUniverseCategories] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [projectCategories, setProjectCategories] = useState([]);
 
   const categoryNamesExcluded = ["Book Talent"];
 
@@ -59,29 +57,6 @@ export default function HomePage() {
     fetchUniverseCategories();
   }, []);
 
-  useEffect(() => {
-    async function fetchProjectCategories() {
-      setLoading(true);
-      setProjectCategories([]);
-
-      try {
-        const { data, error } = await supabase.from("project_categories").select("*");
-
-        if (error) {
-          console.error("Error fetching projects:", error);
-        } else {
-          setProjectCategories(data || []);
-        }
-      } catch (err) {
-        console.log("An unexpected error occurred:", err);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchProjectCategories();
-  }, []);
-
   return (
     <div className="pb-8">
       <nav className="flex items-start justify-between relative gap4 mb-6">
@@ -114,7 +89,7 @@ export default function HomePage() {
               categories.length > 0 &&
               categories.map((category, index) => (
                 <CategoryTile
-                  key={index}
+                  key={category.id}
                   title={category.title}
                   img_url={category.img_url}
                   bg_color={category.color}
@@ -138,18 +113,6 @@ export default function HomePage() {
                   title={category.title}
                   isAvailable={!categoryNamesExcluded.includes(category.title)}
                   onClick={() => router.push("/universe-categories/" + category.id)}
-                />
-              ))}
-          </div>
-
-          <div className="grid grid-cols-1 gap-3 mb-12">
-            {projectCategories &&
-              projectCategories.map((category) => (
-                <CategoryTile
-                  key={category.id}
-                  title={category.title}
-                  bg_color={category.color}
-                  onClick={() => router.push(`/projects/new/${category.id}`)}
                 />
               ))}
           </div>

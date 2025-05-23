@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import RootNavigation from "@/components/Nav/Nav";
 import ProfileImage, { availabilityStatusMap } from "@/components/profile/ProfileImage";
 import DetailsPanel from "@/components/profile/DetailsPanel";
@@ -19,6 +19,8 @@ import ProfileLocation from "@/components/profile/ProfileLocation";
 import ChatsSendMessage from "@/components/chats/SendMessage";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn.jsx";
 import ProjectPreview from "@/components/projects/ProjectPreview.jsx";
+import CategoryTile from "@/components/tiles/CategoryTile.jsx";
+import ProjectCategory from "@/components/projects/ProjectCategory.jsx";
 
 const ProfilePage = () => {
   const style = {
@@ -48,64 +50,21 @@ const ProfilePage = () => {
 
   const [isMyProfile, setIsMyProfile] = useState(null);
   const [sendProjectOpen, setSendProjectOpen] = useState(false);
-  const [selectedPrivateProject, setSelectedPrivateProject] = useState(null);
-  const [myPrivateProjects, setMyPrivateProjects] = useState([]);
+  const [projectCategories, setProjectCategories] = useState([]);
+
+  const [universeCategories, setUniverseCategories] = useState([]);
+  const [universeSubCategories, setUniverseSubCategories] = useState([]);
+  const categoryNamesExcluded = ["Book Talent"];
+
+  const [universeCategoryId, setUniverseCategoryId] = useState(null);
 
   const handleSendPrivateProjectClose = () => {
     setSendProjectOpen(false);
-    setSelectedPrivateProject(null);
   };
 
   const handleSendPrivateProjectOpen = () => {
     setSendProjectOpen(true);
   };
-
-  const fetchMyPrivateProjects = async () => {
-    const { data, error } = await supabase
-      .from("projects")
-      .select("*")
-      .eq("owner", id)
-      .eq("project_visibility", "private")
-      .order("created_at", { ascending: false });
-
-    if (error) {
-      console.error("Error fetching private projects:", error);
-    } else {
-      setMyPrivateProjects(data);
-    }
-  }
-
-  useEffect(() => {
-    if (user?.id && isMyProfile) {
-      fetchMyPrivateProjects();
-    }
-  }, [user?.id, isMyProfile]);
-
-  //TODO!
-  const sendPrivateProject = async () => {
-    const { data: requests, error: requestsError } = await supabase
-      .from("projects")
-      .select("requests")
-      .eq("id", selectedPrivateProject)
-      .single();
-
-    if (!requestsError) {
-      if(!requests.includes(user?.id)) {
-        const { data, error } = await supabase
-          .from("projects")
-          .update({ requests: requests.length ? [...requests, user?.id] : [user?.id] })
-          .eq("id", selectedPrivateProject);
-        if (error) {
-          console.error("Error sending project:", error);
-        }
-        if (data) {
-          console.log("Project sent successfully:", data);
-        }
-      }
-    }
-
-    handleSendPrivateProjectClose();
-  }
 
   useEffect(() => {
     if (!profiles) return;
@@ -126,12 +85,13 @@ const ProfilePage = () => {
   }, [user?.id, id]);
 
   useEffect(() => {
-    console.log("Profile data 1:", profile);
+    fetchUniverseCategories();
+  }, []);
+
+  useEffect(() => {
     if (!profile) return;
-    console.log("Profile data 2:", profile);
     const loadGroups = async () => {
       const allGroups = await fetchProfileGroups();
-      console.log("All groups:", allGroups);
       if (profile?.role) {
         const filtered = allGroups.filter((group) => group.roles.includes(profile.role));
         setGroups(filtered);
@@ -141,6 +101,45 @@ const ProfilePage = () => {
     loadGroups();
   }, [profile]);
 
+  useEffect(() => {
+    async function fetchProjectCategories() {
+      setProjectCategories([]);
+
+      try {
+        const { data, error } = await supabase
+          .from("project_categories")
+          .select("*");
+
+        if (error) {
+          console.error("Error fetching projects:", error);
+        } else {
+          setProjectCategories(data || []);
+        }
+      } catch (err) {
+        console.log("An unexpected error occurred:", err);
+      }
+    }
+
+    fetchProjectCategories();
+  }, []);
+
+  async function fetchUniverseSubCategory(catId) {
+    try {
+      const { data, error } = await supabase
+        .from("universe_sub_categories")
+        .select("*")
+        .eq("universe_category", catId);
+      if (error) {
+        console.error("Error fetching projects:", error);
+      } else {
+        setUniverseSubCategories(data || []);
+        console.log("Subcategories data:", data);
+      }
+    } catch (err) {
+      console.log("An unexpected error occurred:", err);
+    }
+  }
+
   const addRecentlyViewed = async () => {
     if (user && user.id !== id) {
       const viewed = user.recently_viewed || [];
@@ -149,6 +148,18 @@ const ProfilePage = () => {
         setUser((prev) => ({ ...prev, recently_viewed: viewed }));
         await supabase.from("users").update({ recently_viewed: viewed }).eq("id", user.id);
       }
+    }
+  };
+
+  const fetchUniverseCategories = async () => {
+    const { data, error } = await supabase
+      .from("universe_categories")
+      .select("*");
+
+    if (error) {
+      console.error("Failed to fetch categories:", error);
+    } else {
+      setUniverseCategories(data);
     }
   };
 
@@ -167,7 +178,7 @@ const ProfilePage = () => {
     } else {
       setProfile(updated);
       setUser((prev) => ({ ...prev, bio: updated.bio }));
-      setCurrentBio(updated.bio); // обновляем базовый стейт
+      setCurrentBio(updated.bio);
       setEditingBio(false);
     }
   };
@@ -338,30 +349,61 @@ const ProfilePage = () => {
               </Typography>
             </Box>
 
-            <div className={"grid grid-cols-1 gap-2 max-h-60 overflow-y-auto"}>
-              {myPrivateProjects?.length && myPrivateProjects.map((proj) => (
-                  <label key={proj.id} className={`flex w-full items-center mb-4 cursor-pointer p-2 rounded-xl border border-transparent ${selectedPrivateProject === proj.id ? "!border-indigo-500" : ""}`}>
-                    <input
-                      type="radio"
-                      id={proj.id}
-                      name="project"
-                      value={proj.id}
-                      checked={selectedPrivateProject === proj.id}
-                      onChange={() => setSelectedPrivateProject(proj.id)}
-                      className="mr-2 hidden"
-                    />
+            <div className={"grid grid-cols-1 gap-2 max-h-[65vh] overflow-y-auto"}>
 
-                      <img className={"mr-2 rounded-md"} src={proj.img_url} width={"40"} height={"40"} alt={proj.title} />
+              {universeCategoryId ? (
+                  <>
+                    {universeSubCategories && universeSubCategories.length > 0 ? (
+                      universeSubCategories.map((category) => (
+                        <CategoryTile
+                          key={category.id}
+                          title={category.title}
+                          onClick={() => router.push(`/projects/new/${category.id}?private=true&userId=${id}`)}
+                        />
+                      ))
+                    ) : (
+                      <p className="text-gray-500">No subcategories available</p>
+                    )}
+                  </>
+                ) : (
+                  <>
+                    {universeCategories
+                      ?.sort((a, b) => {
+                        const aAvailable = !categoryNamesExcluded.includes(a.title);
+                        const bAvailable = !categoryNamesExcluded.includes(b.title);
+                        if (aAvailable && !bAvailable) return -1;
+                        if (!aAvailable && bAvailable) return 1;
+                        return 0;
+                      })
+                      .map((category) => (
+                        <CategoryTile
+                          key={category.id}
+                          title={category.title}
+                          isAvailable={!categoryNamesExcluded.includes(category.title)}
+                          onClick={() => {
+                            setUniverseCategoryId(category.id);
+                            fetchUniverseSubCategory(category.id);
+                          }}
+                        />
+                    ))}
 
-                    <span className="text-gray-700">{proj.title}</span>
-                  </label>
-                ))}
+                    {projectCategories &&
+                      projectCategories.map((category) => (
+                        <CategoryTile
+                          key={category.id}
+                          title={category.title}
+                          bg_color={category.color}
+                          onClick={() => router.push(`/projects/new/${category.id}?private=true&userId=${id}`)}
+                        />
+                      ))}
+                  </>
+              )}
+
             </div>
 
-
-            <div className="flex justify-end mt-8 gap-2">
+            <div className="flex justify-between mt-8 gap-2">
+              <SecondaryBtn title={"Go Back"} onClick={()=> setUniverseCategoryId(null)} />
               <SecondaryBtn title={"Cancel"} onClick={handleSendPrivateProjectClose} />
-              <PrimaryBtn disabled={false} title={"Submit"} onClick={sendPrivateProject} />
             </div>
           </Box>
         </Fade>

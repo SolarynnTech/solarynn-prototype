@@ -192,8 +192,8 @@ const SocialMediaSection = ({ id, links, isMyProfile }) => {
             const url = userLinks?.[platform.name] || platform.link;
 
             return (
-              <div className={"text-center"}>
-                <a className={"px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md inline-flex items-center"} href={url} key={index} target="_blank" rel="noopener noreferrer">
+              <div className={"text-center"} key={index}>
+                <a className={"px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md inline-flex items-center"} href={url} target="_blank" rel="noopener noreferrer">
                   <Badge textColor="indigo-500">
                     <span className="inline-flex min-h-5 items-center justify-center">{platform.icon}</span>
                   </Badge>

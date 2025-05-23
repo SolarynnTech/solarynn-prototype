@@ -16,6 +16,7 @@ import useUserStore from "@/stores/useUserStore.js";
 import ImageDropZone from "@/components/ImageDropZone.jsx";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 import VisibilitySelect from "@/components/forms/VisibilitySelect.jsx";
+import {REQUEST_STATUSES} from "@/models/request.js";
 
 const textFieldStyles = {
   "& .MuiInput-underline:before": {
@@ -27,7 +28,7 @@ const textFieldStyles = {
 };
 
 const NewProjectPage = () => {
-  const { id } = useRouter().query;
+  const { id, private: isPrivate, userId } = useRouter().query;
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
   const router = useRouter();
@@ -46,7 +47,7 @@ const NewProjectPage = () => {
   const [paymentInfo, setPaymentInfo] = useState("");
   const [budget, setBudget] = useState("");
   const allAnswered = questions.every(q => (answers[q.id] || "").trim() !== "");
-  const [visibility, setVisibility] = useState("public");
+  const [visibility, setVisibility] = useState(isPrivate === "true" ? "private" : "public");
   const createDisabled = uploading || !allAnswered || !localFile || !projectDescription.trim() || !visibility.trim() || !title.trim();
   const projectRef = useRef(null);
 
@@ -114,8 +115,36 @@ const NewProjectPage = () => {
     } else {
       setCreated(true);
       projectRef.current = data.id;
+
+      if(userId){
+        await sendRequestToJoin(data.id);
+      }
     }
   };
+
+  const sendRequestToJoin = async (prjId) => {
+    const isRequestAlreadySent = await supabase
+      .from("requests")
+      .select("*")
+      .eq("requester_id", user.id)
+      .eq("assigner_id", userId)
+      .eq("target_id", prjId)
+      .eq("target_type", "project_request");
+
+    if (isRequestAlreadySent.data.length > 0) {
+      return;
+    }
+
+    const { error } = await supabase
+      .from("requests")
+      .insert({
+        requester_id: user.id,
+        assigner_id: userId,
+        status: REQUEST_STATUSES.PENDING,
+        target_id: prjId,
+        target_type: "project_request",
+      });
+  }
 
   useEffect(() => {
     if (!id) return;
@@ -227,6 +256,7 @@ const NewProjectPage = () => {
                 value={visibility}
                 onChange={e => setVisibility(e.target.value)}
                 options={f.options}
+                readOnly={isPrivate === "true"}
               />
             ) : f.id === "description" ? (
               <TextField

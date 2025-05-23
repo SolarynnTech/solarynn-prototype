@@ -19,7 +19,7 @@ export default function UniverseCategories() {
     const catsQuery = supabase
       .from("universe_sub_categories")
       .select("*")
-      .eq("universe-category", id);
+      .eq("universe_category", id);
 
     const colorQuery = supabase
       .from("universe_categories")

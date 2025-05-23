@@ -443,7 +443,9 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
         )}
       </div>
 
-      <PrimaryBtn title={"Request to Join"} classes={"w-full mb-6"} onClick={sendRequestToJoin}/>
+      {user.id !== project.owner && (
+        <PrimaryBtn title={"Request to Join"} classes={"w-full mb-6"} onClick={sendRequestToJoin}/>
+      )}
 
       <ProgressTracker percentage={completionPercentage} isOwner={user.id === project.owner}
                        onSave={onCompletionPercentageChange}/>
