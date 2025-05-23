@@ -44,10 +44,10 @@ const FavoriteProjects = () => {
         {favoriteProjects?.length > 0 ? (
           favoriteProjects?.map((proj, index) => (
             <ProjectPreview
-              key={proj.id}
-              link={`/projects/${proj.id}`}
-              title={proj.title}
-              img_url={proj.img_url}
+              key={proj?.id}
+              link={`/projects/${proj?.id}`}
+              title={proj?.title}
+              img_url={proj?.img_url}
               height={150}
               width={150}
             />

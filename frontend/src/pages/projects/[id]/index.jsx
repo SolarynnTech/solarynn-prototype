@@ -7,7 +7,7 @@ import useUserStore from "@/stores/useUserStore.js";
 import useProjectStore from "@/stores/useProjectStore.js";
 import {
   Alert,
-  Box,
+  Box, Snackbar,
   Typography,
 } from "@mui/material";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
@@ -22,7 +22,7 @@ import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 import { LoaderItem } from "@/components/Loader.jsx";
 import ProgressTracker from "@/components/project/ProgressTracker.jsx";
 import MilestonesSection from "@/components/project/MilestonesSection.jsx";
-import {REQUEST_STATUSES} from "@/models/request.js";
+import { REQUEST_STATUSES } from "@/models/request.js";
 import ProjectParticipants from "@/components/project/ProjectParticipants.jsx";
 
 const ProjectPage = ({ accessDenied, projectFromServer }) => {
@@ -54,7 +54,9 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
   const [requestStatus, setRequestStatus] = useState(null);
   const [requestError, setRequestError] = useState(null);
 
-  console.log("projectFromServer", projectFromServer);
+  const [saveError, setSaveError] = useState("");
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+
 
   const onCompletionPercentageChange = async (newValue) => {
     const { error } = await supabase
@@ -290,16 +292,19 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
     const secondChunk = questionsToUse.slice(mid);
 
     const buckets = {
-      "Part 1": {},
-      "Part 2": {},
+      "Part 1": firstChunk .map(q => ({
+        id:       q.id,
+        question: q.question,
+        value:    answersMap[q.id],
+      })),
+      "Part 2": secondChunk.map(q => ({
+        id:       q.id,
+        question: q.question,
+        value:    answersMap[q.id],
+      })),
     };
 
-    firstChunk.forEach(q => {
-      buckets["Part 1"][q.question] = answersMap[q.id];
-    });
-    secondChunk.forEach(q => {
-      buckets["Part 2"][q.question] = answersMap[q.id];
-    });
+    console.log(buckets, 'buckets')
 
     setAnswersBySection(buckets);
     setSectionTitles(["Part 1", "Part 2"]);
@@ -375,7 +380,7 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
     }
 
     cleanRequestMsg();
-  }
+  };
 
   const cleanRequestMsg = () => {
     setTimeout(() => {
@@ -383,6 +388,49 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
       setRequestError(null);
     }, 3000);
   };
+
+  const handleDescriptionAndBudgetSave = async ({ description, budget }) => {
+    const { error } = await supabase
+      .from("projects")
+      .update({ project_description: description, budget })
+      .eq("id", project.id);
+
+    if (error) {
+      setSaveError(error.message || "Unknown error");
+      setSnackbarOpen(true);
+    }
+  };
+
+  const onProjectDetailsSave = async (title, localAnswers) => {
+    console.log(localAnswers, 'localAnswers')
+    const updates = localAnswers.reduce((acc, { id, value }) => {
+      acc[id] = value;
+      return acc;
+    }, {});
+
+    const mergedDescription = {
+      ...(project.description || {}),
+      ...updates,
+    };
+
+    const { error } = await supabase
+      .from('projects')
+      .update({ description: mergedDescription })
+      .eq('id', project.id);
+
+    if (error) {
+      console.error('Error saving project details:', error.message);
+      return;
+    }
+
+
+    setProject(prev => ({
+      ...prev,
+      description: mergedDescription,
+    }));
+    loadProjectDescription(mergedDescription);
+  }
+
 
   useEffect(() => {
     if (id && user?.id) loadProject();
@@ -453,6 +501,7 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
         description={project.project_description}
         isOwner={user.id === project.owner}
         budget={project.budget}
+        onSave={handleDescriptionAndBudgetSave}
       />
 
       <MilestonesSection isOwner={user.id === project.owner} onSave={onMilestonesSave} milestones={milestones}/>
@@ -476,10 +525,12 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
       <ProjectParticipants projectId={id} participants={project.participants}/>
 
       <ProjectDetails
+        isOwner={user.id === project.owner}
         answersBySection={answersBySection}
         sectionTitles={sectionTitles}
         currentFormPage={currentFormPage}
         onPageChange={setCurrentFormPage}
+        onSave={onProjectDetailsSave}
       />
 
       <PhotosSection
@@ -516,6 +567,21 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
                                  onClose={() => setDeleteDialogOpen(false)}
                                  onCancel={() => setDeleteDialogOpen(false)}
                                  onConfirm={handleConfirmDelete}/>
+
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={4000}
+        onClose={() => setSnackbarOpen(false)}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={() => setSnackbarOpen(false)}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          Failed to save: {saveError}
+        </Alert>
+      </Snackbar>
     </div>
   );
 };
