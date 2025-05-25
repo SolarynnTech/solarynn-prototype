@@ -28,6 +28,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
   const [visibleCount, setVisibleCount] = useState(20);
   const [uploading, setUploading] = useState(false);
   const [album, setAlbum] = useState(profile.album || []);
+  const [hasInteracted, setHasInteracted] = useState(false);
 
   const inputRef = useRef(null);
 
@@ -41,6 +42,15 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
     setDataToDisplay(dataMapped);
   }, [data, profiles, id]);
+
+  useEffect(() => {
+    if (!profile || !Array.isArray(profile[columnName === "i_support" ? "i_support" : `interested_in_${columnName}`])) {
+      setHasInteracted(false);
+      return;
+    }
+    const ids = profile[columnName === "i_support" ? "i_support" : `interested_in_${columnName}`];
+    setHasInteracted(ids.includes(user.id));
+  }, [profile, columnName, user?.id]);
 
   useEffect(() => {
     const lower = search.toLowerCase();
@@ -78,22 +88,35 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
   };
 
   const handleISupport = async () => {
-    const currentSupport = profile.i_support || [];
+    const currentData = profile[columnName] || [];
 
-    if (currentSupport.includes(user.id)) return;
+    if (currentData.includes(user.id)) return;
 
-    const updated = [...currentSupport, user.id];
+    const updated = [...currentData, user.id];
 
     const { error } = await supabase
       .from("users")
-      .update({ i_support: updated })
+      .update({ [columnName === "i_support" ? "i_support" : "interested_in_"+columnName]: updated })
       .eq("id", profile.id);
 
     if (error) return console.error("Failed to update user:", error.message);
 
+    const { error: notificationError } = await supabase.from("notifications").insert({
+      user_id: profile.id,
+      title: "Interested",
+      message: `<p>${user.name || user.email} is ${columnName === "i_support" ? "supports what you are doing" : "is interested in your " + columnName}</p>`,
+    });
+
+    if (notificationError){
+      console.error("Failed to create notification:", notificationError.message);
+      return;
+    }
+
+    const key = columnName === "i_support" ? "i_support" : `interested_in_${columnName}`;
+
     setProfiles((prevProfiles) =>
       prevProfiles.map((p) =>
-        p.id === profile.id ? { ...p, i_support: updated } : p
+        p.id === profile.id ? { ...p, [key]: updated } : p
       )
     );
   };
@@ -296,12 +319,27 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
         </>
       )}
 
-      {!isMyProfile && columnName !== "i_support" && profile.availability_status !== availabilityStatusMap.not_available.key && (
+      {!isMyProfile && columnName !== "i_support"
+        && columnName !== "album"
+        && columnName !== "showroom"
+        && profile.availability_status !== availabilityStatusMap.not_available.key && (
         <SendRequest assignerId={profile.id} groupId={groupId} />
       )}
 
       {!isMyProfile && columnName === "i_support" && (
-        <SecondaryBtn classes={"w-full"} title="I support" onClick={handleISupport} />
+        <SecondaryBtn
+          disabled={hasInteracted}
+          classes={"w-full"}
+          title={hasInteracted ? "Supported" : "I Support"}
+          onClick={handleISupport} />
+      )}
+
+      {!isMyProfile && (columnName === "album" || columnName === "showroom") && (
+        <SecondaryBtn
+          disabled={hasInteracted}
+          classes={"w-full"}
+          title={hasInteracted ? "Interested" : "I'm Interested"}
+          onClick={handleISupport} />
       )}
     </div>
   );
