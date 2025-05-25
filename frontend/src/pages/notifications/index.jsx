@@ -10,6 +10,8 @@ import RootNavigation from "@/components/Nav/Nav";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import { LoaderItem } from "@/components/Loader.jsx";
 import { useRouter } from "next/router";
+import useProjectStore from "@/stores/useProjectStore.js";
+
 
 export default function Notifications() {
   const supabase = useSupabaseClient();
@@ -22,6 +24,8 @@ export default function Notifications() {
 
   const [projectAlerts, setProjectAlerts] = useState([]);
   const [alertsLoading, setAlertsLoading] = useState(true);
+
+  const {setAllProjects}  = useProjectStore();
 
   useEffect(() => {
     if (!user) return;
@@ -113,7 +117,7 @@ export default function Notifications() {
     const _data = requests.map((e) => ({
       ...e,
       group: e.target_type === "groups" ? groupsMap[e.target_id] : {},
-      project: e.target_type === "projects" ? projectsMap[e.target_id] : {},
+      project: e.target_type === "project_request" ? projectsMap[e.target_id] : {},
     }));
 
     if (error) {
@@ -201,7 +205,7 @@ export default function Notifications() {
 
           if (!projectError) {
             const participants = projectParticipants[0].participants || [];
-            const newParticipants = [...new Set([...participants, request.requester_id])];
+            const newParticipants = [...new Set([...participants, request.assigner_id])];
 
             const { error: updateProjectError } = await supabase
               .from("projects")
@@ -210,6 +214,12 @@ export default function Notifications() {
 
             if (updateProjectError) {
               console.error("Error updating project participants:", updateProjectError);
+            } else {
+              setAllProjects((prev) =>
+                prev.map((proj) =>
+                  proj.id === request.target_id ? { ...proj, participants: newParticipants } : proj
+                )
+              );
             }
           }
 
