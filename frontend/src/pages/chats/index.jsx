@@ -120,7 +120,37 @@ export default function Chats() {
           return dateB - dateA; // newest first
         });
 
-      setConversations(transformedConversations);
+      const participantIds = transformedConversations.map((conv) => conv.other_user?.id).filter(Boolean);
+
+      const orConditions = participantIds
+        .map(
+          (pid) =>
+            `requester_id.eq.${user.id},assigner_id.eq.${pid},target_type.eq.chat_request` +
+            `,requester_id.eq.${pid},assigner_id.eq.${user.id},target_type.eq.chat_request`
+        )
+        .join(",");
+
+      const { data: requestsData, error: reqErr } = await supabase
+        .from("requests")
+        .select("requester_id, assigner_id, status")
+        .or(orConditions);
+
+      if (reqErr) throw reqErr;
+
+      const rejectedIds = new Set();
+      for (const req of requestsData) {
+        if (req.status === "rejected") {
+          const otherId = req.requester_id === user.id ? req.assigner_id : req.requester_id;
+          rejectedIds.add(otherId);
+        }
+      }
+
+      const filteredConversations = transformedConversations.filter(
+        (conv) => !rejectedIds.has(conv.other_user?.id)
+      );
+
+      setConversations(filteredConversations);
+
     } catch (error) {
       console.error("Error fetching conversations:", error);
     } finally {
