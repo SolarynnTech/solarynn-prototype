@@ -124,6 +124,7 @@ const ProfilePage = () => {
       if (profile?.role) {
         const filtered = allGroups.filter((group) => group.roles.includes(profile.role));
         setGroups(filtered);
+        console.log("Filtered groups:", allGroups);
       }
     };
 

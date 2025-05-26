@@ -28,6 +28,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
   const [visibleCount, setVisibleCount] = useState(20);
   const [uploading, setUploading] = useState(false);
   const [album, setAlbum] = useState(profile.album || []);
+  const [showroom, setShowroom] = useState(profile.showroom || []);
   const [hasInteracted, setHasInteracted] = useState(false);
 
   const inputRef = useRef(null);
@@ -131,7 +132,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
     const name = `${crypto.randomUUID()}.${ext}`;
     const path = `private/${user.id}/${name}`;
 
-    const { error: uploadError } = await supabase.storage.from("professional-album").upload(path, file, {
+    const { error: uploadError } = await supabase.storage.from(columnName === "album" ? "professional-album" : "showroom").upload(path, file, {
       cacheControl: "3600",
       upsert: false,
     });
@@ -142,7 +143,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
       return;
     }
 
-    const { data: urlData, error: urlError } = supabase.storage.from("professional-album").getPublicUrl(path);
+    const { data: urlData, error: urlError } = supabase.storage.from(columnName === "album" ? "professional-album" : "showroom").getPublicUrl(path);
 
     if (urlError || !urlData?.publicUrl) {
       console.error("Failed to get public URL:", urlError?.message);
@@ -151,8 +152,8 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
     }
 
     const newImageUrl = urlData.publicUrl;
-    const updatedAlbum = [...(user.album || []), newImageUrl];
-    const { error: dbError } = await supabase.from("users").update({ album: updatedAlbum }).eq("id", user.id);
+    const updatedAlbum = [...(user[columnName] || []), newImageUrl];
+    const { error: dbError } = await supabase.from("users").update({ [columnName]: updatedAlbum }).eq("id", user.id);
 
     if (dbError) {
       console.error("Failed to update user album:", dbError.message);
@@ -162,18 +163,22 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
     setUser((prev) => ({
       ...prev,
-      album: updatedAlbum,
+      [columnName]: updatedAlbum,
     }));
 
-    setAlbum(updatedAlbum);
+    if (columnName === "album") {
+      setAlbum(updatedAlbum);
+    } else if (columnName === "showroom") {
+      setShowroom(updatedAlbum);
+    }
 
     // setPreviewUrl(newImageUrl);
     setUploading(false);
   };
 
   const deleteImage = async (imageUrl) => {
-    const updatedAlbum = album.filter((img) => img !== imageUrl);
-    const { error } = await supabase.from("users").update({ album: updatedAlbum }).eq("id", user.id);
+    const updatedAlbum = columnName === "album" ? album.filter((img) => img !== imageUrl) : showroom.filter((img) => img !== imageUrl);
+    const { error } = await supabase.from("users").update({ [columnName]: updatedAlbum }).eq("id", user.id);
 
     if (error) {
       console.error("Failed to update user album:", error.message);
@@ -182,10 +187,14 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
     setUser((prev) => ({
       ...prev,
-      album: updatedAlbum,
+      [columnName]: updatedAlbum,
     }));
 
-    setAlbum(updatedAlbum);
+    if( columnName === "showroom") {
+      setShowroom(updatedAlbum);
+    } else if (columnName === "album") {
+      setAlbum(updatedAlbum);
+    }
   }
 
   const ImagePlaceholder = () => {
@@ -209,31 +218,29 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
       <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
         {/* add better handling column case */}
-        {columnName === "album" ? (
-          album.length > 0 ? (
-            album.map((img_url, index) => {
-              return (
+        {(columnName === "album" || columnName === "showroom") ? (
+          (columnName === "album" ? album : showroom).length > 0 ? (
+            (columnName === "album" ? album : showroom).map((img_url, index) => (
+              <div
+                key={img_url}
+                className="flex group shrink-0 relative rounded-md items-center justify-center bg-gray-100"
+                style={{
+                  width: SIZE.w,
+                  height: SIZE.h,
+                  backgroundImage: `url(${img_url})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  boxShadow: "rgba(0, 0, 0, 0.25) 0px -30px 25px -10px inset",
+                }}
+              >
                 <div
-                  key={img_url}
-                  className={`flex group shrink-0 relative rounded-md items-center justify-center bg-gray-100`}
-                  style={{
-                    width: SIZE.w,
-                    height: SIZE.h,
-                    backgroundImage: `url(${img_url})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    boxShadow: `rgba(0, 0, 0, 0.25) 0px -30px 25px -10px inset`,
-                  }}
+                  className="flex rounded-full w-10 h-10 items-center justify-center bg-gray-100 absolute opacity-0 group-hover:opacity-100 top-0 right-0 p-1 cursor-pointer"
+                  onClick={() => deleteImage(img_url)}
                 >
-                  <div
-                    className="flex rounded-full w-10 h-10 items-center justify-center bg-gray-100 absolute opacity-0 group-hover:opacity-100 top-0 right-0 p-1 cursor-pointer"
-                    onClick={() => deleteImage(img_url)}
-                  >
-                    <Trash2 className={"text-red-800"} size={"24"} />
-                  </div>
+                  <Trash2 className="text-red-800" size={24} />
                 </div>
-              );
-            })
+              </div>
+            ))
           ) : (
             <ImagePlaceholder />
           )
@@ -256,7 +263,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
       {isMyProfile && (
         <>
           {/* add better handling column case */}
-          {columnName !== "album" ? (
+          {columnName !== "album" && columnName !== "showroom" ? (
             <SecondaryBtn title="Add" classes="w-full block" onClick={() => setOpen(true)} />
           ) : (
             <>
@@ -273,7 +280,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
                 type="file"
                 accept="image/*"
                 multiple
-                onChange={handleFileChange}
+                onChange={(e)=> handleFileChange(e)}
                 style={{ display: "none" }}
               />
             </>
