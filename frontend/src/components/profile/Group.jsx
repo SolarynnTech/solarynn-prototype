@@ -104,7 +104,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
 
     const { error: notificationError } = await supabase.from("notifications").insert({
       user_id: profile.id,
-      title: "Interested",
+      title: `${columnName === "i_support" ? "Is Supporting" : "Is Interested"}`,
       message: `<p>${user.name || user.email} is ${columnName === "i_support" ? "supports what you are doing" : "is interested in your " + columnName}</p>`,
     });
 
