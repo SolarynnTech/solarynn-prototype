@@ -52,15 +52,18 @@ export const availabilityStatusOptions = Object.entries(availabilityStatusMap).m
   icon,
 }));
 
-const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => {
+const ProfileImage = ({ name, id, imgUrl, coverUrl, availabilityStatus, isMyProfile }) => {
   const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
   const [originalUser, setOriginalUser] = useState();
 
   const [imageFile, setImageFile] = useState(null);
+  const [coverFile, setCoverFile] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+  const [coverPreview, setCoverPreview] = useState(null);
   const [profileImg, setProfileImg] = useState("");
+  const [coverImg, setCoverImg] = useState("");
   const [profileStatus, setProfileStatus] = useState("");
 
   const handleChange = (event) => {
@@ -69,6 +72,9 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
     if (name === "profile_image" && files?.[0]) {
       setImageFile(files[0]);
       setImagePreview(URL.createObjectURL(files[0]));
+    } if (name === "cover_image" && files?.[0]) {
+      setCoverFile(files[0]);
+      setCoverPreview(URL.createObjectURL(files[0]));
     } else {
       setUser((prevUser) => ({
         ...prevUser,
@@ -79,7 +85,11 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
 
   useEffect(() => {
     setProfileImg(isMyProfile ? user?.profile_img : imgUrl || "");
-  }, [user, id, imgUrl, isMyProfile]);
+  }, [user.profile_img, id, imgUrl, isMyProfile]);
+
+  useEffect(() => {
+    setCoverImg(isMyProfile ? user?.cover_img : coverUrl || "");
+  }, [user.cover_img, id, coverUrl, isMyProfile]);
 
   useEffect(() => {
     setProfileStatus(isMyProfile ? user?.availability_status : availabilityStatus || "");
@@ -104,7 +114,8 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
     e.preventDefault();
     const { name, email, address, is_private, availability_status } = user;
 
-    const profile_img = imageFile ? await uploadImageToSupabase(supabase, imageFile, user.id) : user.profile_img;
+    const profile_img = imageFile ? await uploadImageToSupabase(supabase, imageFile, user.id, "avatar") : user.profile_img;
+    const cover_img = coverFile ? await uploadImageToSupabase(supabase, coverFile, user.id, "cover") : user.cover_img;
 
     const { data, error } = await supabase
       .from("users")
@@ -113,6 +124,7 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
         email,
         address,
         profile_img,
+        cover_img,
         is_private,
         availability_status,
       })
@@ -124,6 +136,7 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
     }
 
     setProfileImg(profile_img);
+    setCoverImg(cover_img);
     setProfileStatus(availability_status);
 
     setUser((prevUser) => ({
@@ -132,6 +145,7 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
       email,
       address,
       profile_img,
+      cover_img,
       is_private,
       availability_status,
     }));
@@ -154,47 +168,47 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
   };
 
   return (
-    <div className="mb-6">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="font-bold mb-0">User Info</h3>
-        <div className={"flex gap-2"}>
-          {isMyProfile && (<ActionBtn title="Edit" onClick={handleOpen}/>)}
-        </div>
+    <div className="mb-6 -mx-6 relative" style={{ backgroundImage: `url(${coverImg}?t=${Date.now()})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+      <div className="absolute right-6 top-6 z-20">
+        {isMyProfile && (<ActionBtn title="Edit" onClick={handleOpen}/>)}
       </div>
 
-      <div className="relative overflow-hidden rounded-md">
-        <div className="absolute top-0 bottom-0 left-0 right-0 z-[1] shadow-[inset_0_-40px_40px_-20px_rgba(0,0,0,0.35)]"></div>
+      <div className="relative overflow-hidden p-6">
+        <div style={{ backgroundColor: "rgba(0,0,0,.35)"}} className="absolute top-0 bottom-0 left-0 right-0 z-[1]"></div>
 
-        {profileImg ? <img src={`${profileImg}?t=${Date.now()}`} alt={user?.name} /> : <PlaceholderBox height={400} />}
-
-        <div className={"flex gap-2 items-start justify-end absolute top-2 right-2 z-[2]"}>
-          {profileStatus && (
-            <div
-              className="flex items-center text-xs font-semibold uppercase rounded-full px-3 py-1"
-              style={{
-                color: availabilityStatusMap[profileStatus].textColor,
-                background: availabilityStatusMap[profileStatus].bgColor,
-              }}
+        <div className={"flex items-center relative z-10"}>
+          <div className={"shrink-0 h-32 sm:h-48 w-32 sm:w-48 rounded-full overflow-hidden border-4 border-white flex items-center justify-center bg-white"}
+               style={{ backgroundImage: `url(${profileImg}?t=${Date.now()})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+          </div>
+          <div className={"pl-6"}>
+            <h2
+              style={{ textShadow: `0 0 2px rgba(0,0,0,.25)` }}
+              className="text-white font-bold text-2xl mb-4"
             >
-              {availabilityStatusMap[profileStatus].icon}
-              <span className="ml-2">{availabilityStatusMap[profileStatus].title}</span>
+              {isMyProfile ? user?.name : name}
+            </h2>
+            <div className={"flex gap-2 items-start z-[2] flex-wrap"}>
+              {profileStatus && (
+                <div
+                  className="flex items-center text-xs font-semibold uppercase rounded-full px-3 py-1"
+                  style={{
+                    color: availabilityStatusMap[profileStatus].textColor,
+                    background: availabilityStatusMap[profileStatus].bgColor,
+                  }}
+                >
+                  {availabilityStatusMap[profileStatus].icon}
+                  <span className="ml-2">{availabilityStatusMap[profileStatus].title}</span>
+                </div>
+              )}
+
+              {user?.verified && (
+                <div className="flex items-center text-xs uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-3 py-1">
+                  <Star size={20} color="#615FFF" className="mr-2" />
+                  <div>Verified</div>
+                </div>
+              )}
             </div>
-          )}
-
-          {user?.verified && (
-            <div className="flex items-center text-xs uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-3 py-1">
-              <Star size={20} color="#615FFF" className="mr-2" />
-              <div>Verified</div>
-            </div>
-          )}
-        </div>
-
-
-        <div
-          style={{ textShadow: `0 0 2px rgba(0,0,0,.2)` }}
-          className="text-white font-bold text-xl absolute bottom-3 left-4 z-[2]"
-        >
-          {isMyProfile ? user?.name : name}
+          </div>
         </div>
       </div>
 
@@ -308,6 +322,32 @@ const ProfileImage = ({ name, id, imgUrl, availabilityStatus, isMyProfile }) => 
                 {imagePreview && (
                   <img
                     src={imagePreview}
+                    alt="Preview"
+                    className="mt-4 rounded-md"
+                    style={{ width: 100, height: 100, objectFit: "cover" }}
+                  />
+                )}
+              </label>
+
+              <label
+                htmlFor="cover-image-upload"
+                className="cursor-pointer flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded-md p-6 hover:border-indigo-500 transition-colors text-center"
+              >
+                <p className="text-gray-600 mb-2">Click to upload cover image</p>
+                <p className="text-indigo-500 font-semibold">Browse files</p>
+
+                <input
+                  id="cover-image-upload"
+                  type="file"
+                  accept="image/*"
+                  name="cover_image"
+                  onChange={handleChange}
+                  className="hidden"
+                />
+
+                {coverPreview && (
+                  <img
+                    src={coverPreview}
                     alt="Preview"
                     className="mt-4 rounded-md"
                     style={{ width: 100, height: 100, objectFit: "cover" }}

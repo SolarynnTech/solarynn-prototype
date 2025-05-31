@@ -126,7 +126,7 @@ const DetailsPanel = ({ id, profile, isMyProfile }) => {
         </div>
         {!isMyProfile && (
           <Bookmark
-            fill={user?.booked_profiles?.includes(profile.id) ? "#166534" : "transparent"}
+            fill={user?.booked_profiles?.includes(profile.id) ? "#6366f1" : "transparent"}
             onClick={toogleBookmark}
             size={24}
             className={`${

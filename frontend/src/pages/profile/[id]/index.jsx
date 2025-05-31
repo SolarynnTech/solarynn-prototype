@@ -232,14 +232,15 @@ const ProfilePage = () => {
   }
 
   return (
-    <div className="pt-8">
+    <div className="pt-6">
       <RootNavigation title={isMyProfile ? "My Profile" : "Profile"} backBtn />
-      <div className="pt-4 pb-8">
+      <div className="pb-8">
         <ProfileImage
           id={id}
           isMyProfile={isMyProfile}
           name={profile.name || profile.email}
           imgUrl={profile.profile_img}
+          coverUrl={profile.cover_img}
           availabilityStatus={profile.availability_status}
         />
 
@@ -398,7 +399,7 @@ const ProfilePage = () => {
               </Typography>
             </Box>
 
-            <div className={"grid grid-cols-1 gap-2 max-h-[65vh] overflow-y-auto"}>
+            <div className={"grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[65vh] overflow-y-auto"}>
 
               {universeCategoryId ? (
                   <>

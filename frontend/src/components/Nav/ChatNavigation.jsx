@@ -12,7 +12,7 @@ const ChatNavigation = ({ user, backBtn = false }) => {
   };
 
   return (
-    <nav className="fixed top-0 bg-gray-50 border-b border-gray-200 z-20 max-w-[440px] w-full -mx-6 px-8 py-3 flex items-center gap-3">
+    <nav className="fixed top-0 bg-gray-50 border-b border-gray-200 z-20 max-w-[680px] w-full -mx-6 px-8 py-3 flex items-center gap-3">
       {backBtn && (
         <button
           type="button"

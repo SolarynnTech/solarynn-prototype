@@ -83,7 +83,7 @@ export default function HomePage() {
         <p>Loading categories...</p>
       ) : (
         <>
-          <div className="grid grid-cols-1 gap-3 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12">
             {!loading &&
               categories &&
               categories.length > 0 &&
@@ -98,7 +98,7 @@ export default function HomePage() {
               ))}
           </div>
 
-          <div className="grid grid-cols-1 gap-3 mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-12">
             {universeCategories
               ?.sort((a, b) => {
                 const aAvailable = !categoryNamesExcluded.includes(a.title);

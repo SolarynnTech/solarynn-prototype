@@ -348,7 +348,7 @@ export default function Conversation() {
 
       <form
         onSubmit={handleSendMessage}
-        className="fixed flex-col bg-indigo-50 bottom-0 z-10 max-w-[440px] w-full -mx-6 px-6 py-4 flex items-center justify-around border-t border-gray-200"
+        className="fixed flex-col bg-indigo-50 bottom-0 z-10 max-w-[680px] w-full -mx-6 px-6 py-4 flex items-center justify-around border-t border-gray-200"
       >
         {(blockedByOther || blockedByMe) && (
           <div className="mb-4">

@@ -15,7 +15,7 @@ export default () => {
       <div className="flex grow flex-col justify-center">
         <h3 className="mb-4">You have selected</h3>
 
-        <div className="grid grid-cols-1 gap-4 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
           <CategoryTile
             title={ role?.title ?? "Select the main category" }
             onClick={() => router.push("/onboarding/role")}

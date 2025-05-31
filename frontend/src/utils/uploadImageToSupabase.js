@@ -1,5 +1,13 @@
-export default async function uploadImageToSupabase(supabase, file, userId) {
-  const filePath = `avatars/${userId}.png`;
+export default async function uploadImageToSupabase(supabase, file, userId, type = "avatar") {
+  let filePath= "";
+
+  if (type === "cover") {
+    // For cover images, we might want to use a different path
+    filePath = `covers/${userId}.png`;
+  } else {
+    // Default to avatar images
+    filePath = `avatars/${userId}.png`;
+  }
 
   const { error: uploadError } = await supabase.storage
     .from("profile-images")

@@ -180,7 +180,7 @@ const SocialMediaSection = ({ id, links, isMyProfile }) => {
 
   return (
     <>
-      <div className="mb-12">
+      <div className="mb-8">
         <div className="flex items-center justify-between mb-4">
           <h3 className="font-bold mb-0">Social Media</h3>
           {isMyProfile && <ActionBtn title="Edit" onClick={handleOpen} />}
