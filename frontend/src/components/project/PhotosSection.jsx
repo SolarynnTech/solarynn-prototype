@@ -59,7 +59,7 @@ const PhotosSection = ({
         </Typography>
       </Box>
     ) : (
-      <Box className="overflow-x-auto hide-scrollbar -mx-6 px-6 mt-4">
+      <Box className="overflow-x-auto custom-scrollbar hide-scrollbar -mx-6 px-6 mt-4">
         <Box className="flex gap-4 flex-nowrap relative">
           {imageUrls.map((url, idx) => (
             <Box key={url} className="relative flex-shrink-0">

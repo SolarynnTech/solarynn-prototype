@@ -39,7 +39,7 @@ const Favorites = () => {
         </div>
       </div>
 
-      <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
+      <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar custom-scrollbar -mx-6 px-6">
         {bookedProfiles?.length > 0 ? (
           bookedProfiles?.map((profile, index) => (
             <UserPreview

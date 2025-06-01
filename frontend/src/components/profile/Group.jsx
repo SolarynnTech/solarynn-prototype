@@ -216,7 +216,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
         )}
       </div>
 
-      <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
+      <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto custom-scrollbar scroll scrollbar hide-scrollbar -mx-6 px-6">
         {/* add better handling column case */}
         {(columnName === "album" || columnName === "showroom") ? (
           (columnName === "album" ? album : showroom).length > 0 ? (
@@ -299,7 +299,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
                 />
               </div>
 
-              <div className={"overflow-y-auto max-h-[400px] scrollbar hide-scrollbar h-full"}>
+              <div className={"overflow-y-auto max-h-[400px] scrollbar custom-scrollbar hide-scrollbar h-full"}>
                 {filtered.slice(0, visibleCount).map((p, index) => (
                   <div
                     key={p.id}

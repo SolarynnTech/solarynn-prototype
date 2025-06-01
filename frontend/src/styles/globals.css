@@ -105,6 +105,21 @@ body [chrome-autofilled] {
   margin: 0 auto;
 }
 
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #FFFF;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #FFFF;
+  border-radius: 4px;
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #FFFF;
+}
+
 .bg-chat-normal {
   background-color: #F1FFF2;
 }

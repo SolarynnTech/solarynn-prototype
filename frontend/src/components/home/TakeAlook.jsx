@@ -20,7 +20,7 @@ const TakeALook = () => {
         </div>
       </div>
 
-      <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar -mx-6 px-6">
+      <div className="flex items-center mb-4 gap-4 flex-nowrap overflow-x-auto scroll scrollbar hide-scrollbar custom-scrollbar -mx-6 px-6">
         <PlaceholderBox height={150} width={150} />
         <PlaceholderBox height={150} width={150} />
         <PlaceholderBox height={150} width={150} />
