@@ -25,7 +25,7 @@ const getOptionSx = (isSelected, readOnly) => ({
   mr: 0,
   border: isSelected ? "2px solid #615FFF" : "1px solid #D1D5DB",
   borderRadius: "8px",
-  p: 2,
+  p: 0.5,
   backgroundColor: isSelected ? "#E0E7FF" : "#FFFFFF",
   cursor: readOnly ? "default" : "pointer",
   "&:hover": {
@@ -36,7 +36,7 @@ const getOptionSx = (isSelected, readOnly) => ({
     "&.Mui-checked": {
       color: "#615FFF",
     },
-    mr: 1.5,
+    mr: 0.5,
   },
 });
 
@@ -87,24 +87,20 @@ export default function QuestionnaireForm({
   return (
     <div className={'mb-12'}>
       {section.title && (
-        <Typography
-          variant="h4"
-          gutterBottom
-          className="!font-medium !text-2xl text-center !mb-3"
+        <h3
+          className="!font-medium !text-2xl text-center !mb-4"
         >
           {section.title}
-        </Typography>
+        </h3>
       )}
 
       {section.questions.map((q) => (
-        <Box key={q.id} mb={3}>
-          <Typography
-            variant="subtitle1"
-            gutterBottom
-            className="!text-lg !font-medium !mb-3"
+        <Box key={q.id} mb={5}>
+          <h4
+            className="!text-lg !font-medium !mb-4"
           >
             {q.question}
-          </Typography>
+          </h4>
 
           {q.type === "opentext" && (
             <TextField
@@ -130,7 +126,7 @@ export default function QuestionnaireForm({
                 sx={{
                   display: "flex",
                   flexDirection: "column",
-                  gap: 2,
+                  gap: 1,
                   width: "100%",
                 }}
               >
