@@ -20,6 +20,7 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
   const { user, setUser } = useUserStore();
   const supabase = useSupabaseClient();
   const router = useRouter();
+  const { id: currentProfileId } = router.query;
 
   const [dataToDisplay, setDataToDisplay] = useState([]);
   const [open, setOpen] = useState(false);
@@ -207,6 +208,8 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
     );
   };
 
+  console.log(currentProfileId, 'currentProfileId')
+
   return (
     <div className="mb-12">
       <div className="flex items-center justify-between mb-4">
@@ -233,12 +236,12 @@ const Group = ({ title, id, data, groupId, columnName, isMyProfile, profile }) =
                   boxShadow: "rgba(0, 0, 0, 0.25) 0px -30px 25px -10px inset",
                 }}
               >
-                <div
+                {user.id === currentProfileId && <div
                   className="flex rounded-full w-10 h-10 items-center justify-center bg-gray-100 absolute opacity-0 group-hover:opacity-100 top-0 right-0 p-1 cursor-pointer"
                   onClick={() => deleteImage(img_url)}
                 >
-                  <Trash2 className="text-red-800" size={24} />
-                </div>
+                  <Trash2 className="text-red-800" size={24}/>
+                </div>}
               </div>
             ))
           ) : (
