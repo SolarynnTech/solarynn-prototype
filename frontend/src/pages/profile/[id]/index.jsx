@@ -452,7 +452,7 @@ const ProfilePage = () => {
             </div>
 
             <div className="flex justify-between mt-8 gap-2">
-              <SecondaryBtn title={"Go Back"} onClick={()=> setUniverseCategoryId(null)} />
+              <SecondaryBtn title={"Go Back"} onClick={()=> setSendProjectOpen(false)} />
               <SecondaryBtn title={"Cancel"} onClick={handleSendPrivateProjectClose} />
             </div>
           </Box>
