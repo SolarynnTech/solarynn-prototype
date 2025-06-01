@@ -215,8 +215,15 @@ const QuestionsPage = () => {
           onChange={(qid, val, opt) => handleAnswerChange(currentSection.id, qid, val, opt)}
         />
 
-        <PrimaryBtn onClick={handleNext} title={currentIndex < data.length - 1 ? "Next" : "Finish"}
-                    disabled={!allAnswered} classes="w-full block"/>
+
+        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[680px] bg-white border-t border-gray-200 p-4 z-20">
+          <PrimaryBtn
+            onClick={handleNext}
+            title={currentIndex < data.length - 1 ? "Next" : "Finish"}
+            disabled={!allAnswered}
+            classes="w-full"
+          />
+        </div>
       </div>
     </div>
   );
