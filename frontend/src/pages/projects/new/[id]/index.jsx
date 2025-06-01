@@ -16,7 +16,7 @@ import useUserStore from "@/stores/useUserStore.js";
 import ImageDropZone from "@/components/ImageDropZone.jsx";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 import VisibilitySelect from "@/components/forms/VisibilitySelect.jsx";
-import {REQUEST_STATUSES} from "@/models/request.js";
+import { REQUEST_STATUSES } from "@/models/request.js";
 
 const textFieldStyles = {
   "& .MuiInput-underline:before": {
@@ -116,7 +116,7 @@ const NewProjectPage = () => {
       setCreated(true);
       projectRef.current = data.id;
 
-      if(userId){
+      if (userId) {
         await sendRequestToJoin(data.id);
       }
     }
@@ -144,7 +144,7 @@ const NewProjectPage = () => {
         target_id: prjId,
         target_type: "project_request",
       });
-  }
+  };
 
   useEffect(() => {
     if (!id) return;
@@ -241,7 +241,7 @@ const NewProjectPage = () => {
   ];
 
   return (
-    <div className="pt-8">
+    <div className="pt-8 mb-5">
       <RootNavigation title="New Project" backBtn/>
       <h4 className={"text-lg mb-4 mt-4 text-center"}>{sectionTitle}</h4>
       <Paper sx={{ p: 3, mb: 4 }} className={"!bg-[#F5F5F5]"}>
@@ -336,8 +336,11 @@ const NewProjectPage = () => {
           </Box>
         ))}
       </Paper>
-      <PrimaryBtn onClick={handleCreateProject} title={"Create Project"} classes="w-full block"
-                  disabled={createDisabled}/>
+      <div
+        className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[680px] bg-white border-t border-gray-200 p-4 z-20">
+        <PrimaryBtn onClick={handleCreateProject} title={"Send"} classes="w-full block"
+                    disabled={createDisabled}/>
+      </div>
       <Dialog open={created} disableEscapeKeyDown>
         <DialogTitle className="text-center text-xl !font-semibold">Success!</DialogTitle>
         <DialogContent>
