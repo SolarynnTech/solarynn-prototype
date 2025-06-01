@@ -164,10 +164,10 @@ const QuestionsPage = () => {
   };
 
   useEffect(() => {
-    if (user && role) {
+    if (user?.id && role?.id) {
       getSectionsAndQuestions();
     }
-  }, [user, role]);
+  }, [user?.id, role?.id]);
 
   if (loading || !data.length || !currentPage) {
     return (
