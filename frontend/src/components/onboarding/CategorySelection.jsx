@@ -72,27 +72,29 @@ export function CategorySelection({ title, subtitle, description, selectedCatego
     }
   }, [setCategories]);
 
+
   const selectDomain = async (selectedDomain) => {
     clearError();
     setSaving(true);
     const prevCategory = selectedCategory;
+
     selectCategory(selectedDomain);
 
     try {
-      // TODO: consider saving the selection on "Next" button click, and not on select
       const { error } = await saveCategory(selectedDomain.id);
-
       if (error) throw error;
+
+      router.push(nextRoute);
     } catch (err) {
-      // Rollback the changes
       selectCategory(prevCategory);
-
-      console.error(error);
-      reportError("Failed to save the domain");
+      console.error(err);
+      reportError("Failed to save the category");
+    } finally {
+      setSaving(false);
     }
-
-    setSaving(false);
   };
+
+
 
   return (
     <div className={"pt-8"}>
@@ -131,7 +133,6 @@ export function CategorySelection({ title, subtitle, description, selectedCatego
         </div>
       </div>
 
-      <PrimaryBtn disabled={loading || !selectCategory} onClick={handleNext} title="Next" classes="block w-full mt-8" />
     </div>
   );
 }
