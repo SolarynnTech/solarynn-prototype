@@ -86,13 +86,13 @@ export default function QuestionnaireForm({
 
   return (
     <div className={'mb-12'}>
-      {section.title && (
-        <h3
-          className="!font-medium !text-2xl text-center !mb-4"
-        >
-          {section.title}
-        </h3>
-      )}
+      {/*{section.title && (*/}
+      {/*  <h3*/}
+      {/*    className="!font-medium !text-2xl text-center !mb-4"*/}
+      {/*  >*/}
+      {/*    {section.title}*/}
+      {/*  </h3>*/}
+      {/*)}*/}
 
       {section.questions.map((q) => (
         <Box key={q.id} mb={5}>

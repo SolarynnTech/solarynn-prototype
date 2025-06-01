@@ -7,8 +7,10 @@ import QuestionnaireForm from "@/components/forms/QuestionnaireForm";
 import useUserStore from "@/stores/useUserStore";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Loader } from "lucide-react";
-import { LinearProgress, Box, Typography } from "@mui/material";
+import { LinearProgress, Box } from "@mui/material";
 import useProfilesStore from "@/stores/useProfilesStore";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import SecondaryBtn from "@/components/buttons/SecondaryBtn.jsx";
 
 const QuestionsPage = () => {
   const router = useRouter();
@@ -37,6 +39,13 @@ const QuestionsPage = () => {
       }
       return { ...prev, [sectionId]: { ...sec, [questionId]: newVal } };
     });
+  };
+
+  const handleBack = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((idx) => idx - 1);
+      window.scrollTo(0, 0);
+    }
   };
 
   const handleNext = async () => {
@@ -180,7 +189,7 @@ const QuestionsPage = () => {
 
   return (
     <div className="pt-8">
-      <RootNavigation title="Onboard Questions"/>
+      <RootNavigation title={`Onboard Questions - ${currentSection.title}` || "Onboard Questions"}/>
       <Box
         sx={{
           display: "flex",
@@ -216,13 +225,37 @@ const QuestionsPage = () => {
         />
 
 
-        <div className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[680px] bg-white border-t border-gray-200 p-4 z-20">
-          <PrimaryBtn
-            onClick={handleNext}
-            title={currentIndex < data.length - 1 ? "Next" : "Finish"}
-            disabled={!allAnswered}
-            classes="w-full"
-          />
+        <div
+          className="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-[680px] bg-white border-t border-gray-200 p-4 z-20">
+          <div className="flex gap-3">
+            <SecondaryBtn
+              onClick={handleBack}
+              disabled={currentIndex === 0}
+              title={<div className={"flex items-center justify-center gap-2"}><ArrowBackIcon/> Back </div>}
+              classes={`
+                flex-1
+                    h-12
+                  rounded-md
+                ${currentIndex === 0
+                ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                : ""}
+              `}
+            />
+
+            <PrimaryBtn
+              onClick={handleNext}
+              title={currentIndex < data.length - 1 ? "Next" : "Finish"}
+              disabled={!allAnswered}
+              classes={`
+                flex-1
+                h-12
+                rounded-md
+                ${allAnswered
+                ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                : "bg-gray-200 text-gray-500 cursor-not-allowed"}
+              `}
+            />
+          </div>
         </div>
       </div>
     </div>
