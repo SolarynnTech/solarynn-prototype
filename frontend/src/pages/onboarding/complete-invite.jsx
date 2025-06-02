@@ -43,6 +43,10 @@ export default function CompleteInvite() {
     const userEmail = sessionData?.session?.user?.email;
 
     if (!userId || !ghostId) {
+      console.log("ghostId:", ghostId);
+      console.log("userId:", userId);
+      console.log("sessionData:", sessionData);
+
       setError("Missing session or ghost ID.");
       setSubmitting(false);
       return;
@@ -79,8 +83,8 @@ export default function CompleteInvite() {
     // 4. Create new user record
     const { error: insertError } = await supabase.from("users").insert({
       id: userId,
-      email: ghost.email || userEmail,
-      name: ghost.name,
+      email: ghost.email || userEmail || "",
+      name: ghost.name || "",
       profile_img: ghost.profile_image || null,
       bio: ghost.bio || "",
       city: ghost.city || "",
