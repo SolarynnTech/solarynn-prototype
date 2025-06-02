@@ -15,29 +15,30 @@ export default function CompleteInvite() {
   const [sessionReady, setSessionReady] = useState(false);
 
   useEffect(() => {
-    const exchangeCode = async () => {
-      const url = new URL(window.location.href);
-      const code = url.searchParams.get("code");
+    const restoreSessionFromHash = async () => {
+      const hash = window.location.hash.substring(1); // Remove the `#`
+      const params = new URLSearchParams(hash);
 
-      if (code) {
-        const { error: exchangeError } = await supabase.auth.exchangeCodeForSession();
-        if (exchangeError) {
-          console.error("Session error:", exchangeError.message);
+      const access_token = params.get("access_token");
+      const refresh_token = params.get("refresh_token");
+
+      if (access_token && refresh_token) {
+        const { data, error } = await supabase.auth.setSession({
+          access_token,
+          refresh_token,
+        });
+
+        if (error) {
+          console.error("Failed to set session:", error.message);
           await router.push("/login");
-          return;
+        } else {
+          console.log("✅ Session restored:", data);
         }
-
-        // ✅ Wait a tick to ensure cookie is set
-        setTimeout(() => {
-          setSessionReady(true);
-        }, 200); // small delay just to let the cookie persist
-      } else {
-        setSessionReady(true); // no code means session might already be there
       }
     };
 
     if (router.isReady) {
-      exchangeCode();
+      restoreSessionFromHash();
     }
   }, [router.isReady]);
 
