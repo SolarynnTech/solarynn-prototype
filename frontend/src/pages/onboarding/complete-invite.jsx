@@ -70,13 +70,20 @@ export default function CompleteInvite() {
       return;
     }
 
+    const { count } = await supabase
+      .from("ghost_users")
+      .select("*", { count: "exact", head: true })
+      .eq("id", ghostId)
+      .eq("used", false);
+    console.log("Matching ghost rows:", count);
+
     // 2. Fetch ghost user
     const { data: ghost, error: ghostError } = await supabase
       .from("ghost_users")
       .select("*")
       .eq("id", ghostId)
       .eq("used", false)
-      .single();
+      .maybeSingle();
 
     if (ghostError || !ghost) {
       setError("Invalid or already used invite.");
@@ -95,7 +102,7 @@ export default function CompleteInvite() {
       id: userId,
       email: ghost.email || userEmail || "",
       name: ghost.name || "",
-      profile_img: ghost.profile_image || null,
+      profile_img: ghost.profile_img || null,
       bio: ghost.bio || "",
       city: ghost.city || "",
       country: ghost.country || "",

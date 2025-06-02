@@ -24,8 +24,23 @@ export default function useAllProfiles() {
     if (sessionLoading) return;
 
     async function fetchAllProfiles() {
-      const { data } = await supabase.auth.getSession();
-      console.log("Current session:", data);
+      const { data: sessionData } = await supabase.auth.getSession();
+      const userSession = sessionData?.session;
+
+      console.log("Current session (inside fetch):", userSession);
+
+      // Use session directly from supabase instead of context
+      const isAuthenticated = !!userSession;
+
+      const TABLES = isAuthenticated
+        ? [
+          { title: "Registered Profiles", table: "users", column: "name", displayField: "name" },
+          { title: "Public Profiles", table: "ghost_users", column: "name", displayField: "name" },
+        ]
+        : [
+          { title: "Public Profiles", table: "ghost_users", column: "name", displayField: "name" },
+        ];
+
       setLoading(true);
       const allRecords = [];
 
@@ -55,7 +70,7 @@ export default function useAllProfiles() {
     if (!profiles?.length) {
       fetchAllProfiles();
     }
-  }, [session, sessionLoading]);
+  }, [sessionLoading]);
 
   return { loading };
 }
