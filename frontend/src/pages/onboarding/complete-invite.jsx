@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
+import LabeledInput from "@/components/forms/LabeledInput.jsx";
 
 export default function CompleteInvite() {
   const router = useRouter();
@@ -10,6 +12,7 @@ export default function CompleteInvite() {
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [sessionReady, setSessionReady] = useState(false);
 
   useEffect(() => {
     const exchangeCode = async () => {
@@ -20,8 +23,16 @@ export default function CompleteInvite() {
         const { error: exchangeError } = await supabase.auth.exchangeCodeForSession();
         if (exchangeError) {
           console.error("Session error:", exchangeError.message);
-          router.push("/login");
+          await router.push("/login");
+          return;
         }
+
+        // ✅ Wait a tick to ensure cookie is set
+        setTimeout(() => {
+          setSessionReady(true);
+        }, 200); // small delay just to let the cookie persist
+      } else {
+        setSessionReady(true); // no code means session might already be there
       }
     };
 
@@ -30,14 +41,26 @@ export default function CompleteInvite() {
     }
   }, [router.isReady]);
 
+  useEffect(() => {
+    if (sessionReady) {
+      supabase.auth.getSession().then(({ data }) => {
+        console.log("🔁 Session after exchange:", data.session);
+      });
+    }
+  }, [sessionReady]);
+
   const handleComplete = async () => {
     setSubmitting(true);
     setError("");
 
-    const {
-      data: sessionData,
-      error: sessionError,
-    } = await supabase.auth.getSession();
+    // Wait until sessionReady is true
+    if (!sessionReady) {
+      setError("Session not ready. Please wait a moment...");
+      setSubmitting(false);
+      return;
+    }
+
+    const { data: sessionData, error: sessionError } = await supabase.auth.getSession();
 
     const userId = sessionData?.session?.user?.id;
     const userEmail = sessionData?.session?.user?.email;
@@ -104,27 +127,25 @@ export default function CompleteInvite() {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-12">
+    <div className="w-full mt-12">
       <h2 className="text-xl font-semibold mb-4 text-center">Set Your Password</h2>
       <p className="text-sm text-gray-600 mb-4 text-center">
         To complete your invitation, set a secure password for your account.
       </p>
 
-      <input
+      <LabeledInput
+        label="Create Password"
         type="password"
-        placeholder="Create Password"
-        className="w-full border border-gray-300 px-4 py-2 rounded mb-4"
+        name="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        required
       />
 
-      <button
+      <PrimaryBtn title={submitting ? "Finalizing..." : "Complete Invite"}
         onClick={handleComplete}
         disabled={submitting || !password}
-        className="w-full bg-indigo-600 text-white py-2 rounded hover:bg-indigo-700 disabled:opacity-50"
-      >
-        {submitting ? "Finalizing..." : "Complete Invite"}
-      </button>
+      />
 
       {error && <p className="text-red-500 text-sm mt-3">{error}</p>}
     </div>
