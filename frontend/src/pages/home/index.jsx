@@ -8,7 +8,7 @@ import TakeALook from "@/components/home/TakeAlook";
 import NavigationBar from "@/components/profile/NavigationBar";
 import CategoryTile from "@/components/tiles/CategoryTile";
 import SearchBar from "@/components/SearchBar";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import {useSessionContext, useSupabaseClient} from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import { createPagesServerClient } from "@supabase/auth-helpers-nextjs";
 import NotificationsRequests from "@/components/Notifications/Requests";
@@ -23,6 +23,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [universeCategories, setUniverseCategories] = useState([]);
   const [categories, setCategories] = useState([]);
+  const { session, isLoading: sessionLoading } = useSessionContext();
 
   const categoryNamesExcluded = ["Book Talent"];
 
@@ -119,7 +120,9 @@ export default function HomePage() {
         </>
       )}
 
-      <NavigationBar />
+      {session && (
+        <NavigationBar />
+      )}
     </div>
   );
 }

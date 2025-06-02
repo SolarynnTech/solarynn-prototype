@@ -108,7 +108,7 @@ export function CategorySelection({ title, subtitle, description, selectedCatego
         <h2>{subtitle}</h2>
         <h3 className="mb-8 font-medium">{description}</h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-1 gap-3">
           {loading && (
             <>
               <div className="animate-pulse bg-slate-300 h-14 rounded-lg"></div>

@@ -4,7 +4,7 @@ import moment from "moment";
 import { formatDistanceToNow } from "date-fns";
 import RootNavigation from "@/components/Nav/Nav";
 import NavigationBar from "@/components/profile/NavigationBar";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import {useSessionContext, useSupabaseClient} from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import UserPreview from "@/components/UserPreview";
 
@@ -14,6 +14,7 @@ export default function Chats() {
   const router = useRouter();
   const [conversations, setConversations] = useState([]);
   const [loading, setLoading] = useState(true);
+  const { session, isLoading: sessionLoading } = useSessionContext();
 
   useEffect(() => {
     if (!user) return;
@@ -239,7 +240,9 @@ export default function Chats() {
         )}
       </div>
 
-      <NavigationBar />
+      {session && (
+        <NavigationBar />
+      )}
     </div>
   );
 }

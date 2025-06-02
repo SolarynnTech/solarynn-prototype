@@ -13,16 +13,17 @@ const OnboardingStartPage = () => {
 
   useEffect(() => {
     const restoreSession = async () => {
-      const url = new URL(window.location.href);
-      const code = url.searchParams.get("code");
-      const type = url.searchParams.get("type");
+      const { data, error } = await supabase.auth.getSession();
 
-      if (!code || !type) return; // skip if not magic link or signup
-
-      const { error } = await supabase.auth.exchangeCodeForSession();
-      if (error) {
-        console.error("Error restoring session", error.message);
-        await router.push("/login");
+      if (!data?.session) {
+        console.warn("No active session, trying exchangeCodeForSession...");
+        const { error: exchangeError } = await supabase.auth.exchangeCodeForSession();
+        if (exchangeError) {
+          console.error("Failed to restore session:", exchangeError.message);
+          router.push("/login");
+        }
+      } else {
+        console.log("Session restored:", data.session.user.email);
       }
     };
 

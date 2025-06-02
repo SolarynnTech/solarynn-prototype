@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import {useSessionContext, useSupabaseClient} from "@supabase/auth-helpers-react";
 import RootNavigation from "@/components/Nav/Nav";
 import NavigationBar from "@/components/profile/NavigationBar";
 import useUserStore from "@/stores/useUserStore.js";
@@ -30,6 +30,7 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
   const { id } = router.query;
   const { user, setUser } = useUserStore();
   const { allProjects } = useProjectStore();
+  const { session, isLoading: sessionLoading } = useSessionContext();
   const [favoriteProjects, setFavoriteProjects] = useState([]);
   const [isFav, setIsFav] = useState(false);
   const supabase = useSupabaseClient();
@@ -470,7 +471,9 @@ const ProjectPage = ({ accessDenied, projectFromServer }) => {
           alertsEnabled={notificationEnabled}
           onToggleAlerts={onToggleAlerts}
         />
-        <NavigationBar/>
+        {session && (
+          <NavigationBar />
+        )}
       </div>
 
       <div>

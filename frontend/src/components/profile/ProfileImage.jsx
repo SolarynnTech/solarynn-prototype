@@ -52,7 +52,7 @@ export const availabilityStatusOptions = Object.entries(availabilityStatusMap).m
   icon,
 }));
 
-const ProfileImage = ({ name, id, imgUrl, coverUrl, availabilityStatus, isMyProfile }) => {
+const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus, isMyProfile }) => {
   const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
@@ -85,11 +85,11 @@ const ProfileImage = ({ name, id, imgUrl, coverUrl, availabilityStatus, isMyProf
 
   useEffect(() => {
     setProfileImg(isMyProfile ? user?.profile_img : imgUrl || "");
-  }, [user.profile_img, id, imgUrl, isMyProfile]);
+  }, [user?.profile_img, id, imgUrl, isMyProfile]);
 
   useEffect(() => {
     setCoverImg(isMyProfile ? user?.cover_img : coverUrl || "");
-  }, [user.cover_img, id, coverUrl, isMyProfile]);
+  }, [user?.cover_img, id, coverUrl, isMyProfile]);
 
   useEffect(() => {
     setProfileStatus(isMyProfile ? user?.availability_status : availabilityStatus || "");
@@ -201,7 +201,7 @@ const ProfileImage = ({ name, id, imgUrl, coverUrl, availabilityStatus, isMyProf
                 </div>
               )}
 
-              {user?.verified && (
+              {verified && (
                 <div className="flex items-center text-xs uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-3 py-1">
                   <Star size={20} color="#615FFF" className="mr-2" />
                   <div>Verified</div>

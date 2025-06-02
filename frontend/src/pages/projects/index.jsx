@@ -4,11 +4,12 @@ import { Settings, Loader } from "lucide-react";
 import NavigationBar from "@/components/profile/NavigationBar";
 import ProjectCategory from "@/components/projects/ProjectCategory";
 import ProjectsSearchBar from "@/components/projects/ProjectsSearchBar";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import {useSessionContext, useSupabaseClient} from "@supabase/auth-helpers-react";
 import NotificationsRequests from "@/components/Notifications/Requests";
 
 export default function ProjectsPage() {
   const router = useRouter();
+  const { session, isLoading: sessionLoading } = useSessionContext();
 
   const [projects, setProjects] = useState([]);
   const [projectCategories, setProjectCategories] = useState([]);
@@ -96,7 +97,9 @@ export default function ProjectsPage() {
           />
         ))}
 
-      <NavigationBar />
+      {session && (
+        <NavigationBar />
+      )}
     </div>
   );
 }

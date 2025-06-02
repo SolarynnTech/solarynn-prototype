@@ -6,7 +6,7 @@ import SocialMediaSection from "@/components/profile/SocialMediaSection";
 import NavigationBar from "@/components/profile/NavigationBar";
 import React from "react";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
-import { useSupabaseClient } from "@supabase/auth-helpers-react";
+import {useSessionContext, useSupabaseClient} from "@supabase/auth-helpers-react";
 import useUserStore from "@/stores/useUserStore";
 import useProfilesStore from "@/stores/useProfilesStore";
 import { useRouter } from "next/router";
@@ -58,6 +58,7 @@ const ProfilePage = () => {
   const categoryNamesExcluded = ["Book Talent"];
 
   const [universeCategoryId, setUniverseCategoryId] = useState(null);
+  const { session, isLoading: sessionLoading } = useSessionContext();
 
   const handleSendPrivateProjectClose = () => {
     setSendProjectOpen(false);
@@ -233,32 +234,38 @@ const ProfilePage = () => {
 
   return (
     <div className="pt-6">
-      <RootNavigation title={isMyProfile ? "My Profile" : "Profile"} backBtn />
+      <RootNavigation title={isMyProfile ? "My Profile" : "Profile"} backBtn={!profile.is_ghost} />
       <div className="pb-8">
         <ProfileImage
           id={id}
           isMyProfile={isMyProfile}
           name={profile.name || profile.email}
+          verified={profile.verified || false}
           imgUrl={profile.profile_img}
           coverUrl={profile.cover_img}
           availabilityStatus={profile.availability_status}
         />
 
         <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />
-        {isMyProfile ? (
-          <PrimaryBtn title={"Start A Project"} classes="w-full block mb-2" onClick={() => router.push("/projects")} />
-        ) : (
-          profile.availability_status !== availabilityStatusMap.not_available.key && (
-            <PrimaryBtn title={"Send a Project"} classes="w-full block mb-2" onClick={()=>{
-            if (isMyProfile) {
-              router.push("/projects/create");
-            } else {
-              handleSendPrivateProjectOpen();
-            }
-          }} />
-          )
+
+        {!profile.is_ghost && (
+          <>
+            {isMyProfile ? (
+              <PrimaryBtn title={"Start A Project"} classes="w-full block mb-2" onClick={() => router.push("/projects")} />
+            ) : (
+              profile.availability_status !== availabilityStatusMap.not_available.key && (
+                <PrimaryBtn title={"Send a Project"} classes="w-full block mb-2" onClick={()=>{
+                if (isMyProfile) {
+                  router.push("/projects/create");
+                } else {
+                  handleSendPrivateProjectOpen();
+                }
+              }} />
+              )
+            )}
+            {!isMyProfile && <ChatsSendMessage id={id} />}
+          </>
         )}
-        {!isMyProfile && <ChatsSendMessage id={id} />}
 
         {(isMyProfile || profile.bio) && (
           <Box className="my-8">
@@ -338,7 +345,10 @@ const ProfilePage = () => {
           profile.country && <ProfileLocation location={profile.country} />
         )}
 
-        <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id} />
+
+        {profile.questionnaire_answers && Object.keys(profile.questionnaire_answers).length > 0 && (
+          <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id} />
+        )}
 
         {profile && groups?.length ?
           groups.filter((group) => !(group.column_name === "i_support" && isMyProfile)).map((group) => {
@@ -356,7 +366,7 @@ const ProfilePage = () => {
             );
             }) : null}
 
-        {!isMyProfile && (
+        {!isMyProfile && session && (
         <div className={"flex justify-end items-center gap-4 mb-8"}>
             <ReportProfile/>
 
@@ -375,7 +385,9 @@ const ProfilePage = () => {
 
         </div>
             )}
-        <NavigationBar />
+        {session && (
+          <NavigationBar />
+        )}
       </div>
 
       <Modal

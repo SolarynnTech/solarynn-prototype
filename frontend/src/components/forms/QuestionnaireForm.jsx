@@ -95,12 +95,12 @@ export default function QuestionnaireForm({
       {/*)}*/}
 
       {section.questions.map((q) => (
-        <Box key={q.id} mb={5}>
-          <h4
-            className="!text-lg !font-medium !mb-4"
+        <Box key={q.id} mb={2}>
+          <h5
+            className="!text-md !font-medium !mb-2"
           >
             {q.question}
-          </h4>
+          </h5>
 
           {q.type === "opentext" && (
             <TextField
