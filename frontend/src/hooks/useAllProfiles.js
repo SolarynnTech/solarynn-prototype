@@ -1,36 +1,26 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSupabaseClient, useSessionContext } from "@supabase/auth-helpers-react";
 import useProfilesStore from "@/stores/useProfilesStore";
 
 export default function useAllProfiles() {
   const supabase = useSupabaseClient();
   const { session, isLoading: sessionLoading } = useSessionContext();
-
   const [loading, setLoading] = useState(false);
-
   const { profiles, setProfiles } = useProfilesStore();
 
-  // Dynamically define what tables to fetch based on auth
-  const TABLES = session
-    ? [
-      { title: "Registered Profiles", table: "users", column: "name", displayField: "name" },
-      { title: "Public Profiles", table: "ghost_users", column: "name", displayField: "name" },
-    ]
-    : [
-      { title: "Public Profiles", table: "ghost_users", column: "name", displayField: "name" },
-    ];
+  const prevSessionRef = useRef(null);
 
   useEffect(() => {
     if (sessionLoading) return;
 
+    const prevSession = prevSessionRef.current;
+    const nowAuthenticated = !!session;
+    const wasUnauthenticated = !prevSession;
+
+    const shouldRefetch = !profiles?.length || (wasUnauthenticated && nowAuthenticated);
+
     async function fetchAllProfiles() {
-      const { data: sessionData } = await supabase.auth.getSession();
-      const userSession = sessionData?.session;
-
-      console.log("Current session (inside fetch):", userSession);
-
-      // Use session directly from supabase instead of context
-      const isAuthenticated = !!userSession;
+      const isAuthenticated = !!session;
 
       const TABLES = isAuthenticated
         ? [
@@ -46,7 +36,6 @@ export default function useAllProfiles() {
 
       for (const { title, table, displayField } of TABLES) {
         const { data, error } = await supabase.from(table).select("*");
-
         if (error) {
           console.error(`Failed to fetch from ${title}:`, error.message);
           continue;
@@ -67,10 +56,12 @@ export default function useAllProfiles() {
       setLoading(false);
     }
 
-    if (!profiles?.length) {
+    if (shouldRefetch) {
       fetchAllProfiles();
     }
-  }, [sessionLoading]);
+
+    prevSessionRef.current = session;
+  }, [sessionLoading, session]);
 
   return { loading };
 }
