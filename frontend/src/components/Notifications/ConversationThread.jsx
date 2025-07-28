@@ -13,7 +13,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 
-export default function Conversation() {
+export default function ConversationThread() {
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
   const router = useRouter();
@@ -257,8 +257,6 @@ export default function Conversation() {
 
   return (
     <div className="flex flex-col">
-      <ChatNavigation user={otherUser} backBtn onBack={() => router.push("/chats")}/>
-
       <div className="flex-1 overflow-y-auto pt-20 pb-20 relative">
 
         {loading ? (

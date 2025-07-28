@@ -11,6 +11,9 @@ import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import { LoaderItem } from "@/components/Loader.jsx";
 import { useRouter } from "next/router";
 import useProjectStore from "@/stores/useProjectStore.js";
+import NotificationsChats from "@/components/Notifications/Chats.jsx";
+import ChatsWrapper from "@/components/Notifications/ChatsWrapper.jsx";
+import ConversationThread from "@/components/Notifications/ConversationThread.jsx";
 
 
 export default function Notifications() {
@@ -272,6 +275,7 @@ export default function Notifications() {
         >
           <Tab label="Received" value="received" />
           <Tab label="Sent" value="sent" />
+          <Tab label={<NotificationsChats/>} value="chats" />
         </Tabs>
 
         {projectAlerts.length > 0 && (
@@ -352,6 +356,14 @@ export default function Notifications() {
                 </Alert>
               ))}
             </Stack>
+
+            {selectedTab === "chats" && (
+              router.query.conversationId ? (
+                <ConversationThread />
+              ) : (
+                <ChatsWrapper />
+              )
+            )}
           </>
         )}
       </div>

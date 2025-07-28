@@ -2,7 +2,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import { House, Inbox, User } from "lucide-react";
 import useUserStore from "@/stores/useUserStore";
-import NotificationsChats from "@/components/Notifications/Chats";
 import NotificationsRequests from "@/components/Notifications/Requests";
 
 const NavigationBar = () => {
@@ -27,8 +26,6 @@ const NavigationBar = () => {
         Projects
       </div>
 
-      <NotificationsChats />
-
       <div
         className={`${router.pathname.includes("profile") ? "text-indigo-500" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-indigo-500`}
         onClick={() => router.push("/profile/" + user.id)}
@@ -38,7 +35,7 @@ const NavigationBar = () => {
       </div>
 
       <NotificationsRequests />
-      
+
     </nav>
   );
 };
