@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Bell } from "lucide-react";
-import { useRouter } from "next/router";
 import useUserStore from "@/stores/useUserStore";
+import { useRouter } from "next/router";
 
 export default function NotificationsRequests() {
   const supabase = useSupabaseClient();
@@ -48,20 +48,22 @@ export default function NotificationsRequests() {
   const total = unreadCount + projectAlertCount;
 
   return (
-    <div onClick={() => router.push("/notifications")}>
-      <div className="relative">
-        <Bell className="cursor-pointer hover:text-indigo-500"/>
-        {total > 0 && (
-          <span className="
-            absolute -top-1 -right-1
-            bg-red-500 text-white text-xs
-            rounded-full w-4 h-4
-            flex items-center justify-center
-          ">
-            {total}
-          </span>
-        )}
-      </div>
+    <div
+      className={`${router.pathname.includes("notifications") ? "text-indigo-500" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-indigo-500`}
+      onClick={() => router.push("/notifications/")}
+    >
+      <Bell className="cursor-pointer mb-2 hover:text-indigo-500"/>
+      Notifications
+      {total > 0 && (
+        <span className="
+          absolute -top-1 -right-1
+          bg-red-500 text-white text-xs
+          rounded-full w-4 h-4
+          flex items-center justify-center
+        ">
+          {total}
+        </span>
+      )}
     </div>
   );
 }
