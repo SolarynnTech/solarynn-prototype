@@ -98,7 +98,6 @@ const ProfilePage = () => {
     if (!profiles) return;
     const p = profiles.find((p) => p.id === id);
     setProfile(p);
-    console.log("Profile data:", p);
   }, [profiles, id]);
 
   useEffect(() => {
@@ -119,7 +118,6 @@ const ProfilePage = () => {
       if (profile?.role) {
         const filtered = allGroups.filter((group) => group.roles.includes(profile.role));
         setGroups(filtered);
-        console.log("Filtered groups:", allGroups);
       }
     };
 

@@ -101,7 +101,6 @@ const ProfileImage = ({
 
   useEffect(() => {
     setProfileImg(profile.profile_img);
-    console.log("profile img 2", user?.profile_img);
   }, [profile.id]);
 
   useEffect(() => {
@@ -159,8 +158,6 @@ const ProfileImage = ({
       console.error("Error updating user:", error);
       return;
     }
-
-    console.log("profile img", profile_img);
 
     setProfileImg(profile_img);
     setCoverImg(cover_img);
