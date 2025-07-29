@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Autocomplete, TextField, CircularProgress, Box } from "@mui/material";
+import useUserStore from "@/stores/useUserStore.js";
 
-const LocationPicker = ({ onChange, initialCountry = "", initialCity = "" }) => {
+const LocationPicker = () => {
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);
-  const [selectedCountry, setSelectedCountry] = useState(initialCountry);
-  const [selectedCity, setSelectedCity] = useState(initialCity);
   const [loadingCities, setLoadingCities] = useState(false);
+  const {user, setUser} = useUserStore();
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -18,44 +18,53 @@ const LocationPicker = ({ onChange, initialCountry = "", initialCity = "" }) => 
   }, []);
 
   useEffect(() => {
-    if (!selectedCountry) return;
+    if (!user.country) return;
     setLoadingCities(true);
     const fetchCities = async () => {
       const res = await fetch("https://countriesnow.space/api/v0.1/countries/cities", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ country: selectedCountry }),
+        body: JSON.stringify({ country: user.country }),
       });
       const data = await res.json();
       setCities(data.data || []);
       setLoadingCities(false);
     };
     fetchCities();
-  }, [selectedCountry]);
-
-  useEffect(() => {
-    onChange?.({ country: selectedCountry, city: selectedCity });
-  }, [selectedCountry, selectedCity]);
+  }, [user.country]);
 
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
       <Autocomplete
         options={countries}
-        value={selectedCountry}
+        value={user.country || ""}
+        name={"country"}
         placeholder="Search your country..."
-        onChange={(e, value) => {
-          setSelectedCountry(value);
-          setSelectedCity("");
+        onChange={(event, newValue) => {
+          setUser((prev) => ({ ...prev, country: newValue, city: "" }));
+        }}
+        sx={{
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": { borderColor: "#d1d5db" },
+            "&:hover fieldset": { borderColor: "#d1d5db" },
+            "&.Mui-focused fieldset": {
+              borderColor: "#6366f1",
+              borderWidth: "1px",
+            },
+          },
         }}
         renderInput={(params) => <TextField {...params} />}
       />
 
       <Autocomplete
         options={cities}
-        value={selectedCity}
-        onChange={(e, value) => setSelectedCity(value)}
+        value={user.city || ""}
+        name={"city"}
+        onChange={(event, newValue) => {
+          setUser((prev) => ({ ...prev, city: newValue }));
+        }}
         loading={loadingCities}
-        disabled={!selectedCountry}
+        disabled={!user.country}
         renderInput={(params) => (
           <TextField
             {...params}
@@ -75,10 +84,10 @@ const LocationPicker = ({ onChange, initialCountry = "", initialCity = "" }) => 
             }}
             sx={{
               "& .MuiOutlinedInput-root": {
-                "& fieldset": { borderColor: "#000" },
-                "&:hover fieldset": { borderColor: "#000" },
+                "& fieldset": { borderColor: "#d1d5db" },
+                "&:hover fieldset": { borderColor: "#d1d5db" },
                 "&.Mui-focused fieldset": {
-                  borderColor: "#000",
+                  borderColor: "#6366f1",
                   borderWidth: "1px",
                 },
               },

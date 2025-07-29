@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { BellOff, LaptopMinimalCheck, MessageCircleQuestion, Star } from "lucide-react";
+import { BellOff, LaptopMinimalCheck, MessageCircleQuestion, CheckCircle } from "lucide-react";
 import ActionBtn from "../buttons/ActionBtn";
 import {
   Backdrop,
@@ -13,14 +13,17 @@ import {
   Stack,
   Switch,
   Typography,
+  TextField
 } from "@mui/material";
-import PlaceholderBox from "../PlaceholderBox";
 import useUserStore from "@/stores/useUserStore";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import PrimaryBtn from "@/components/buttons/PrimaryBtn";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import uploadImageToSupabase from "@/utils/uploadImageToSupabase";
 import LabeledInput from "@/components/forms/LabeledInput.jsx";
+import { useRouter } from "next/router";
+import LocationPicker from "@/components/profile/LocationPicker.jsx";
+import useProfilesStore from "@/stores/useProfilesStore.js";
 
 export const availabilityStatusMap = {
   ["open_to_project"]: {
@@ -52,7 +55,17 @@ export const availabilityStatusOptions = Object.entries(availabilityStatusMap).m
   icon,
 }));
 
-const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus, isMyProfile }) => {
+const ProfileImage = ({
+                        name,
+                        verified,
+                        id,
+                        availabilityStatus,
+                        isMyProfile,
+                        is_ghost,
+                        handleSendPrivateProjectOpen,
+                        bio,
+                        profile
+}) => {
   const [open, setOpen] = useState(false);
   const supabase = useSupabaseClient();
   const { user, setUser } = useUserStore();
@@ -65,6 +78,9 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
   const [profileImg, setProfileImg] = useState("");
   const [coverImg, setCoverImg] = useState("");
   const [profileStatus, setProfileStatus] = useState("");
+  const router = useRouter();
+
+  const {setProfiles} = useProfilesStore();
 
   const handleChange = (event) => {
     const { name, value, files, type, checked } = event.target;
@@ -84,12 +100,13 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
   };
 
   useEffect(() => {
-    setProfileImg(isMyProfile ? user?.profile_img : imgUrl || "");
-  }, [user?.profile_img, id, imgUrl, isMyProfile]);
+    setProfileImg(profile.profile_img);
+    console.log("profile img 2", user?.profile_img);
+  }, [profile.id]);
 
   useEffect(() => {
-    setCoverImg(isMyProfile ? user?.cover_img : coverUrl || "");
-  }, [user?.cover_img, id, coverUrl, isMyProfile]);
+    setCoverImg(profile.cover_img);
+  }, [profile.id]);
 
   useEffect(() => {
     setProfileStatus(isMyProfile ? user?.availability_status : availabilityStatus || "");
@@ -112,10 +129,15 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, address, is_private, availability_status } = user;
+    const { name, email, address, is_private, availability_status, bio, city, country } = user;
 
-    const profile_img = imageFile ? await uploadImageToSupabase(supabase, imageFile, user.id, "avatar") : user.profile_img;
-    const cover_img = coverFile ? await uploadImageToSupabase(supabase, coverFile, user.id, "cover") : user.cover_img;
+    const profile_img = imageFile
+      ? await uploadImageToSupabase(supabase, imageFile, user.id, "avatars")
+      : user.profile_img;
+
+    const cover_img = coverFile
+      ? await uploadImageToSupabase(supabase, coverFile, user.id, "covers")
+      : user.cover_img;
 
     const { data, error } = await supabase
       .from("users")
@@ -126,6 +148,9 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
         profile_img,
         cover_img,
         is_private,
+        bio,
+        city,
+        country,
         availability_status,
       })
       .eq("id", user.id);
@@ -135,20 +160,27 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
       return;
     }
 
+    console.log("profile img", profile_img);
+
     setProfileImg(profile_img);
     setCoverImg(cover_img);
     setProfileStatus(availability_status);
 
-    setUser((prevUser) => ({
-      ...prevUser,
-      name,
-      email,
-      address,
-      profile_img,
-      cover_img,
-      is_private,
-      availability_status,
-    }));
+    setProfiles(
+      (prevProfiles) => prevProfiles.map((profile) => (profile.id === user.id ? {
+        ...profile,
+        name,
+        email,
+        address,
+        profile_img,
+        cover_img,
+        is_private,
+        availability_status,
+        bio,
+        city,
+        country,
+      } : profile))
+    );
 
     setTimeout(() => {
       setOpen(false);
@@ -168,7 +200,7 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
   };
 
   return (
-    <div className="mb-6 -mx-6 relative" style={{ backgroundImage: `url(${coverImg}?t=${Date.now()})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+    <div className="mb-6 -mx-6 relative" style={{ backgroundImage: `url(${coverImg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
       <div className="absolute right-6 top-6 z-20">
         {isMyProfile && (<ActionBtn title="Edit" onClick={handleOpen}/>)}
       </div>
@@ -178,7 +210,7 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
 
         <div className={"flex items-center relative z-10"}>
           <div className={"shrink-0 h-32 sm:h-48 w-32 sm:w-48 rounded-full overflow-hidden border-4 border-white flex items-center justify-center bg-white"}
-               style={{ backgroundImage: `url(${profileImg}?t=${Date.now()})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+               style={{ backgroundImage: `url(${profileImg})`, backgroundSize: "cover", backgroundPosition: "center" }}>
           </div>
           <div className={"pl-6"}>
             <h2
@@ -186,6 +218,7 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
               className="text-white font-bold text-2xl mb-4"
             >
               {isMyProfile ? user?.name : name}
+              {verified && <CheckCircle size={20} strokeWidth={3} color="#22C55E" className="inline ml-2" />}
             </h2>
             <div className={"flex gap-2 items-start z-[2] flex-wrap"}>
               {profileStatus && (
@@ -200,14 +233,37 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
                   <span className="ml-2">{availabilityStatusMap[profileStatus].title}</span>
                 </div>
               )}
-
-              {verified && (
-                <div className="flex items-center text-xs uppercase font-semibold text-indigo-500 bg-indigo-100 rounded-full px-3 py-1">
-                  <Star size={20} color="#615FFF" className="mr-2" />
-                  <div>Verified</div>
-                </div>
-              )}
             </div>
+
+            {bio?.trim() && (
+              <Box className="my-4">
+                  <Typography className="text-white">{bio}</Typography>
+              </Box>
+            )}
+
+            {profile.country && (
+              <Box className="my-4">
+                <Typography className="text-white">{profile.country}{profile.city ? " - " + profile.city : ""}</Typography>
+              </Box>
+            )}
+
+            {!is_ghost && (
+              <div className={"mt-4"}>
+                {isMyProfile ? (
+                  <PrimaryBtn title={"Start A Project"} classes="w-full block mb-2" onClick={() => router.push("/projects")} />
+                ) : (
+                  availabilityStatus !== availabilityStatusMap.not_available.key && (
+                    <PrimaryBtn title={"Send a Project"} classes="w-full block mb-2" onClick={()=>{
+                      if (isMyProfile) {
+                        router.push("/projects/create");
+                      } else {
+                        handleSendPrivateProjectOpen();
+                      }
+                    }} />
+                  )
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -241,20 +297,6 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
                 label="Your Name"
               />
 
-              {/*<TextField*/}
-              {/*  id="outlined-basic"*/}
-              {/*  label="Address"*/}
-              {/*  variant="standard"*/}
-              {/*  fullWidth*/}
-              {/*  name="address"*/}
-              {/*  slotProps={{*/}
-              {/*    inputLabel: {*/}
-              {/*      shrink: true,*/}
-              {/*    },*/}
-              {/*  }}*/}
-              {/*  value={user?.address ? user.address : ""}*/}
-              {/*  onChange={handleChange}*/}
-              {/*/>*/}
               <Box sx={{ mt: 2, mb: 2 }}>
                 <FormControl variant="outlined" fullWidth sx={{
                   "& .MuiOutlinedInput-root": {
@@ -295,6 +337,29 @@ const ProfileImage = ({ name, verified, id, imgUrl, coverUrl, availabilityStatus
                   </Select>
                 </FormControl>
               </Box>
+
+              <TextField
+                fullWidth
+                multiline
+                minRows={2}
+                value={user.bio}
+                name="bio"
+                onChange={handleChange}
+                placeholder="Write a public-facing bio or description..."
+
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": { borderColor: "#d1d5db" },
+                    "&:hover fieldset": { borderColor: "#d1d5db" },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#6366f1",
+                      borderWidth: "1px",
+                    },
+                  },
+                }}
+              />
+
+              <LocationPicker />
 
               <Box>
                 <FormControlLabel

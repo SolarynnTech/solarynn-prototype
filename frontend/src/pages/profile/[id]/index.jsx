@@ -14,8 +14,6 @@ import Group from "@/components/profile/Group";
 import { fetchProfileGroups } from "@/libs/fetchProfileGroups";
 import {TextField, Typography, Box, IconButton, Tooltip, Backdrop, Fade, Modal} from "@mui/material";
 import ActionBtn from "@/components/buttons/ActionBtn.jsx";
-import MyProfileLocation from "@/components/profile/MyProfileLocation";
-import ProfileLocation from "@/components/profile/ProfileLocation";
 import ChatsSendMessage from "@/components/chats/SendMessage";
 import SecondaryBtn from "@/components/buttons/SecondaryBtn.jsx";
 import CategoryTile from "@/components/tiles/CategoryTile.jsx";
@@ -99,12 +97,8 @@ const ProfilePage = () => {
   useEffect(() => {
     if (!profiles) return;
     const p = profiles.find((p) => p.id === id);
-    console.log("Profile data:", p);
     setProfile(p);
-    if (p?.bio) {
-      setBio(p.bio);
-      setCurrentBio(p.bio);
-    }
+    console.log("Profile data:", p);
   }, [profiles, id]);
 
   useEffect(() => {
@@ -194,26 +188,6 @@ const ProfilePage = () => {
     }
   };
 
-  const handleSaveBio = async () => {
-    if (bio.trim() === "") {
-      setBio(currentBio);
-      setEditingBio(false);
-      return;
-    }
-
-    setSavingBio(true);
-    const { data: updated, error } = await supabase.from("users").update({ bio }).eq("id", user.id).select().single();
-    setSavingBio(false);
-    if (error) {
-      console.error("Failed to save bio:", error);
-    } else {
-      setProfile(updated);
-      setUser((prev) => ({ ...prev, bio: updated.bio }));
-      setCurrentBio(updated.bio);
-      setEditingBio(false);
-    }
-  };
-
   if (!profiles) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -241,110 +215,16 @@ const ProfilePage = () => {
           isMyProfile={isMyProfile}
           name={profile.name || profile.email}
           verified={profile.verified || false}
-          imgUrl={profile.profile_img}
-          coverUrl={profile.cover_img}
           availabilityStatus={profile.availability_status}
+          is_ghost={profile.is_ghost}
+          bio={profile.bio}
+          profile={profile}
+          handleSendPrivateProjectOpen={handleSendPrivateProjectOpen}
         />
 
         <SocialMediaSection id={id} isMyProfile={isMyProfile} links={profile.social_networks} />
 
-        {!profile.is_ghost && (
-          <>
-            {isMyProfile ? (
-              <PrimaryBtn title={"Start A Project"} classes="w-full block mb-2" onClick={() => router.push("/projects")} />
-            ) : (
-              profile.availability_status !== availabilityStatusMap.not_available.key && (
-                <PrimaryBtn title={"Send a Project"} classes="w-full block mb-2" onClick={()=>{
-                if (isMyProfile) {
-                  router.push("/projects/create");
-                } else {
-                  handleSendPrivateProjectOpen();
-                }
-              }} />
-              )
-            )}
-            {!isMyProfile && <ChatsSendMessage id={id} />}
-          </>
-        )}
-
-        {(isMyProfile || profile.bio) && (
-          <Box className="my-8">
-            <div className="flex justify-between items-center w-full">
-              <h3 className="font-bold mb-0">{isMyProfile ? "Your Bio" : "About"}</h3>
-
-              {isMyProfile && (
-                <Box display="flex" gap={2}>
-                  {editingBio ? (
-                    <>
-                      <ActionBtn
-                        title={savingBio ? "Saving..." : "Save"}
-                        onClick={handleSaveBio}
-                        disabled={savingBio || bio.trim() === ""}
-                      />
-                      <ActionBtn
-                        title="Cancel"
-                        onClick={() => {
-                          setBio(profile.bio || "");
-                          setEditingBio(false);
-                        }}
-                        disabled={savingBio}
-                      />
-                    </>
-                  ) : (
-                    <ActionBtn title="Edit" onClick={() => setEditingBio(true)} />
-                  )}
-                </Box>
-              )}
-            </div>
-
-            <Box className="mt-4">
-              {isMyProfile ? (
-                editingBio ? (
-                  <TextField
-                    fullWidth
-                    multiline
-                    minRows={3}
-                    value={bio}
-                    onBlur={() => {
-                      if (bio.trim() === "") {
-                        setBio(currentBio);
-                        setEditingBio(false);
-                      }
-                    }}
-                    onChange={(e) => setBio(e.target.value)}
-                    placeholder="Write a public-facing bio or description..."
-                    disabled={savingBio}
-                    sx={{
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": { borderColor: "#000" },
-                        "&:hover fieldset": { borderColor: "#000" },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "#000",
-                          borderWidth: "2px",
-                        },
-                      },
-                    }}
-                  />
-                ) : bio.trim() ? (
-                  <Typography className="text-gray-700">{bio}</Typography>
-                ) : (
-                  <Typography className="text-gray-500 italic">
-                    You haven’t added a bio yet. Click Edit to add one.
-                  </Typography>
-                )
-              ) : (
-                <Typography className="text-gray-700">{profile.bio}</Typography>
-              )}
-            </Box>
-          </Box>
-        )}
-
-        {isMyProfile ? (
-          <MyProfileLocation location={{ country: profile.country, city: profile.city }} />
-        ) : (
-          profile.country && <ProfileLocation location={profile.country} />
-        )}
-
+        {!isMyProfile && !profile.is_ghost && <ChatsSendMessage id={id} />}
 
         {profile.questionnaire_answers && Object.keys(profile.questionnaire_answers).length > 0 && (
           <DetailsPanel isMyProfile={isMyProfile} profile={profile} id={id} />
@@ -411,7 +291,7 @@ const ProfilePage = () => {
               </Typography>
             </Box>
 
-            <div className={"grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-[65vh] overflow-y-auto"}>
+            <div className={"grid grid-cols-1 gap-2 max-h-[65vh] overflow-y-auto"}>
 
               {universeCategoryId ? (
                   <>

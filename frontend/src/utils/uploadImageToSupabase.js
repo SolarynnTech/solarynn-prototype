@@ -1,31 +1,28 @@
-export default async function uploadImageToSupabase(supabase, file, userId, type = "avatar") {
-  let filePath= "";
 
-  if (type === "cover") {
-    // For cover images, we might want to use a different path
-    filePath = `covers/${userId}.png`;
-  } else {
-    // Default to avatar images
-    filePath = `avatars/${userId}.png`;
-  }
+export default async function uploadImageToSupabase(supabase, file, userId, folder = "avatars") {
+  const fileExt = file.name.split('.').pop();
+  const uniqueFileName = `${folder}/${userId}/${crypto.randomUUID()}.${fileExt}`;
 
   const { error: uploadError } = await supabase.storage
     .from("profile-images")
-    .upload(filePath, file, {
+    .upload(uniqueFileName, file, {
       cacheControl: "3600",
-      upsert: true, // ✅ allows replacing existing image
-      contentType: file.type,
+      upsert: false,
     });
 
   if (uploadError) {
-    console.error("Upload failed:", uploadError.message);
+    console.error("Image upload error:", uploadError);
     return null;
   }
 
-  const { data } = supabase
-    .storage
+  const { data, error: urlError } = supabase.storage
     .from("profile-images")
-    .getPublicUrl(filePath);
+    .getPublicUrl(uniqueFileName);
 
-  return data?.publicUrl || null;
+  if (urlError || !data?.publicUrl) {
+    console.error("Error getting public URL:", urlError);
+    return null;
+  }
+
+  return data.publicUrl || null;
 }
