@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import moment from "moment";
 import Link from "next/link";
-import { Alert } from "@mui/material";
+import { Alert, Tabs, Tab } from "@mui/material";
 import Stack from "@mui/material/Stack";
 import useUserStore from "@/stores/useUserStore";
 import { REQUEST_STATUSES, REQUEST_STATUSES_VERBS } from "@/models/request";
@@ -11,6 +11,9 @@ import SecondaryBtn from "@/components/buttons/SecondaryBtn";
 import { LoaderItem } from "@/components/Loader.jsx";
 import { useRouter } from "next/router";
 import useProjectStore from "@/stores/useProjectStore.js";
+import NotificationsChats from "@/components/Notifications/Chats.jsx";
+import ChatsWrapper from "@/components/Notifications/ChatsWrapper.jsx";
+import ConversationThread from "@/components/Notifications/ConversationThread.jsx";
 
 
 export default function Notifications() {
@@ -21,6 +24,7 @@ export default function Notifications() {
   const [requests, setRequests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedTab, setSelectedTab] = useState("received");
 
   const [projectAlerts, setProjectAlerts] = useState([]);
   const [alertsLoading, setAlertsLoading] = useState(true);
@@ -260,7 +264,19 @@ export default function Notifications() {
     <div className="pt-8">
       <RootNavigation title="Notifications" backBtn/>
 
-      <div className="pt-12">
+      <div>
+        <Tabs
+          value={selectedTab}
+          onChange={(e, newValue) => setSelectedTab(newValue)}
+          textColor="primary"
+          indicatorColor="primary"
+          className="mb-4"
+          centered
+        >
+          <Tab label="Received" value="received" />
+          <Tab label="Sent" value="sent" />
+          <Tab label={<NotificationsChats/>} value="chats" />
+        </Tabs>
 
         {projectAlerts.length > 0 && (
           <Stack spacing={1} mb={4}>
@@ -283,29 +299,37 @@ export default function Notifications() {
               </div>
             )}
             <Stack sx={{ width: "100%" }} spacing={1}>
-              {requests.map((request) => (
+              {requests
+                .filter((request) => {
+                  if (selectedTab === "received") return request.assigner.id === user.id;
+                  if (selectedTab === "sent") return request.requester.id === user.id;
+                  return false;
+                })
+                .map((request) => (
                 <Alert key={request.id} severity={requestSeverity(request)}>
                   <div>
                     {request.requester.id === user.id && request.status === REQUEST_STATUSES.PENDING && (
-                      <>
+                      <p className={"mb-2"}>
                         {userDisplayName(request.requester)} {REQUEST_STATUSES_VERBS[request.status]} a request to{" "}
                         {userDisplayName(request.assigner)} {requestTarget(request)}
-                      </>
+                      </p>
                     )}
 
                     {request.requester.id === user.id && request.status !== REQUEST_STATUSES.PENDING && (
-                      <>
+                      <p className={"mb-2"}>
                         {userDisplayName(request.assigner)} {REQUEST_STATUSES_VERBS[request.status]} your request{" "}
                         {requestTarget(request)}
-                      </>
+                      </p>
                     )}
 
                     {request.assigner.id === user.id && request.status === REQUEST_STATUSES.PENDING && (
                       <>
-                        {userDisplayName(request.requester)} {REQUEST_STATUSES_VERBS[request.status]} a request to{" "}
-                        {userDisplayName(request.assigner)} {requestTarget(request)}
+                        <p className={"mb-2"}>
+                          {userDisplayName(request.requester)} {REQUEST_STATUSES_VERBS[request.status]} a request to{" "}
+                          {userDisplayName(request.assigner)} {requestTarget(request)}
+                        </p>
                         {!request.action_request_id && (
-                          <div className="flex gap-2 mt-1 mb-1">
+                          <div className="flex gap-2 mb-2">
                             <SecondaryBtn
                               classes="!py-1 text-sm"
                               title="Approve"
@@ -328,10 +352,18 @@ export default function Notifications() {
                       </>
                     )}
                   </div>
-                  <p>Request Date: {moment(request.created_at).format("DD/MM/YYYY LT")}</p>
+                  <p className={"text-xs text-gray-600"}>Request Date: {moment(request.created_at).format("DD/MM/YYYY LT")}</p>
                 </Alert>
               ))}
             </Stack>
+
+            {selectedTab === "chats" && (
+              router.query.conversationId ? (
+                <ConversationThread />
+              ) : (
+                <ChatsWrapper />
+              )
+            )}
           </>
         )}
       </div>

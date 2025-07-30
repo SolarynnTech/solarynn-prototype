@@ -1,4 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import LabeledInput from "@/components/forms/LabeledInput.jsx";
+import PrimaryBtn from "@/components/buttons/PrimaryBtn.jsx";
 
 export default function InviteAdminPage() {
   const [email, setEmail] = useState("");
@@ -31,31 +33,31 @@ export default function InviteAdminPage() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 space-y-4">
-      <h1 className="text-xl font-bold">Send Magic Link to Ghost User</h1>
+    <div className="w-full pt-8">
+      <h1 className="text-xl font-bold mb-8 text-center">Send Magic Link to Ghost User</h1>
 
-      <input
-        className="border p-2 w-full rounded"
+      <LabeledInput
+        label="Ghost User ID"
         type="text"
-        placeholder="Ghost User ID"
+        name="ghostId"
         value={ghostId}
         onChange={(e) => setGhostId(e.target.value)}
-      />
-      <input
-        className="border p-2 w-full rounded"
-        type="email"
-        placeholder="Recipient Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        required
       />
 
-      <button
+      <LabeledInput
+        label="Recipient Email"
+        type="email"
+        name="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+
+      <PrimaryBtn title={loading ? "Sending..." : "Send Magic Link"}
         onClick={handleInvite}
-        className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         disabled={loading}
-      >
-        {loading ? "Sending..." : "Send Magic Link"}
-      </button>
+      />
 
       {status && <p className="mt-4">{status}</p>}
     </div>

@@ -80,7 +80,6 @@ export default function ProjectsPage() {
       <nav className="flex items-start justify-between relative gap4 mb-6">
         <h2>Projects</h2>
         <div className="flex items-center justify-between gap-4 pt-1">
-          <NotificationsRequests />
           <Settings className="cursor-pointer hover:text-indigo-500" onClick={() => router.push("/settings")} />
         </div>
       </nav>

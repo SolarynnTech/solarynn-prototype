@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
-import { MessageSquare } from "lucide-react";
-import { useRouter } from "next/router";
 
 import useUserStore from "@/stores/useUserStore";
 
 export default function NotificationsChats() {
   const supabase = useSupabaseClient();
   const { user } = useUserStore();
-  const router = useRouter();
 
   const [unreadCount, setUnreadCount] = useState(0);
 
@@ -60,30 +57,22 @@ export default function NotificationsChats() {
 
   useEffect(() => {
     if (!user) return;
-
     fetchUnreadCount();
-
     const cleanup = setupRealtimeSubscription();
 
     return () => {
-      cleanup(); // Unsubscribe on unmount
+      cleanup();
     };
   }, [user]);
 
   return (
-    <div
-      className={`${router.pathname.includes("chats") ? "text-indigo-500" : ""} flex flex-col items-center justify-center text-xs cursor-pointer hover:text-indigo-500`}
-      onClick={() => router.push("/chats")}
-    >
       <div className="relative">
-        <MessageSquare className="mb-2" />
         {unreadCount > 0 && (
           <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
             {unreadCount}
           </span>
         )}
+        Chats
       </div>
-      Chats
-    </div>
   );
 }

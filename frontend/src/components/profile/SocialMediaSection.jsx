@@ -168,6 +168,7 @@ const SocialMediaSection = ({ id, links, isMyProfile }) => {
     } else {
       // console.log("Social networks updated successfully:", data);
     }
+    setOpen(false);
   };
 
   const handleClose = () => {
